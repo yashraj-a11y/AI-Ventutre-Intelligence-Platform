@@ -1,0 +1,7 @@
+state,Count,Percentage
+failed,197719,52.22
+successful,133956,35.38
+canceled,38779,10.24
+undefined,3562,0.94
+live,2799,0.74
+suspended,1846,0.49
