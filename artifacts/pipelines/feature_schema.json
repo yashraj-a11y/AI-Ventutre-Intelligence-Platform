@@ -1,0 +1,82 @@
+{
+  "version": "1.2.0",
+  "n_features": 12,
+  "features": [
+    "name",
+    "category",
+    "main_category",
+    "currency",
+    "deadline",
+    "goal",
+    "launched",
+    "state",
+    "country",
+    "usd_goal_real",
+    "name_clean",
+    "target"
+  ],
+  "dtypes": {
+    "name": "string",
+    "category": "category",
+    "main_category": "category",
+    "currency": "category",
+    "deadline": "datetime64[us]",
+    "goal": "float64",
+    "launched": "datetime64[us]",
+    "state": "str",
+    "country": "category",
+    "usd_goal_real": "float64",
+    "name_clean": "string",
+    "target": "int64"
+  },
+  "target_column": "target",
+  "dropped_columns": [
+    "ID",
+    "pledged",
+    "usd pledged",
+    "usd_pledged_real",
+    "backers"
+  ],
+  "validation_rules": [
+    {
+      "rule": "V1",
+      "check": "goal > 0",
+      "action": "drop"
+    },
+    {
+      "rule": "V2",
+      "check": "duration (days) > 0",
+      "action": "flag"
+    },
+    {
+      "rule": "V3",
+      "check": "duration <= 90",
+      "action": "flag"
+    },
+    {
+      "rule": "V4",
+      "check": "launched < deadline",
+      "action": "drop"
+    },
+    {
+      "rule": "V5",
+      "check": "launched != 1970 epoch",
+      "action": "drop"
+    },
+    {
+      "rule": "V6",
+      "check": "state in valid set",
+      "action": "drop"
+    },
+    {
+      "rule": "V7",
+      "check": "country != 'N,0\"'",
+      "action": "drop (quarantine)"
+    },
+    {
+      "rule": "V8",
+      "check": "required business fields present",
+      "action": "flag"
+    }
+  ]
+}

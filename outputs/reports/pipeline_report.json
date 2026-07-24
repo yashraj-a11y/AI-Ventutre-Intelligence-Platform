@@ -1,0 +1,84 @@
+{
+  "steps": {
+    "column_cleaner": {
+      "rows_in": 378661,
+      "rows_out": 378661,
+      "rows_removed": 0,
+      "seconds": 0.017
+    },
+    "text_cleaner": {
+      "rows_in": 378661,
+      "rows_out": 378661,
+      "rows_removed": 0,
+      "seconds": 0.676
+    },
+    "category_normalizer": {
+      "rows_in": 378661,
+      "rows_out": 378661,
+      "rows_removed": 0,
+      "seconds": 0.098
+    },
+    "column_remover": {
+      "rows_in": 378661,
+      "rows_out": 378661,
+      "rows_removed": 0,
+      "seconds": 0.014
+    },
+    "target_builder": {
+      "rows_in": 378661,
+      "rows_out": 331675,
+      "rows_removed": 46986,
+      "seconds": 0.051
+    },
+    "missing": {
+      "rows_in": 331675,
+      "rows_out": 331675,
+      "rows_removed": 0,
+      "seconds": 0.085
+    },
+    "duplicates": {
+      "rows_in": 331675,
+      "rows_out": 331675,
+      "rows_removed": 0,
+      "seconds": 0.199
+    },
+    "datatype": {
+      "rows_in": 331675,
+      "rows_out": 331675,
+      "rows_removed": 0,
+      "seconds": 0.144
+    },
+    "integrity": {
+      "rows_in": 331675,
+      "rows_out": 331464,
+      "rows_removed": 211,
+      "seconds": 0.137,
+      "report": {
+        "total_rows": 331675,
+        "violations_per_rule": {
+          "V1": 1,
+          "V4": 0,
+          "V5": 0,
+          "V6": 0,
+          "V7": 210,
+          "V2": 92,
+          "V3": 22,
+          "V8": 0
+        },
+        "rows_dropped": 211,
+        "rows_flagged_kept": {
+          "V2": 92,
+          "V3": 22,
+          "V8": 0
+        },
+        "rows_remaining": 331464,
+        "timestamp": "2026-07-24T13:21:54.451113+00:00"
+      }
+    }
+  },
+  "final_shape": [
+    331464,
+    12
+  ],
+  "total_seconds": 1.44
+}

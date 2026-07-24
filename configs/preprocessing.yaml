@@ -1,0 +1,117 @@
+# =============================================================================
+# preprocessing.yaml
+# Configuration contract for the Day 2 Stage-1 preprocessing pipeline
+# (AI Venture Intelligence Platform — Roadmap V1.2, FROZEN).
+#
+# Stage-1 = dataset cleaning (row-changing). Stage-2 keys (encoding / scaling /
+# TF-IDF) are under `day3_reserved` and are NOT consumed in Day 2.
+# =============================================================================
+
+version: "1.2.0"
+
+dataset:
+  name: "Kickstarter Projects"
+  raw_path: "data/raw/ks-projects-201801.csv"
+  processed_path: "data/processed/kickstarter_processed.csv"
+  quarantine_path: "data/interim/quarantined_invalid_rows.csv"
+
+# --- Phase A: schema contract (actual 15 columns; no assumed columns) ---------
+schema:
+  required_columns:
+    - ID
+    - name
+    - category
+    - main_category
+    - currency
+    - deadline
+    - goal
+    - launched
+    - pledged
+    - state
+    - backers
+    - country
+    - usd pledged
+    - usd_pledged_real
+    - usd_goal_real
+
+# --- Phase B: column governance ----------------------------------------------
+columns:
+  identifier:
+    - ID
+  # Post-event columns that leak the outcome -> removed before modeling.
+  leakage_drop:
+    - pledged
+    - usd pledged
+    - usd_pledged_real
+    - backers
+  # Known at launch -> retained.
+  keep_numeric:
+    - goal
+    - usd_goal_real
+
+# --- Phase G: target contract -------------------------------------------------
+target:
+  source_column: state
+  positive_state: successful
+  decided_states:
+    - successful
+    - failed
+  excluded_states:
+    - live
+    - canceled
+    - suspended
+    - undefined
+  target_column: target        # successful -> 1, failed -> 0
+
+# --- Phase C: missing-value strategy -----------------------------------------
+missing:
+  numeric_strategy: median     # mean | median  (median: robust to skew)
+  categorical_strategy: mode   # mode | unknown
+  categorical_fill: "Unknown"
+  text_columns:
+    - name
+  text_fill: ""
+  # NOTE: country == 'N,0"' is a non-null STRING sentinel, not a NaN.
+  # It is handled by Phase F integrity (V7), NOT imputed here.
+
+# --- Phase E: datatype targets ------------------------------------------------
+datatypes:
+  datetime_columns:
+    - launched
+    - deadline
+  category_columns:
+    - category
+    - main_category
+    - currency
+    - country
+  numeric_columns:
+    - goal
+    - usd_goal_real
+
+# --- Phase F: business-integrity rules (V1–V8) --------------------------------
+integrity:
+  min_goal: 0.01                 # V1: goal > 0
+  min_duration_days: 1           # V2: duration > 0
+  max_duration_days: 90          # V3: duration <= 90 (flag)
+  epoch_sentinel_year: 1970      # V5: launched != epoch sentinel
+  corrupt_country_sentinel: 'N,0"'   # V7: quarantine & remove
+  valid_states:                  # V6
+    - successful
+    - failed
+    - canceled
+    - live
+    - undefined
+    - suspended
+
+logging:
+  level: INFO
+  log_file: "outputs/logs/preprocessing.log"
+
+# =============================================================================
+# RESERVED FOR DAY 3 (Stage 2 — row-preserving feature transforms).
+# Declared here for forward reference only; NOT used by Day 2 Stage-1 pipeline.
+# =============================================================================
+day3_reserved:
+  scaler: robust                 # RESERVED — Day 3
+  encoding: one_hot              # RESERVED — Day 3
+  tfidf_max_features: 2500       # RESERVED — Day 3

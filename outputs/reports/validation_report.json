@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "n_rows": 378661,
+  "n_columns": 15,
+  "checks": [
+    {
+      "name": "empty_dataset",
+      "status": "PASS",
+      "message": "Dataset has 378,661 rows.",
+      "details": {
+        "n_rows": 378661
+      }
+    },
+    {
+      "name": "duplicate_columns",
+      "status": "PASS",
+      "message": "No duplicate column names.",
+      "details": {}
+    },
+    {
+      "name": "required_columns",
+      "status": "PASS",
+      "message": "All 15 required columns present.",
+      "details": {}
+    },
+    {
+      "name": "unexpected_columns",
+      "status": "PASS",
+      "message": "No unexpected columns.",
+      "details": {}
+    },
+    {
+      "name": "target_values",
+      "status": "PASS",
+      "message": "All 'state' values are within the valid set.",
+      "details": {}
+    },
+    {
+      "name": "id_uniqueness",
+      "status": "PASS",
+      "message": "Identifier 'ID' is unique.",
+      "details": {}
+    }
+  ],
+  "timestamp": "2026-07-24T13:21:53.047819+00:00"
+}

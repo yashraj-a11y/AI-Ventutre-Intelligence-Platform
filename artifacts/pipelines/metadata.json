@@ -1,0 +1,38 @@
+{
+  "pipeline_version": "1.2.0",
+  "created_at": "2026-07-24T13:21:55.333939+00:00",
+  "dataset": {
+    "name": "Kickstarter Projects",
+    "raw_path": "/Users/Yash/AI-Ventutre-Intelligence-Platform/data/raw/ks-projects-201801.csv",
+    "sha256": "4846177ce8cfacd06a6acf06cba663b9aa5f5f77e7d0debecf5bdc861a87e3cb"
+  },
+  "training_shape": [
+    331464,
+    12
+  ],
+  "target_definition": {
+    "source_column": "state",
+    "positive_state": "successful",
+    "encoding": "successful -> 1, failed -> 0",
+    "decided_states": [
+      "successful",
+      "failed"
+    ]
+  },
+  "missing_strategy": {
+    "numeric_strategy": "median",
+    "categorical_strategy": "mode",
+    "categorical_fill": "Unknown",
+    "text_columns": [
+      "name"
+    ],
+    "text_fill": ""
+  },
+  "dropped_features": [
+    "ID",
+    "pledged",
+    "usd pledged",
+    "usd_pledged_real",
+    "backers"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "total_rows": 331675,
+  "violations_per_rule": {
+    "V1": 1,
+    "V4": 0,
+    "V5": 0,
+    "V6": 0,
+    "V7": 210,
+    "V2": 92,
+    "V3": 22,
+    "V8": 0
+  },
+  "rows_dropped": 211,
+  "rows_flagged_kept": {
+    "V2": 92,
+    "V3": 22,
+    "V8": 0
+  },
+  "rows_remaining": 331464,
+  "timestamp": "2026-07-24T13:21:54.451113+00:00"
+}
