@@ -1,0 +1,43 @@
+{
+  "blocks": [
+    {
+      "name": "numeric",
+      "n_rows": 265171,
+      "n_cols": 14,
+      "nnz": 3712394,
+      "density": 1.0,
+      "dense_mb": 29.699152,
+      "sparse_mb": 44.548728,
+      "savings": 0.6666666666666667
+    },
+    {
+      "name": "categorical",
+      "n_rows": 265171,
+      "n_cols": 52,
+      "nnz": 1060684,
+      "density": 0.07692307692307693,
+      "dense_mb": 110.311136,
+      "sparse_mb": 13.788896,
+      "savings": 7.999997679292092
+    },
+    {
+      "name": "text",
+      "n_rows": 265171,
+      "n_cols": 800,
+      "nnz": 565970,
+      "density": 0.002667948229632954,
+      "dense_mb": 1697.0944,
+      "sparse_mb": 7.852328,
+      "savings": 216.1262749085367
+    }
+  ],
+  "n_rows": 265171,
+  "total_cols": 866,
+  "total_nnz": 5339048,
+  "combined_density": 0.02324983670173945,
+  "combined_dense_mb": 1837.104688,
+  "combined_sparse_mb": 65.129264,
+  "fusion_format": "csr",
+  "created_utc": "2026-07-25T15:00:06.319531+00:00",
+  "combined_savings": 28.207054328143485
+}

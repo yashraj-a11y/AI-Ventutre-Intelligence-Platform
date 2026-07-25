@@ -108,10 +108,109 @@ logging:
   log_file: "outputs/logs/preprocessing.log"
 
 # =============================================================================
-# RESERVED FOR DAY 3 (Stage 2 — row-preserving feature transforms).
-# Declared here for forward reference only; NOT used by Day 2 Stage-1 pipeline.
+# DAY 3 (Stage 2 — row-preserving feature transforms). Frozen spec V1.2.
+# See docs/day3_roadmap.md. Values corrected from the old `day3_reserved`
+# forward-reference so there is ONE source of truth.
 # =============================================================================
-day3_reserved:
-  scaler: robust                 # RESERVED — Day 3
-  encoding: one_hot              # RESERVED — Day 3
-  tfidf_max_features: 2500       # RESERVED — Day 3
+day3:
+  # --- Phase 0: train/test split (the leakage foundation) --------------------
+  # Fit every downstream transformer on TRAIN ONLY; transform test.
+  split:
+    test_size: 0.2
+    random_state: 42
+    stratify: true               # stratify on target -> preserve ~40/60 balance
+    target_column: target        # Day-2 label (successful=1, failed=0)
+    leak_columns:                # NOT features — removed from X before modeling
+      - state                    # perfect leak: state directly determines target
+    artifacts_dir: artifacts/splits
+
+  # --- Phase A: exploratory feature analysis (train-only) --------------------
+  profiling:
+    skew_threshold: 1.0          # |skew| above this -> recommend log1p
+    onehot_max_cardinality: 25   # <= this -> one-hot; above -> frequency-encode
+    corr_threshold: 0.9          # |corr| above this -> drop one of the pair
+    numeric: [goal, usd_goal_real]
+    categorical: [category, main_category, currency, country]
+    text: name_clean
+    dates: [launched, deadline]
+
+  # --- Phase F: domain feature engineering (pre-launch, leakage-free) ---------
+  # Runs FIRST in the pipeline; creates columns the numeric branch then transforms.
+  feature_builder:
+    launched_col: launched
+    deadline_col: deadline
+    title_col: name              # RAW title (casing/digits are the style signal)
+    goal_col: goal
+    min_duration_days: 1         # guard: clip duration denominator so goal/0 never happens
+
+  # --- Phase G: text preprocessing (Week 1; NLTK path) -----------------------
+  text:
+    input_col: name_clean
+    output_col: name_processed
+    min_token_length: 2
+    remove_stopwords: true
+    lemmatize: true
+    keep_words: []               # domain words to retain despite being stopwords
+
+  # --- Phase H: TF-IDF vectorization (Week 2; fit vocab+idf on TRAIN only) ----
+  tfidf:
+    input_col: name_processed
+    max_features: 800            # titles ~6 words -> 800, NOT 2500
+    ngram_range: [1, 2]          # unigrams + bigrams ("board game")
+    min_df: 2                    # drop terms in <2 docs (hapax noise)
+    max_df: 0.95                 # drop terms in >95% of docs
+    sublinear_tf: false
+
+  # --- Phase J: multi-modal fusion (sparse hstack of the three blocks) --------
+  fusion:
+    order: [text, categorical, numeric]   # column layout of the fused matrix
+
+  # --- Phase K: feature selection (fit on train) -----------------------------
+  selection:
+    variance_threshold: 0.0      # drop (near-)constant columns
+    correlated_pairs: [[goal, usd_goal_real]]   # Phase A: pearson 0.957
+    corr_threshold: 0.9          # drop lower-MI member if |corr| >= this
+    top_k: null                  # null = keep all survivors; else keep top-k by MI
+    mi_subsample: 40000          # rows sampled for mutual-information estimation
+    random_state: 42
+
+  # --- Phase C: numerical transformation -------------------------------------
+  transform:
+    method: log1p                # log1p | yeo-johnson
+    columns: [goal, usd_goal_real, goal_per_day]   # goal_per_day if Phase F built it
+
+  # --- Phase D: outlier treatment (cap/winsorize only — NEVER drop rows) ------
+  outliers:
+    method: iqr                  # iqr | percentile
+    iqr_multiplier: 1.5          # Tukey fences: [Q1 - k*IQR, Q3 + k*IQR]
+    lower_quantile: 0.01         # used when method: percentile
+    upper_quantile: 0.99
+    columns: [goal, usd_goal_real, goal_per_day]
+
+  # --- Phase E: feature scaling (numeric branch; toggle for tree models) ------
+  scaling:
+    method: standard             # standard | robust | minmax | maxabs
+    enabled: true                # false -> pass-through (tree models don't need scaling)
+    columns: &numeric_features   # scale ALL numeric features (log applied only to skewed)
+      - goal
+      - usd_goal_real
+      - goal_per_day
+      - campaign_duration
+      - launch_year
+      - launch_month
+      - launch_weekday
+      - launch_quarter
+      - is_weekend_launch
+      - title_length
+      - word_count
+      - avg_word_length
+      - uppercase_ratio
+      - has_number
+
+  # --- Phase L: pipeline assembly --------------------------------------------
+  numeric_features: *numeric_features   # the numeric block the pipeline slices/fuses
+
+  # --- Phase B: categorical encoding -----------------------------------------
+  encoding:
+    low_cardinality_onehot: [main_category, currency, country]
+    frequency_encode: [category] # 159 levels -> frequency  (was: one_hot all)

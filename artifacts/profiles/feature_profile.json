@@ -1,0 +1,198 @@
+{
+  "n_train": 265171,
+  "numerics": {
+    "goal": {
+      "min": 0.15,
+      "median": 5000.0,
+      "mean": 45316.31675526359,
+      "max": 100000000.0,
+      "skew": 73.12204236089936,
+      "kurtosis": 5918.206760145233,
+      "log_skew": -0.11654806171010962,
+      "log_kurtosis": 1.4001231198816764,
+      "n_zero": 0
+    },
+    "usd_goal_real": {
+      "min": 0.15,
+      "median": 5000.0,
+      "mean": 42677.89131899793,
+      "max": 166361390.71,
+      "skew": 80.88580207258397,
+      "kurtosis": 7589.080171442683,
+      "log_skew": -0.1436645879339486,
+      "log_kurtosis": 1.463019935905328,
+      "n_zero": 0
+    }
+  },
+  "categoricals": {
+    "category": {
+      "cardinality": 159,
+      "top": {
+        "Product Design": 14916,
+        "Documentary": 11619,
+        "Music": 9994,
+        "Tabletop Games": 9418,
+        "Shorts": 9173
+      },
+      "unseen_in_test": 0
+    },
+    "main_category": {
+      "cardinality": 15,
+      "top": {
+        "Film & Video": 45162,
+        "Music": 36633,
+        "Publishing": 28333,
+        "Games": 22878,
+        "Technology": 21646
+      },
+      "unseen_in_test": 0
+    },
+    "currency": {
+      "cardinality": 14,
+      "top": {
+        "USD": 208906,
+        "GBP": 23652,
+        "EUR": 11554,
+        "CAD": 9873,
+        "AUD": 5339
+      },
+      "unseen_in_test": 0
+    },
+    "country": {
+      "cardinality": 22,
+      "top": {
+        "US": 208906,
+        "GB": 23652,
+        "CA": 9873,
+        "AU": 5339,
+        "DE": 2750
+      },
+      "unseen_in_test": 0
+    }
+  },
+  "correlations": [
+    {
+      "pair": [
+        "goal",
+        "usd_goal_real"
+      ],
+      "pearson": 0.9567487713826119,
+      "spearman": 0.9814195853453556
+    }
+  ],
+  "text": {
+    "column": "name_clean",
+    "word_count": {
+      "mean": 5.628730140173699,
+      "median": 5.0,
+      "p95": 10.0,
+      "max": 27
+    },
+    "char_length": {
+      "mean": 33.04040411658892,
+      "median": 32.0,
+      "p95": 57.0,
+      "max": 85
+    },
+    "n_empty": 4
+  },
+  "dates": {
+    "campaign_duration": {
+      "min": 0.0,
+      "median": 29.0,
+      "mean": 32.94841819052611,
+      "p95": 59.0,
+      "max": 91.0,
+      "skew": 1.251646558995507,
+      "n_nonpositive": 74
+    },
+    "n_unparseable": 0
+  },
+  "recommendations": [
+    {
+      "feature": "goal",
+      "transform": "log1p",
+      "reason": "heavy right skew (73.1) collapses to -0.12 under log1p",
+      "evidence": {
+        "skew": 73.12204236089936,
+        "log_skew": -0.11654806171010962
+      }
+    },
+    {
+      "feature": "usd_goal_real",
+      "transform": "log1p",
+      "reason": "heavy right skew (80.9) collapses to -0.14 under log1p",
+      "evidence": {
+        "skew": 80.88580207258397,
+        "log_skew": -0.1436645879339486
+      }
+    },
+    {
+      "feature": "category",
+      "transform": "frequency_encode",
+      "reason": "high cardinality (159 > 25); one-hot would explode width",
+      "evidence": {
+        "cardinality": 159
+      }
+    },
+    {
+      "feature": "main_category",
+      "transform": "one_hot",
+      "reason": "low cardinality (15 <= 25)",
+      "evidence": {
+        "cardinality": 15
+      }
+    },
+    {
+      "feature": "currency",
+      "transform": "one_hot",
+      "reason": "low cardinality (14 <= 25)",
+      "evidence": {
+        "cardinality": 14
+      }
+    },
+    {
+      "feature": "country",
+      "transform": "one_hot",
+      "reason": "low cardinality (22 <= 25)",
+      "evidence": {
+        "cardinality": 22
+      }
+    },
+    {
+      "feature": "goal|usd_goal_real",
+      "transform": "drop_one_of_pair",
+      "reason": "near-collinear (pearson 0.957); keep one",
+      "evidence": {
+        "pearson": 0.9567487713826119,
+        "spearman": 0.9814195853453556
+      }
+    },
+    {
+      "feature": "name_clean",
+      "transform": "tfidf_small_vocab",
+      "reason": "short titles (~5.6 words); cap TF-IDF features low (~800) with (1,2)-grams, not 2500",
+      "evidence": {
+        "mean_words": 5.628730140173699,
+        "p95_words": 10.0
+      }
+    },
+    {
+      "feature": "campaign_duration",
+      "transform": "engineer_from_dates",
+      "reason": "derive (deadline - launched).days + temporal parts (year/month/weekday)",
+      "evidence": {
+        "median_days": 29.0
+      }
+    },
+    {
+      "feature": "goal_per_day",
+      "transform": "guard_divide_by_zero",
+      "reason": "74 row(s) have duration <= 0; goal/duration would divide by zero \u2014 clip denominator to >= 1",
+      "evidence": {
+        "n_nonpositive_duration": 74
+      }
+    }
+  ],
+  "created_utc": "2026-07-25T14:10:55.318014+00:00"
+}

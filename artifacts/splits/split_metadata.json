@@ -1,0 +1,50 @@
+{
+  "created_utc": "2026-07-25T16:23:44.710146+00:00",
+  "config_version": "1.2.0",
+  "n_total": 331464,
+  "n_train": 265171,
+  "n_test": 66293,
+  "test_size": 0.2,
+  "random_state": 42,
+  "stratify": true,
+  "target_column": "target",
+  "dropped_from_features": [
+    "target",
+    "state"
+  ],
+  "feature_columns": [
+    "name",
+    "category",
+    "main_category",
+    "currency",
+    "deadline",
+    "goal",
+    "launched",
+    "country",
+    "usd_goal_real",
+    "name_clean"
+  ],
+  "class_balance": {
+    "overall": {
+      "counts": {
+        "0": 197614,
+        "1": 133850
+      },
+      "positive_rate": 0.403815
+    },
+    "train": {
+      "counts": {
+        "0": 158091,
+        "1": 107080
+      },
+      "positive_rate": 0.403815
+    },
+    "test": {
+      "counts": {
+        "0": 39523,
+        "1": 26770
+      },
+      "positive_rate": 0.403813
+    }
+  }
+}
