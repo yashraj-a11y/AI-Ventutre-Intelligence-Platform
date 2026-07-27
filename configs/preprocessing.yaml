@@ -214,3 +214,82 @@ day3:
   encoding:
     low_cardinality_onehot: [main_category, currency, country]
     frequency_encode: [category] # 159 levels -> frequency  (was: one_hot all)
+
+
+# =============================================================================
+# DAY 4 — Prediction Engine (Architecture Layer 4). See docs/day4_roadmap.md.
+# =============================================================================
+day4:
+  # --- Phase B: validation-from-train split (test set is untouched holdout) ---
+  split:
+    fused_dir: artifacts/fused_features
+    val_size: 0.2                # fraction of TRAIN carved off for validation
+    n_splits: 5                  # stratified k-fold for tuning/calibration
+    random_state: 42
+
+  # --- Phase C: Logistic Regression baseline (mandatory Week 6) ---------------
+  logreg:
+    penalties: [l2, l1, elasticnet]   # L2 mandatory; L1 + ElasticNet for comparison
+    C: 1.0                       # inverse regularization strength
+    l1_ratio: 0.5                # ElasticNet mix (0=L2 .. 1=L1)
+    solver: saga                 # only saga does L1/ElasticNet on large sparse data
+    max_iter: 1000
+    class_weight: null           # null | balanced (for the 40/60 imbalance)
+    random_state: 42
+    feature_names_path: artifacts/feature_pipeline/feature_metadata.json
+
+  # --- Phase D: classical ML benchmarking ------------------------------------
+  benchmark:
+    models: [random_forest, extra_trees, xgboost, lightgbm, hist_gradient_boosting]
+    n_estimators: 200            # trees / boosting rounds
+    n_jobs: -1
+    random_state: 42
+    report_path: docs/day4_benchmark_report.md
+    json_path: artifacts/evaluations/benchmark.json
+
+  # --- Phase E: hyperparameter optimization ----------------------------------
+  tuning:
+    model: lightgbm              # tune the Phase-D winner
+    n_iter: 25                   # RandomizedSearchCV candidates
+    cv: 3                        # stratified folds (3 to bound runtime)
+    scoring: average_precision   # PR-AUC (primary metric)
+    random_state: 42
+    best_config_path: artifacts/models/best_config.json
+
+  # --- Phase F: probability calibration --------------------------------------
+  calibration:
+    methods: [sigmoid, isotonic] # Platt (sigmoid) + Isotonic
+    cv: 5                        # internal CV for cross-fitted calibration (on fit set)
+    n_bins: 10                   # reliability-curve bins
+    plot_path: artifacts/evaluations/calibration_curve.png
+    model_path: artifacts/models/calibrated_model.joblib
+
+  # --- Phase G: venture scores (honesty tiers) -------------------------------
+  venture_scores:
+    readiness_high: 0.66         # calibrated p >= this -> "High"
+    readiness_medium: 0.40       # >= this -> "Medium"; else "Low"
+    # Scores with NO data basis in this dataset — never fabricated, returned as deferred.
+    deferred: [founder_strength, market_fit, business_model, scalability, growth_potential]
+
+  # --- Phase H: prediction engine (raw campaign -> full prediction) -----------
+  prediction_engine:
+    pipeline_path: artifacts/feature_pipeline/feature_pipeline.joblib
+    model_path: artifacts/models/calibrated_model.joblib
+    calibration_path: artifacts/evaluations/calibration.json   # source of the F1-optimal threshold
+    threshold: null              # null -> load F1-optimal from calibration.json; else a float
+
+  # --- Phase I: model serialization & versioning -----------------------------
+  serialization:
+    version: "1.0.0"
+    model_dir: artifacts/models
+    metadata_path: artifacts/models/model_metadata.json
+    feature_pipeline_path: artifacts/feature_pipeline/feature_pipeline.joblib
+    dataset_path: data/processed/kickstarter_processed.csv
+
+  # --- Phase J: final evaluation on the untouched TEST set (scored ONCE) ------
+  evaluation:
+    model_path: artifacts/models/calibrated_model.joblib
+    plots_dir: artifacts/evaluations
+    report_path: docs/day4_model_report.md
+    benchmark_json: artifacts/evaluations/benchmark.json
+    calibration_json: artifacts/evaluations/calibration.json

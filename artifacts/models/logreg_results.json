@@ -1,0 +1,122 @@
+{
+  "logreg_l2": {
+    "metrics": {
+      "accuracy": 0.6768,
+      "precision": 0.6291,
+      "recall": 0.4864,
+      "f1": 0.5486,
+      "roc_auc": 0.7269,
+      "pr_auc": 0.6264
+    },
+    "train_time_s": 30.2,
+    "n_nonzero_coef": 865,
+    "params": {
+      "penalty": "l2",
+      "C": 1.0
+    }
+  },
+  "logreg_l1": {
+    "metrics": {
+      "accuracy": 0.6769,
+      "precision": 0.6293,
+      "recall": 0.4862,
+      "f1": 0.5486,
+      "roc_auc": 0.7269,
+      "pr_auc": 0.6264
+    },
+    "train_time_s": 246.9,
+    "n_nonzero_coef": 824,
+    "params": {
+      "penalty": "l1",
+      "C": 1.0
+    }
+  },
+  "logreg_elasticnet": {
+    "metrics": {
+      "accuracy": 0.6765,
+      "precision": 0.6286,
+      "recall": 0.4861,
+      "f1": 0.5482,
+      "roc_auc": 0.7269,
+      "pr_auc": 0.6264
+    },
+    "train_time_s": 323.0,
+    "n_nonzero_coef": 841,
+    "params": {
+      "penalty": "elasticnet",
+      "C": 1.0,
+      "l1_ratio": 0.5
+    }
+  },
+  "dummy_majority": {
+    "metrics": {
+      "accuracy": 0.5962,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "pr_auc": 0.4038
+    },
+    "train_time_s": 0.0,
+    "n_nonzero_coef": null,
+    "params": {
+      "strategy": "most_frequent"
+    }
+  },
+  "_context": {
+    "nir_accuracy": 0.5962,
+    "base_rate": 0.4038,
+    "best_by_pr_auc": "logreg_l2",
+    "top_l2_coef": [
+      [
+        "category_freq",
+        5.9563427118292855
+      ],
+      [
+        "youtube",
+        -2.9015203773867415
+      ],
+      [
+        "new record",
+        2.1167459298805835
+      ],
+      [
+        "miniature",
+        2.0500617735182427
+      ],
+      [
+        "hip hop",
+        -1.9652813901486785
+      ],
+      [
+        "burning man",
+        1.956371602526104
+      ],
+      [
+        "thesis",
+        1.9086043790064922
+      ],
+      [
+        "titanium",
+        1.7875065611231653
+      ],
+      [
+        "art book",
+        1.7695787402947034
+      ],
+      [
+        "post production",
+        1.7287487684484353
+      ],
+      [
+        "residency",
+        1.727192540870438
+      ],
+      [
+        "brewing",
+        1.6923045518794948
+      ]
+    ],
+    "total_time_s": 600.5
+  }
+}

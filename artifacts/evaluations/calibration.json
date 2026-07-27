@@ -1,0 +1,29 @@
+{
+  "best_method": "sigmoid",
+  "threshold": {
+    "f1_optimal": 0.329,
+    "f1_at_optimal": 0.6681,
+    "recall_at_optimal": 0.817,
+    "f1_at_0.5": 0.6162,
+    "recall_at_0.5": 0.5762
+  },
+  "plot": "artifacts/evaluations/calibration_curve.png",
+  "total_time_s": 128.7,
+  "results": {
+    "uncalibrated": {
+      "brier": 0.1875,
+      "roc_auc": 0.7759,
+      "pr_auc": 0.6876
+    },
+    "sigmoid": {
+      "brier": 0.1872,
+      "roc_auc": 0.7767,
+      "pr_auc": 0.6884
+    },
+    "isotonic": {
+      "brier": 0.1872,
+      "roc_auc": 0.7766,
+      "pr_auc": 0.6881
+    }
+  }
+}

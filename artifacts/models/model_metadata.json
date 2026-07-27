@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "created_utc": "2026-07-27T07:59:38.385029+00:00",
+  "task": "binary classification \u2014 Kickstarter funding success",
+  "model": {
+    "type": "LightGBM (tuned) + CalibratedClassifierCV",
+    "calibration_method": "sigmoid",
+    "hyperparameters": {
+      "subsample": 0.7,
+      "scale_pos_weight": 1.0,
+      "reg_lambda": 1.0,
+      "reg_alpha": 0.1,
+      "num_leaves": 127,
+      "n_estimators": 300,
+      "min_child_samples": 50,
+      "max_depth": -1,
+      "learning_rate": 0.05,
+      "colsample_bytree": 0.8
+    },
+    "artifact": "artifacts/models/calibrated_model.joblib",
+    "sha256": "dde1cdef14554bc57482ce98a985851b02e926cd2dca115cb0ca4423efa3e677"
+  },
+  "decision_threshold": 0.329,
+  "validation_metrics": {
+    "tuned_cv_pr_auc": 0.6872,
+    "calibrated_val": {
+      "brier": 0.1872,
+      "roc_auc": 0.7767,
+      "pr_auc": 0.6884
+    }
+  },
+  "feature_pipeline": {
+    "artifact": "artifacts/feature_pipeline/feature_pipeline.joblib",
+    "sha256": "d27e8ae58ccb5a1d0d20f36c921fc88c5baad0cb17a43b7ee10b1d75007ab629",
+    "note": "model MUST be served with this exact pipeline (train/serve parity)"
+  },
+  "dataset": {
+    "artifact": "data/processed/kickstarter_processed.csv",
+    "sha256": "90bf582925cd1b87d40bd859cfdb73acbd811431b87519d32f954c7171e38c30"
+  },
+  "environment": {
+    "python": "3.14.2",
+    "sklearn": "1.9.0",
+    "lightgbm": "4.7.0"
+  }
+}
