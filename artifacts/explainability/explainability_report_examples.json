@@ -1,0 +1,636 @@
+[
+  {
+    "funding_probability": 0.2166,
+    "predicted_label": "failed",
+    "decision_threshold": 0.329,
+    "scores": {
+      "funding_probability": {
+        "value": 0.2166,
+        "scale": "0-1",
+        "status": "derived",
+        "basis": "calibrated model output"
+      },
+      "failure_risk": {
+        "value": 0.7834,
+        "scale": "0-1",
+        "status": "derived",
+        "basis": "1 - funding_probability"
+      },
+      "startup_score": {
+        "value": 22,
+        "scale": "0-100",
+        "status": "derived",
+        "basis": "100 * funding_probability"
+      },
+      "investment_score": {
+        "value": 22,
+        "scale": "0-100",
+        "status": "derived",
+        "basis": "100 * funding_probability"
+      },
+      "investment_readiness": {
+        "value": "Low",
+        "scale": "band",
+        "status": "derived",
+        "basis": "band(p): High>=0.66, Medium>=0.4"
+      },
+      "founder_strength": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      },
+      "market_fit": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      },
+      "business_model": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      },
+      "scalability": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      },
+      "growth_potential": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      }
+    },
+    "local_explanation": {
+      "funding_probability": 0.2166,
+      "predicted_label": "failed",
+      "decision_threshold": 0.329,
+      "base_value": -0.6985,
+      "margin": -1.3315,
+      "top_positive": [
+        {
+          "feature": "campaign_duration",
+          "group": "tabular",
+          "contribution": 0.4541,
+          "feature_value": -1.0192,
+          "descriptor": "campaign_duration"
+        },
+        {
+          "feature": "category_freq",
+          "group": "tabular",
+          "contribution": 0.1812,
+          "feature_value": 0.0377,
+          "descriptor": "category_freq"
+        },
+        {
+          "feature": "title_length",
+          "group": "tabular",
+          "contribution": 0.116,
+          "feature_value": 0.737,
+          "descriptor": "title_length"
+        },
+        {
+          "feature": "word_count",
+          "group": "tabular",
+          "contribution": 0.1151,
+          "feature_value": 0.4966,
+          "descriptor": "word_count"
+        },
+        {
+          "feature": "uppercase_ratio",
+          "group": "tabular",
+          "contribution": 0.061,
+          "feature_value": 0.271,
+          "descriptor": "uppercase_ratio"
+        },
+        {
+          "feature": "currency_EUR",
+          "group": "tabular",
+          "contribution": 0.0251,
+          "feature_value": 0.0,
+          "descriptor": "currency_EUR"
+        },
+        {
+          "feature": "main_category_Music",
+          "group": "tabular",
+          "contribution": 0.0188,
+          "feature_value": 1.0,
+          "descriptor": "main_category_Music"
+        },
+        {
+          "feature": "avg_word_length",
+          "group": "tabular",
+          "contribution": 0.0169,
+          "feature_value": 0.088,
+          "descriptor": "avg_word_length"
+        }
+      ],
+      "top_negative": [
+        {
+          "feature": "usd_goal_real",
+          "group": "tabular",
+          "contribution": -0.3766,
+          "feature_value": 0.9945,
+          "descriptor": "usd_goal_real"
+        },
+        {
+          "feature": "fashion",
+          "group": "text",
+          "contribution": -0.3596,
+          "feature_value": 0.5316,
+          "descriptor": "title term 'fashion'"
+        },
+        {
+          "feature": "music",
+          "group": "text",
+          "contribution": -0.2723,
+          "feature_value": 0.4094,
+          "descriptor": "title term 'music'"
+        },
+        {
+          "feature": "launch_weekday",
+          "group": "tabular",
+          "contribution": -0.1801,
+          "feature_value": 1.4622,
+          "descriptor": "launch_weekday"
+        },
+        {
+          "feature": "goal_per_day",
+          "group": "tabular",
+          "contribution": -0.1383,
+          "feature_value": 0.9926,
+          "descriptor": "goal_per_day"
+        },
+        {
+          "feature": "art",
+          "group": "text",
+          "contribution": -0.1214,
+          "feature_value": 0.3902,
+          "descriptor": "title term 'art'"
+        },
+        {
+          "feature": "currency_USD",
+          "group": "tabular",
+          "contribution": -0.0665,
+          "feature_value": 0.0,
+          "descriptor": "currency_USD"
+        },
+        {
+          "feature": "launch_year",
+          "group": "tabular",
+          "contribution": -0.0554,
+          "feature_value": 0.4252,
+          "descriptor": "launch_year"
+        }
+      ],
+      "additivity_error": 1.1221780393810832e-08,
+      "honesty_note": "Factors are real campaign features (goal, category, timing, title words) the model learned to associate with funding \u2014 not causal levers or founder/market signals (the dataset has none). Probability is calibrated; contributions explain the log-odds.",
+      "scores": {
+        "funding_probability": {
+          "value": 0.2166,
+          "scale": "0-1",
+          "status": "derived",
+          "basis": "calibrated model output"
+        },
+        "failure_risk": {
+          "value": 0.7834,
+          "scale": "0-1",
+          "status": "derived",
+          "basis": "1 - funding_probability"
+        },
+        "startup_score": {
+          "value": 22,
+          "scale": "0-100",
+          "status": "derived",
+          "basis": "100 * funding_probability"
+        },
+        "investment_score": {
+          "value": 22,
+          "scale": "0-100",
+          "status": "derived",
+          "basis": "100 * funding_probability"
+        },
+        "investment_readiness": {
+          "value": "Low",
+          "scale": "band",
+          "status": "derived",
+          "basis": "band(p): High>=0.66, Medium>=0.4"
+        },
+        "founder_strength": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "market_fit": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "business_model": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "scalability": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "growth_potential": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        }
+      }
+    },
+    "readable": {
+      "funding_probability": 0.2166,
+      "predicted_label": "failed",
+      "decision_threshold": 0.329,
+      "explanation_text": "This campaign is predicted failed, with a 22% chance of funding.\nFactors raising its odds: a short campaign length; a typical project category; a long title length; a high title word count.\nFactors lowering its odds: a large funding goal; the title term 'fashion'; the title term 'music'; the launch day of the week.\nNote: these are patterns the model learned to associate with funding from campaign metadata and title text \u2014 not guaranteed causes of success.",
+      "positive_factors": [
+        "a short campaign length",
+        "a typical project category",
+        "a long title length",
+        "a high title word count"
+      ],
+      "negative_factors": [
+        "a large funding goal",
+        "the title term 'fashion'",
+        "the title term 'music'",
+        "the launch day of the week"
+      ],
+      "honesty_note": "these are patterns the model learned to associate with funding from campaign metadata and title text \u2014 not guaranteed causes of success"
+    },
+    "brief": {
+      "headline": "Low investment readiness \u2014 22% modeled funding chance (failed).",
+      "funding_probability": 0.2166,
+      "predicted_label": "failed",
+      "investment_readiness": "Low",
+      "strengths": [
+        "A short campaign length",
+        "A typical project category",
+        "A long title length",
+        "A high title word count"
+      ],
+      "weaknesses": [
+        "A large funding goal",
+        "The title term 'fashion'",
+        "The title term 'music'",
+        "The launch day of the week"
+      ],
+      "risks": [
+        "Modeled funding risk: 78% chance this campaign does not fund.",
+        "A large funding goal is weighing the model's estimate down.",
+        "The title term 'fashion' is weighing the model's estimate down."
+      ],
+      "score_explanations": {
+        "funding_probability": "Calibrated 0.2166 probability of funding if the campaign runs to completion (basis: calibrated model output).",
+        "startup_score": "Startup score 22/100, a rescale of funding probability (basis: 100 * funding_probability).",
+        "investment_readiness": "Investment readiness: Low (basis: band(p): High>=0.66, Medium>=0.4).",
+        "failure_risk": "Failure risk 0.7834, the complement of funding probability (basis: 1 - funding_probability)."
+      },
+      "deferred": {
+        "market_analysis": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+        },
+        "competitor_analysis": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+        },
+        "founder_intelligence": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+        },
+        "market_opportunities": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+        }
+      },
+      "honesty_note": "Factors are real campaign features (goal, category, timing, title words) the model learned to associate with funding \u2014 not causal levers or founder/market signals (the dataset has none). Probability is calibrated; contributions explain the log-odds."
+    },
+    "meta": {
+      "base_value": -0.6985,
+      "margin": -1.3315,
+      "shap_additivity_error": 1.1221780393810832e-08,
+      "shap_space": "log_odds_margin (calibration is a monotone squash on top)"
+    }
+  },
+  {
+    "funding_probability": 0.0892,
+    "predicted_label": "failed",
+    "decision_threshold": 0.329,
+    "scores": {
+      "funding_probability": {
+        "value": 0.0892,
+        "scale": "0-1",
+        "status": "derived",
+        "basis": "calibrated model output"
+      },
+      "failure_risk": {
+        "value": 0.9108,
+        "scale": "0-1",
+        "status": "derived",
+        "basis": "1 - funding_probability"
+      },
+      "startup_score": {
+        "value": 9,
+        "scale": "0-100",
+        "status": "derived",
+        "basis": "100 * funding_probability"
+      },
+      "investment_score": {
+        "value": 9,
+        "scale": "0-100",
+        "status": "derived",
+        "basis": "100 * funding_probability"
+      },
+      "investment_readiness": {
+        "value": "Low",
+        "scale": "band",
+        "status": "derived",
+        "basis": "band(p): High>=0.66, Medium>=0.4"
+      },
+      "founder_strength": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      },
+      "market_fit": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      },
+      "business_model": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      },
+      "scalability": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      },
+      "growth_potential": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      }
+    },
+    "local_explanation": {
+      "funding_probability": 0.0892,
+      "predicted_label": "failed",
+      "decision_threshold": 0.329,
+      "base_value": -0.6985,
+      "margin": -2.1328,
+      "top_positive": [
+        {
+          "feature": "currency_USD",
+          "group": "tabular",
+          "contribution": 0.0293,
+          "feature_value": 1.0,
+          "descriptor": "currency_USD"
+        },
+        {
+          "feature": "main_category_Technology",
+          "group": "tabular",
+          "contribution": 0.0258,
+          "feature_value": 0.0,
+          "descriptor": "main_category_Technology"
+        },
+        {
+          "feature": "youtube",
+          "group": "text",
+          "contribution": 0.0172,
+          "feature_value": 0.0,
+          "descriptor": "title term 'youtube' (absent)"
+        },
+        {
+          "feature": "uppercase_ratio",
+          "group": "tabular",
+          "contribution": 0.0142,
+          "feature_value": -0.3222,
+          "descriptor": "uppercase_ratio"
+        },
+        {
+          "feature": "currency_EUR",
+          "group": "tabular",
+          "contribution": 0.0141,
+          "feature_value": 0.0,
+          "descriptor": "currency_EUR"
+        },
+        {
+          "feature": "start",
+          "group": "text",
+          "contribution": 0.0135,
+          "feature_value": 0.0,
+          "descriptor": "title term 'start' (absent)"
+        },
+        {
+          "feature": "main_category_Fashion",
+          "group": "tabular",
+          "contribution": 0.0132,
+          "feature_value": 0.0,
+          "descriptor": "main_category_Fashion"
+        },
+        {
+          "feature": "launch_weekday",
+          "group": "tabular",
+          "contribution": 0.0109,
+          "feature_value": -0.2392,
+          "descriptor": "launch_weekday"
+        }
+      ],
+      "top_negative": [
+        {
+          "feature": "main_category_Crafts",
+          "group": "tabular",
+          "contribution": -0.5367,
+          "feature_value": 1.0,
+          "descriptor": "main_category_Crafts"
+        },
+        {
+          "feature": "word_count",
+          "group": "tabular",
+          "contribution": -0.2568,
+          "feature_value": -0.9542,
+          "descriptor": "word_count"
+        },
+        {
+          "feature": "launch_year",
+          "group": "tabular",
+          "contribution": -0.2467,
+          "feature_value": 0.4252,
+          "descriptor": "launch_year"
+        },
+        {
+          "feature": "category_freq",
+          "group": "tabular",
+          "contribution": -0.2001,
+          "feature_value": 0.0125,
+          "descriptor": "category_freq"
+        },
+        {
+          "feature": "title_length",
+          "group": "tabular",
+          "contribution": -0.1542,
+          "feature_value": -0.8287,
+          "descriptor": "title_length"
+        },
+        {
+          "feature": "campaign_duration",
+          "group": "tabular",
+          "contribution": -0.1262,
+          "feature_value": -0.3108,
+          "descriptor": "campaign_duration"
+        },
+        {
+          "feature": "main_category_Film & Video",
+          "group": "tabular",
+          "contribution": -0.0621,
+          "feature_value": 0.0,
+          "descriptor": "main_category_Film & Video"
+        },
+        {
+          "feature": "has_number",
+          "group": "tabular",
+          "contribution": -0.0239,
+          "feature_value": -0.3497,
+          "descriptor": "has_number"
+        }
+      ],
+      "additivity_error": 1.1221780393810832e-08,
+      "honesty_note": "Factors are real campaign features (goal, category, timing, title words) the model learned to associate with funding \u2014 not causal levers or founder/market signals (the dataset has none). Probability is calibrated; contributions explain the log-odds.",
+      "scores": {
+        "funding_probability": {
+          "value": 0.0892,
+          "scale": "0-1",
+          "status": "derived",
+          "basis": "calibrated model output"
+        },
+        "failure_risk": {
+          "value": 0.9108,
+          "scale": "0-1",
+          "status": "derived",
+          "basis": "1 - funding_probability"
+        },
+        "startup_score": {
+          "value": 9,
+          "scale": "0-100",
+          "status": "derived",
+          "basis": "100 * funding_probability"
+        },
+        "investment_score": {
+          "value": 9,
+          "scale": "0-100",
+          "status": "derived",
+          "basis": "100 * funding_probability"
+        },
+        "investment_readiness": {
+          "value": "Low",
+          "scale": "band",
+          "status": "derived",
+          "basis": "band(p): High>=0.66, Medium>=0.4"
+        },
+        "founder_strength": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "market_fit": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "business_model": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "scalability": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "growth_potential": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        }
+      }
+    },
+    "readable": {
+      "funding_probability": 0.0892,
+      "predicted_label": "failed",
+      "decision_threshold": 0.329,
+      "explanation_text": "This campaign is predicted failed, with a 9% chance of funding.\nFactors raising its odds: raising funds in USD; not being a Technology project; the absence of the title term 'youtube'; a typical use of capital letters in the title.\nFactors lowering its odds: being a Crafts project; a low title word count; a recent launch year; a typical project category.\nNote: these are patterns the model learned to associate with funding from campaign metadata and title text \u2014 not guaranteed causes of success.",
+      "positive_factors": [
+        "raising funds in USD",
+        "not being a Technology project",
+        "the absence of the title term 'youtube'",
+        "a typical use of capital letters in the title"
+      ],
+      "negative_factors": [
+        "being a Crafts project",
+        "a low title word count",
+        "a recent launch year",
+        "a typical project category"
+      ],
+      "honesty_note": "these are patterns the model learned to associate with funding from campaign metadata and title text \u2014 not guaranteed causes of success"
+    },
+    "brief": {
+      "headline": "Low investment readiness \u2014 9% modeled funding chance (failed).",
+      "funding_probability": 0.0892,
+      "predicted_label": "failed",
+      "investment_readiness": "Low",
+      "strengths": [
+        "Raising funds in USD",
+        "Not being a Technology project",
+        "The absence of the title term 'youtube'",
+        "A typical use of capital letters in the title"
+      ],
+      "weaknesses": [
+        "Being a Crafts project",
+        "A low title word count",
+        "A recent launch year",
+        "A typical project category"
+      ],
+      "risks": [
+        "Modeled funding risk: 91% chance this campaign does not fund.",
+        "Being a Crafts project is weighing the model's estimate down.",
+        "A low title word count is weighing the model's estimate down."
+      ],
+      "score_explanations": {
+        "funding_probability": "Calibrated 0.0892 probability of funding if the campaign runs to completion (basis: calibrated model output).",
+        "startup_score": "Startup score 9/100, a rescale of funding probability (basis: 100 * funding_probability).",
+        "investment_readiness": "Investment readiness: Low (basis: band(p): High>=0.66, Medium>=0.4).",
+        "failure_risk": "Failure risk 0.9108, the complement of funding probability (basis: 1 - funding_probability)."
+      },
+      "deferred": {
+        "market_analysis": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+        },
+        "competitor_analysis": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+        },
+        "founder_intelligence": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+        },
+        "market_opportunities": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+        }
+      },
+      "honesty_note": "Factors are real campaign features (goal, category, timing, title words) the model learned to associate with funding \u2014 not causal levers or founder/market signals (the dataset has none). Probability is calibrated; contributions explain the log-odds."
+    },
+    "meta": {
+      "base_value": -0.6985,
+      "margin": -2.1328,
+      "shap_additivity_error": 1.1221780393810832e-08,
+      "shap_space": "log_odds_margin (calibration is a monotone squash on top)"
+    }
+  }
+]

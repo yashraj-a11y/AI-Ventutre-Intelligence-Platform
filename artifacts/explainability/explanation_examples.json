@@ -1,0 +1,116 @@
+[
+  {
+    "funding_probability": 0.0401,
+    "predicted_label": "failed",
+    "decision_threshold": 0.329,
+    "explanation_text": "This campaign is predicted failed, with a 4% chance of funding.\nFactors raising its odds: being a Theater project; the launch month; the title term 'simple'; not raising funds in EUR.\nFactors lowering its odds: a large funding goal; a steep daily funding target; the title term 'life'; a light use of capital letters in the title.\nNote: these are patterns the model learned to associate with funding from campaign metadata and title text \u2014 not guaranteed causes of success.",
+    "positive_factors": [
+      "being a Theater project",
+      "the launch month",
+      "the title term 'simple'",
+      "not raising funds in EUR"
+    ],
+    "negative_factors": [
+      "a large funding goal",
+      "a steep daily funding target",
+      "the title term 'life'",
+      "a light use of capital letters in the title"
+    ],
+    "honesty_note": "these are patterns the model learned to associate with funding from campaign metadata and title text \u2014 not guaranteed causes of success"
+  },
+  {
+    "funding_probability": 0.1484,
+    "predicted_label": "failed",
+    "decision_threshold": 0.329,
+    "explanation_text": "This campaign is predicted failed, with a 15% chance of funding.\nFactors raising its odds: being an Art project; a typical funding goal; not being a Technology project; not raising funds in EUR.\nFactors lowering its odds: the title term 'music'; a recent launch year; not raising funds in USD; a short title length.\nNote: these are patterns the model learned to associate with funding from campaign metadata and title text \u2014 not guaranteed causes of success.",
+    "positive_factors": [
+      "being an Art project",
+      "a typical funding goal",
+      "not being a Technology project",
+      "not raising funds in EUR"
+    ],
+    "negative_factors": [
+      "the title term 'music'",
+      "a recent launch year",
+      "not raising funds in USD",
+      "a short title length"
+    ],
+    "honesty_note": "these are patterns the model learned to associate with funding from campaign metadata and title text \u2014 not guaranteed causes of success"
+  },
+  {
+    "funding_probability": 0.3243,
+    "predicted_label": "failed",
+    "decision_threshold": 0.329,
+    "explanation_text": "This campaign is predicted failed, with a 32% chance of funding.\nFactors raising its odds: the title term 'bicycle'; the title term 'book'; an earlier launch year; a typical use of capital letters in the title.\nFactors lowering its odds: the launch month; being a Publishing project; a typical project category; not raising funds in USD.\nNote: these are patterns the model learned to associate with funding from campaign metadata and title text \u2014 not guaranteed causes of success.",
+    "positive_factors": [
+      "the title term 'bicycle'",
+      "the title term 'book'",
+      "an earlier launch year",
+      "a typical use of capital letters in the title"
+    ],
+    "negative_factors": [
+      "the launch month",
+      "being a Publishing project",
+      "a typical project category",
+      "not raising funds in USD"
+    ],
+    "honesty_note": "these are patterns the model learned to associate with funding from campaign metadata and title text \u2014 not guaranteed causes of success"
+  },
+  {
+    "funding_probability": 0.4549,
+    "predicted_label": "successful",
+    "decision_threshold": 0.329,
+    "explanation_text": "This campaign is predicted successful, with a 45% chance of funding.\nFactors raising its odds: a short campaign length; the title term 'bag'; the launch day of the week; a large funding goal.\nFactors lowering its odds: being a Fashion project; a typical launch year; a typical title length; a steep daily funding target.\nNote: these are patterns the model learned to associate with funding from campaign metadata and title text \u2014 not guaranteed causes of success.",
+    "positive_factors": [
+      "a short campaign length",
+      "the title term 'bag'",
+      "the launch day of the week",
+      "a large funding goal"
+    ],
+    "negative_factors": [
+      "being a Fashion project",
+      "a typical launch year",
+      "a typical title length",
+      "a steep daily funding target"
+    ],
+    "honesty_note": "these are patterns the model learned to associate with funding from campaign metadata and title text \u2014 not guaranteed causes of success"
+  },
+  {
+    "funding_probability": 0.5837,
+    "predicted_label": "successful",
+    "decision_threshold": 0.329,
+    "explanation_text": "This campaign is predicted successful, with a 58% chance of funding.\nFactors raising its odds: the title term 'brewing'; a high title word count; a long title length; the title term 'co'.\nFactors lowering its odds: the title term 'true'; a typical project category; the title term 'project'; a recent launch year.\nNote: these are patterns the model learned to associate with funding from campaign metadata and title text \u2014 not guaranteed causes of success.",
+    "positive_factors": [
+      "the title term 'brewing'",
+      "a high title word count",
+      "a long title length",
+      "the title term 'co'"
+    ],
+    "negative_factors": [
+      "the title term 'true'",
+      "a typical project category",
+      "the title term 'project'",
+      "a recent launch year"
+    ],
+    "honesty_note": "these are patterns the model learned to associate with funding from campaign metadata and title text \u2014 not guaranteed causes of success"
+  },
+  {
+    "funding_probability": 0.8769,
+    "predicted_label": "successful",
+    "decision_threshold": 0.329,
+    "explanation_text": "This campaign is predicted successful, with a 88% chance of funding.\nFactors raising its odds: being a Theater project; the title term 'fringe'; a modest funding goal; a short campaign length.\nFactors lowering its odds: a recent launch year; a short title length; a low title word count; not raising funds in USD.\nNote: these are patterns the model learned to associate with funding from campaign metadata and title text \u2014 not guaranteed causes of success.",
+    "positive_factors": [
+      "being a Theater project",
+      "the title term 'fringe'",
+      "a modest funding goal",
+      "a short campaign length"
+    ],
+    "negative_factors": [
+      "a recent launch year",
+      "a short title length",
+      "a low title word count",
+      "not raising funds in USD"
+    ],
+    "honesty_note": "these are patterns the model learned to associate with funding from campaign metadata and title text \u2014 not guaranteed causes of success"
+  }
+]

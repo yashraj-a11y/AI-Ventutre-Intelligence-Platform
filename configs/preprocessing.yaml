@@ -293,3 +293,79 @@ day4:
     report_path: docs/day4_model_report.md
     benchmark_json: artifacts/evaluations/benchmark.json
     calibration_json: artifacts/evaluations/calibration.json
+
+# ============================================================================
+# Day 5 — Explainability Engine (Layer 5, Week 7)
+# ============================================================================
+day5:
+  # --- Phase B: global feature importance (gain + split + mean|SHAP|) ---------
+  global_importance:
+    fused_dir: artifacts/fused_features
+    model_path: artifacts/models/best_model.joblib          # base LightGBM (SHAP-able)
+    feature_meta_path: artifacts/feature_pipeline/feature_metadata.json
+    shap_subsample: 2000         # densified rows for mean|SHAP| (never 66k x 865)
+    shap_background: 100         # background rows for INTERVENTIONAL TreeSHAP (masker default)
+    shap_additivity_tol: 0.001   # max |expected+Σshap - margin| allowed (correctness guard)
+    random_state: 42
+    top_k: 50
+    out_dir: artifacts/explainability
+    csv_path: artifacts/explainability/global_importance.csv
+    report_path: docs/day5_global_importance_report.md
+
+  # --- Phase C: logistic-regression coefficient analysis (mandatory Week 7) ---
+  coefficient_analysis:
+    model_path: artifacts/models/logistic_regression.joblib   # L2 LogReg (white-box)
+    feature_meta_path: artifacts/feature_pipeline/feature_metadata.json
+    global_importance_csv: artifacts/explainability/global_importance.csv  # for cross-model agreement
+    top_k: 25                    # top +/- coefficients to tabulate
+    agreement_top_n: 20          # top-N overlap between |coef| and mean|SHAP|
+    out_dir: artifacts/explainability
+    csv_path: artifacts/explainability/coefficients.csv
+    report_path: docs/day5_coefficient_report.md
+
+  # --- Phase D: SHAP explainability engine (base LightGBM, interventional) -----
+  shap:
+    model_path: artifacts/models/best_model.joblib   # base tuned LightGBM (SHAP-able)
+    fused_dir: artifacts/fused_features
+    feature_meta_path: artifacts/feature_pipeline/feature_metadata.json
+    subsample: 2000              # rows to explain for global/summary (densified ~13MB)
+    background: 100              # interventional reference sample (masker default)
+    additivity_tol: 0.001        # correctness guard on expected+Σshap ≈ margin
+    random_state: 42
+    out_path: artifacts/explainability/shap_values.pkl
+
+  # --- Phase E: local (per-campaign) explanation ------------------------------
+  local:
+    top_k: 8                     # top +/- real-feature contributions to surface
+    examples_path: artifacts/explainability/local_explanation_examples.json
+
+  # --- Phase F: feature-importance visualizations (mandatory Week 7) -----------
+  visualization:
+    out_dir: artifacts/visualizations
+    global_importance_csv: artifacts/explainability/global_importance.csv
+    coefficients_csv: artifacts/explainability/coefficients.csv
+    shap_values_pkl: artifacts/explainability/shap_values.pkl
+    fused_dir: artifacts/fused_features
+    top_n: 20                    # bars/beeswarm show top-N features
+    waterfall_row: 0             # which subsample row to draw a waterfall for
+    dpi: 130
+
+  # --- Phase G: human-readable explanation generator --------------------------
+  explanation:
+    max_factors: 4               # how many +/- factors to verbalize per campaign
+    z_high: 0.4                  # |standardized value| above this -> "high"/"low"
+    n_examples: 6                # campaigns to verbalize for the deliverable
+    examples_path: artifacts/explainability/explanation_examples.json
+
+  # --- Phase H: Venture Copilot (honesty-tiered advisory layer) ----------------
+  copilot:
+    max_factors: 4               # real-feature strengths/weaknesses to surface
+    n_examples: 4                # campaigns to brief for the deliverable
+    briefs_path: artifacts/explainability/copilot_briefs.json
+
+  # --- Phase I: end-to-end explainability pipeline (raw -> full bundle) --------
+  pipeline:
+    top_k_global: 15             # top features in the global-context summary
+    global_importance_csv: artifacts/explainability/global_importance.csv
+    coefficients_csv: artifacts/explainability/coefficients.csv
+    report_path: artifacts/explainability/explainability_report_examples.json

@@ -1,0 +1,194 @@
+[
+  {
+    "headline": "Low investment readiness \u2014 3% modeled funding chance (failed).",
+    "funding_probability": 0.0344,
+    "predicted_label": "failed",
+    "investment_readiness": "Low",
+    "strengths": [
+      "The launch day of the week",
+      "A heavy use of capital letters in the title",
+      "A recent launch year",
+      "The launch month"
+    ],
+    "weaknesses": [
+      "A large funding goal",
+      "Being a Food project",
+      "A steep daily funding target",
+      "Raising funds in EUR"
+    ],
+    "risks": [
+      "Modeled funding risk: 97% chance this campaign does not fund.",
+      "A large funding goal is weighing the model's estimate down.",
+      "Being a Food project is weighing the model's estimate down."
+    ],
+    "score_explanations": {
+      "funding_probability": "Calibrated 0.0344 probability of funding if the campaign runs to completion (basis: calibrated model output).",
+      "startup_score": "Startup score 3/100, a rescale of funding probability (basis: 100 * funding_probability).",
+      "investment_readiness": "Investment readiness: Low (basis: band(p): High>=0.66, Medium>=0.4).",
+      "failure_risk": "Failure risk 0.9656, the complement of funding probability (basis: 1 - funding_probability)."
+    },
+    "deferred": {
+      "market_analysis": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+      },
+      "competitor_analysis": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+      },
+      "founder_intelligence": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+      },
+      "market_opportunities": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+      }
+    },
+    "honesty_note": "Factors are real campaign features (goal, category, timing, title words) the model learned to associate with funding \u2014 not causal levers or founder/market signals (the dataset has none). Probability is calibrated; contributions explain the log-odds."
+  },
+  {
+    "headline": "Low investment readiness \u2014 29% modeled funding chance (failed).",
+    "funding_probability": 0.2936,
+    "predicted_label": "failed",
+    "investment_readiness": "Low",
+    "strengths": [
+      "A short campaign length",
+      "A modest funding goal",
+      "A gentle daily funding target",
+      "The launch month"
+    ],
+    "weaknesses": [
+      "Raising funds in EUR",
+      "A typical project category",
+      "A low title word count",
+      "A typical launch year"
+    ],
+    "risks": [
+      "Modeled funding risk: 71% chance this campaign does not fund.",
+      "Raising funds in EUR is weighing the model's estimate down.",
+      "A typical project category is weighing the model's estimate down."
+    ],
+    "score_explanations": {
+      "funding_probability": "Calibrated 0.2936 probability of funding if the campaign runs to completion (basis: calibrated model output).",
+      "startup_score": "Startup score 29/100, a rescale of funding probability (basis: 100 * funding_probability).",
+      "investment_readiness": "Investment readiness: Low (basis: band(p): High>=0.66, Medium>=0.4).",
+      "failure_risk": "Failure risk 0.7064, the complement of funding probability (basis: 1 - funding_probability)."
+    },
+    "deferred": {
+      "market_analysis": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+      },
+      "competitor_analysis": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+      },
+      "founder_intelligence": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+      },
+      "market_opportunities": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+      }
+    },
+    "honesty_note": "Factors are real campaign features (goal, category, timing, title words) the model learned to associate with funding \u2014 not causal levers or founder/market signals (the dataset has none). Probability is calibrated; contributions explain the log-odds."
+  },
+  {
+    "headline": "Medium investment readiness \u2014 51% modeled funding chance (successful).",
+    "funding_probability": 0.5058,
+    "predicted_label": "successful",
+    "investment_readiness": "Medium",
+    "strengths": [
+      "A modest funding goal",
+      "A gentle daily funding target",
+      "A number in the title",
+      "A short campaign length"
+    ],
+    "weaknesses": [
+      "A light use of capital letters in the title",
+      "Raising funds in EUR",
+      "A typical project category",
+      "Being based in Spain"
+    ],
+    "risks": [
+      "Modeled funding risk: 49% chance this campaign does not fund.",
+      "A light use of capital letters in the title is weighing the model's estimate down.",
+      "Raising funds in EUR is weighing the model's estimate down."
+    ],
+    "score_explanations": {
+      "funding_probability": "Calibrated 0.5058 probability of funding if the campaign runs to completion (basis: calibrated model output).",
+      "startup_score": "Startup score 51/100, a rescale of funding probability (basis: 100 * funding_probability).",
+      "investment_readiness": "Investment readiness: Medium (basis: band(p): High>=0.66, Medium>=0.4).",
+      "failure_risk": "Failure risk 0.4942, the complement of funding probability (basis: 1 - funding_probability)."
+    },
+    "deferred": {
+      "market_analysis": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+      },
+      "competitor_analysis": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+      },
+      "founder_intelligence": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+      },
+      "market_opportunities": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+      }
+    },
+    "honesty_note": "Factors are real campaign features (goal, category, timing, title words) the model learned to associate with funding \u2014 not causal levers or founder/market signals (the dataset has none). Probability is calibrated; contributions explain the log-odds."
+  },
+  {
+    "headline": "High investment readiness \u2014 81% modeled funding chance (successful).",
+    "funding_probability": 0.808,
+    "predicted_label": "successful",
+    "investment_readiness": "High",
+    "strengths": [
+      "A typical project category",
+      "A modest funding goal",
+      "Being a Music project",
+      "An earlier launch year"
+    ],
+    "weaknesses": [
+      "A typical campaign length",
+      "The absence of the title term 'film'",
+      "The absence of the title term 'album'",
+      "The absence of the title term 'pen'"
+    ],
+    "risks": [
+      "Modeled funding risk: 19% chance this campaign does not fund.",
+      "A typical campaign length is weighing the model's estimate down.",
+      "The absence of the title term 'film' is weighing the model's estimate down."
+    ],
+    "score_explanations": {
+      "funding_probability": "Calibrated 0.808 probability of funding if the campaign runs to completion (basis: calibrated model output).",
+      "startup_score": "Startup score 81/100, a rescale of funding probability (basis: 100 * funding_probability).",
+      "investment_readiness": "Investment readiness: High (basis: band(p): High>=0.66, Medium>=0.4).",
+      "failure_risk": "Failure risk 0.192, the complement of funding probability (basis: 1 - funding_probability)."
+    },
+    "deferred": {
+      "market_analysis": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+      },
+      "competitor_analysis": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+      },
+      "founder_intelligence": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+      },
+      "market_opportunities": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no market / competitor / founder / team signals) \u2014 awaits Layers 2\u20133 (retrieval + richer data); not fabricated"
+      }
+    },
+    "honesty_note": "Factors are real campaign features (goal, category, timing, title words) the model learned to associate with funding \u2014 not causal levers or founder/market signals (the dataset has none). Probability is calibrated; contributions explain the log-odds."
+  }
+]

@@ -1,0 +1,366 @@
+[
+  {
+    "funding_probability": 0.8769,
+    "predicted_label": "successful",
+    "decision_threshold": 0.329,
+    "base_value": -0.6985,
+    "margin": 1.8693,
+    "top_positive": [
+      {
+        "feature": "main_category_Theater",
+        "group": "tabular",
+        "contribution": 0.7384,
+        "feature_value": 1.0,
+        "descriptor": "main_category_Theater"
+      },
+      {
+        "feature": "fringe",
+        "group": "text",
+        "contribution": 0.4832,
+        "feature_value": 1.0,
+        "descriptor": "title term 'fringe'"
+      },
+      {
+        "feature": "usd_goal_real",
+        "group": "tabular",
+        "contribution": 0.4663,
+        "feature_value": -0.7869,
+        "descriptor": "usd_goal_real"
+      },
+      {
+        "feature": "campaign_duration",
+        "group": "tabular",
+        "contribution": 0.4151,
+        "feature_value": -0.5469,
+        "descriptor": "campaign_duration"
+      },
+      {
+        "feature": "category_freq",
+        "group": "tabular",
+        "contribution": 0.2986,
+        "feature_value": 0.0023,
+        "descriptor": "category_freq"
+      },
+      {
+        "feature": "goal_per_day",
+        "group": "tabular",
+        "contribution": 0.2203,
+        "feature_value": -0.9771,
+        "descriptor": "goal_per_day"
+      },
+      {
+        "feature": "uppercase_ratio",
+        "group": "tabular",
+        "contribution": 0.1487,
+        "feature_value": 0.604,
+        "descriptor": "uppercase_ratio"
+      },
+      {
+        "feature": "currency_GBP",
+        "group": "tabular",
+        "contribution": 0.0861,
+        "feature_value": 1.0,
+        "descriptor": "currency_GBP"
+      }
+    ],
+    "top_negative": [
+      {
+        "feature": "launch_year",
+        "group": "tabular",
+        "contribution": -0.3006,
+        "feature_value": 0.4252,
+        "descriptor": "launch_year"
+      },
+      {
+        "feature": "title_length",
+        "group": "tabular",
+        "contribution": -0.0936,
+        "feature_value": -0.6408,
+        "descriptor": "title_length"
+      },
+      {
+        "feature": "word_count",
+        "group": "tabular",
+        "contribution": -0.0894,
+        "feature_value": -0.5915,
+        "descriptor": "word_count"
+      },
+      {
+        "feature": "currency_USD",
+        "group": "tabular",
+        "contribution": -0.0539,
+        "feature_value": 0.0,
+        "descriptor": "currency_USD"
+      },
+      {
+        "feature": "country_US",
+        "group": "tabular",
+        "contribution": -0.0129,
+        "feature_value": 0.0,
+        "descriptor": "country_US"
+      },
+      {
+        "feature": "has_number",
+        "group": "tabular",
+        "contribution": -0.0117,
+        "feature_value": -0.3497,
+        "descriptor": "has_number"
+      },
+      {
+        "feature": "main_category_Film & Video",
+        "group": "tabular",
+        "contribution": -0.01,
+        "feature_value": 0.0,
+        "descriptor": "main_category_Film & Video"
+      },
+      {
+        "feature": "album",
+        "group": "text",
+        "contribution": -0.0081,
+        "feature_value": 0.0,
+        "descriptor": "title term 'album' (absent)"
+      }
+    ],
+    "additivity_error": 4.047765012060722e-08,
+    "honesty_note": "Factors are real campaign features (goal, category, timing, title words) the model learned to associate with funding \u2014 not causal levers or founder/market signals (the dataset has none). Probability is calibrated; contributions explain the log-odds.",
+    "scores": {
+      "funding_probability": {
+        "value": 0.8769,
+        "scale": "0-1",
+        "status": "derived",
+        "basis": "calibrated model output"
+      },
+      "failure_risk": {
+        "value": 0.1231,
+        "scale": "0-1",
+        "status": "derived",
+        "basis": "1 - funding_probability"
+      },
+      "startup_score": {
+        "value": 88,
+        "scale": "0-100",
+        "status": "derived",
+        "basis": "100 * funding_probability"
+      },
+      "investment_score": {
+        "value": 88,
+        "scale": "0-100",
+        "status": "derived",
+        "basis": "100 * funding_probability"
+      },
+      "investment_readiness": {
+        "value": "High",
+        "scale": "band",
+        "status": "derived",
+        "basis": "band(p): High>=0.66, Medium>=0.4"
+      },
+      "founder_strength": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      },
+      "market_fit": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      },
+      "business_model": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      },
+      "scalability": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      },
+      "growth_potential": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      }
+    }
+  },
+  {
+    "funding_probability": 0.0401,
+    "predicted_label": "failed",
+    "decision_threshold": 0.329,
+    "base_value": -0.6985,
+    "margin": -2.8325,
+    "top_positive": [
+      {
+        "feature": "main_category_Theater",
+        "group": "tabular",
+        "contribution": 0.4428,
+        "feature_value": 1.0,
+        "descriptor": "main_category_Theater"
+      },
+      {
+        "feature": "launch_month",
+        "group": "tabular",
+        "contribution": 0.0432,
+        "feature_value": -0.4281,
+        "descriptor": "launch_month"
+      },
+      {
+        "feature": "simple",
+        "group": "text",
+        "contribution": 0.0363,
+        "feature_value": 0.8144,
+        "descriptor": "title term 'simple'"
+      },
+      {
+        "feature": "currency_EUR",
+        "group": "tabular",
+        "contribution": 0.0191,
+        "feature_value": 0.0,
+        "descriptor": "currency_EUR"
+      },
+      {
+        "feature": "youtube",
+        "group": "text",
+        "contribution": 0.0146,
+        "feature_value": 0.0,
+        "descriptor": "title term 'youtube' (absent)"
+      },
+      {
+        "feature": "currency_USD",
+        "group": "tabular",
+        "contribution": 0.0141,
+        "feature_value": 1.0,
+        "descriptor": "currency_USD"
+      },
+      {
+        "feature": "main_category_Food",
+        "group": "tabular",
+        "contribution": 0.0129,
+        "feature_value": 0.0,
+        "descriptor": "main_category_Food"
+      },
+      {
+        "feature": "main_category_Crafts",
+        "group": "tabular",
+        "contribution": 0.0126,
+        "feature_value": 0.0,
+        "descriptor": "main_category_Crafts"
+      }
+    ],
+    "top_negative": [
+      {
+        "feature": "usd_goal_real",
+        "group": "tabular",
+        "contribution": -1.0874,
+        "feature_value": 1.6606,
+        "descriptor": "usd_goal_real"
+      },
+      {
+        "feature": "goal_per_day",
+        "group": "tabular",
+        "contribution": -0.3596,
+        "feature_value": 1.7166,
+        "descriptor": "goal_per_day"
+      },
+      {
+        "feature": "life",
+        "group": "text",
+        "contribution": -0.3373,
+        "feature_value": 0.5803,
+        "descriptor": "title term 'life'"
+      },
+      {
+        "feature": "uppercase_ratio",
+        "group": "tabular",
+        "contribution": -0.2698,
+        "feature_value": -0.7158,
+        "descriptor": "uppercase_ratio"
+      },
+      {
+        "feature": "word_count",
+        "group": "tabular",
+        "contribution": -0.2106,
+        "feature_value": -0.9542,
+        "descriptor": "word_count"
+      },
+      {
+        "feature": "title_length",
+        "group": "tabular",
+        "contribution": -0.1828,
+        "feature_value": -1.2671,
+        "descriptor": "title_length"
+      },
+      {
+        "feature": "category_freq",
+        "group": "tabular",
+        "contribution": -0.1254,
+        "feature_value": 0.004,
+        "descriptor": "category_freq"
+      },
+      {
+        "feature": "campaign_duration",
+        "group": "tabular",
+        "contribution": -0.0558,
+        "feature_value": -0.3108,
+        "descriptor": "campaign_duration"
+      }
+    ],
+    "additivity_error": 4.047765012060722e-08,
+    "honesty_note": "Factors are real campaign features (goal, category, timing, title words) the model learned to associate with funding \u2014 not causal levers or founder/market signals (the dataset has none). Probability is calibrated; contributions explain the log-odds.",
+    "scores": {
+      "funding_probability": {
+        "value": 0.0401,
+        "scale": "0-1",
+        "status": "derived",
+        "basis": "calibrated model output"
+      },
+      "failure_risk": {
+        "value": 0.9599,
+        "scale": "0-1",
+        "status": "derived",
+        "basis": "1 - funding_probability"
+      },
+      "startup_score": {
+        "value": 4,
+        "scale": "0-100",
+        "status": "derived",
+        "basis": "100 * funding_probability"
+      },
+      "investment_score": {
+        "value": 4,
+        "scale": "0-100",
+        "status": "derived",
+        "basis": "100 * funding_probability"
+      },
+      "investment_readiness": {
+        "value": "Low",
+        "scale": "band",
+        "status": "derived",
+        "basis": "band(p): High>=0.66, Medium>=0.4"
+      },
+      "founder_strength": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      },
+      "market_fit": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      },
+      "business_model": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      },
+      "scalability": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      },
+      "growth_potential": {
+        "value": null,
+        "status": "deferred",
+        "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+      }
+    }
+  }
+]
