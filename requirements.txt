@@ -149,3 +149,8 @@ webencodings==0.5.1
 websocket-client==1.9.0
 widgetsnbextension==4.0.15
 wrapt==2.2.2
+# Day-6 semantic retrieval (Layer 2/3): SBERT embeddings + FAISS vector DB.
+# sentence-transformers pulls torch (large). Model all-MiniLM-L6-v2 downloads from HuggingFace.
+faiss-cpu==1.14.3
+sentence-transformers==5.6.1
+torch==2.13.0

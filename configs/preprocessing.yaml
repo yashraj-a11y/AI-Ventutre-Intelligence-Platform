@@ -369,3 +369,76 @@ day5:
     global_importance_csv: artifacts/explainability/global_importance.csv
     coefficients_csv: artifacts/explainability/coefficients.csv
     report_path: artifacts/explainability/explainability_report_examples.json
+
+# ============================================================================
+# Day 6 — Venture Knowledge Base & Semantic Retrieval (Layers 2/3)
+# ============================================================================
+day6:
+  # --- Phase B: venture knowledge base (train-split historical records) --------
+  knowledge_base:
+    processed_path: data/processed/kickstarter_processed.csv
+    split_dir: artifacts/splits
+    use_split: train             # build KB from TRAIN rows only (leakage-free)
+    subsample: null              # null = all train (265k); else an int for fast dev
+    random_state: 42
+    out_dir: artifacts/embeddings
+    metadata_csv: artifacts/embeddings/metadata.csv     # full table (pyarrow absent -> csv)
+    manifest_path: artifacts/embeddings/metadata.json   # compact schema + summary + samples
+
+  # --- Phase C: SBERT embedding generation (dense semantic vectors) ------------
+  embedding:
+    model_name: all-MiniLM-L6-v2   # SBERT primary, 384-dim, lightweight
+    batch_size: 256
+    normalize: true                # L2-normalize -> cosine == dot product (FAISS IP)
+    device: cpu                    # matches benchmark; override to mps/cuda if available
+    out_dir: artifacts/embeddings
+    embeddings_path: artifacts/embeddings/startup_embeddings.npy
+    model_info_path: artifacts/embeddings/embedding_model.json
+    # NB: no independent subsample here — embeddings must stay row-aligned with the
+    # Phase-B metadata. For fast dev, set day6.knowledge_base.subsample instead.
+
+  # --- Phase D: FAISS vector database (exact cosine via inner product) ---------
+  vector_db:
+    index_type: flat_ip          # IndexFlatIP on normalized vectors = exact cosine
+    embeddings_path: artifacts/embeddings/startup_embeddings.npy
+    model_info_path: artifacts/embeddings/embedding_model.json
+    metadata_csv: artifacts/embeddings/metadata.csv
+    out_dir: artifacts/vector_db
+    index_path: artifacts/vector_db/faiss.index
+    mapping_path: artifacts/vector_db/mapping.json
+
+  # --- Phase E: semantic search engine (query -> ranked similar campaigns) -----
+  semantic_search:
+    metadata_csv: artifacts/embeddings/metadata.csv
+    default_k: 5
+    pool_factor: 20              # over-fetch k*this when filtering/excluding
+    min_pool: 300                # minimum over-fetch pool
+
+  # --- Phase F: historical venture retriever (Layer-3 core) --------------------
+  venture_retriever:
+    k: 5                         # neighbors surfaced per list
+    benchmark_pool: 50           # nearest neighbors used for funding benchmark + kNN prior
+    examples_path: artifacts/retrieval/retrieval_examples.json
+
+  # --- Phase G: retrieval evidence generator (structured + readable) -----------
+  evidence:
+    n_examples: 4
+    prior_model_agree_tol: 0.1   # |kNN prior - model prob| <= this => "corroborates"
+    examples_path: artifacts/retrieval/evidence_examples.json
+
+  # --- Phase H: venture intelligence pipeline (prediction + evidence) ----------
+  pipeline:
+    attach_prediction: true      # attach Day-4 calibrated probability alongside evidence
+    n_examples: 3
+    report_path: artifacts/retrieval/intelligence_report_examples.json
+
+  # --- Phase I: knowledge base serialization (versioned, tamper-evident) -------
+  serialization:
+    version: "1.0.0"
+    manifest_path: artifacts/vector_db/knowledge_base_manifest.json
+    artifacts:
+      embeddings: artifacts/embeddings/startup_embeddings.npy
+      faiss_index: artifacts/vector_db/faiss.index
+      metadata_csv: artifacts/embeddings/metadata.csv
+      mapping: artifacts/vector_db/mapping.json
+      embedding_model_json: artifacts/embeddings/embedding_model.json

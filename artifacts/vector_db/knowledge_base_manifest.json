@@ -1,0 +1,86 @@
+{
+  "version": "1.0.0",
+  "created_utc": "2026-07-29T10:41:51.530559+00:00",
+  "architecture_layers": [
+    2,
+    3
+  ],
+  "embedding_model": {
+    "model_name": "all-MiniLM-L6-v2",
+    "sentence_transformers_version": "5.6.1",
+    "embedding_dim": 384,
+    "n_embeddings": 265171,
+    "normalized": true,
+    "dtype": "float32",
+    "sha256": "2231e134f779ff0f2b879256282ff1f86b9bf027b77426435db977daaee7825a",
+    "created_utc": "2026-07-29T07:30:07.636081+00:00"
+  },
+  "corpus": {
+    "split": "train",
+    "n_records": 265171,
+    "success_rate": 0.4038,
+    "n_main_category": 15,
+    "n_category": 159,
+    "n_country": 22
+  },
+  "index": {
+    "index_type": "flat_ip",
+    "metric": "cosine (inner product on L2-normalized vectors)",
+    "n_vectors": 265171,
+    "dim": 384,
+    "embeddings_sha256": "2231e134f779ff0f2b879256282ff1f86b9bf027b77426435db977daaee7825a"
+  },
+  "retrieval_config": {
+    "embedding": {
+      "model_name": "all-MiniLM-L6-v2",
+      "batch_size": 256,
+      "normalize": true
+    },
+    "semantic_search": {
+      "default_k": 5,
+      "pool_factor": 20,
+      "min_pool": 300
+    },
+    "venture_retriever": {
+      "k": 5,
+      "benchmark_pool": 50
+    }
+  },
+  "artifacts": {
+    "embeddings": {
+      "path": "artifacts/embeddings/startup_embeddings.npy",
+      "exists": true,
+      "bytes": 407302784,
+      "sha256": "30d5a2837458a01901a60881b45077e6e234a4cae4c1160bb9302b72a945a76b"
+    },
+    "faiss_index": {
+      "path": "artifacts/vector_db/faiss.index",
+      "exists": true,
+      "bytes": 407302701,
+      "sha256": "85caaf8dbbd07813efd1aa4afd0532981c87e4d30f82806cdafc85a12e8b2886"
+    },
+    "metadata_csv": {
+      "path": "artifacts/embeddings/metadata.csv",
+      "exists": true,
+      "bytes": 73864989,
+      "sha256": "9a89cb125c58b43b59bc30e38b242e9d96dae64fc96f00632a0d872276838fdb"
+    },
+    "mapping": {
+      "path": "artifacts/vector_db/mapping.json",
+      "exists": true,
+      "bytes": 2032923,
+      "sha256": "c6e78fc8c3d95e37bd12d112daf707e434f251a3c0dc8a1a4fb750012063ef8a"
+    },
+    "embedding_model_json": {
+      "path": "artifacts/embeddings/embedding_model.json",
+      "exists": true,
+      "bytes": 309,
+      "sha256": "6620403ea1c2e82e8e52b9164f5defe012fe9b69a82cdff4e66467e0bc3867dc"
+    }
+  },
+  "deferred_capabilities": [
+    "similar founders / founder benchmarks \u2014 no founder or team data in this dataset",
+    "market / competitor benchmarks \u2014 no market data",
+    "valuation / exit history retrieval \u2014 not present"
+  ]
+}

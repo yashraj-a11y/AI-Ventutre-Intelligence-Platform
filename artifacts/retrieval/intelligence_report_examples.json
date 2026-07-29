@@ -1,0 +1,464 @@
+[
+  {
+    "query": {
+      "name": "(Thanksgiving Challenge) Thanksgiving (Thanks4giving)",
+      "category": "Hip-Hop",
+      "main_category": "Music",
+      "country": "US",
+      "usd_goal_real": 5000.0
+    },
+    "prediction": {
+      "funding_probability": 0.1781,
+      "predicted_label": "failed",
+      "decision_threshold": 0.329,
+      "scores": {
+        "funding_probability": {
+          "value": 0.1781,
+          "scale": "0-1",
+          "status": "derived",
+          "basis": "calibrated model output"
+        },
+        "failure_risk": {
+          "value": 0.8219,
+          "scale": "0-1",
+          "status": "derived",
+          "basis": "1 - funding_probability"
+        },
+        "startup_score": {
+          "value": 18,
+          "scale": "0-100",
+          "status": "derived",
+          "basis": "100 * funding_probability"
+        },
+        "investment_score": {
+          "value": 18,
+          "scale": "0-100",
+          "status": "derived",
+          "basis": "100 * funding_probability"
+        },
+        "investment_readiness": {
+          "value": "Low",
+          "scale": "band",
+          "status": "derived",
+          "basis": "band(p): High>=0.66, Medium>=0.4"
+        },
+        "founder_strength": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "market_fit": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "business_model": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "scalability": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "growth_potential": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        }
+      }
+    },
+    "evidence": {
+      "n_retrieved": 50,
+      "n_funded": 17,
+      "n_failed": 33,
+      "retrieval_prior": 0.34,
+      "model_probability": 0.1781,
+      "prior_vs_model": "is more optimistic than the model",
+      "dominant_category": "Food",
+      "dominant_country": "US",
+      "funding_pattern": {
+        "successful_median_goal_usd": 3500.0,
+        "failed_median_goal_usd": 3700.0,
+        "success_goal_band": "a small goal",
+        "failure_goal_band": "a small goal",
+        "query_goal_usd": 5000.0,
+        "query_vs_successful_median": "above"
+      },
+      "category_benchmark": {
+        "main_category": "Music",
+        "n_in_category": 36633,
+        "success_rate": 0.5276,
+        "median_goal_successful_usd": 3200.0,
+        "median_goal_failed_usd": 5000.0,
+        "query_goal_usd": 5000.0,
+        "query_goal_vs_successful_median": "above"
+      },
+      "examples": {
+        "successful": [
+          {
+            "title": "Thanksgiving",
+            "similarity": 0.8205,
+            "outcome": "successful",
+            "reason": "same country (US), similar goal size (a modest goal)"
+          },
+          {
+            "title": "Thanksgiving: A Family History",
+            "similarity": 0.8001,
+            "outcome": "successful",
+            "reason": "same category group (Music), same country (US)"
+          }
+        ],
+        "failed": [
+          {
+            "title": "This Thanksgiving (First Commercial Mainstream Song about the Holiday)",
+            "similarity": 0.8221,
+            "outcome": "failed",
+            "reason": "same category (Hip-Hop), same country (US)"
+          },
+          {
+            "title": "Thanksgiving Dinner For Everyone",
+            "similarity": 0.7398,
+            "outcome": "failed",
+            "reason": "same country (US)"
+          }
+        ]
+      },
+      "deferred": {
+        "founder_benchmark": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+        },
+        "market_benchmark": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+        },
+        "valuation_benchmark": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+        },
+        "exit_benchmark": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+        }
+      },
+      "honesty_caption": "Historical outcomes of similar past campaigns \u2014 context for, not proof of, this campaign's result. Based on campaign metadata and titles only (no founder / market / financial data).",
+      "evidence_text": "Retrieved 50 similar past campaigns: 17 funded (34%) \u2014 a retrieval-based estimate of this campaign's funding chance. Similar campaigns that funded typically sought a small goal (median $3,500); those that failed sought a small goal (median $3,700). This campaign's $5,000 goal is above the funded median. Across the Music category overall, 53% of campaigns fund. The prediction model estimates 18%; retrieved evidence is more optimistic than the model. Note: Historical outcomes of similar past campaigns \u2014 context for, not proof of, this campaign's result. Based on campaign metadata and titles only (no founder / market / financial data)."
+    },
+    "meta": {
+      "has_prediction": true,
+      "kb": "train-only (non-circular)",
+      "retrieval_prior": 0.34,
+      "prior_vs_model": "is more optimistic than the model"
+    }
+  },
+  {
+    "query": {
+      "name": "\"THE VIGIL\" \u2014 a documentary film",
+      "category": "Documentary",
+      "main_category": "Film & Video",
+      "country": "US",
+      "usd_goal_real": 4200.0
+    },
+    "prediction": {
+      "funding_probability": 0.7774,
+      "predicted_label": "successful",
+      "decision_threshold": 0.329,
+      "scores": {
+        "funding_probability": {
+          "value": 0.7774,
+          "scale": "0-1",
+          "status": "derived",
+          "basis": "calibrated model output"
+        },
+        "failure_risk": {
+          "value": 0.2226,
+          "scale": "0-1",
+          "status": "derived",
+          "basis": "1 - funding_probability"
+        },
+        "startup_score": {
+          "value": 78,
+          "scale": "0-100",
+          "status": "derived",
+          "basis": "100 * funding_probability"
+        },
+        "investment_score": {
+          "value": 78,
+          "scale": "0-100",
+          "status": "derived",
+          "basis": "100 * funding_probability"
+        },
+        "investment_readiness": {
+          "value": "High",
+          "scale": "band",
+          "status": "derived",
+          "basis": "band(p): High>=0.66, Medium>=0.4"
+        },
+        "founder_strength": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "market_fit": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "business_model": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "scalability": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "growth_potential": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        }
+      }
+    },
+    "evidence": {
+      "n_retrieved": 50,
+      "n_funded": 16,
+      "n_failed": 34,
+      "retrieval_prior": 0.32,
+      "model_probability": 0.7774,
+      "prior_vs_model": "is more cautious than the model",
+      "dominant_category": "Shorts",
+      "dominant_country": "US",
+      "funding_pattern": {
+        "successful_median_goal_usd": 4200.0,
+        "failed_median_goal_usd": 17500.0,
+        "success_goal_band": "a small goal",
+        "failure_goal_band": "a modest goal",
+        "query_goal_usd": 4200.0,
+        "query_vs_successful_median": "at or below"
+      },
+      "category_benchmark": {
+        "main_category": "Film & Video",
+        "n_in_category": 45162,
+        "success_rate": 0.4175,
+        "median_goal_successful_usd": 5000.0,
+        "median_goal_failed_usd": 10000.0,
+        "query_goal_usd": 4200.0,
+        "query_goal_vs_successful_median": "at or below"
+      },
+      "examples": {
+        "successful": [
+          {
+            "title": "The Vigil- Documentary Film",
+            "similarity": 0.9666,
+            "outcome": "successful",
+            "reason": "same category (Documentary), same country (US)"
+          },
+          {
+            "title": "The Vigilante",
+            "similarity": 0.8075,
+            "outcome": "successful",
+            "reason": "same category group (Film & Video), same country (US)"
+          }
+        ],
+        "failed": [
+          {
+            "title": "Vigil Trilogy",
+            "similarity": 0.832,
+            "outcome": "failed",
+            "reason": "same category group (Film & Video), same country (US)"
+          },
+          {
+            "title": "Vigil(anti)",
+            "similarity": 0.828,
+            "outcome": "failed",
+            "reason": "same category group (Film & Video), same country (US), similar goal size (a small goal)"
+          }
+        ]
+      },
+      "deferred": {
+        "founder_benchmark": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+        },
+        "market_benchmark": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+        },
+        "valuation_benchmark": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+        },
+        "exit_benchmark": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+        }
+      },
+      "honesty_caption": "Historical outcomes of similar past campaigns \u2014 context for, not proof of, this campaign's result. Based on campaign metadata and titles only (no founder / market / financial data).",
+      "evidence_text": "Retrieved 50 similar past campaigns: 16 funded (32%) \u2014 a retrieval-based estimate of this campaign's funding chance. Similar campaigns that funded typically sought a small goal (median $4,200); those that failed sought a modest goal (median $17,500). This campaign's $4,200 goal is at or below the funded median. Across the Film & Video category overall, 42% of campaigns fund. The prediction model estimates 78%; retrieved evidence is more cautious than the model. Note: Historical outcomes of similar past campaigns \u2014 context for, not proof of, this campaign's result. Based on campaign metadata and titles only (no founder / market / financial data)."
+    },
+    "meta": {
+      "has_prediction": true,
+      "kb": "train-only (non-circular)",
+      "retrieval_prior": 0.32,
+      "prior_vs_model": "is more cautious than the model"
+    }
+  },
+  {
+    "query": {
+      "name": "\"NIGHT OF THE CLOWNS\" - A Horror Short Film",
+      "category": "Horror",
+      "main_category": "Film & Video",
+      "country": "US",
+      "usd_goal_real": 25000.0
+    },
+    "prediction": {
+      "funding_probability": 0.7186,
+      "predicted_label": "successful",
+      "decision_threshold": 0.329,
+      "scores": {
+        "funding_probability": {
+          "value": 0.7186,
+          "scale": "0-1",
+          "status": "derived",
+          "basis": "calibrated model output"
+        },
+        "failure_risk": {
+          "value": 0.2814,
+          "scale": "0-1",
+          "status": "derived",
+          "basis": "1 - funding_probability"
+        },
+        "startup_score": {
+          "value": 72,
+          "scale": "0-100",
+          "status": "derived",
+          "basis": "100 * funding_probability"
+        },
+        "investment_score": {
+          "value": 72,
+          "scale": "0-100",
+          "status": "derived",
+          "basis": "100 * funding_probability"
+        },
+        "investment_readiness": {
+          "value": "High",
+          "scale": "band",
+          "status": "derived",
+          "basis": "band(p): High>=0.66, Medium>=0.4"
+        },
+        "founder_strength": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "market_fit": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "business_model": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "scalability": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        },
+        "growth_potential": {
+          "value": null,
+          "status": "deferred",
+          "basis": "no data basis in this dataset \u2014 awaits Layer 2/3 (retrieval / richer data)"
+        }
+      }
+    },
+    "evidence": {
+      "n_retrieved": 50,
+      "n_funded": 21,
+      "n_failed": 29,
+      "retrieval_prior": 0.42,
+      "model_probability": 0.7186,
+      "prior_vs_model": "is more cautious than the model",
+      "dominant_category": "Horror",
+      "dominant_country": "US",
+      "funding_pattern": {
+        "successful_median_goal_usd": 3000.0,
+        "failed_median_goal_usd": 3500.0,
+        "success_goal_band": "a small goal",
+        "failure_goal_band": "a small goal",
+        "query_goal_usd": 25000.0,
+        "query_vs_successful_median": "above"
+      },
+      "category_benchmark": {
+        "main_category": "Film & Video",
+        "n_in_category": 45162,
+        "success_rate": 0.4175,
+        "median_goal_successful_usd": 5000.0,
+        "median_goal_failed_usd": 10000.0,
+        "query_goal_usd": 25000.0,
+        "query_goal_vs_successful_median": "above"
+      },
+      "examples": {
+        "successful": [
+          {
+            "title": "Clown Motel - Horror Movie",
+            "similarity": 0.7981,
+            "outcome": "successful",
+            "reason": "same category (Horror), same country (US)"
+          },
+          {
+            "title": "Clown Motel - Horror thriller Movie",
+            "similarity": 0.7874,
+            "outcome": "successful",
+            "reason": "same category (Horror), same country (US)"
+          }
+        ],
+        "failed": [
+          {
+            "title": "Fear The Clowns",
+            "similarity": 0.7525,
+            "outcome": "failed",
+            "reason": "same category group (Film & Video), same country (US)"
+          },
+          {
+            "title": "A Night of Horror",
+            "similarity": 0.7291,
+            "outcome": "failed",
+            "reason": "same country (US)"
+          }
+        ]
+      },
+      "deferred": {
+        "founder_benchmark": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+        },
+        "market_benchmark": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+        },
+        "valuation_benchmark": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+        },
+        "exit_benchmark": {
+          "status": "deferred",
+          "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+        }
+      },
+      "honesty_caption": "Historical outcomes of similar past campaigns \u2014 context for, not proof of, this campaign's result. Based on campaign metadata and titles only (no founder / market / financial data).",
+      "evidence_text": "Retrieved 50 similar past campaigns: 21 funded (42%) \u2014 a retrieval-based estimate of this campaign's funding chance. Similar campaigns that funded typically sought a small goal (median $3,000); those that failed sought a small goal (median $3,500). This campaign's $25,000 goal is above the funded median. Across the Film & Video category overall, 42% of campaigns fund. The prediction model estimates 72%; retrieved evidence is more cautious than the model. Note: Historical outcomes of similar past campaigns \u2014 context for, not proof of, this campaign's result. Based on campaign metadata and titles only (no founder / market / financial data)."
+    },
+    "meta": {
+      "has_prediction": true,
+      "kb": "train-only (non-circular)",
+      "retrieval_prior": 0.42,
+      "prior_vs_model": "is more cautious than the model"
+    }
+  }
+]

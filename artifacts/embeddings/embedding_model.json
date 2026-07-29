@@ -1,0 +1,10 @@
+{
+  "model_name": "all-MiniLM-L6-v2",
+  "sentence_transformers_version": "5.6.1",
+  "embedding_dim": 384,
+  "n_embeddings": 265171,
+  "normalized": true,
+  "dtype": "float32",
+  "sha256": "2231e134f779ff0f2b879256282ff1f86b9bf027b77426435db977daaee7825a",
+  "created_utc": "2026-07-29T07:30:07.636081+00:00"
+}

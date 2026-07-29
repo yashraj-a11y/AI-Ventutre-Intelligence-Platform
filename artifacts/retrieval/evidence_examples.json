@@ -1,0 +1,310 @@
+[
+  {
+    "n_retrieved": 50,
+    "n_funded": 13,
+    "n_failed": 37,
+    "retrieval_prior": 0.26,
+    "model_probability": null,
+    "prior_vs_model": null,
+    "dominant_category": "Art",
+    "dominant_country": "US",
+    "funding_pattern": {
+      "successful_median_goal_usd": 3200.0,
+      "failed_median_goal_usd": 4500.0,
+      "success_goal_band": "a small goal",
+      "failure_goal_band": "a small goal",
+      "query_goal_usd": 600.0,
+      "query_vs_successful_median": "at or below"
+    },
+    "category_benchmark": {
+      "main_category": "Design",
+      "n_in_category": 20294,
+      "success_rate": 0.4156,
+      "median_goal_successful_usd": 7500.0,
+      "median_goal_failed_usd": 13000.0,
+      "query_goal_usd": 600.0,
+      "query_goal_vs_successful_median": "at or below"
+    },
+    "examples": {
+      "successful": [
+        {
+          "title": "The Red Loft Decoration Fund.",
+          "similarity": 1.0,
+          "outcome": "successful",
+          "reason": "same category (Graphic Design), same country (US), similar goal size (a very small goal)"
+        },
+        {
+          "title": "\"Consideration for Imagination\" Loft Wall Project",
+          "similarity": 0.6906,
+          "outcome": "successful",
+          "reason": "same country (US), similar goal size (a very small goal)"
+        }
+      ],
+      "failed": [
+        {
+          "title": "Loft in the Red Zone",
+          "similarity": 0.7905,
+          "outcome": "failed",
+          "reason": "same country (US)"
+        },
+        {
+          "title": "Grand Dad's Loft",
+          "similarity": 0.6911,
+          "outcome": "failed",
+          "reason": "same category group (Design), similar goal size (a very small goal)"
+        }
+      ]
+    },
+    "deferred": {
+      "founder_benchmark": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+      },
+      "market_benchmark": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+      },
+      "valuation_benchmark": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+      },
+      "exit_benchmark": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+      }
+    },
+    "honesty_caption": "Historical outcomes of similar past campaigns \u2014 context for, not proof of, this campaign's result. Based on campaign metadata and titles only (no founder / market / financial data).",
+    "evidence_text": "Retrieved 50 similar past campaigns: 13 funded (26%) \u2014 a retrieval-based estimate of this campaign's funding chance. Similar campaigns that funded typically sought a small goal (median $3,200); those that failed sought a small goal (median $4,500). This campaign's $600 goal is at or below the funded median. Across the Design category overall, 42% of campaigns fund. Note: Historical outcomes of similar past campaigns \u2014 context for, not proof of, this campaign's result. Based on campaign metadata and titles only (no founder / market / financial data)."
+  },
+  {
+    "n_retrieved": 50,
+    "n_funded": 14,
+    "n_failed": 36,
+    "retrieval_prior": 0.28,
+    "model_probability": null,
+    "prior_vs_model": null,
+    "dominant_category": "Shorts",
+    "dominant_country": "US",
+    "funding_pattern": {
+      "successful_median_goal_usd": 6000.0,
+      "failed_median_goal_usd": 6250.0,
+      "success_goal_band": "a modest goal",
+      "failure_goal_band": "a modest goal",
+      "query_goal_usd": 6500.0,
+      "query_vs_successful_median": "above"
+    },
+    "category_benchmark": {
+      "main_category": "Publishing",
+      "n_in_category": 28333,
+      "success_rate": 0.3465,
+      "median_goal_successful_usd": 3000.0,
+      "median_goal_failed_usd": 5000.0,
+      "query_goal_usd": 6500.0,
+      "query_goal_vs_successful_median": "above"
+    },
+    "examples": {
+      "successful": [
+        {
+          "title": "The Cure? Documentary",
+          "similarity": 0.5934,
+          "outcome": "successful",
+          "reason": "same country (US)"
+        },
+        {
+          "title": "The Cure",
+          "similarity": 0.5908,
+          "outcome": "successful",
+          "reason": "same country (US), similar goal size (a modest goal)"
+        }
+      ],
+      "failed": [
+        {
+          "title": "Dream Point - A Doctor's Search for a Cure in the Amazon",
+          "similarity": 1.0,
+          "outcome": "failed",
+          "reason": "same category (Fiction), same country (US), similar goal size (a modest goal)"
+        },
+        {
+          "title": "The Cure",
+          "similarity": 0.6243,
+          "outcome": "failed",
+          "reason": "semantically similar title"
+        }
+      ]
+    },
+    "deferred": {
+      "founder_benchmark": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+      },
+      "market_benchmark": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+      },
+      "valuation_benchmark": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+      },
+      "exit_benchmark": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+      }
+    },
+    "honesty_caption": "Historical outcomes of similar past campaigns \u2014 context for, not proof of, this campaign's result. Based on campaign metadata and titles only (no founder / market / financial data).",
+    "evidence_text": "Retrieved 50 similar past campaigns: 14 funded (28%) \u2014 a retrieval-based estimate of this campaign's funding chance. Similar campaigns that funded typically sought a modest goal (median $6,000); those that failed sought a modest goal (median $6,250). This campaign's $6,500 goal is above the funded median. Across the Publishing category overall, 35% of campaigns fund. Note: Historical outcomes of similar past campaigns \u2014 context for, not proof of, this campaign's result. Based on campaign metadata and titles only (no founder / market / financial data)."
+  },
+  {
+    "n_retrieved": 50,
+    "n_funded": 17,
+    "n_failed": 33,
+    "retrieval_prior": 0.34,
+    "model_probability": null,
+    "prior_vs_model": null,
+    "dominant_category": "Print",
+    "dominant_country": "US",
+    "funding_pattern": {
+      "successful_median_goal_usd": 4000.0,
+      "failed_median_goal_usd": 5500.0,
+      "success_goal_band": "a small goal",
+      "failure_goal_band": "a modest goal",
+      "query_goal_usd": 500.0,
+      "query_vs_successful_median": "at or below"
+    },
+    "category_benchmark": {
+      "main_category": "Journalism",
+      "n_in_category": 3303,
+      "success_rate": 0.2443,
+      "median_goal_successful_usd": 3000.0,
+      "median_goal_failed_usd": 5000.0,
+      "query_goal_usd": 500.0,
+      "query_goal_vs_successful_median": "at or below"
+    },
+    "examples": {
+      "successful": [
+        {
+          "title": "A NewsHound's Guide to Student Journalism",
+          "similarity": 0.8136,
+          "outcome": "successful",
+          "reason": "same category (Print), same country (US)"
+        },
+        {
+          "title": "Sharing Voices; Getting from There to Here",
+          "similarity": 0.7682,
+          "outcome": "successful",
+          "reason": "same category (Print), same country (US)"
+        }
+      ],
+      "failed": [
+        {
+          "title": "School Newspaper",
+          "similarity": 1.0,
+          "outcome": "failed",
+          "reason": "same category (Print), same country (US), similar goal size (a very small goal)"
+        },
+        {
+          "title": "Kids Can Read",
+          "similarity": 0.8204,
+          "outcome": "failed",
+          "reason": "same category (Print), same country (US)"
+        }
+      ]
+    },
+    "deferred": {
+      "founder_benchmark": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+      },
+      "market_benchmark": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+      },
+      "valuation_benchmark": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+      },
+      "exit_benchmark": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+      }
+    },
+    "honesty_caption": "Historical outcomes of similar past campaigns \u2014 context for, not proof of, this campaign's result. Based on campaign metadata and titles only (no founder / market / financial data).",
+    "evidence_text": "Retrieved 50 similar past campaigns: 17 funded (34%) \u2014 a retrieval-based estimate of this campaign's funding chance. Similar campaigns that funded typically sought a small goal (median $4,000); those that failed sought a modest goal (median $5,500). This campaign's $500 goal is at or below the funded median. Across the Journalism category overall, 24% of campaigns fund. Note: Historical outcomes of similar past campaigns \u2014 context for, not proof of, this campaign's result. Based on campaign metadata and titles only (no founder / market / financial data)."
+  },
+  {
+    "n_retrieved": 50,
+    "n_funded": 34,
+    "n_failed": 16,
+    "retrieval_prior": 0.68,
+    "model_probability": null,
+    "prior_vs_model": null,
+    "dominant_category": "Performances",
+    "dominant_country": "US",
+    "funding_pattern": {
+      "successful_median_goal_usd": 3000.0,
+      "failed_median_goal_usd": 3658.89,
+      "success_goal_band": "a small goal",
+      "failure_goal_band": "a small goal",
+      "query_goal_usd": 5000.0,
+      "query_vs_successful_median": "above"
+    },
+    "category_benchmark": {
+      "main_category": "Dance",
+      "n_in_category": 2866,
+      "success_rate": 0.6476,
+      "median_goal_successful_usd": 3000.0,
+      "median_goal_failed_usd": 4746.51,
+      "query_goal_usd": 5000.0,
+      "query_goal_vs_successful_median": "above"
+    },
+    "examples": {
+      "successful": [
+        {
+          "title": "Replacement Place | New York Live Arts",
+          "similarity": 1.0,
+          "outcome": "successful",
+          "reason": "same category (Performances), same country (US), similar goal size (a modest goal)"
+        },
+        {
+          "title": "Subject To Change",
+          "similarity": 0.7004,
+          "outcome": "successful",
+          "reason": "same category (Performances), same country (US)"
+        }
+      ],
+      "failed": [
+        {
+          "title": "A Home for Dancers",
+          "similarity": 0.6825,
+          "outcome": "failed",
+          "reason": "same category (Performances), same country (US), similar goal size (a modest goal)"
+        },
+        {
+          "title": "Through the Body is Looking Back",
+          "similarity": 0.675,
+          "outcome": "failed",
+          "reason": "same category (Performances), same country (US)"
+        }
+      ]
+    },
+    "deferred": {
+      "founder_benchmark": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+      },
+      "market_benchmark": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+      },
+      "valuation_benchmark": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+      },
+      "exit_benchmark": {
+        "status": "deferred",
+        "reason": "no data basis in this dataset (no founder / team / market / valuation / exit signals) \u2014 awaits Layers 2\u20133 richer data; not fabricated"
+      }
+    },
+    "honesty_caption": "Historical outcomes of similar past campaigns \u2014 context for, not proof of, this campaign's result. Based on campaign metadata and titles only (no founder / market / financial data).",
+    "evidence_text": "Retrieved 50 similar past campaigns: 34 funded (68%) \u2014 a retrieval-based estimate of this campaign's funding chance. Similar campaigns that funded typically sought a small goal (median $3,000); those that failed sought a small goal (median $3,659). This campaign's $5,000 goal is above the funded median. Across the Dance category overall, 65% of campaigns fund. Note: Historical outcomes of similar past campaigns \u2014 context for, not proof of, this campaign's result. Based on campaign metadata and titles only (no founder / market / financial data)."
+  }
+]

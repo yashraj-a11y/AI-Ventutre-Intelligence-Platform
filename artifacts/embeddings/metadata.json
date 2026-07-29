@@ -1,0 +1,45 @@
+{
+  "source": "data/processed/kickstarter_processed.csv",
+  "split": "train",
+  "n_records": 265171,
+  "success_rate": 0.4038,
+  "fields": [
+    "campaign_id",
+    "title",
+    "category",
+    "main_category",
+    "country",
+    "currency",
+    "goal",
+    "usd_goal_real",
+    "launch_year",
+    "target",
+    "outcome",
+    "goal_band",
+    "text"
+  ],
+  "n_main_category": 15,
+  "n_category": 159,
+  "n_country": 22,
+  "goal_band_counts": {
+    "a modest goal": 91663,
+    "a small goal": 82200,
+    "a large goal": 46476,
+    "a very small goal": 34830,
+    "a very large goal": 10002
+  },
+  "deferred_fields": [
+    "founder",
+    "team_size",
+    "valuation",
+    "exit_status",
+    "business_model",
+    "financial_metrics",
+    "market_reports"
+  ],
+  "sample_records": [
+    "A Winter Storm - A Novel. A Fiction project in the Publishing category, based in the United States, seeking a modest goal of about $6,000 (launched 2012).",
+    "PilaFoot. A Technology project in the Technology category, based in Belgium, seeking a large goal of about $44,674 (launched 2017).",
+    "JB Couture Cupcakes Hits the Shore!. A Food project in the Food category, based in the United States, seeking a large goal of about $28,000 (launched 2014)."
+  ]
+}

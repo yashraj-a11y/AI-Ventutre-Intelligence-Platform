@@ -7,3 +7,9 @@ __pycache__/
 *.csv
 .DS_Store
 .vscode/
+
+# Day-6 large regenerable KB artifacts (>100MB — GitHub rejects; rebuild via
+# notebooks/06_Venture_Knowledge_Base.ipynb or the src/retrieval modules).
+# metadata.csv is already covered by *.csv above.
+artifacts/embeddings/startup_embeddings.npy
+artifacts/vector_db/faiss.index
