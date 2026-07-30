@@ -1,0 +1,381 @@
+{
+  "pattern_type": "success",
+  "base_rate": 0.4038,
+  "thresholds": {
+    "min_support_count": 500,
+    "min_lift": 1.15,
+    "max_pvalue": 0.05
+  },
+  "note": "Historical associations from train campaigns (metadata + titles only), not causal drivers.",
+  "n_patterns": 25,
+  "patterns": [
+    {
+      "items": {
+        "main_category": "Comics",
+        "goal_band": "a very small goal"
+      },
+      "order": 2,
+      "n": 1461,
+      "n_funded": 1132,
+      "support": 0.00551,
+      "confidence": 0.7748,
+      "lift": 1.919,
+      "p_value": 2.48e-184,
+      "direction": "success",
+      "label": "main_category=Comics \u2227 goal_band=a very small goal"
+    },
+    {
+      "items": {
+        "main_category": "Theater",
+        "goal_band": "a very small goal"
+      },
+      "order": 2,
+      "n": 1203,
+      "n_funded": 918,
+      "support": 0.00454,
+      "confidence": 0.7631,
+      "lift": 1.89,
+      "p_value": 1.325e-142,
+      "direction": "success",
+      "label": "main_category=Theater \u2227 goal_band=a very small goal"
+    },
+    {
+      "items": {
+        "main_category": "Theater",
+        "duration_band": "<=15d"
+      },
+      "order": 2,
+      "n": 668,
+      "n_funded": 487,
+      "support": 0.00252,
+      "confidence": 0.729,
+      "lift": 1.805,
+      "p_value": 1.176e-65,
+      "direction": "success",
+      "label": "main_category=Theater \u2227 duration_band=<=15d"
+    },
+    {
+      "items": {
+        "main_category": "Theater",
+        "goal_band": "a small goal"
+      },
+      "order": 2,
+      "n": 3836,
+      "n_funded": 2784,
+      "support": 0.01447,
+      "confidence": 0.7258,
+      "lift": 1.797,
+      "p_value": 0.0,
+      "direction": "success",
+      "label": "main_category=Theater \u2227 goal_band=a small goal"
+    },
+    {
+      "items": {
+        "main_category": "Dance",
+        "goal_band": "a small goal"
+      },
+      "order": 2,
+      "n": 1425,
+      "n_funded": 1023,
+      "support": 0.00537,
+      "confidence": 0.7179,
+      "lift": 1.778,
+      "p_value": 2.122e-129,
+      "direction": "success",
+      "label": "main_category=Dance \u2227 goal_band=a small goal"
+    },
+    {
+      "items": {
+        "main_category": "Theater",
+        "country": "GB"
+      },
+      "order": 2,
+      "n": 1255,
+      "n_funded": 886,
+      "support": 0.00473,
+      "confidence": 0.706,
+      "lift": 1.748,
+      "p_value": 9.855e-106,
+      "direction": "success",
+      "label": "main_category=Theater \u2227 country=GB"
+    },
+    {
+      "items": {
+        "category": "Anthologies"
+      },
+      "order": 1,
+      "n": 589,
+      "n_funded": 415,
+      "support": 0.00222,
+      "confidence": 0.7046,
+      "lift": 1.745,
+      "p_value": 6.823e-50,
+      "direction": "success",
+      "label": "category=Anthologies"
+    },
+    {
+      "items": {
+        "main_category": "Theater",
+        "has_number": "has number"
+      },
+      "order": 2,
+      "n": 955,
+      "n_funded": 669,
+      "support": 0.0036,
+      "confidence": 0.7005,
+      "lift": 1.735,
+      "p_value": 6.18e-78,
+      "direction": "success",
+      "label": "main_category=Theater \u2227 has_number=has number"
+    },
+    {
+      "items": {
+        "main_category": "Comics",
+        "has_number": "has number"
+      },
+      "order": 2,
+      "n": 2438,
+      "n_funded": 1695,
+      "support": 0.00919,
+      "confidence": 0.6952,
+      "lift": 1.722,
+      "p_value": 1.601e-190,
+      "direction": "success",
+      "label": "main_category=Comics \u2227 has_number=has number"
+    },
+    {
+      "items": {
+        "category": "Dance"
+      },
+      "order": 1,
+      "n": 1781,
+      "n_funded": 1231,
+      "support": 0.00672,
+      "confidence": 0.6912,
+      "lift": 1.712,
+      "p_value": 1.629e-135,
+      "direction": "success",
+      "label": "category=Dance"
+    },
+    {
+      "items": {
+        "main_category": "Dance",
+        "duration_band": "31-45d"
+      },
+      "order": 2,
+      "n": 595,
+      "n_funded": 408,
+      "support": 0.00224,
+      "confidence": 0.6857,
+      "lift": 1.698,
+      "p_value": 1.84e-44,
+      "direction": "success",
+      "label": "main_category=Dance \u2227 duration_band=31-45d"
+    },
+    {
+      "items": {
+        "category": "Indie Rock"
+      },
+      "order": 1,
+      "n": 4247,
+      "n_funded": 2888,
+      "support": 0.01602,
+      "confidence": 0.68,
+      "lift": 1.684,
+      "p_value": 4.122e-299,
+      "direction": "success",
+      "label": "category=Indie Rock"
+    },
+    {
+      "items": {
+        "main_category": "Dance",
+        "word_count_band": "7-10 words"
+      },
+      "order": 2,
+      "n": 1016,
+      "n_funded": 689,
+      "support": 0.00383,
+      "confidence": 0.6781,
+      "lift": 1.679,
+      "p_value": 4.621e-71,
+      "direction": "success",
+      "label": "main_category=Dance \u2227 word_count_band=7-10 words"
+    },
+    {
+      "items": {
+        "category": "Country & Folk"
+      },
+      "order": 1,
+      "n": 3394,
+      "n_funded": 2289,
+      "support": 0.0128,
+      "confidence": 0.6744,
+      "lift": 1.67,
+      "p_value": 3.59e-229,
+      "direction": "success",
+      "label": "category=Country & Folk"
+    },
+    {
+      "items": {
+        "goal_band": "a very small goal",
+        "has_number": "has number"
+      },
+      "order": 2,
+      "n": 4570,
+      "n_funded": 3080,
+      "support": 0.01723,
+      "confidence": 0.674,
+      "lift": 1.669,
+      "p_value": 3.036e-308,
+      "direction": "success",
+      "label": "goal_band=a very small goal \u2227 has_number=has number"
+    },
+    {
+      "items": {
+        "category": "Tabletop Games"
+      },
+      "order": 1,
+      "n": 9418,
+      "n_funded": 6340,
+      "support": 0.03552,
+      "confidence": 0.6732,
+      "lift": 1.667,
+      "p_value": 0.0,
+      "direction": "success",
+      "label": "category=Tabletop Games"
+    },
+    {
+      "items": {
+        "main_category": "Theater",
+        "launch_quarter": "Q2"
+      },
+      "order": 2,
+      "n": 2654,
+      "n_funded": 1785,
+      "support": 0.01001,
+      "confidence": 0.6726,
+      "lift": 1.666,
+      "p_value": 1.102e-176,
+      "direction": "success",
+      "label": "main_category=Theater \u2227 launch_quarter=Q2"
+    },
+    {
+      "items": {
+        "main_category": "Dance",
+        "country": "US"
+      },
+      "order": 2,
+      "n": 2466,
+      "n_funded": 1652,
+      "support": 0.0093,
+      "confidence": 0.6699,
+      "lift": 1.659,
+      "p_value": 5.502e-161,
+      "direction": "success",
+      "label": "main_category=Dance \u2227 country=US"
+    },
+    {
+      "items": {
+        "main_category": "Dance",
+        "duration_band": "16-30d"
+      },
+      "order": 2,
+      "n": 1682,
+      "n_funded": 1126,
+      "support": 0.00634,
+      "confidence": 0.6694,
+      "lift": 1.658,
+      "p_value": 1.17e-109,
+      "direction": "success",
+      "label": "main_category=Dance \u2227 duration_band=16-30d"
+    },
+    {
+      "items": {
+        "category": "Classical Music"
+      },
+      "order": 1,
+      "n": 1938,
+      "n_funded": 1292,
+      "support": 0.00731,
+      "confidence": 0.6667,
+      "lift": 1.651,
+      "p_value": 1.273e-123,
+      "direction": "success",
+      "label": "category=Classical Music"
+    },
+    {
+      "items": {
+        "main_category": "Dance",
+        "launch_quarter": "Q2"
+      },
+      "order": 2,
+      "n": 809,
+      "n_funded": 539,
+      "support": 0.00305,
+      "confidence": 0.6663,
+      "lift": 1.65,
+      "p_value": 3.502e-52,
+      "direction": "success",
+      "label": "main_category=Dance \u2227 launch_quarter=Q2"
+    },
+    {
+      "items": {
+        "main_category": "Theater",
+        "word_count_band": "7-10 words"
+      },
+      "order": 2,
+      "n": 3184,
+      "n_funded": 2108,
+      "support": 0.01201,
+      "confidence": 0.6621,
+      "lift": 1.64,
+      "p_value": 6.423e-196,
+      "direction": "success",
+      "label": "main_category=Theater \u2227 word_count_band=7-10 words"
+    },
+    {
+      "items": {
+        "category": "Theater"
+      },
+      "order": 1,
+      "n": 5354,
+      "n_funded": 3524,
+      "support": 0.02019,
+      "confidence": 0.6582,
+      "lift": 1.63,
+      "p_value": 0.0,
+      "direction": "success",
+      "label": "category=Theater"
+    },
+    {
+      "items": {
+        "main_category": "Theater",
+        "duration_band": "31-45d"
+      },
+      "order": 2,
+      "n": 1486,
+      "n_funded": 977,
+      "support": 0.0056,
+      "confidence": 0.6575,
+      "lift": 1.628,
+      "p_value": 1.28e-88,
+      "direction": "success",
+      "label": "main_category=Theater \u2227 duration_band=31-45d"
+    },
+    {
+      "items": {
+        "main_category": "Theater",
+        "duration_band": "16-30d"
+      },
+      "order": 2,
+      "n": 4866,
+      "n_funded": 3192,
+      "support": 0.01835,
+      "confidence": 0.656,
+      "lift": 1.624,
+      "p_value": 1.882e-286,
+      "direction": "success",
+      "label": "main_category=Theater \u2227 duration_band=16-30d"
+    }
+  ]
+}

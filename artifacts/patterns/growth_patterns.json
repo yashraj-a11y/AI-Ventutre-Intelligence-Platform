@@ -1,0 +1,256 @@
+{
+  "pattern_type": "temporal",
+  "base_rate": 0.4038,
+  "note": "Launch-timing patterns (real). True growth trajectories are deferred \u2014 the dataset has one outcome per campaign, not a time series. Historical associations, not causes.",
+  "year_trend": [
+    {
+      "value": "2009",
+      "success_rate": 0.5026,
+      "lift": 1.245,
+      "n": 951
+    },
+    {
+      "value": "2010",
+      "success_rate": 0.4772,
+      "lift": 1.182,
+      "n": 7713
+    },
+    {
+      "value": "2011",
+      "success_rate": 0.5065,
+      "lift": 1.254,
+      "n": 19185
+    },
+    {
+      "value": "2012",
+      "success_rate": 0.4655,
+      "lift": 1.153,
+      "n": 30841
+    },
+    {
+      "value": "2013",
+      "success_rate": 0.4713,
+      "lift": 1.167,
+      "n": 32842
+    },
+    {
+      "value": "2014",
+      "success_rate": 0.3551,
+      "lift": 0.879,
+      "n": 47408
+    },
+    {
+      "value": "2015",
+      "success_rate": 0.3226,
+      "lift": 0.799,
+      "n": 52240
+    },
+    {
+      "value": "2016",
+      "success_rate": 0.3805,
+      "lift": 0.942,
+      "n": 39205
+    },
+    {
+      "value": "2017",
+      "success_rate": 0.4244,
+      "lift": 1.051,
+      "n": 34786
+    }
+  ],
+  "month": [
+    {
+      "value": "01",
+      "success_rate": 0.3871,
+      "lift": 0.959,
+      "n": 19635
+    },
+    {
+      "value": "02",
+      "success_rate": 0.4184,
+      "lift": 1.036,
+      "n": 21145
+    },
+    {
+      "value": "03",
+      "success_rate": 0.4271,
+      "lift": 1.058,
+      "n": 23932
+    },
+    {
+      "value": "04",
+      "success_rate": 0.425,
+      "lift": 1.053,
+      "n": 22680
+    },
+    {
+      "value": "05",
+      "success_rate": 0.4105,
+      "lift": 1.017,
+      "n": 23264
+    },
+    {
+      "value": "06",
+      "success_rate": 0.4037,
+      "lift": 1.0,
+      "n": 23156
+    },
+    {
+      "value": "07",
+      "success_rate": 0.3672,
+      "lift": 0.909,
+      "n": 25485
+    },
+    {
+      "value": "08",
+      "success_rate": 0.381,
+      "lift": 0.944,
+      "n": 22767
+    },
+    {
+      "value": "09",
+      "success_rate": 0.409,
+      "lift": 1.013,
+      "n": 22039
+    },
+    {
+      "value": "10",
+      "success_rate": 0.4216,
+      "lift": 1.044,
+      "n": 23487
+    },
+    {
+      "value": "11",
+      "success_rate": 0.4131,
+      "lift": 1.023,
+      "n": 22792
+    },
+    {
+      "value": "12",
+      "success_rate": 0.3722,
+      "lift": 0.922,
+      "n": 14789
+    }
+  ],
+  "quarter": [
+    {
+      "value": "Q1",
+      "success_rate": 0.4121,
+      "lift": 1.021,
+      "n": 64712
+    },
+    {
+      "value": "Q2",
+      "success_rate": 0.413,
+      "lift": 1.023,
+      "n": 69100
+    },
+    {
+      "value": "Q3",
+      "success_rate": 0.3848,
+      "lift": 0.953,
+      "n": 70291
+    },
+    {
+      "value": "Q4",
+      "success_rate": 0.4065,
+      "lift": 1.007,
+      "n": 61068
+    }
+  ],
+  "weekday": [
+    {
+      "value": "Tuesday",
+      "success_rate": 0.4249,
+      "lift": 1.052,
+      "n": 54228
+    },
+    {
+      "value": "Wednesday",
+      "success_rate": 0.4062,
+      "lift": 1.006,
+      "n": 47312
+    },
+    {
+      "value": "Monday",
+      "success_rate": 0.4054,
+      "lift": 1.004,
+      "n": 42733
+    },
+    {
+      "value": "Sunday",
+      "success_rate": 0.4039,
+      "lift": 1.0,
+      "n": 14648
+    },
+    {
+      "value": "Thursday",
+      "success_rate": 0.4026,
+      "lift": 0.997,
+      "n": 42387
+    },
+    {
+      "value": "Friday",
+      "success_rate": 0.3888,
+      "lift": 0.963,
+      "n": 41026
+    },
+    {
+      "value": "Saturday",
+      "success_rate": 0.3748,
+      "lift": 0.928,
+      "n": 22837
+    }
+  ],
+  "weekend": [
+    {
+      "value": "weekday",
+      "success_rate": 0.4067,
+      "lift": 1.007,
+      "n": 227686
+    },
+    {
+      "value": "weekend",
+      "success_rate": 0.3862,
+      "lift": 0.956,
+      "n": 37485
+    }
+  ],
+  "highlights": {
+    "best_year": "2011",
+    "worst_year": "2015",
+    "best_month": "03",
+    "worst_month": "07",
+    "best_quarter": "Q2",
+    "best_weekday": "Tuesday",
+    "worst_weekday": "Saturday",
+    "year_trend_direction": "declining",
+    "weekend_vs_weekday_lift": -0.051
+  },
+  "deferred": {
+    "growth_trajectory": {
+      "status": "deferred",
+      "reason": "Kickstarter records one funded/failed outcome, not a time series \u2014 no user/revenue/retention growth to mine"
+    },
+    "user_growth": {
+      "status": "deferred",
+      "reason": "no data"
+    },
+    "revenue_growth": {
+      "status": "deferred",
+      "reason": "no data"
+    },
+    "retention": {
+      "status": "deferred",
+      "reason": "no data"
+    },
+    "team_expansion": {
+      "status": "deferred",
+      "reason": "no data"
+    },
+    "product_iteration": {
+      "status": "deferred",
+      "reason": "no data"
+    }
+  }
+}

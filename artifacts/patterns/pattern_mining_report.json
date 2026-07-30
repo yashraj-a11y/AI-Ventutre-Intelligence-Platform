@@ -1,0 +1,260 @@
+{
+  "architecture_layer": 6,
+  "base_rate": 0.4038,
+  "n_campaigns": 265171,
+  "n_rules_mined": 746,
+  "counts": {
+    "success": 25,
+    "failure": 25,
+    "funding_category_profiles": 15,
+    "funding_combos": 15,
+    "temporal_dimensions": 5,
+    "explanations": 15
+  },
+  "multiple_testing": {
+    "n_rules_tested": 746,
+    "alpha": 0.05,
+    "alpha_bonferroni": 6.702e-05,
+    "n_raw_significant": 677,
+    "n_bonferroni_significant": 610,
+    "n_rejected_by_correction": 67,
+    "min_abs_lift": 0.15,
+    "n_ranked": 40
+  },
+  "clusters": [
+    {
+      "cluster": 12,
+      "n": 8515,
+      "success_rate": 0.657,
+      "lift": 1.627,
+      "dominant_main_category": "Games",
+      "dominant_goal_band": "a modest goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 19,
+      "n": 11303,
+      "success_rate": 0.6183,
+      "lift": 1.531,
+      "dominant_main_category": "Theater",
+      "dominant_goal_band": "a small goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 13,
+      "n": 19227,
+      "success_rate": 0.5969,
+      "lift": 1.478,
+      "dominant_main_category": "Music",
+      "dominant_goal_band": "a small goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 1,
+      "n": 7621,
+      "success_rate": 0.569,
+      "lift": 1.409,
+      "dominant_main_category": "Comics",
+      "dominant_goal_band": "a small goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 15,
+      "n": 3706,
+      "success_rate": 0.4957,
+      "lift": 1.227,
+      "dominant_main_category": "Games",
+      "dominant_goal_band": "a modest goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 2,
+      "n": 7133,
+      "success_rate": 0.4698,
+      "lift": 1.163,
+      "dominant_main_category": "Design",
+      "dominant_goal_band": "a modest goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 5,
+      "n": 19664,
+      "success_rate": 0.4453,
+      "lift": 1.103,
+      "dominant_main_category": "Music",
+      "dominant_goal_band": "a small goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 21,
+      "n": 10368,
+      "success_rate": 0.4419,
+      "lift": 1.094,
+      "dominant_main_category": "Film & Video",
+      "dominant_goal_band": "a modest goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 7,
+      "n": 28259,
+      "success_rate": 0.4202,
+      "lift": 1.041,
+      "dominant_main_category": "Film & Video",
+      "dominant_goal_band": "a modest goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 22,
+      "n": 7719,
+      "success_rate": 0.4076,
+      "lift": 1.009,
+      "dominant_main_category": "Design",
+      "dominant_goal_band": "a modest goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 9,
+      "n": 23389,
+      "success_rate": 0.4062,
+      "lift": 1.006,
+      "dominant_main_category": "Art",
+      "dominant_goal_band": "a small goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 10,
+      "n": 9337,
+      "success_rate": 0.4052,
+      "lift": 1.003,
+      "dominant_main_category": "Publishing",
+      "dominant_goal_band": "a modest goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 20,
+      "n": 6107,
+      "success_rate": 0.4049,
+      "lift": 1.003,
+      "dominant_main_category": "Publishing",
+      "dominant_goal_band": "a small goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 23,
+      "n": 7154,
+      "success_rate": 0.3462,
+      "lift": 0.857,
+      "dominant_main_category": "Food",
+      "dominant_goal_band": "a modest goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 3,
+      "n": 15492,
+      "success_rate": 0.3451,
+      "lift": 0.855,
+      "dominant_main_category": "Design",
+      "dominant_goal_band": "a modest goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 24,
+      "n": 12071,
+      "success_rate": 0.3393,
+      "lift": 0.84,
+      "dominant_main_category": "Technology",
+      "dominant_goal_band": "a large goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 11,
+      "n": 3203,
+      "success_rate": 0.3278,
+      "lift": 0.812,
+      "dominant_main_category": "Food",
+      "dominant_goal_band": "a modest goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 8,
+      "n": 15108,
+      "success_rate": 0.2998,
+      "lift": 0.742,
+      "dominant_main_category": "Publishing",
+      "dominant_goal_band": "a modest goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 16,
+      "n": 7615,
+      "success_rate": 0.2949,
+      "lift": 0.73,
+      "dominant_main_category": "Fashion",
+      "dominant_goal_band": "a modest goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 18,
+      "n": 11665,
+      "success_rate": 0.2543,
+      "lift": 0.63,
+      "dominant_main_category": "Games",
+      "dominant_goal_band": "a modest goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 4,
+      "n": 7703,
+      "success_rate": 0.2516,
+      "lift": 0.623,
+      "dominant_main_category": "Fashion",
+      "dominant_goal_band": "a modest goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 14,
+      "n": 10515,
+      "success_rate": 0.2466,
+      "lift": 0.611,
+      "dominant_main_category": "Food",
+      "dominant_goal_band": "a modest goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 17,
+      "n": 6890,
+      "success_rate": 0.234,
+      "lift": 0.579,
+      "dominant_main_category": "Film & Video",
+      "dominant_goal_band": "a modest goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 6,
+      "n": 5406,
+      "success_rate": 0.0975,
+      "lift": 0.241,
+      "dominant_main_category": "Technology",
+      "dominant_goal_band": "a large goal",
+      "dominant_country": "US"
+    },
+    {
+      "cluster": 0,
+      "n": 1,
+      "success_rate": 0.0,
+      "lift": 0.0,
+      "dominant_main_category": "Fashion",
+      "dominant_goal_band": "a large goal",
+      "dominant_country": "US"
+    }
+  ],
+  "artifacts": {
+    "success": "artifacts/patterns/success_patterns.json",
+    "failure": "artifacts/patterns/failure_patterns.json",
+    "funding": "artifacts/patterns/funding_patterns.json",
+    "temporal": "artifacts/patterns/growth_patterns.json",
+    "ranked": "artifacts/patterns/ranked_patterns.csv",
+    "explanations": "artifacts/patterns/pattern_explanations.json",
+    "repository": "artifacts/patterns/pattern_repository.json"
+  }
+}

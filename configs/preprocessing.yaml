@@ -442,3 +442,75 @@ day6:
       metadata_csv: artifacts/embeddings/metadata.csv
       mapping: artifacts/vector_db/mapping.json
       embedding_model_json: artifacts/embeddings/embedding_model.json
+
+# ============================================================================
+# Day 7 — Pattern Mining Engine (Layer 6)
+# ============================================================================
+day7:
+  # --- shared mining core: discretized real-feature item frame + rule stats ---
+  mining:
+    processed_path: data/processed/kickstarter_processed.csv
+    split_dir: artifacts/splits
+    use_split: train                 # mine train-only (patterns validatable on test)
+    min_support_count: 500           # ~0.2% of 265k — kills small-sample noise
+    single_features: [main_category, category, country, currency, goal_band,
+                      launch_year, launch_quarter, launch_weekday, is_weekend_launch,
+                      duration_band, word_count_band, has_number]
+    pair_features: [main_category, goal_band, country, launch_quarter,
+                    duration_band, word_count_band, has_number]
+
+  # --- Phase B: success pattern mining (rules -> funded, lift > 1) -------------
+  success:
+    min_lift: 1.15                   # effect size: >=15% above base rate
+    max_pvalue: 0.05                 # chi-square significance (Bonferroni in Phase F)
+    top_k: 25
+    out_path: artifacts/patterns/success_patterns.json
+
+  # --- Phase C: failure pattern mining (rules -> failed, funding lift < 1) -----
+  failure:
+    max_lift: 0.85                   # funding lift <=0.85 (>=15% below the 0.4038 base)
+    max_pvalue: 0.05
+    top_k: 25
+    out_path: artifacts/patterns/failure_patterns.json
+
+  # --- Phase D: funding pattern discovery (category goal thresholds + combos) ---
+  funding:
+    category_min_support: 100        # min campaigns per (category, band) cell
+    top_combos: 15                   # strongest 2-feature funding drivers
+    out_path: artifacts/patterns/funding_patterns.json
+
+  # --- Phase E: temporal / timing patterns (reframed from "growth") ------------
+  temporal:
+    min_support_count: 300           # per timing cell
+    out_path: artifacts/patterns/growth_patterns.json
+
+  # --- Phase F: statistical pattern ranking (Bonferroni + effect size) ---------
+  ranker:
+    alpha: 0.05                      # family-wise error rate (before correction)
+    min_abs_lift: 0.15               # effect size: |lift - 1| >= this
+    top_k: 40
+    out_path: artifacts/patterns/ranked_patterns.csv
+
+  # --- Phase G: pattern explanation generator (readable + honesty caption) -----
+  explanation:
+    top_k: 15
+    out_path: artifacts/patterns/pattern_explanations.json
+
+  # --- Phase H: pattern knowledge repository (organized, provenance-tagged) ----
+  repository:
+    version: "1.0.0"
+    sources:
+      success: artifacts/patterns/success_patterns.json
+      failure: artifacts/patterns/failure_patterns.json
+      funding: artifacts/patterns/funding_patterns.json
+      temporal: artifacts/patterns/growth_patterns.json
+      explanations: artifacts/patterns/pattern_explanations.json
+    out_path: artifacts/patterns/pattern_repository.json
+
+  # --- Phase I: pattern mining pipeline (mine-once -> cluster -> rank -> store) -
+  pipeline:
+    n_clusters: 25                   # MiniBatchKMeans on Day-6 embeddings
+    embeddings_path: artifacts/embeddings/startup_embeddings.npy
+    cluster_random_state: 42
+    top_explanations: 15
+    report_path: artifacts/patterns/pattern_mining_report.json

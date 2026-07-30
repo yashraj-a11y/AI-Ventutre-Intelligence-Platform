@@ -1,0 +1,1611 @@
+{
+  "version": "1.0.0",
+  "created_utc": "2026-07-30T14:06:44.161453+00:00",
+  "architecture_layer": 6,
+  "note": "Discovered venture patterns \u2014 historical associations from train campaign metadata + titles, not causal drivers.",
+  "provenance": {
+    "source_split": "train",
+    "base_rate": 0.4038,
+    "thresholds": {
+      "min_support_count": 500,
+      "min_lift": 1.15,
+      "max_pvalue": 0.05
+    }
+  },
+  "counts": {
+    "success": 25,
+    "failure": 25,
+    "funding_category_profiles": 15,
+    "funding_combos": 15,
+    "temporal_dimensions": 5,
+    "explanations": 15
+  },
+  "patterns": {
+    "success": [
+      {
+        "items": {
+          "main_category": "Comics",
+          "goal_band": "a very small goal"
+        },
+        "order": 2,
+        "n": 1461,
+        "n_funded": 1132,
+        "support": 0.00551,
+        "confidence": 0.7748,
+        "lift": 1.919,
+        "p_value": 2.48e-184,
+        "direction": "success",
+        "label": "main_category=Comics \u2227 goal_band=a very small goal"
+      },
+      {
+        "items": {
+          "main_category": "Theater",
+          "goal_band": "a very small goal"
+        },
+        "order": 2,
+        "n": 1203,
+        "n_funded": 918,
+        "support": 0.00454,
+        "confidence": 0.7631,
+        "lift": 1.89,
+        "p_value": 1.325e-142,
+        "direction": "success",
+        "label": "main_category=Theater \u2227 goal_band=a very small goal"
+      },
+      {
+        "items": {
+          "main_category": "Theater",
+          "duration_band": "<=15d"
+        },
+        "order": 2,
+        "n": 668,
+        "n_funded": 487,
+        "support": 0.00252,
+        "confidence": 0.729,
+        "lift": 1.805,
+        "p_value": 1.176e-65,
+        "direction": "success",
+        "label": "main_category=Theater \u2227 duration_band=<=15d"
+      },
+      {
+        "items": {
+          "main_category": "Theater",
+          "goal_band": "a small goal"
+        },
+        "order": 2,
+        "n": 3836,
+        "n_funded": 2784,
+        "support": 0.01447,
+        "confidence": 0.7258,
+        "lift": 1.797,
+        "p_value": 0.0,
+        "direction": "success",
+        "label": "main_category=Theater \u2227 goal_band=a small goal"
+      },
+      {
+        "items": {
+          "main_category": "Dance",
+          "goal_band": "a small goal"
+        },
+        "order": 2,
+        "n": 1425,
+        "n_funded": 1023,
+        "support": 0.00537,
+        "confidence": 0.7179,
+        "lift": 1.778,
+        "p_value": 2.122e-129,
+        "direction": "success",
+        "label": "main_category=Dance \u2227 goal_band=a small goal"
+      },
+      {
+        "items": {
+          "main_category": "Theater",
+          "country": "GB"
+        },
+        "order": 2,
+        "n": 1255,
+        "n_funded": 886,
+        "support": 0.00473,
+        "confidence": 0.706,
+        "lift": 1.748,
+        "p_value": 9.855e-106,
+        "direction": "success",
+        "label": "main_category=Theater \u2227 country=GB"
+      },
+      {
+        "items": {
+          "category": "Anthologies"
+        },
+        "order": 1,
+        "n": 589,
+        "n_funded": 415,
+        "support": 0.00222,
+        "confidence": 0.7046,
+        "lift": 1.745,
+        "p_value": 6.823e-50,
+        "direction": "success",
+        "label": "category=Anthologies"
+      },
+      {
+        "items": {
+          "main_category": "Theater",
+          "has_number": "has number"
+        },
+        "order": 2,
+        "n": 955,
+        "n_funded": 669,
+        "support": 0.0036,
+        "confidence": 0.7005,
+        "lift": 1.735,
+        "p_value": 6.18e-78,
+        "direction": "success",
+        "label": "main_category=Theater \u2227 has_number=has number"
+      },
+      {
+        "items": {
+          "main_category": "Comics",
+          "has_number": "has number"
+        },
+        "order": 2,
+        "n": 2438,
+        "n_funded": 1695,
+        "support": 0.00919,
+        "confidence": 0.6952,
+        "lift": 1.722,
+        "p_value": 1.601e-190,
+        "direction": "success",
+        "label": "main_category=Comics \u2227 has_number=has number"
+      },
+      {
+        "items": {
+          "category": "Dance"
+        },
+        "order": 1,
+        "n": 1781,
+        "n_funded": 1231,
+        "support": 0.00672,
+        "confidence": 0.6912,
+        "lift": 1.712,
+        "p_value": 1.629e-135,
+        "direction": "success",
+        "label": "category=Dance"
+      },
+      {
+        "items": {
+          "main_category": "Dance",
+          "duration_band": "31-45d"
+        },
+        "order": 2,
+        "n": 595,
+        "n_funded": 408,
+        "support": 0.00224,
+        "confidence": 0.6857,
+        "lift": 1.698,
+        "p_value": 1.84e-44,
+        "direction": "success",
+        "label": "main_category=Dance \u2227 duration_band=31-45d"
+      },
+      {
+        "items": {
+          "category": "Indie Rock"
+        },
+        "order": 1,
+        "n": 4247,
+        "n_funded": 2888,
+        "support": 0.01602,
+        "confidence": 0.68,
+        "lift": 1.684,
+        "p_value": 4.122e-299,
+        "direction": "success",
+        "label": "category=Indie Rock"
+      },
+      {
+        "items": {
+          "main_category": "Dance",
+          "word_count_band": "7-10 words"
+        },
+        "order": 2,
+        "n": 1016,
+        "n_funded": 689,
+        "support": 0.00383,
+        "confidence": 0.6781,
+        "lift": 1.679,
+        "p_value": 4.621e-71,
+        "direction": "success",
+        "label": "main_category=Dance \u2227 word_count_band=7-10 words"
+      },
+      {
+        "items": {
+          "category": "Country & Folk"
+        },
+        "order": 1,
+        "n": 3394,
+        "n_funded": 2289,
+        "support": 0.0128,
+        "confidence": 0.6744,
+        "lift": 1.67,
+        "p_value": 3.59e-229,
+        "direction": "success",
+        "label": "category=Country & Folk"
+      },
+      {
+        "items": {
+          "goal_band": "a very small goal",
+          "has_number": "has number"
+        },
+        "order": 2,
+        "n": 4570,
+        "n_funded": 3080,
+        "support": 0.01723,
+        "confidence": 0.674,
+        "lift": 1.669,
+        "p_value": 3.036e-308,
+        "direction": "success",
+        "label": "goal_band=a very small goal \u2227 has_number=has number"
+      },
+      {
+        "items": {
+          "category": "Tabletop Games"
+        },
+        "order": 1,
+        "n": 9418,
+        "n_funded": 6340,
+        "support": 0.03552,
+        "confidence": 0.6732,
+        "lift": 1.667,
+        "p_value": 0.0,
+        "direction": "success",
+        "label": "category=Tabletop Games"
+      },
+      {
+        "items": {
+          "main_category": "Theater",
+          "launch_quarter": "Q2"
+        },
+        "order": 2,
+        "n": 2654,
+        "n_funded": 1785,
+        "support": 0.01001,
+        "confidence": 0.6726,
+        "lift": 1.666,
+        "p_value": 1.102e-176,
+        "direction": "success",
+        "label": "main_category=Theater \u2227 launch_quarter=Q2"
+      },
+      {
+        "items": {
+          "main_category": "Dance",
+          "country": "US"
+        },
+        "order": 2,
+        "n": 2466,
+        "n_funded": 1652,
+        "support": 0.0093,
+        "confidence": 0.6699,
+        "lift": 1.659,
+        "p_value": 5.502e-161,
+        "direction": "success",
+        "label": "main_category=Dance \u2227 country=US"
+      },
+      {
+        "items": {
+          "main_category": "Dance",
+          "duration_band": "16-30d"
+        },
+        "order": 2,
+        "n": 1682,
+        "n_funded": 1126,
+        "support": 0.00634,
+        "confidence": 0.6694,
+        "lift": 1.658,
+        "p_value": 1.17e-109,
+        "direction": "success",
+        "label": "main_category=Dance \u2227 duration_band=16-30d"
+      },
+      {
+        "items": {
+          "category": "Classical Music"
+        },
+        "order": 1,
+        "n": 1938,
+        "n_funded": 1292,
+        "support": 0.00731,
+        "confidence": 0.6667,
+        "lift": 1.651,
+        "p_value": 1.273e-123,
+        "direction": "success",
+        "label": "category=Classical Music"
+      },
+      {
+        "items": {
+          "main_category": "Dance",
+          "launch_quarter": "Q2"
+        },
+        "order": 2,
+        "n": 809,
+        "n_funded": 539,
+        "support": 0.00305,
+        "confidence": 0.6663,
+        "lift": 1.65,
+        "p_value": 3.502e-52,
+        "direction": "success",
+        "label": "main_category=Dance \u2227 launch_quarter=Q2"
+      },
+      {
+        "items": {
+          "main_category": "Theater",
+          "word_count_band": "7-10 words"
+        },
+        "order": 2,
+        "n": 3184,
+        "n_funded": 2108,
+        "support": 0.01201,
+        "confidence": 0.6621,
+        "lift": 1.64,
+        "p_value": 6.423e-196,
+        "direction": "success",
+        "label": "main_category=Theater \u2227 word_count_band=7-10 words"
+      },
+      {
+        "items": {
+          "category": "Theater"
+        },
+        "order": 1,
+        "n": 5354,
+        "n_funded": 3524,
+        "support": 0.02019,
+        "confidence": 0.6582,
+        "lift": 1.63,
+        "p_value": 0.0,
+        "direction": "success",
+        "label": "category=Theater"
+      },
+      {
+        "items": {
+          "main_category": "Theater",
+          "duration_band": "31-45d"
+        },
+        "order": 2,
+        "n": 1486,
+        "n_funded": 977,
+        "support": 0.0056,
+        "confidence": 0.6575,
+        "lift": 1.628,
+        "p_value": 1.28e-88,
+        "direction": "success",
+        "label": "main_category=Theater \u2227 duration_band=31-45d"
+      },
+      {
+        "items": {
+          "main_category": "Theater",
+          "duration_band": "16-30d"
+        },
+        "order": 2,
+        "n": 4866,
+        "n_funded": 3192,
+        "support": 0.01835,
+        "confidence": 0.656,
+        "lift": 1.624,
+        "p_value": 1.882e-286,
+        "direction": "success",
+        "label": "main_category=Theater \u2227 duration_band=16-30d"
+      }
+    ],
+    "failure": [
+      {
+        "items": {
+          "main_category": "Food",
+          "goal_band": "a very large goal"
+        },
+        "order": 2,
+        "n": 997,
+        "n_funded": 20,
+        "support": 0.00376,
+        "confidence": 0.0201,
+        "lift": 0.05,
+        "p_value": 8.387e-135,
+        "direction": "failure",
+        "label": "main_category=Food \u2227 goal_band=a very large goal",
+        "failure_confidence": 0.9799,
+        "failure_lift": 1.644
+      },
+      {
+        "items": {
+          "goal_band": "a very large goal",
+          "duration_band": "46-60d"
+        },
+        "order": 2,
+        "n": 2513,
+        "n_funded": 103,
+        "support": 0.00948,
+        "confidence": 0.041,
+        "lift": 0.101,
+        "p_value": 2.604e-303,
+        "direction": "failure",
+        "label": "goal_band=a very large goal \u2227 duration_band=46-60d",
+        "failure_confidence": 0.959,
+        "failure_lift": 1.609
+      },
+      {
+        "items": {
+          "goal_band": "a very large goal",
+          "word_count_band": "1-3 words"
+        },
+        "order": 2,
+        "n": 3381,
+        "n_funded": 182,
+        "support": 0.01275,
+        "confidence": 0.0538,
+        "lift": 0.133,
+        "p_value": 0.0,
+        "direction": "failure",
+        "label": "goal_band=a very large goal \u2227 word_count_band=1-3 words",
+        "failure_confidence": 0.9462,
+        "failure_lift": 1.587
+      },
+      {
+        "items": {
+          "category": "Apps"
+        },
+        "order": 1,
+        "n": 4234,
+        "n_funded": 294,
+        "support": 0.01597,
+        "confidence": 0.0694,
+        "lift": 0.172,
+        "p_value": 0.0,
+        "direction": "failure",
+        "label": "category=Apps",
+        "failure_confidence": 0.9306,
+        "failure_lift": 1.561
+      },
+      {
+        "items": {
+          "goal_band": "a very large goal",
+          "country": "GB"
+        },
+        "order": 2,
+        "n": 814,
+        "n_funded": 62,
+        "support": 0.00307,
+        "confidence": 0.0762,
+        "lift": 0.189,
+        "p_value": 7.172e-81,
+        "direction": "failure",
+        "label": "goal_band=a very large goal \u2227 country=GB",
+        "failure_confidence": 0.9238,
+        "failure_lift": 1.55
+      },
+      {
+        "items": {
+          "goal_band": "a very large goal",
+          "word_count_band": "4-6 words"
+        },
+        "order": 2,
+        "n": 3220,
+        "n_funded": 270,
+        "support": 0.01214,
+        "confidence": 0.0839,
+        "lift": 0.208,
+        "p_value": 4.277e-303,
+        "direction": "failure",
+        "label": "goal_band=a very large goal \u2227 word_count_band=4-6 words",
+        "failure_confidence": 0.9161,
+        "failure_lift": 1.537
+      },
+      {
+        "items": {
+          "main_category": "Film & Video",
+          "goal_band": "a very large goal"
+        },
+        "order": 2,
+        "n": 2362,
+        "n_funded": 206,
+        "support": 0.00891,
+        "confidence": 0.0872,
+        "lift": 0.216,
+        "p_value": 1.678e-217,
+        "direction": "failure",
+        "label": "main_category=Film & Video \u2227 goal_band=a very large goal",
+        "failure_confidence": 0.9128,
+        "failure_lift": 1.531
+      },
+      {
+        "items": {
+          "goal_band": "a large goal",
+          "country": "IT"
+        },
+        "order": 2,
+        "n": 503,
+        "n_funded": 44,
+        "support": 0.0019,
+        "confidence": 0.0875,
+        "lift": 0.217,
+        "p_value": 3.457e-47,
+        "direction": "failure",
+        "label": "goal_band=a large goal \u2227 country=IT",
+        "failure_confidence": 0.9125,
+        "failure_lift": 1.531
+      },
+      {
+        "items": {
+          "goal_band": "a very large goal",
+          "has_number": "no number"
+        },
+        "order": 2,
+        "n": 9061,
+        "n_funded": 836,
+        "support": 0.03417,
+        "confidence": 0.0923,
+        "lift": 0.228,
+        "p_value": 0.0,
+        "direction": "failure",
+        "label": "goal_band=a very large goal \u2227 has_number=no number",
+        "failure_confidence": 0.9077,
+        "failure_lift": 1.523
+      },
+      {
+        "items": {
+          "goal_band": "a very large goal",
+          "launch_quarter": "Q4"
+        },
+        "order": 2,
+        "n": 2293,
+        "n_funded": 215,
+        "support": 0.00865,
+        "confidence": 0.0938,
+        "lift": 0.232,
+        "p_value": 1.399e-202,
+        "direction": "failure",
+        "label": "goal_band=a very large goal \u2227 launch_quarter=Q4",
+        "failure_confidence": 0.9062,
+        "failure_lift": 1.52
+      },
+      {
+        "items": {
+          "goal_band": "a very large goal",
+          "launch_quarter": "Q3"
+        },
+        "order": 2,
+        "n": 2675,
+        "n_funded": 256,
+        "support": 0.01009,
+        "confidence": 0.0957,
+        "lift": 0.237,
+        "p_value": 1.909e-233,
+        "direction": "failure",
+        "label": "goal_band=a very large goal \u2227 launch_quarter=Q3",
+        "failure_confidence": 0.9043,
+        "failure_lift": 1.517
+      },
+      {
+        "items": {
+          "goal_band": "a very large goal",
+          "duration_band": "16-30d"
+        },
+        "order": 2,
+        "n": 5062,
+        "n_funded": 498,
+        "support": 0.01909,
+        "confidence": 0.0984,
+        "lift": 0.244,
+        "p_value": 0.0,
+        "direction": "failure",
+        "label": "goal_band=a very large goal \u2227 duration_band=16-30d",
+        "failure_confidence": 0.9016,
+        "failure_lift": 1.512
+      },
+      {
+        "items": {
+          "goal_band": "a very large goal"
+        },
+        "order": 1,
+        "n": 10002,
+        "n_funded": 995,
+        "support": 0.03772,
+        "confidence": 0.0995,
+        "lift": 0.246,
+        "p_value": 0.0,
+        "direction": "failure",
+        "label": "goal_band=a very large goal",
+        "failure_confidence": 0.9005,
+        "failure_lift": 1.51
+      },
+      {
+        "items": {
+          "goal_band": "a very large goal",
+          "launch_quarter": "Q1"
+        },
+        "order": 2,
+        "n": 2353,
+        "n_funded": 235,
+        "support": 0.00887,
+        "confidence": 0.0999,
+        "lift": 0.247,
+        "p_value": 7.591e-200,
+        "direction": "failure",
+        "label": "goal_band=a very large goal \u2227 launch_quarter=Q1",
+        "failure_confidence": 0.9001,
+        "failure_lift": 1.51
+      },
+      {
+        "items": {
+          "main_category": "Technology",
+          "word_count_band": "1-3 words"
+        },
+        "order": 2,
+        "n": 5927,
+        "n_funded": 596,
+        "support": 0.02235,
+        "confidence": 0.1006,
+        "lift": 0.249,
+        "p_value": 0.0,
+        "direction": "failure",
+        "label": "main_category=Technology \u2227 word_count_band=1-3 words",
+        "failure_confidence": 0.8994,
+        "failure_lift": 1.509
+      },
+      {
+        "items": {
+          "category": "Mobile Games"
+        },
+        "order": 1,
+        "n": 1181,
+        "n_funded": 120,
+        "support": 0.00445,
+        "confidence": 0.1016,
+        "lift": 0.252,
+        "p_value": 1.343e-99,
+        "direction": "failure",
+        "label": "category=Mobile Games",
+        "failure_confidence": 0.8984,
+        "failure_lift": 1.507
+      },
+      {
+        "items": {
+          "category": "Web"
+        },
+        "order": 1,
+        "n": 3432,
+        "n_funded": 351,
+        "support": 0.01294,
+        "confidence": 0.1023,
+        "lift": 0.253,
+        "p_value": 2.858e-287,
+        "direction": "failure",
+        "label": "category=Web",
+        "failure_confidence": 0.8977,
+        "failure_lift": 1.506
+      },
+      {
+        "items": {
+          "goal_band": "a very large goal",
+          "launch_quarter": "Q2"
+        },
+        "order": 2,
+        "n": 2681,
+        "n_funded": 289,
+        "support": 0.01011,
+        "confidence": 0.1078,
+        "lift": 0.267,
+        "p_value": 4.091e-216,
+        "direction": "failure",
+        "label": "goal_band=a very large goal \u2227 launch_quarter=Q2",
+        "failure_confidence": 0.8922,
+        "failure_lift": 1.497
+      },
+      {
+        "items": {
+          "goal_band": "a very large goal",
+          "country": "US"
+        },
+        "order": 2,
+        "n": 7657,
+        "n_funded": 869,
+        "support": 0.02888,
+        "confidence": 0.1135,
+        "lift": 0.281,
+        "p_value": 0.0,
+        "direction": "failure",
+        "label": "goal_band=a very large goal \u2227 country=US",
+        "failure_confidence": 0.8865,
+        "failure_lift": 1.487
+      },
+      {
+        "items": {
+          "main_category": "Technology",
+          "goal_band": "a very large goal"
+        },
+        "order": 2,
+        "n": 2690,
+        "n_funded": 323,
+        "support": 0.01014,
+        "confidence": 0.1201,
+        "lift": 0.297,
+        "p_value": 2.195e-199,
+        "direction": "failure",
+        "label": "main_category=Technology \u2227 goal_band=a very large goal",
+        "failure_confidence": 0.8799,
+        "failure_lift": 1.476
+      },
+      {
+        "items": {
+          "main_category": "Crafts",
+          "duration_band": "46-60d"
+        },
+        "order": 2,
+        "n": 560,
+        "n_funded": 76,
+        "support": 0.00211,
+        "confidence": 0.1357,
+        "lift": 0.336,
+        "p_value": 4.448e-38,
+        "direction": "failure",
+        "label": "main_category=Crafts \u2227 duration_band=46-60d",
+        "failure_confidence": 0.8643,
+        "failure_lift": 1.45
+      },
+      {
+        "items": {
+          "category": "Food Trucks"
+        },
+        "order": 1,
+        "n": 1273,
+        "n_funded": 175,
+        "support": 0.0048,
+        "confidence": 0.1375,
+        "lift": 0.34,
+        "p_value": 1.02e-83,
+        "direction": "failure",
+        "label": "category=Food Trucks",
+        "failure_confidence": 0.8625,
+        "failure_lift": 1.447
+      },
+      {
+        "items": {
+          "main_category": "Food",
+          "duration_band": "46-60d"
+        },
+        "order": 2,
+        "n": 2279,
+        "n_funded": 316,
+        "support": 0.00859,
+        "confidence": 0.1387,
+        "lift": 0.343,
+        "p_value": 8.94e-148,
+        "direction": "failure",
+        "label": "main_category=Food \u2227 duration_band=46-60d",
+        "failure_confidence": 0.8613,
+        "failure_lift": 1.445
+      },
+      {
+        "items": {
+          "goal_band": "a large goal",
+          "duration_band": "<=15d"
+        },
+        "order": 2,
+        "n": 701,
+        "n_funded": 98,
+        "support": 0.00264,
+        "confidence": 0.1398,
+        "lift": 0.346,
+        "p_value": 6.254e-46,
+        "direction": "failure",
+        "label": "goal_band=a large goal \u2227 duration_band=<=15d",
+        "failure_confidence": 0.8602,
+        "failure_lift": 1.443
+      },
+      {
+        "items": {
+          "category": "Software"
+        },
+        "order": 1,
+        "n": 2041,
+        "n_funded": 297,
+        "support": 0.0077,
+        "confidence": 0.1455,
+        "lift": 0.36,
+        "p_value": 9.632e-126,
+        "direction": "failure",
+        "label": "category=Software",
+        "failure_confidence": 0.8545,
+        "failure_lift": 1.433
+      }
+    ],
+    "funding": {
+      "category_profiles": [
+        {
+          "main_category": "Dance",
+          "n": 2866,
+          "success_rate": 0.6476,
+          "lift": 1.604,
+          "funded_median_goal_usd": 3000.0,
+          "failed_median_goal_usd": 4746.51,
+          "best_goal_band": "a small goal",
+          "best_goal_band_success_rate": 0.7179
+        },
+        {
+          "main_category": "Theater",
+          "n": 8228,
+          "success_rate": 0.6359,
+          "lift": 1.575,
+          "funded_median_goal_usd": 2627.08,
+          "failed_median_goal_usd": 5000.0,
+          "best_goal_band": "a very small goal",
+          "best_goal_band_success_rate": 0.7631
+        },
+        {
+          "main_category": "Comics",
+          "n": 7876,
+          "success_rate": 0.5867,
+          "lift": 1.453,
+          "funded_median_goal_usd": 2637.27,
+          "failed_median_goal_usd": 5000.0,
+          "best_goal_band": "a very small goal",
+          "best_goal_band_success_rate": 0.7748
+        },
+        {
+          "main_category": "Music",
+          "n": 36633,
+          "success_rate": 0.5276,
+          "lift": 1.307,
+          "funded_median_goal_usd": 3200.0,
+          "failed_median_goal_usd": 5000.0,
+          "best_goal_band": "a very small goal",
+          "best_goal_band_success_rate": 0.5902
+        },
+        {
+          "main_category": "Art",
+          "n": 20529,
+          "success_rate": 0.4517,
+          "lift": 1.119,
+          "funded_median_goal_usd": 2000.0,
+          "failed_median_goal_usd": 3852.85,
+          "best_goal_band": "a very small goal",
+          "best_goal_band_success_rate": 0.5715
+        },
+        {
+          "main_category": "Games",
+          "n": 22878,
+          "success_rate": 0.4395,
+          "lift": 1.088,
+          "funded_median_goal_usd": 5000.0,
+          "failed_median_goal_usd": 10000.0,
+          "best_goal_band": "a very small goal",
+          "best_goal_band_success_rate": 0.6111
+        },
+        {
+          "main_category": "Film & Video",
+          "n": 45162,
+          "success_rate": 0.4175,
+          "lift": 1.034,
+          "funded_median_goal_usd": 5000.0,
+          "failed_median_goal_usd": 10000.0,
+          "best_goal_band": "a very small goal",
+          "best_goal_band_success_rate": 0.5596
+        },
+        {
+          "main_category": "Design",
+          "n": 20294,
+          "success_rate": 0.4156,
+          "lift": 1.029,
+          "funded_median_goal_usd": 7500.0,
+          "failed_median_goal_usd": 13000.0,
+          "best_goal_band": "a very small goal",
+          "best_goal_band_success_rate": 0.6106
+        },
+        {
+          "main_category": "Publishing",
+          "n": 28333,
+          "success_rate": 0.3465,
+          "lift": 0.858,
+          "funded_median_goal_usd": 3000.0,
+          "failed_median_goal_usd": 5000.0,
+          "best_goal_band": "a very small goal",
+          "best_goal_band_success_rate": 0.5267
+        },
+        {
+          "main_category": "Photography",
+          "n": 7741,
+          "success_rate": 0.3403,
+          "lift": 0.843,
+          "funded_median_goal_usd": 3000.0,
+          "failed_median_goal_usd": 4500.0,
+          "best_goal_band": "a very small goal",
+          "best_goal_band_success_rate": 0.474
+        },
+        {
+          "main_category": "Fashion",
+          "n": 15809,
+          "success_rate": 0.2833,
+          "lift": 0.701,
+          "funded_median_goal_usd": 5000.0,
+          "failed_median_goal_usd": 6000.0,
+          "best_goal_band": "a very small goal",
+          "best_goal_band_success_rate": 0.4035
+        },
+        {
+          "main_category": "Food",
+          "n": 17643,
+          "success_rate": 0.2761,
+          "lift": 0.684,
+          "funded_median_goal_usd": 7166.1,
+          "failed_median_goal_usd": 12000.0,
+          "best_goal_band": "a very small goal",
+          "best_goal_band_success_rate": 0.3836
+        },
+        {
+          "main_category": "Crafts",
+          "n": 6230,
+          "success_rate": 0.2708,
+          "lift": 0.671,
+          "funded_median_goal_usd": 1000.0,
+          "failed_median_goal_usd": 2977.74,
+          "best_goal_band": "a very small goal",
+          "best_goal_band_success_rate": 0.4378
+        },
+        {
+          "main_category": "Journalism",
+          "n": 3303,
+          "success_rate": 0.2443,
+          "lift": 0.605,
+          "funded_median_goal_usd": 3000.0,
+          "failed_median_goal_usd": 5000.0,
+          "best_goal_band": "a very small goal",
+          "best_goal_band_success_rate": 0.3726
+        },
+        {
+          "main_category": "Technology",
+          "n": 21646,
+          "success_rate": 0.237,
+          "lift": 0.587,
+          "funded_median_goal_usd": 10000.0,
+          "failed_median_goal_usd": 20000.0,
+          "best_goal_band": "a very small goal",
+          "best_goal_band_success_rate": 0.4679
+        }
+      ],
+      "top_funding_combos": [
+        {
+          "items": {
+            "main_category": "Food",
+            "goal_band": "a very large goal"
+          },
+          "order": 2,
+          "n": 997,
+          "n_funded": 20,
+          "support": 0.00376,
+          "confidence": 0.0201,
+          "lift": 0.05,
+          "p_value": 8.387e-135,
+          "direction": "failure",
+          "label": "main_category=Food \u2227 goal_band=a very large goal",
+          "driver": "failure"
+        },
+        {
+          "items": {
+            "main_category": "Comics",
+            "goal_band": "a very small goal"
+          },
+          "order": 2,
+          "n": 1461,
+          "n_funded": 1132,
+          "support": 0.00551,
+          "confidence": 0.7748,
+          "lift": 1.919,
+          "p_value": 2.48e-184,
+          "direction": "success",
+          "label": "main_category=Comics \u2227 goal_band=a very small goal",
+          "driver": "success"
+        },
+        {
+          "items": {
+            "goal_band": "a very large goal",
+            "duration_band": "46-60d"
+          },
+          "order": 2,
+          "n": 2513,
+          "n_funded": 103,
+          "support": 0.00948,
+          "confidence": 0.041,
+          "lift": 0.101,
+          "p_value": 2.604e-303,
+          "direction": "failure",
+          "label": "goal_band=a very large goal \u2227 duration_band=46-60d",
+          "driver": "failure"
+        },
+        {
+          "items": {
+            "main_category": "Theater",
+            "goal_band": "a very small goal"
+          },
+          "order": 2,
+          "n": 1203,
+          "n_funded": 918,
+          "support": 0.00454,
+          "confidence": 0.7631,
+          "lift": 1.89,
+          "p_value": 1.325e-142,
+          "direction": "success",
+          "label": "main_category=Theater \u2227 goal_band=a very small goal",
+          "driver": "success"
+        },
+        {
+          "items": {
+            "goal_band": "a very large goal",
+            "word_count_band": "1-3 words"
+          },
+          "order": 2,
+          "n": 3381,
+          "n_funded": 182,
+          "support": 0.01275,
+          "confidence": 0.0538,
+          "lift": 0.133,
+          "p_value": 0.0,
+          "direction": "failure",
+          "label": "goal_band=a very large goal \u2227 word_count_band=1-3 words",
+          "driver": "failure"
+        },
+        {
+          "items": {
+            "goal_band": "a very large goal",
+            "country": "GB"
+          },
+          "order": 2,
+          "n": 814,
+          "n_funded": 62,
+          "support": 0.00307,
+          "confidence": 0.0762,
+          "lift": 0.189,
+          "p_value": 7.172e-81,
+          "direction": "failure",
+          "label": "goal_band=a very large goal \u2227 country=GB",
+          "driver": "failure"
+        },
+        {
+          "items": {
+            "main_category": "Theater",
+            "duration_band": "<=15d"
+          },
+          "order": 2,
+          "n": 668,
+          "n_funded": 487,
+          "support": 0.00252,
+          "confidence": 0.729,
+          "lift": 1.805,
+          "p_value": 1.176e-65,
+          "direction": "success",
+          "label": "main_category=Theater \u2227 duration_band=<=15d",
+          "driver": "success"
+        },
+        {
+          "items": {
+            "main_category": "Theater",
+            "goal_band": "a small goal"
+          },
+          "order": 2,
+          "n": 3836,
+          "n_funded": 2784,
+          "support": 0.01447,
+          "confidence": 0.7258,
+          "lift": 1.797,
+          "p_value": 0.0,
+          "direction": "success",
+          "label": "main_category=Theater \u2227 goal_band=a small goal",
+          "driver": "success"
+        },
+        {
+          "items": {
+            "goal_band": "a very large goal",
+            "word_count_band": "4-6 words"
+          },
+          "order": 2,
+          "n": 3220,
+          "n_funded": 270,
+          "support": 0.01214,
+          "confidence": 0.0839,
+          "lift": 0.208,
+          "p_value": 4.277e-303,
+          "direction": "failure",
+          "label": "goal_band=a very large goal \u2227 word_count_band=4-6 words",
+          "driver": "failure"
+        },
+        {
+          "items": {
+            "main_category": "Film & Video",
+            "goal_band": "a very large goal"
+          },
+          "order": 2,
+          "n": 2362,
+          "n_funded": 206,
+          "support": 0.00891,
+          "confidence": 0.0872,
+          "lift": 0.216,
+          "p_value": 1.678e-217,
+          "direction": "failure",
+          "label": "main_category=Film & Video \u2227 goal_band=a very large goal",
+          "driver": "failure"
+        },
+        {
+          "items": {
+            "goal_band": "a large goal",
+            "country": "IT"
+          },
+          "order": 2,
+          "n": 503,
+          "n_funded": 44,
+          "support": 0.0019,
+          "confidence": 0.0875,
+          "lift": 0.217,
+          "p_value": 3.457e-47,
+          "direction": "failure",
+          "label": "goal_band=a large goal \u2227 country=IT",
+          "driver": "failure"
+        },
+        {
+          "items": {
+            "main_category": "Dance",
+            "goal_band": "a small goal"
+          },
+          "order": 2,
+          "n": 1425,
+          "n_funded": 1023,
+          "support": 0.00537,
+          "confidence": 0.7179,
+          "lift": 1.778,
+          "p_value": 2.122e-129,
+          "direction": "success",
+          "label": "main_category=Dance \u2227 goal_band=a small goal",
+          "driver": "success"
+        },
+        {
+          "items": {
+            "goal_band": "a very large goal",
+            "has_number": "no number"
+          },
+          "order": 2,
+          "n": 9061,
+          "n_funded": 836,
+          "support": 0.03417,
+          "confidence": 0.0923,
+          "lift": 0.228,
+          "p_value": 0.0,
+          "direction": "failure",
+          "label": "goal_band=a very large goal \u2227 has_number=no number",
+          "driver": "failure"
+        },
+        {
+          "items": {
+            "goal_band": "a very large goal",
+            "launch_quarter": "Q4"
+          },
+          "order": 2,
+          "n": 2293,
+          "n_funded": 215,
+          "support": 0.00865,
+          "confidence": 0.0938,
+          "lift": 0.232,
+          "p_value": 1.399e-202,
+          "direction": "failure",
+          "label": "goal_band=a very large goal \u2227 launch_quarter=Q4",
+          "driver": "failure"
+        },
+        {
+          "items": {
+            "goal_band": "a very large goal",
+            "launch_quarter": "Q3"
+          },
+          "order": 2,
+          "n": 2675,
+          "n_funded": 256,
+          "support": 0.01009,
+          "confidence": 0.0957,
+          "lift": 0.237,
+          "p_value": 1.909e-233,
+          "direction": "failure",
+          "label": "goal_band=a very large goal \u2227 launch_quarter=Q3",
+          "driver": "failure"
+        }
+      ]
+    },
+    "temporal": {
+      "year_trend": [
+        {
+          "value": "2009",
+          "success_rate": 0.5026,
+          "lift": 1.245,
+          "n": 951
+        },
+        {
+          "value": "2010",
+          "success_rate": 0.4772,
+          "lift": 1.182,
+          "n": 7713
+        },
+        {
+          "value": "2011",
+          "success_rate": 0.5065,
+          "lift": 1.254,
+          "n": 19185
+        },
+        {
+          "value": "2012",
+          "success_rate": 0.4655,
+          "lift": 1.153,
+          "n": 30841
+        },
+        {
+          "value": "2013",
+          "success_rate": 0.4713,
+          "lift": 1.167,
+          "n": 32842
+        },
+        {
+          "value": "2014",
+          "success_rate": 0.3551,
+          "lift": 0.879,
+          "n": 47408
+        },
+        {
+          "value": "2015",
+          "success_rate": 0.3226,
+          "lift": 0.799,
+          "n": 52240
+        },
+        {
+          "value": "2016",
+          "success_rate": 0.3805,
+          "lift": 0.942,
+          "n": 39205
+        },
+        {
+          "value": "2017",
+          "success_rate": 0.4244,
+          "lift": 1.051,
+          "n": 34786
+        }
+      ],
+      "month": [
+        {
+          "value": "01",
+          "success_rate": 0.3871,
+          "lift": 0.959,
+          "n": 19635
+        },
+        {
+          "value": "02",
+          "success_rate": 0.4184,
+          "lift": 1.036,
+          "n": 21145
+        },
+        {
+          "value": "03",
+          "success_rate": 0.4271,
+          "lift": 1.058,
+          "n": 23932
+        },
+        {
+          "value": "04",
+          "success_rate": 0.425,
+          "lift": 1.053,
+          "n": 22680
+        },
+        {
+          "value": "05",
+          "success_rate": 0.4105,
+          "lift": 1.017,
+          "n": 23264
+        },
+        {
+          "value": "06",
+          "success_rate": 0.4037,
+          "lift": 1.0,
+          "n": 23156
+        },
+        {
+          "value": "07",
+          "success_rate": 0.3672,
+          "lift": 0.909,
+          "n": 25485
+        },
+        {
+          "value": "08",
+          "success_rate": 0.381,
+          "lift": 0.944,
+          "n": 22767
+        },
+        {
+          "value": "09",
+          "success_rate": 0.409,
+          "lift": 1.013,
+          "n": 22039
+        },
+        {
+          "value": "10",
+          "success_rate": 0.4216,
+          "lift": 1.044,
+          "n": 23487
+        },
+        {
+          "value": "11",
+          "success_rate": 0.4131,
+          "lift": 1.023,
+          "n": 22792
+        },
+        {
+          "value": "12",
+          "success_rate": 0.3722,
+          "lift": 0.922,
+          "n": 14789
+        }
+      ],
+      "quarter": [
+        {
+          "value": "Q1",
+          "success_rate": 0.4121,
+          "lift": 1.021,
+          "n": 64712
+        },
+        {
+          "value": "Q2",
+          "success_rate": 0.413,
+          "lift": 1.023,
+          "n": 69100
+        },
+        {
+          "value": "Q3",
+          "success_rate": 0.3848,
+          "lift": 0.953,
+          "n": 70291
+        },
+        {
+          "value": "Q4",
+          "success_rate": 0.4065,
+          "lift": 1.007,
+          "n": 61068
+        }
+      ],
+      "weekday": [
+        {
+          "value": "Tuesday",
+          "success_rate": 0.4249,
+          "lift": 1.052,
+          "n": 54228
+        },
+        {
+          "value": "Wednesday",
+          "success_rate": 0.4062,
+          "lift": 1.006,
+          "n": 47312
+        },
+        {
+          "value": "Monday",
+          "success_rate": 0.4054,
+          "lift": 1.004,
+          "n": 42733
+        },
+        {
+          "value": "Sunday",
+          "success_rate": 0.4039,
+          "lift": 1.0,
+          "n": 14648
+        },
+        {
+          "value": "Thursday",
+          "success_rate": 0.4026,
+          "lift": 0.997,
+          "n": 42387
+        },
+        {
+          "value": "Friday",
+          "success_rate": 0.3888,
+          "lift": 0.963,
+          "n": 41026
+        },
+        {
+          "value": "Saturday",
+          "success_rate": 0.3748,
+          "lift": 0.928,
+          "n": 22837
+        }
+      ],
+      "weekend": [
+        {
+          "value": "weekday",
+          "success_rate": 0.4067,
+          "lift": 1.007,
+          "n": 227686
+        },
+        {
+          "value": "weekend",
+          "success_rate": 0.3862,
+          "lift": 0.956,
+          "n": 37485
+        }
+      ],
+      "highlights": {
+        "best_year": "2011",
+        "worst_year": "2015",
+        "best_month": "03",
+        "worst_month": "07",
+        "best_quarter": "Q2",
+        "best_weekday": "Tuesday",
+        "worst_weekday": "Saturday",
+        "year_trend_direction": "declining",
+        "weekend_vs_weekday_lift": -0.051
+      }
+    },
+    "explanations": [
+      {
+        "label": "main_category=Food \u2227 goal_band=a very large goal",
+        "direction": "failure",
+        "lift": 0.05,
+        "support": 0.00376,
+        "n": 997,
+        "explanation": "Historically, campaigns in the Food category and seeking a very large goal were more likely to fail: they funded at only 2% versus a 40% baseline (lift 0.05), across 997 campaigns. This is a historical association in campaign metadata and titles, not a proven cause of funding."
+      },
+      {
+        "label": "main_category=Comics \u2227 goal_band=a very small goal",
+        "direction": "success",
+        "lift": 1.919,
+        "support": 0.00551,
+        "n": 1461,
+        "explanation": "Historically, campaigns in the Comics category and seeking a very small goal were more likely to secure funding: they funded at 77% versus a 40% baseline, a lift of 1.92, across 1,461 campaigns. This is a historical association in campaign metadata and titles, not a proven cause of funding."
+      },
+      {
+        "label": "goal_band=a very large goal \u2227 duration_band=46-60d",
+        "direction": "failure",
+        "lift": 0.101,
+        "support": 0.00948,
+        "n": 2513,
+        "explanation": "Historically, campaigns seeking a very large goal and running a 46-60d campaign were more likely to fail: they funded at only 4% versus a 40% baseline (lift 0.10), across 2,513 campaigns. This is a historical association in campaign metadata and titles, not a proven cause of funding."
+      },
+      {
+        "label": "main_category=Theater \u2227 goal_band=a very small goal",
+        "direction": "success",
+        "lift": 1.89,
+        "support": 0.00454,
+        "n": 1203,
+        "explanation": "Historically, campaigns in the Theater category and seeking a very small goal were more likely to secure funding: they funded at 76% versus a 40% baseline, a lift of 1.89, across 1,203 campaigns. This is a historical association in campaign metadata and titles, not a proven cause of funding."
+      },
+      {
+        "label": "goal_band=a very large goal \u2227 word_count_band=1-3 words",
+        "direction": "failure",
+        "lift": 0.133,
+        "support": 0.01275,
+        "n": 3381,
+        "explanation": "Historically, campaigns seeking a very large goal and with a 1-3 words title were more likely to fail: they funded at only 5% versus a 40% baseline (lift 0.13), across 3,381 campaigns. This is a historical association in campaign metadata and titles, not a proven cause of funding."
+      },
+      {
+        "label": "category=Apps",
+        "direction": "failure",
+        "lift": 0.172,
+        "support": 0.01597,
+        "n": 4234,
+        "explanation": "Historically, campaigns in the Apps category were more likely to fail: they funded at only 7% versus a 40% baseline (lift 0.17), across 4,234 campaigns. This is a historical association in campaign metadata and titles, not a proven cause of funding."
+      },
+      {
+        "label": "goal_band=a very large goal \u2227 country=GB",
+        "direction": "failure",
+        "lift": 0.189,
+        "support": 0.00307,
+        "n": 814,
+        "explanation": "Historically, campaigns seeking a very large goal and based in GB were more likely to fail: they funded at only 8% versus a 40% baseline (lift 0.19), across 814 campaigns. This is a historical association in campaign metadata and titles, not a proven cause of funding."
+      },
+      {
+        "label": "main_category=Theater \u2227 duration_band=<=15d",
+        "direction": "success",
+        "lift": 1.805,
+        "support": 0.00252,
+        "n": 668,
+        "explanation": "Historically, campaigns in the Theater category and running a <=15d campaign were more likely to secure funding: they funded at 73% versus a 40% baseline, a lift of 1.80, across 668 campaigns. This is a historical association in campaign metadata and titles, not a proven cause of funding."
+      },
+      {
+        "label": "main_category=Theater \u2227 goal_band=a small goal",
+        "direction": "success",
+        "lift": 1.797,
+        "support": 0.01447,
+        "n": 3836,
+        "explanation": "Historically, campaigns in the Theater category and seeking a small goal were more likely to secure funding: they funded at 73% versus a 40% baseline, a lift of 1.80, across 3,836 campaigns. This is a historical association in campaign metadata and titles, not a proven cause of funding."
+      },
+      {
+        "label": "goal_band=a very large goal \u2227 word_count_band=4-6 words",
+        "direction": "failure",
+        "lift": 0.208,
+        "support": 0.01214,
+        "n": 3220,
+        "explanation": "Historically, campaigns seeking a very large goal and with a 4-6 words title were more likely to fail: they funded at only 8% versus a 40% baseline (lift 0.21), across 3,220 campaigns. This is a historical association in campaign metadata and titles, not a proven cause of funding."
+      },
+      {
+        "label": "main_category=Film & Video \u2227 goal_band=a very large goal",
+        "direction": "failure",
+        "lift": 0.216,
+        "support": 0.00891,
+        "n": 2362,
+        "explanation": "Historically, campaigns in the Film & Video category and seeking a very large goal were more likely to fail: they funded at only 9% versus a 40% baseline (lift 0.22), across 2,362 campaigns. This is a historical association in campaign metadata and titles, not a proven cause of funding."
+      },
+      {
+        "label": "goal_band=a large goal \u2227 country=IT",
+        "direction": "failure",
+        "lift": 0.217,
+        "support": 0.0019,
+        "n": 503,
+        "explanation": "Historically, campaigns seeking a large goal and based in IT were more likely to fail: they funded at only 9% versus a 40% baseline (lift 0.22), across 503 campaigns. This is a historical association in campaign metadata and titles, not a proven cause of funding."
+      },
+      {
+        "label": "main_category=Dance \u2227 goal_band=a small goal",
+        "direction": "success",
+        "lift": 1.778,
+        "support": 0.00537,
+        "n": 1425,
+        "explanation": "Historically, campaigns in the Dance category and seeking a small goal were more likely to secure funding: they funded at 72% versus a 40% baseline, a lift of 1.78, across 1,425 campaigns. This is a historical association in campaign metadata and titles, not a proven cause of funding."
+      },
+      {
+        "label": "goal_band=a very large goal \u2227 has_number=no number",
+        "direction": "failure",
+        "lift": 0.228,
+        "support": 0.03417,
+        "n": 9061,
+        "explanation": "Historically, campaigns seeking a very large goal and without a number in the title were more likely to fail: they funded at only 9% versus a 40% baseline (lift 0.23), across 9,061 campaigns. This is a historical association in campaign metadata and titles, not a proven cause of funding."
+      },
+      {
+        "label": "goal_band=a very large goal \u2227 launch_quarter=Q4",
+        "direction": "failure",
+        "lift": 0.232,
+        "support": 0.00865,
+        "n": 2293,
+        "explanation": "Historically, campaigns seeking a very large goal and launched in Q4 were more likely to fail: they funded at only 9% versus a 40% baseline (lift 0.23), across 2,293 campaigns. This is a historical association in campaign metadata and titles, not a proven cause of funding."
+      }
+    ]
+  },
+  "deferred_capabilities": {
+    "funding_rounds": {
+      "status": "deferred",
+      "reason": "no data in this dataset \u2014 awaits richer venture data"
+    },
+    "funding_stage": {
+      "status": "deferred",
+      "reason": "no data in this dataset \u2014 awaits richer venture data"
+    },
+    "team_composition": {
+      "status": "deferred",
+      "reason": "no data in this dataset \u2014 awaits richer venture data"
+    },
+    "revenue": {
+      "status": "deferred",
+      "reason": "no data in this dataset \u2014 awaits richer venture data"
+    },
+    "business_model": {
+      "status": "deferred",
+      "reason": "no data in this dataset \u2014 awaits richer venture data"
+    },
+    "market_size": {
+      "status": "deferred",
+      "reason": "no data in this dataset \u2014 awaits richer venture data"
+    },
+    "growth_trajectory": {
+      "status": "deferred",
+      "reason": "Kickstarter records one funded/failed outcome, not a time series \u2014 no user/revenue/retention growth to mine"
+    },
+    "user_growth": {
+      "status": "deferred",
+      "reason": "no data"
+    },
+    "revenue_growth": {
+      "status": "deferred",
+      "reason": "no data"
+    },
+    "retention": {
+      "status": "deferred",
+      "reason": "no data"
+    },
+    "team_expansion": {
+      "status": "deferred",
+      "reason": "no data"
+    },
+    "product_iteration": {
+      "status": "deferred",
+      "reason": "no data"
+    }
+  }
+}
