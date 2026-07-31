@@ -1,0 +1,169 @@
+[
+  {
+    "query": {
+      "name": "Artificer - Board Game",
+      "main_category": "Games",
+      "category": "Tabletop Games",
+      "country": "CA",
+      "usd_goal_real": 30515.72
+    },
+    "optimization_plan": {
+      "baseline_p": 0.242,
+      "final_p": 0.664,
+      "total_gain": 0.422,
+      "n_steps": 3,
+      "steps": [
+        {
+          "feature": "campaign_duration",
+          "current": 29,
+          "proposed": 15,
+          "tier": "moderate",
+          "rationale_key": "shorter_campaign",
+          "cumulative_p": 0.5377,
+          "marginal_gain": 0.2957,
+          "raw_changes": {
+            "deadline": "2015-07-31 04:16:42"
+          },
+          "action": "Shorten your campaign from 29 to 15 days",
+          "confidence": "high",
+          "evidence": "Games campaigns with a <=15d campaign funded at 66% vs a 40% baseline (lift 1.62, n=1,331)."
+        },
+        {
+          "feature": "goal",
+          "current": 30515.72,
+          "proposed": 5000.0,
+          "tier": "strong",
+          "rationale_key": "category_funded_median",
+          "cumulative_p": 0.6166,
+          "marginal_gain": 0.0789,
+          "raw_changes": {
+            "goal": 6554.0,
+            "usd_goal_real": 5000.0
+          },
+          "action": "Lower your funding goal from $30,516 to $5,000",
+          "confidence": "high",
+          "evidence": "Games campaigns asking goal <= $5,000 funded at 55% vs a 40% baseline (lift 1.36, n=9,834). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+        },
+        {
+          "feature": "title",
+          "current": "no number",
+          "proposed": "has number",
+          "tier": "suggestive",
+          "rationale_key": "title_has_number",
+          "cumulative_p": 0.664,
+          "marginal_gain": 0.0474,
+          "raw_changes": {
+            "name": "Artificer - Board Game 2",
+            "name_clean": "artificer board game 2"
+          },
+          "action": "Add a number to your title (e.g. an edition or volume number)",
+          "confidence": "medium",
+          "evidence": "Games campaigns with a number in the title funded at 59% vs a 40% baseline (lift 1.46, n=2,823)."
+        }
+      ],
+      "n_model_calls": 41,
+      "note": "Cumulative probabilities are re-simulated jointly through the calibrated model, not summed. Model-simulated estimate, not a causal guarantee."
+    }
+  },
+  {
+    "query": {
+      "name": "Sequel to \"I'm a Cow\" song and animation video",
+      "main_category": "Film & Video",
+      "category": "Comedy",
+      "country": "US",
+      "usd_goal_real": 15000.0
+    },
+    "optimization_plan": {
+      "baseline_p": 0.2312,
+      "final_p": 0.4357,
+      "total_gain": 0.2045,
+      "n_steps": 2,
+      "steps": [
+        {
+          "feature": "campaign_duration",
+          "current": 18,
+          "proposed": 30,
+          "tier": "moderate",
+          "rationale_key": "shorter_campaign",
+          "cumulative_p": 0.3499,
+          "marginal_gain": 0.1187,
+          "raw_changes": {
+            "deadline": "2015-08-11 14:42:03"
+          },
+          "action": "Shorten your campaign from 18 to 30 days",
+          "confidence": "medium",
+          "evidence": "Film & Video campaigns with a 16-30d campaign funded at 44% vs a 40% baseline (lift 1.10, n=26,194)."
+        },
+        {
+          "feature": "goal",
+          "current": 15000.0,
+          "proposed": 5000.0,
+          "tier": "strong",
+          "rationale_key": "category_funded_median",
+          "cumulative_p": 0.4357,
+          "marginal_gain": 0.0858,
+          "raw_changes": {
+            "goal": 5000.0,
+            "usd_goal_real": 5000.0
+          },
+          "action": "Lower your funding goal from $15,000 to $5,000",
+          "confidence": "high",
+          "evidence": "Film & Video campaigns asking goal <= $5,000 funded at 51% vs a 40% baseline (lift 1.27, n=20,767). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+        }
+      ],
+      "n_model_calls": 60,
+      "note": "Cumulative probabilities are re-simulated jointly through the calibrated model, not summed. Model-simulated estimate, not a causal guarantee."
+    }
+  },
+  {
+    "query": {
+      "name": "Organika Cases - Phone cases from real natural materials",
+      "main_category": "Fashion",
+      "category": "Accessories",
+      "country": "US",
+      "usd_goal_real": 13000.0
+    },
+    "optimization_plan": {
+      "baseline_p": 0.3509,
+      "final_p": 0.3887,
+      "total_gain": 0.0378,
+      "n_steps": 2,
+      "steps": [
+        {
+          "feature": "goal",
+          "current": 13000.0,
+          "proposed": 5000.0,
+          "tier": "strong",
+          "rationale_key": "category_funded_median",
+          "cumulative_p": 0.3807,
+          "marginal_gain": 0.0298,
+          "raw_changes": {
+            "goal": 5000.0,
+            "usd_goal_real": 5000.0
+          },
+          "action": "Lower your funding goal from $13,000 to $5,000",
+          "confidence": "medium",
+          "evidence": "Fashion campaigns asking goal <= $5,000 funded at 31% vs a 40% baseline (lift 0.76, n=7,747). Funded campaigns here had a median goal of $5,000 vs $6,000 for failed."
+        },
+        {
+          "feature": "title",
+          "current": "no number",
+          "proposed": "has number",
+          "tier": "suggestive",
+          "rationale_key": "title_has_number",
+          "cumulative_p": 0.3887,
+          "marginal_gain": 0.008,
+          "raw_changes": {
+            "name": "Organika Cases - Phone cases from real natural materials 2",
+            "name_clean": "organika cases phone cases from real natural materials 2"
+          },
+          "action": "Add a number to your title (e.g. an edition or volume number)",
+          "confidence": "low",
+          "evidence": "Fashion campaigns with a number in the title funded at 35% vs a 40% baseline (lift 0.87, n=1,435)."
+        }
+      ],
+      "n_model_calls": 74,
+      "note": "Cumulative probabilities are re-simulated jointly through the calibrated model, not summed. Model-simulated estimate, not a causal guarantee."
+    }
+  }
+]

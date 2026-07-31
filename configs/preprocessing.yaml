@@ -514,3 +514,61 @@ day7:
     cluster_random_state: 42
     top_explanations: 15
     report_path: artifacts/patterns/pattern_mining_report.json
+
+# ============================================================================
+# Day 8 — Counterfactual Engine (Layer 7)
+# ============================================================================
+day8:
+  # --- Phase B: counterfactual candidate generator (mutable features only) -----
+  candidates:
+    funding_patterns_path: artifacts/patterns/funding_patterns.json  # Day-7 category goal medians
+    goal_floor: 100                  # never propose an absurdly low goal
+    goal_multiples: [0.5]            # extra goal reductions of current usd_goal_real
+    target_durations: [15, 30]       # Kickstarter sweet spots (Day-7: shorter funds better)
+    best_weekday: Tuesday            # Day-7 best-lift weekday
+    enable_title: true               # coarse has_number candidate (suggestive tier)
+    mutable: [goal, campaign_duration, launch_weekday, title]
+    immutable: [country, currency]   # NEVER recommend (gaming, not advice)
+
+  # --- Phase C: funding probability simulator (perturb -> re-run Day-4 model) ---
+  simulator:
+    min_gain: 0.005                  # min cumulative gain to add a step in the greedy plan
+    predict_cols: [name, category, main_category, currency, deadline, goal,
+                   launched, country, usd_goal_real, name_clean]
+
+  # --- Phase D: historical evidence validation (real Day-7 patterns) ----------
+  evidence:
+    min_subgroup_n: 100              # min campaigns for category-specific evidence; else global
+
+  # --- Phase E: improvement ranking engine (gain x evidence x feasibility) -----
+  ranking:
+    min_delta: 0.005                 # drop negligible/negative-gain recommendations
+    tier_weights: {strong: 1.0, moderate: 0.85, suggestive: 0.7}
+    feasibility: {goal: 1.0, campaign_duration: 1.0, launch_weekday: 0.9, title: 0.8}
+    evidence_lift_cap: 1.8           # clip evidence lift so one huge lift can't dominate
+
+  # --- Phase G: counterfactual pipeline (raw -> ranked plan) -------------------
+  pipeline:
+    n_examples: 3
+    recommendations_path: artifacts/counterfactual/recommendations.json
+    scenario_results_path: artifacts/counterfactual/scenario_results.json
+    ranked_actions_path: artifacts/counterfactual/ranked_actions.csv
+
+  # --- Phase H: startup optimization report -----------------------------------
+  report:
+    top_n: 5
+    n_examples: 3
+    out_path: artifacts/counterfactual/optimization_report.json
+
+  # --- Phase I: counterfactual engine serialization (config + hashes) ----------
+  serialization:
+    version: "1.0.0"
+    manifest_path: artifacts/counterfactual/counterfactual_engine.json
+    dependencies:
+      day4_calibrated_model: artifacts/models/calibrated_model.joblib
+      day7_funding_patterns: artifacts/patterns/funding_patterns.json
+      day7_pattern_repository: artifacts/patterns/pattern_repository.json
+    artifacts:
+      recommendations: artifacts/counterfactual/recommendations.json
+      scenario_results: artifacts/counterfactual/scenario_results.json
+      optimization_report: artifacts/counterfactual/optimization_report.json

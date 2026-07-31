@@ -1,0 +1,444 @@
+[
+  {
+    "query": {
+      "name": "Artificer - Board Game",
+      "main_category": "Games",
+      "category": "Tabletop Games",
+      "country": "CA",
+      "usd_goal_real": 30515.72
+    },
+    "baseline_p": 0.242,
+    "ranked_recommendations": [
+      {
+        "feature": "campaign_duration",
+        "current": 29,
+        "proposed": 15,
+        "tier": "moderate",
+        "rationale_key": "shorter_campaign",
+        "baseline_p": 0.242,
+        "new_p": 0.5377,
+        "delta": 0.2957,
+        "raw_changes": {
+          "deadline": "2015-07-31 04:16:42"
+        },
+        "evidence": {
+          "available": true,
+          "source": "pattern_mining (Day-7 train substrate)",
+          "scope": "Games campaigns",
+          "item": "duration_band=<=15d",
+          "n": 1331,
+          "confidence": 0.6551,
+          "lift": 1.622,
+          "base_rate": 0.4038,
+          "statement": "Games campaigns with a <=15d campaign funded at 66% vs a 40% baseline (lift 1.62, n=1,331)."
+        },
+        "score": 0.40768,
+        "feasibility": 1.0,
+        "confidence": "high",
+        "cost_label": "low (pre-launch setting)",
+        "time_label": "immediate (set before launch)",
+        "labels_are_heuristic": true,
+        "priority": 1,
+        "explanation": "Shorten your campaign from 29 to 15 days. The model estimates your funding probability would rise from 24% to 54% (+30 points). Games campaigns with a <=15d campaign funded at 66% vs a 40% baseline (lift 1.62, n=1,331). Confidence: high. Note: this is the model's estimate based on historical association, not a guarantee."
+      },
+      {
+        "feature": "goal",
+        "current": 30515.72,
+        "proposed": 5000.0,
+        "tier": "strong",
+        "rationale_key": "category_funded_median",
+        "baseline_p": 0.242,
+        "new_p": 0.3587,
+        "delta": 0.1167,
+        "raw_changes": {
+          "goal": 6554.0,
+          "usd_goal_real": 5000.0
+        },
+        "evidence": {
+          "available": true,
+          "source": "pattern_mining (Day-7 train substrate)",
+          "scope": "Games campaigns",
+          "item": "goal <= $5,000",
+          "n": 9834,
+          "confidence": 0.5496,
+          "lift": 1.361,
+          "base_rate": 0.4038,
+          "funded_median_goal_usd": 5000.0,
+          "failed_median_goal_usd": 10000.0,
+          "statement": "Games campaigns asking goal <= $5,000 funded at 55% vs a 40% baseline (lift 1.36, n=9,834). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+        },
+        "score": 0.15883,
+        "feasibility": 1.0,
+        "confidence": "high",
+        "cost_label": "low (pre-launch setting)",
+        "time_label": "immediate (set before launch)",
+        "labels_are_heuristic": true,
+        "priority": 2,
+        "explanation": "Lower your funding goal from $30,516 to $5,000. The model estimates your funding probability would rise from 24% to 36% (+12 points). Games campaigns asking goal <= $5,000 funded at 55% vs a 40% baseline (lift 1.36, n=9,834). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed. Confidence: high. Note: this is the model's estimate based on historical association, not a guarantee."
+      },
+      {
+        "feature": "goal",
+        "current": 30515.72,
+        "proposed": 15257.86,
+        "tier": "moderate",
+        "rationale_key": "reduce_to_50pct",
+        "baseline_p": 0.242,
+        "new_p": 0.2758,
+        "delta": 0.0338,
+        "raw_changes": {
+          "goal": 20000.0,
+          "usd_goal_real": 15257.86
+        },
+        "evidence": {
+          "available": true,
+          "source": "pattern_mining (Day-7 train substrate)",
+          "scope": "Games campaigns",
+          "item": "goal <= $15,258",
+          "n": 16294,
+          "confidence": 0.5003,
+          "lift": 1.239,
+          "base_rate": 0.4038,
+          "funded_median_goal_usd": 5000.0,
+          "failed_median_goal_usd": 10000.0,
+          "statement": "Games campaigns asking goal <= $15,258 funded at 50% vs a 40% baseline (lift 1.24, n=16,294). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+        },
+        "score": 0.0356,
+        "feasibility": 1.0,
+        "confidence": "high",
+        "cost_label": "low (pre-launch setting)",
+        "time_label": "immediate (set before launch)",
+        "labels_are_heuristic": true,
+        "priority": 3,
+        "explanation": "Lower your funding goal from $30,516 to $15,258. The model estimates your funding probability would rise from 24% to 28% (+3 points). Games campaigns asking goal <= $15,258 funded at 50% vs a 40% baseline (lift 1.24, n=16,294). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed. Confidence: high. Note: this is the model's estimate based on historical association, not a guarantee."
+      },
+      {
+        "feature": "title",
+        "current": "no number",
+        "proposed": "has number",
+        "tier": "suggestive",
+        "rationale_key": "title_has_number",
+        "baseline_p": 0.242,
+        "new_p": 0.2772,
+        "delta": 0.0352,
+        "raw_changes": {
+          "name": "Artificer - Board Game 2",
+          "name_clean": "artificer board game 2"
+        },
+        "evidence": {
+          "available": true,
+          "source": "pattern_mining (Day-7 train substrate)",
+          "scope": "Games campaigns",
+          "item": "has_number=has number",
+          "n": 2823,
+          "confidence": 0.588,
+          "lift": 1.456,
+          "base_rate": 0.4038,
+          "statement": "Games campaigns with a number in the title funded at 59% vs a 40% baseline (lift 1.46, n=2,823)."
+        },
+        "score": 0.0287,
+        "feasibility": 0.8,
+        "confidence": "medium",
+        "cost_label": "low (pre-launch setting)",
+        "time_label": "immediate (set before launch)",
+        "labels_are_heuristic": true,
+        "priority": 4,
+        "explanation": "Add a number to your title (e.g. an edition or volume number). The model estimates your funding probability would rise from 24% to 28% (+4 points). Games campaigns with a number in the title funded at 59% vs a 40% baseline (lift 1.46, n=2,823). Confidence: medium. Note: this is the model's estimate based on historical association, not a guarantee."
+      },
+      {
+        "feature": "launch_weekday",
+        "current": "Thursday",
+        "proposed": "Tuesday",
+        "tier": "suggestive",
+        "rationale_key": "best_weekday",
+        "baseline_p": 0.242,
+        "new_p": 0.2677,
+        "delta": 0.0257,
+        "raw_changes": {
+          "launched": "2015-07-21 04:16:42",
+          "deadline": "2015-08-20 00:00:00"
+        },
+        "evidence": {
+          "available": true,
+          "source": "pattern_mining (Day-7 train substrate)",
+          "scope": "Games campaigns",
+          "item": "launch_weekday=Tuesday",
+          "n": 5071,
+          "confidence": 0.5017,
+          "lift": 1.242,
+          "base_rate": 0.4038,
+          "statement": "Games campaigns launched on Tuesday funded at 50% vs a 40% baseline (lift 1.24, n=5,071)."
+        },
+        "score": 0.02011,
+        "feasibility": 0.9,
+        "confidence": "medium",
+        "cost_label": "low (pre-launch setting)",
+        "time_label": "immediate (set before launch)",
+        "labels_are_heuristic": true,
+        "priority": 5,
+        "explanation": "Launch on Tuesday instead of Thursday. The model estimates your funding probability would rise from 24% to 27% (+3 points). Games campaigns launched on Tuesday funded at 50% vs a 40% baseline (lift 1.24, n=5,071). Confidence: medium. Note: this is the model's estimate based on historical association, not a guarantee."
+      }
+    ]
+  },
+  {
+    "query": {
+      "name": "Sequel to \"I'm a Cow\" song and animation video",
+      "main_category": "Film & Video",
+      "category": "Comedy",
+      "country": "US",
+      "usd_goal_real": 15000.0
+    },
+    "baseline_p": 0.2312,
+    "ranked_recommendations": [
+      {
+        "feature": "goal",
+        "current": 15000.0,
+        "proposed": 5000.0,
+        "tier": "strong",
+        "rationale_key": "category_funded_median",
+        "baseline_p": 0.2312,
+        "new_p": 0.3217,
+        "delta": 0.0905,
+        "raw_changes": {
+          "goal": 5000.0,
+          "usd_goal_real": 5000.0
+        },
+        "evidence": {
+          "available": true,
+          "source": "pattern_mining (Day-7 train substrate)",
+          "scope": "Film & Video campaigns",
+          "item": "goal <= $5,000",
+          "n": 20767,
+          "confidence": 0.512,
+          "lift": 1.268,
+          "base_rate": 0.4038,
+          "funded_median_goal_usd": 5000.0,
+          "failed_median_goal_usd": 10000.0,
+          "statement": "Film & Video campaigns asking goal <= $5,000 funded at 51% vs a 40% baseline (lift 1.27, n=20,767). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+        },
+        "score": 0.11475,
+        "feasibility": 1.0,
+        "confidence": "high",
+        "cost_label": "low (pre-launch setting)",
+        "time_label": "immediate (set before launch)",
+        "labels_are_heuristic": true,
+        "priority": 1,
+        "explanation": "Lower your funding goal from $15,000 to $5,000. The model estimates your funding probability would rise from 23% to 32% (+9 points). Film & Video campaigns asking goal <= $5,000 funded at 51% vs a 40% baseline (lift 1.27, n=20,767). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed. Confidence: high. Note: this is the model's estimate based on historical association, not a guarantee."
+      },
+      {
+        "feature": "campaign_duration",
+        "current": 18,
+        "proposed": 30,
+        "tier": "moderate",
+        "rationale_key": "shorter_campaign",
+        "baseline_p": 0.2312,
+        "new_p": 0.3499,
+        "delta": 0.1187,
+        "raw_changes": {
+          "deadline": "2015-08-11 14:42:03"
+        },
+        "evidence": {
+          "available": true,
+          "source": "pattern_mining (Day-7 train substrate)",
+          "scope": "Film & Video campaigns",
+          "item": "duration_band=16-30d",
+          "n": 26194,
+          "confidence": 0.4438,
+          "lift": 1.099,
+          "base_rate": 0.4038,
+          "statement": "Film & Video campaigns with a 16-30d campaign funded at 44% vs a 40% baseline (lift 1.10, n=26,194)."
+        },
+        "score": 0.11088,
+        "feasibility": 1.0,
+        "confidence": "medium",
+        "cost_label": "low (pre-launch setting)",
+        "time_label": "immediate (set before launch)",
+        "labels_are_heuristic": true,
+        "priority": 2,
+        "explanation": "Shorten your campaign from 18 to 30 days. The model estimates your funding probability would rise from 23% to 35% (+12 points). Film & Video campaigns with a 16-30d campaign funded at 44% vs a 40% baseline (lift 1.10, n=26,194). Confidence: medium. Note: this is the model's estimate based on historical association, not a guarantee."
+      },
+      {
+        "feature": "goal",
+        "current": 15000.0,
+        "proposed": 7500.0,
+        "tier": "moderate",
+        "rationale_key": "reduce_to_50pct",
+        "baseline_p": 0.2312,
+        "new_p": 0.2891,
+        "delta": 0.0579,
+        "raw_changes": {
+          "goal": 7500.0,
+          "usd_goal_real": 7500.0
+        },
+        "evidence": {
+          "available": true,
+          "source": "pattern_mining (Day-7 train substrate)",
+          "scope": "Film & Video campaigns",
+          "item": "goal <= $7,500",
+          "n": 24307,
+          "confidence": 0.505,
+          "lift": 1.25,
+          "base_rate": 0.4038,
+          "funded_median_goal_usd": 5000.0,
+          "failed_median_goal_usd": 10000.0,
+          "statement": "Film & Video campaigns asking goal <= $7,500 funded at 50% vs a 40% baseline (lift 1.25, n=24,307). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+        },
+        "score": 0.06152,
+        "feasibility": 1.0,
+        "confidence": "high",
+        "cost_label": "low (pre-launch setting)",
+        "time_label": "immediate (set before launch)",
+        "labels_are_heuristic": true,
+        "priority": 3,
+        "explanation": "Lower your funding goal from $15,000 to $7,500. The model estimates your funding probability would rise from 23% to 29% (+6 points). Film & Video campaigns asking goal <= $7,500 funded at 50% vs a 40% baseline (lift 1.25, n=24,307). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed. Confidence: high. Note: this is the model's estimate based on historical association, not a guarantee."
+      },
+      {
+        "feature": "launch_weekday",
+        "current": "Sunday",
+        "proposed": "Tuesday",
+        "tier": "suggestive",
+        "rationale_key": "best_weekday",
+        "baseline_p": 0.2312,
+        "new_p": 0.3002,
+        "delta": 0.069,
+        "raw_changes": {
+          "launched": "2015-07-14 14:42:03",
+          "deadline": "2015-08-02 00:00:00"
+        },
+        "evidence": {
+          "available": true,
+          "source": "pattern_mining (Day-7 train substrate)",
+          "scope": "Film & Video campaigns",
+          "item": "launch_weekday=Tuesday",
+          "n": 8753,
+          "confidence": 0.4303,
+          "lift": 1.065,
+          "base_rate": 0.4038,
+          "statement": "Film & Video campaigns launched on Tuesday funded at 43% vs a 40% baseline (lift 1.07, n=8,753)."
+        },
+        "score": 0.0463,
+        "feasibility": 0.9,
+        "confidence": "medium",
+        "cost_label": "low (pre-launch setting)",
+        "time_label": "immediate (set before launch)",
+        "labels_are_heuristic": true,
+        "priority": 4,
+        "explanation": "Launch on Tuesday instead of Sunday. The model estimates your funding probability would rise from 23% to 30% (+7 points). Film & Video campaigns launched on Tuesday funded at 43% vs a 40% baseline (lift 1.07, n=8,753). Confidence: medium. Note: this is the model's estimate based on historical association, not a guarantee."
+      }
+    ]
+  },
+  {
+    "query": {
+      "name": "Organika Cases - Phone cases from real natural materials",
+      "main_category": "Fashion",
+      "category": "Accessories",
+      "country": "US",
+      "usd_goal_real": 13000.0
+    },
+    "baseline_p": 0.3509,
+    "ranked_recommendations": [
+      {
+        "feature": "goal",
+        "current": 13000.0,
+        "proposed": 5000.0,
+        "tier": "strong",
+        "rationale_key": "category_funded_median",
+        "baseline_p": 0.3509,
+        "new_p": 0.3807,
+        "delta": 0.0298,
+        "raw_changes": {
+          "goal": 5000.0,
+          "usd_goal_real": 5000.0
+        },
+        "evidence": {
+          "available": true,
+          "source": "pattern_mining (Day-7 train substrate)",
+          "scope": "Fashion campaigns",
+          "item": "goal <= $5,000",
+          "n": 7747,
+          "confidence": 0.3062,
+          "lift": 0.758,
+          "base_rate": 0.4038,
+          "funded_median_goal_usd": 5000.0,
+          "failed_median_goal_usd": 6000.0,
+          "statement": "Fashion campaigns asking goal <= $5,000 funded at 31% vs a 40% baseline (lift 0.76, n=7,747). Funded campaigns here had a median goal of $5,000 vs $6,000 for failed."
+        },
+        "score": 0.02259,
+        "feasibility": 1.0,
+        "confidence": "medium",
+        "cost_label": "low (pre-launch setting)",
+        "time_label": "immediate (set before launch)",
+        "labels_are_heuristic": true,
+        "priority": 1,
+        "explanation": "Lower your funding goal from $13,000 to $5,000. The model estimates your funding probability would rise from 35% to 38% (+3 points). Fashion campaigns asking goal <= $5,000 funded at 31% vs a 40% baseline (lift 0.76, n=7,747). Funded campaigns here had a median goal of $5,000 vs $6,000 for failed. Confidence: medium. Note: this is the model's estimate based on historical association, not a guarantee."
+      },
+      {
+        "feature": "goal",
+        "current": 13000.0,
+        "proposed": 6500.0,
+        "tier": "moderate",
+        "rationale_key": "reduce_to_50pct",
+        "baseline_p": 0.3509,
+        "new_p": 0.3794,
+        "delta": 0.0285,
+        "raw_changes": {
+          "goal": 6500.0,
+          "usd_goal_real": 6500.0
+        },
+        "evidence": {
+          "available": true,
+          "source": "pattern_mining (Day-7 train substrate)",
+          "scope": "Fashion campaigns",
+          "item": "goal <= $6,500",
+          "n": 8462,
+          "confidence": 0.3018,
+          "lift": 0.747,
+          "base_rate": 0.4038,
+          "funded_median_goal_usd": 5000.0,
+          "failed_median_goal_usd": 6000.0,
+          "statement": "Fashion campaigns asking goal <= $6,500 funded at 30% vs a 40% baseline (lift 0.75, n=8,462). Funded campaigns here had a median goal of $5,000 vs $6,000 for failed."
+        },
+        "score": 0.0181,
+        "feasibility": 1.0,
+        "confidence": "medium",
+        "cost_label": "low (pre-launch setting)",
+        "time_label": "immediate (set before launch)",
+        "labels_are_heuristic": true,
+        "priority": 2,
+        "explanation": "Lower your funding goal from $13,000 to $6,500. The model estimates your funding probability would rise from 35% to 38% (+3 points). Fashion campaigns asking goal <= $6,500 funded at 30% vs a 40% baseline (lift 0.75, n=8,462). Funded campaigns here had a median goal of $5,000 vs $6,000 for failed. Confidence: medium. Note: this is the model's estimate based on historical association, not a guarantee."
+      },
+      {
+        "feature": "title",
+        "current": "no number",
+        "proposed": "has number",
+        "tier": "suggestive",
+        "rationale_key": "title_has_number",
+        "baseline_p": 0.3509,
+        "new_p": 0.3634,
+        "delta": 0.0125,
+        "raw_changes": {
+          "name": "Organika Cases - Phone cases from real natural materials 2",
+          "name_clean": "organika cases phone cases from real natural materials 2"
+        },
+        "evidence": {
+          "available": true,
+          "source": "pattern_mining (Day-7 train substrate)",
+          "scope": "Fashion campaigns",
+          "item": "has_number=has number",
+          "n": 1435,
+          "confidence": 0.3512,
+          "lift": 0.87,
+          "base_rate": 0.4038,
+          "statement": "Fashion campaigns with a number in the title funded at 35% vs a 40% baseline (lift 0.87, n=1,435)."
+        },
+        "score": 0.00609,
+        "feasibility": 0.8,
+        "confidence": "low",
+        "cost_label": "low (pre-launch setting)",
+        "time_label": "immediate (set before launch)",
+        "labels_are_heuristic": true,
+        "priority": 3,
+        "explanation": "Add a number to your title (e.g. an edition or volume number). The model estimates your funding probability would rise from 35% to 36% (+1 points). Fashion campaigns with a number in the title funded at 35% vs a 40% baseline (lift 0.87, n=1,435). Confidence: low. Note: this is the model's estimate based on historical association, not a guarantee."
+      }
+    ]
+  }
+]
