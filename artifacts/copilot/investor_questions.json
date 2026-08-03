@@ -1,0 +1,172 @@
+[
+  {
+    "campaign": {
+      "name": "New Music Album",
+      "main_category": "Music",
+      "usd_goal_real": 19250.0
+    },
+    "objections": [
+      {
+        "dimension": "goal_size",
+        "concern": "Your $19,250 goal is high for Music, where funded campaigns typically ask a median of $3,200. Why this ask \u2014 and can you hit it?",
+        "severity": "High",
+        "concern_score": 1.0,
+        "reason": "Goal $19,250 vs Music funded-median $3,200 (6.0x).",
+        "suggested_response": "Lower your funding goal from $19,250 to $3,200 \u2014 the model estimates about +27 points (59%).",
+        "source_layer": "Day-5 SHAP + Day-7 patterns",
+        "evidence": {
+          "goal": 19250.0,
+          "funded_median": 3200.0
+        },
+        "honesty_note": "Model predictions + historical associations reframed as investor-style concerns \u2014 not a real investor's judgement."
+      },
+      {
+        "dimension": "funding_odds",
+        "concern": "The model estimates only a 32% funding probability \u2014 below the ~33% decision threshold. How will you beat these odds?",
+        "severity": "Low",
+        "concern_score": 0.015,
+        "reason": "Calibrated funding probability 32% vs 33% bar.",
+        "suggested_response": "Lower your funding goal from $19,250 to $3,200 \u2014 the model estimates about +27 points (59%).",
+        "source_layer": "Day-4 prediction",
+        "evidence": {
+          "probability": 0.3241,
+          "threshold": 0.329
+        },
+        "honesty_note": "Model predictions + historical associations reframed as investor-style concerns \u2014 not a real investor's judgement."
+      }
+    ]
+  },
+  {
+    "campaign": {
+      "name": "Man VS Killer Clown",
+      "main_category": "Film & Video",
+      "usd_goal_real": 50000.0
+    },
+    "objections": [
+      {
+        "dimension": "goal_size",
+        "concern": "Your $50,000 goal is high for Film & Video, where funded campaigns typically ask a median of $5,000. Why this ask \u2014 and can you hit it?",
+        "severity": "High",
+        "concern_score": 1.0,
+        "reason": "Goal $50,000 vs Film & Video funded-median $5,000 (10.0x).",
+        "suggested_response": "Lower your funding goal from $50,000 to $5,000 \u2014 the model estimates about +9 points (22%).",
+        "source_layer": "Day-5 SHAP + Day-7 patterns",
+        "evidence": {
+          "goal": 50000.0,
+          "funded_median": 5000.0
+        },
+        "honesty_note": "Model predictions + historical associations reframed as investor-style concerns \u2014 not a real investor's judgement."
+      },
+      {
+        "dimension": "funding_odds",
+        "concern": "The model estimates only a 13% funding probability \u2014 below the ~33% decision threshold. How will you beat these odds?",
+        "severity": "High",
+        "concern_score": 0.595,
+        "reason": "Calibrated funding probability 13% vs 33% bar.",
+        "suggested_response": "Lower your funding goal from $50,000 to $5,000 \u2014 the model estimates about +9 points (22%).",
+        "source_layer": "Day-4 prediction",
+        "evidence": {
+          "probability": 0.1331,
+          "threshold": 0.329
+        },
+        "honesty_note": "Model predictions + historical associations reframed as investor-style concerns \u2014 not a real investor's judgement."
+      },
+      {
+        "dimension": "cohort",
+        "concern": "Among campaigns most like yours (Film & Video, a large goal), only 29% funded. What sets you apart from the 9,148 that came before?",
+        "severity": "Medium",
+        "concern_score": 0.292,
+        "reason": "Cohort (Film & Video + a large goal) funding rate 29% vs 40% (n=9,148).",
+        "suggested_response": "Lower your funding goal from $50,000 to $5,000 \u2014 the model estimates about +9 points (22%).",
+        "source_layer": "Day-6/7 cohort",
+        "evidence": {
+          "cohort_rate": 0.2859,
+          "lift": 0.708,
+          "n": 9148
+        },
+        "honesty_note": "Model predictions + historical associations reframed as investor-style concerns \u2014 not a real investor's judgement."
+      }
+    ]
+  },
+  {
+    "campaign": {
+      "name": "rubbelzz",
+      "main_category": "Technology",
+      "usd_goal_real": 32507.99
+    },
+    "objections": [
+      {
+        "dimension": "goal_size",
+        "concern": "Your $32,508 goal is high for Technology, where funded campaigns typically ask a median of $10,000. Why this ask \u2014 and can you hit it?",
+        "severity": "High",
+        "concern_score": 1.0,
+        "reason": "Goal $32,508 vs Technology funded-median $10,000 (3.3x).",
+        "suggested_response": "Lower your funding goal from $32,508 to $10,000 \u2014 the model estimates about +4 points (8%).",
+        "source_layer": "Day-5 SHAP + Day-7 patterns",
+        "evidence": {
+          "goal": 32507.99,
+          "funded_median": 10000.0
+        },
+        "honesty_note": "Model predictions + historical associations reframed as investor-style concerns \u2014 not a real investor's judgement."
+      },
+      {
+        "dimension": "funding_odds",
+        "concern": "The model estimates only a 4% funding probability \u2014 below the ~33% decision threshold. How will you beat these odds?",
+        "severity": "High",
+        "concern_score": 0.894,
+        "reason": "Calibrated funding probability 4% vs 33% bar.",
+        "suggested_response": "Lower your funding goal from $32,508 to $10,000 \u2014 the model estimates about +4 points (8%).",
+        "source_layer": "Day-4 prediction",
+        "evidence": {
+          "probability": 0.035,
+          "threshold": 0.329
+        },
+        "honesty_note": "Model predictions + historical associations reframed as investor-style concerns \u2014 not a real investor's judgement."
+      },
+      {
+        "dimension": "cohort",
+        "concern": "Among campaigns most like yours (Technology, a large goal), only 22% funded. What sets you apart from the 7,940 that came before?",
+        "severity": "High",
+        "concern_score": 0.465,
+        "reason": "Cohort (Technology + a large goal) funding rate 22% vs 40% (n=7,940).",
+        "suggested_response": "Lower your funding goal from $32,508 to $10,000 \u2014 the model estimates about +4 points (8%).",
+        "source_layer": "Day-6/7 cohort",
+        "evidence": {
+          "cohort_rate": 0.2159,
+          "lift": 0.535,
+          "n": 7940
+        },
+        "honesty_note": "Model predictions + historical associations reframed as investor-style concerns \u2014 not a real investor's judgement."
+      },
+      {
+        "dimension": "timing",
+        "concern": "Your 29-day campaign sits in a band that funds at 22% (lift 0.54). Would a shorter campaign convert better?",
+        "severity": "High",
+        "concern_score": 0.456,
+        "reason": "Duration '16-30d' funds at 22% vs 40% baseline (n=13,077).",
+        "suggested_response": "Shorten your campaign from 29 to 15 days \u2014 the model estimates about +1 points (4%).",
+        "source_layer": "Day-7 patterns",
+        "evidence": {
+          "duration_days": 29,
+          "lift": 0.544
+        },
+        "honesty_note": "Model predictions + historical associations reframed as investor-style concerns \u2014 not a real investor's judgement."
+      },
+      {
+        "dimension": "category_fit",
+        "concern": "Technology campaigns historically fund at 24% (lift 0.59) \u2014 below the 40% baseline. How do you overcome the category headwind?",
+        "severity": "High",
+        "concern_score": 0.413,
+        "reason": "Technology funding rate 24% vs 40% baseline (n=21,646).",
+        "suggested_response": "Lower your funding goal from $32,508 to $10,000 \u2014 the model estimates about +4 points (8%).",
+        "source_layer": "Day-7 patterns",
+        "evidence": {
+          "category_rate": 0.237,
+          "lift": 0.587,
+          "n": 21646
+        },
+        "honesty_note": "Model predictions + historical associations reframed as investor-style concerns \u2014 not a real investor's judgement."
+      }
+    ]
+  }
+]

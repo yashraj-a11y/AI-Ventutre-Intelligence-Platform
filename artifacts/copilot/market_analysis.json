@@ -1,0 +1,281 @@
+[
+  {
+    "campaign": {
+      "name": "(Thanksgiving Challenge) Thanksgiving (Thanks4giving)",
+      "main_category": "Music",
+      "usd_goal_real": 5000.0
+    },
+    "category": "Music",
+    "category_funding_rate": 0.5276,
+    "category_lift": 1.307,
+    "n_campaigns": 36633,
+    "market_opportunity": "Favorable",
+    "crowding": "Highly crowded",
+    "year_trend": {
+      "direction": "declining",
+      "by_year": [
+        {
+          "year": "2009",
+          "funding_rate": 0.6143,
+          "lift": 1.521,
+          "n": 210
+        },
+        {
+          "year": "2010",
+          "funding_rate": 0.5671,
+          "lift": 1.404,
+          "n": 1864
+        },
+        {
+          "year": "2011",
+          "funding_rate": 0.6123,
+          "lift": 1.516,
+          "n": 4947
+        },
+        {
+          "year": "2012",
+          "funding_rate": 0.5859,
+          "lift": 1.451,
+          "n": 6771
+        },
+        {
+          "year": "2013",
+          "funding_rate": 0.5738,
+          "lift": 1.421,
+          "n": 5218
+        },
+        {
+          "year": "2014",
+          "funding_rate": 0.4826,
+          "lift": 1.195,
+          "n": 5158
+        },
+        {
+          "year": "2015",
+          "funding_rate": 0.4085,
+          "lift": 1.011,
+          "n": 5112
+        },
+        {
+          "year": "2016",
+          "funding_rate": 0.4815,
+          "lift": 1.192,
+          "n": 3969
+        },
+        {
+          "year": "2017",
+          "funding_rate": 0.4917,
+          "lift": 1.218,
+          "n": 3384
+        }
+      ]
+    },
+    "market_timing": "Unfavorable",
+    "goal_norms": {
+      "funded_median_goal_usd": 3200.0,
+      "failed_median_goal_usd": 5000.0
+    },
+    "summary": "The Music segment has a 53% historical funding rate (lift 1.31, favorable opportunity), across 36,633 campaigns (highly crowded). Funding rates have declined over time, making market timing unfavorable. (Within-Kickstarter read; external market size/CAGR not available.)",
+    "deferred": {
+      "tam_sam_som": {
+        "status": "deferred",
+        "reason": "no market-size data"
+      },
+      "market_cagr_growth": {
+        "status": "deferred",
+        "reason": "no external growth data"
+      },
+      "external_market_data": {
+        "status": "deferred",
+        "reason": "dataset is Kickstarter only"
+      }
+    },
+    "honesty_note": "A within-Kickstarter category read from our own data \u2014 NOT external market size, CAGR, or industry analysis (those are deferred: no data)."
+  },
+  {
+    "campaign": {
+      "name": "\"THE VIGIL\" \u2014 a documentary film",
+      "main_category": "Film & Video",
+      "usd_goal_real": 4200.0
+    },
+    "category": "Film & Video",
+    "category_funding_rate": 0.4175,
+    "category_lift": 1.034,
+    "n_campaigns": 45162,
+    "market_opportunity": "Neutral",
+    "crowding": "Highly crowded",
+    "year_trend": {
+      "direction": "stable",
+      "by_year": [
+        {
+          "year": "2009",
+          "funding_rate": 0.4008,
+          "lift": 0.993,
+          "n": 237
+        },
+        {
+          "year": "2010",
+          "funding_rate": 0.4332,
+          "lift": 1.073,
+          "n": 2694
+        },
+        {
+          "year": "2011",
+          "funding_rate": 0.459,
+          "lift": 1.137,
+          "n": 5765
+        },
+        {
+          "year": "2012",
+          "funding_rate": 0.4298,
+          "lift": 1.064,
+          "n": 7008
+        },
+        {
+          "year": "2013",
+          "funding_rate": 0.4593,
+          "lift": 1.137,
+          "n": 7094
+        },
+        {
+          "year": "2014",
+          "funding_rate": 0.4097,
+          "lift": 1.014,
+          "n": 6918
+        },
+        {
+          "year": "2015",
+          "funding_rate": 0.3494,
+          "lift": 0.865,
+          "n": 6903
+        },
+        {
+          "year": "2016",
+          "funding_rate": 0.3931,
+          "lift": 0.973,
+          "n": 4816
+        },
+        {
+          "year": "2017",
+          "funding_rate": 0.4132,
+          "lift": 1.023,
+          "n": 3727
+        }
+      ]
+    },
+    "market_timing": "Neutral",
+    "goal_norms": {
+      "funded_median_goal_usd": 5000.0,
+      "failed_median_goal_usd": 10000.0
+    },
+    "summary": "The Film & Video segment has a 42% historical funding rate (lift 1.03, neutral opportunity), across 45,162 campaigns (highly crowded). Funding rates have held steady, making market timing neutral. (Within-Kickstarter read; external market size/CAGR not available.)",
+    "deferred": {
+      "tam_sam_som": {
+        "status": "deferred",
+        "reason": "no market-size data"
+      },
+      "market_cagr_growth": {
+        "status": "deferred",
+        "reason": "no external growth data"
+      },
+      "external_market_data": {
+        "status": "deferred",
+        "reason": "dataset is Kickstarter only"
+      }
+    },
+    "honesty_note": "A within-Kickstarter category read from our own data \u2014 NOT external market size, CAGR, or industry analysis (those are deferred: no data)."
+  },
+  {
+    "campaign": {
+      "name": "\"NIGHT OF THE CLOWNS\" - A Horror Short Film",
+      "main_category": "Film & Video",
+      "usd_goal_real": 25000.0
+    },
+    "category": "Film & Video",
+    "category_funding_rate": 0.4175,
+    "category_lift": 1.034,
+    "n_campaigns": 45162,
+    "market_opportunity": "Neutral",
+    "crowding": "Highly crowded",
+    "year_trend": {
+      "direction": "stable",
+      "by_year": [
+        {
+          "year": "2009",
+          "funding_rate": 0.4008,
+          "lift": 0.993,
+          "n": 237
+        },
+        {
+          "year": "2010",
+          "funding_rate": 0.4332,
+          "lift": 1.073,
+          "n": 2694
+        },
+        {
+          "year": "2011",
+          "funding_rate": 0.459,
+          "lift": 1.137,
+          "n": 5765
+        },
+        {
+          "year": "2012",
+          "funding_rate": 0.4298,
+          "lift": 1.064,
+          "n": 7008
+        },
+        {
+          "year": "2013",
+          "funding_rate": 0.4593,
+          "lift": 1.137,
+          "n": 7094
+        },
+        {
+          "year": "2014",
+          "funding_rate": 0.4097,
+          "lift": 1.014,
+          "n": 6918
+        },
+        {
+          "year": "2015",
+          "funding_rate": 0.3494,
+          "lift": 0.865,
+          "n": 6903
+        },
+        {
+          "year": "2016",
+          "funding_rate": 0.3931,
+          "lift": 0.973,
+          "n": 4816
+        },
+        {
+          "year": "2017",
+          "funding_rate": 0.4132,
+          "lift": 1.023,
+          "n": 3727
+        }
+      ]
+    },
+    "market_timing": "Neutral",
+    "goal_norms": {
+      "funded_median_goal_usd": 5000.0,
+      "failed_median_goal_usd": 10000.0
+    },
+    "summary": "The Film & Video segment has a 42% historical funding rate (lift 1.03, neutral opportunity), across 45,162 campaigns (highly crowded). Funding rates have held steady, making market timing neutral. (Within-Kickstarter read; external market size/CAGR not available.)",
+    "deferred": {
+      "tam_sam_som": {
+        "status": "deferred",
+        "reason": "no market-size data"
+      },
+      "market_cagr_growth": {
+        "status": "deferred",
+        "reason": "no external growth data"
+      },
+      "external_market_data": {
+        "status": "deferred",
+        "reason": "dataset is Kickstarter only"
+      }
+    },
+    "honesty_note": "A within-Kickstarter category read from our own data \u2014 NOT external market size, CAGR, or industry analysis (those are deferred: no data)."
+  }
+]

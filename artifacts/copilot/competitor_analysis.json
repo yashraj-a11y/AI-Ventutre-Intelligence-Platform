@@ -1,0 +1,119 @@
+[
+  {
+    "campaign": {
+      "name": "New Music Album",
+      "main_category": "Music",
+      "usd_goal_real": 19250.0
+    },
+    "category": "Music",
+    "competitive_intensity": {
+      "level": "Highly crowded",
+      "n_campaigns": 36633,
+      "share_of_all": 0.1381
+    },
+    "what_winners_do": [
+      "Ask for less: funded campaigns' median goal is $3,200 vs $5,000 for those that failed."
+    ],
+    "your_position": {
+      "goal_usd": 19250.0,
+      "winners_median_goal_usd": 3200.0,
+      "positioned_like": "strugglers",
+      "notes": [
+        "Your $19,250 goal is 6.0x the winners' median ($3,200) \u2014 priced like the campaigns that failed."
+      ]
+    },
+    "deferred": {
+      "named_competitors": {
+        "status": "deferred",
+        "reason": "no competitor data in this dataset"
+      },
+      "moat_defensibility": {
+        "status": "deferred",
+        "reason": "no product/IP data"
+      },
+      "proprietary_data_network_effects": {
+        "status": "deferred",
+        "reason": "no such data"
+      }
+    },
+    "honesty_note": "Competition = other campaigns in your category (our own data). Named competitors, moat, and defensibility are deferred \u2014 no data."
+  },
+  {
+    "campaign": {
+      "name": "Man VS Killer Clown",
+      "main_category": "Film & Video",
+      "usd_goal_real": 50000.0
+    },
+    "category": "Film & Video",
+    "competitive_intensity": {
+      "level": "Highly crowded",
+      "n_campaigns": 45162,
+      "share_of_all": 0.1703
+    },
+    "what_winners_do": [
+      "Ask for less: funded campaigns' median goal is $5,000 vs $10,000 for those that failed."
+    ],
+    "your_position": {
+      "goal_usd": 50000.0,
+      "winners_median_goal_usd": 5000.0,
+      "positioned_like": "strugglers",
+      "notes": [
+        "Your $50,000 goal is 10.0x the winners' median ($5,000) \u2014 priced like the campaigns that failed."
+      ]
+    },
+    "deferred": {
+      "named_competitors": {
+        "status": "deferred",
+        "reason": "no competitor data in this dataset"
+      },
+      "moat_defensibility": {
+        "status": "deferred",
+        "reason": "no product/IP data"
+      },
+      "proprietary_data_network_effects": {
+        "status": "deferred",
+        "reason": "no such data"
+      }
+    },
+    "honesty_note": "Competition = other campaigns in your category (our own data). Named competitors, moat, and defensibility are deferred \u2014 no data."
+  },
+  {
+    "campaign": {
+      "name": "rubbelzz",
+      "main_category": "Technology",
+      "usd_goal_real": 32507.99
+    },
+    "category": "Technology",
+    "competitive_intensity": {
+      "level": "Crowded",
+      "n_campaigns": 21646,
+      "share_of_all": 0.0816
+    },
+    "what_winners_do": [
+      "Ask for less: funded campaigns' median goal is $10,000 vs $20,000 for those that failed."
+    ],
+    "your_position": {
+      "goal_usd": 32507.99,
+      "winners_median_goal_usd": 10000.0,
+      "positioned_like": "strugglers",
+      "notes": [
+        "Your $32,508 goal is 3.3x the winners' median ($10,000) \u2014 priced like the campaigns that failed."
+      ]
+    },
+    "deferred": {
+      "named_competitors": {
+        "status": "deferred",
+        "reason": "no competitor data in this dataset"
+      },
+      "moat_defensibility": {
+        "status": "deferred",
+        "reason": "no product/IP data"
+      },
+      "proprietary_data_network_effects": {
+        "status": "deferred",
+        "reason": "no such data"
+      }
+    },
+    "honesty_note": "Competition = other campaigns in your category (our own data). Named competitors, moat, and defensibility are deferred \u2014 no data."
+  }
+]
