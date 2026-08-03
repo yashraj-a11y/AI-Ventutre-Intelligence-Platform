@@ -1,0 +1,86 @@
+[
+  {
+    "campaign": {
+      "name": "Faces: Family Portraits Off the Grid",
+      "main_category": "Photography",
+      "usd_goal_real": 8500.0
+    },
+    "funding_probability": 0.2805,
+    "optimized_probability": 0.5425,
+    "reachable_gain": 0.262,
+    "threshold": 0.329,
+    "stage": "Fixable",
+    "confidence": 0.76,
+    "reason": "As-is the model estimates 28% (below the 33% bar), but controllable changes could reach ~54% \u2014 above the bar. Fixable before launch.",
+    "deferred_stages": {
+      "startup_lifecycle": {
+        "status": "deferred",
+        "reason": "Idea/MVP/Validation/PMF/Growth/Series-A require observing a company over time; the dataset is a single pre-launch snapshot"
+      }
+    },
+    "honesty_note": "Funding-readiness stage (model-derived from the calibrated probability + the counterfactual's reachable optimum) \u2014 not a startup lifecycle stage, and not a causal guarantee."
+  },
+  {
+    "campaign": {
+      "name": "Sonya's Pralines-n-Sweets",
+      "main_category": "Food",
+      "usd_goal_real": 10500.0
+    },
+    "funding_probability": 0.1227,
+    "optimized_probability": 0.3187,
+    "reachable_gain": 0.196,
+    "threshold": 0.329,
+    "stage": "Not ready",
+    "confidence": 0.51,
+    "reason": "Even with the best controllable changes the model estimates ~32% \u2014 still below the 33% bar. The fundamentals (e.g. category, positioning) likely need to change.",
+    "deferred_stages": {
+      "startup_lifecycle": {
+        "status": "deferred",
+        "reason": "Idea/MVP/Validation/PMF/Growth/Series-A require observing a company over time; the dataset is a single pre-launch snapshot"
+      }
+    },
+    "honesty_note": "Funding-readiness stage (model-derived from the calibrated probability + the counterfactual's reachable optimum) \u2014 not a startup lifecycle stage, and not a causal guarantee."
+  },
+  {
+    "campaign": {
+      "name": "\"Beautiful People. A story of people that have no money told by people with no money.",
+      "main_category": "Film & Video",
+      "usd_goal_real": 2500.0
+    },
+    "funding_probability": 0.4733,
+    "optimized_probability": 0.5948,
+    "reachable_gain": 0.1215,
+    "threshold": 0.329,
+    "stage": "Ready",
+    "confidence": 0.67,
+    "reason": "The model estimates 47% \u2014 already above the 33% funding bar.",
+    "deferred_stages": {
+      "startup_lifecycle": {
+        "status": "deferred",
+        "reason": "Idea/MVP/Validation/PMF/Growth/Series-A require observing a company over time; the dataset is a single pre-launch snapshot"
+      }
+    },
+    "honesty_note": "Funding-readiness stage (model-derived from the calibrated probability + the counterfactual's reachable optimum) \u2014 not a startup lifecycle stage, and not a causal guarantee."
+  },
+  {
+    "campaign": {
+      "name": "RAH:DESIGNS - MODERN FURNITURE DESIGN AND FABRICATION",
+      "main_category": "Design",
+      "usd_goal_real": 25000.0
+    },
+    "funding_probability": 0.1605,
+    "optimized_probability": 0.3279,
+    "reachable_gain": 0.1674,
+    "threshold": 0.329,
+    "stage": "Not ready",
+    "confidence": 0.5,
+    "reason": "Even with the best controllable changes the model estimates ~33% \u2014 still below the 33% bar. The fundamentals (e.g. category, positioning) likely need to change.",
+    "deferred_stages": {
+      "startup_lifecycle": {
+        "status": "deferred",
+        "reason": "Idea/MVP/Validation/PMF/Growth/Series-A require observing a company over time; the dataset is a single pre-launch snapshot"
+      }
+    },
+    "honesty_note": "Funding-readiness stage (model-derived from the calibrated probability + the counterfactual's reachable optimum) \u2014 not a startup lifecycle stage, and not a causal guarantee."
+  }
+]

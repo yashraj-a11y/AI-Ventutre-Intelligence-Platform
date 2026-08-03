@@ -1,0 +1,204 @@
+[
+  {
+    "campaign": {
+      "name": "Artificer - Board Game",
+      "main_category": "Games",
+      "usd_goal_real": 30515.72
+    },
+    "current_probability": 0.242,
+    "best_probability": 0.6864,
+    "threshold": 0.329,
+    "results": [
+      {
+        "name": "Current (as-is)",
+        "changes": {},
+        "description": "no changes",
+        "probability": 0.242,
+        "crosses_bar": false,
+        "gain": 0.0,
+        "stage": "Fixable"
+      },
+      {
+        "name": "Lower goal",
+        "changes": {
+          "goal_usd": 5000.0
+        },
+        "description": "goal \u2192 $5,000",
+        "probability": 0.3587,
+        "crosses_bar": true,
+        "gain": 0.1167,
+        "stage": "Ready"
+      },
+      {
+        "name": "Lower goal + shorten duration",
+        "changes": {
+          "goal_usd": 5000.0,
+          "duration_days": 15
+        },
+        "description": "goal \u2192 $5,000; duration \u2192 15d",
+        "probability": 0.6166,
+        "crosses_bar": true,
+        "gain": 0.3746,
+        "stage": "Strong"
+      },
+      {
+        "name": "Lower goal + shorten duration + Tuesday launch",
+        "changes": {
+          "goal_usd": 5000.0,
+          "duration_days": 15,
+          "weekday": "Tuesday"
+        },
+        "description": "goal \u2192 $5,000; duration \u2192 15d; launch \u2192 Tuesday",
+        "probability": 0.6442,
+        "crosses_bar": true,
+        "gain": 0.4022,
+        "stage": "Strong"
+      },
+      {
+        "name": "Lower goal + shorten duration + Tuesday launch + add title number",
+        "changes": {
+          "goal_usd": 5000.0,
+          "duration_days": 15,
+          "weekday": "Tuesday",
+          "add_number": true
+        },
+        "description": "goal \u2192 $5,000; duration \u2192 15d; launch \u2192 Tuesday; title \u2192 add number",
+        "probability": 0.6864,
+        "crosses_bar": true,
+        "gain": 0.4444,
+        "stage": "Strong"
+      }
+    ],
+    "honesty_note": "Each scenario's probability is a fresh call to the real calibrated model on the canonically-composed campaign \u2014 model-simulated over controllable features, not a causal guarantee, and never a sum of individual gains."
+  },
+  {
+    "campaign": {
+      "name": "Sequel to \"I'm a Cow\" song and animation video",
+      "main_category": "Film & Video",
+      "usd_goal_real": 15000.0
+    },
+    "current_probability": 0.2312,
+    "best_probability": 0.4968,
+    "threshold": 0.329,
+    "results": [
+      {
+        "name": "Current (as-is)",
+        "changes": {},
+        "description": "no changes",
+        "probability": 0.2312,
+        "crosses_bar": false,
+        "gain": 0.0,
+        "stage": "Fixable"
+      },
+      {
+        "name": "Lower goal",
+        "changes": {
+          "goal_usd": 5000.0
+        },
+        "description": "goal \u2192 $5,000",
+        "probability": 0.3217,
+        "crosses_bar": false,
+        "gain": 0.0905,
+        "stage": "Fixable"
+      },
+      {
+        "name": "Lower goal + shorten duration",
+        "changes": {
+          "goal_usd": 5000.0,
+          "duration_days": 30
+        },
+        "description": "goal \u2192 $5,000; duration \u2192 30d",
+        "probability": 0.4357,
+        "crosses_bar": true,
+        "gain": 0.2045,
+        "stage": "Ready"
+      },
+      {
+        "name": "Lower goal + shorten duration + Tuesday launch",
+        "changes": {
+          "goal_usd": 5000.0,
+          "duration_days": 30,
+          "weekday": "Tuesday"
+        },
+        "description": "goal \u2192 $5,000; duration \u2192 30d; launch \u2192 Tuesday",
+        "probability": 0.4968,
+        "crosses_bar": true,
+        "gain": 0.2656,
+        "stage": "Strong"
+      },
+      {
+        "name": "Lower goal + shorten duration + Tuesday launch + add title number",
+        "changes": {
+          "goal_usd": 5000.0,
+          "duration_days": 30,
+          "weekday": "Tuesday",
+          "add_number": true
+        },
+        "description": "goal \u2192 $5,000; duration \u2192 30d; launch \u2192 Tuesday; title \u2192 add number",
+        "probability": 0.4913,
+        "crosses_bar": true,
+        "gain": 0.2601,
+        "stage": "Strong"
+      }
+    ],
+    "honesty_note": "Each scenario's probability is a fresh call to the real calibrated model on the canonically-composed campaign \u2014 model-simulated over controllable features, not a causal guarantee, and never a sum of individual gains."
+  },
+  {
+    "campaign": {
+      "name": "Organika Cases - Phone cases from real natural materials",
+      "main_category": "Fashion",
+      "usd_goal_real": 13000.0
+    },
+    "current_probability": 0.3509,
+    "best_probability": 0.3807,
+    "threshold": 0.329,
+    "results": [
+      {
+        "name": "Current (as-is)",
+        "changes": {},
+        "description": "no changes",
+        "probability": 0.3509,
+        "crosses_bar": true,
+        "gain": 0.0,
+        "stage": "Ready"
+      },
+      {
+        "name": "Lower goal",
+        "changes": {
+          "goal_usd": 5000.0
+        },
+        "description": "goal \u2192 $5,000",
+        "probability": 0.3807,
+        "crosses_bar": true,
+        "gain": 0.0298,
+        "stage": "Ready"
+      },
+      {
+        "name": "Lower goal + shorten duration",
+        "changes": {
+          "goal_usd": 5000.0,
+          "duration_days": 15
+        },
+        "description": "goal \u2192 $5,000; duration \u2192 15d",
+        "probability": 0.2052,
+        "crosses_bar": false,
+        "gain": -0.1457,
+        "stage": "Fixable"
+      },
+      {
+        "name": "Lower goal + shorten duration + add title number",
+        "changes": {
+          "goal_usd": 5000.0,
+          "duration_days": 15,
+          "add_number": true
+        },
+        "description": "goal \u2192 $5,000; duration \u2192 15d; title \u2192 add number",
+        "probability": 0.2196,
+        "crosses_bar": false,
+        "gain": -0.1313,
+        "stage": "Fixable"
+      }
+    ],
+    "honesty_note": "Each scenario's probability is a fresh call to the real calibrated model on the canonically-composed campaign \u2014 model-simulated over controllable features, not a causal guarantee, and never a sum of individual gains."
+  }
+]

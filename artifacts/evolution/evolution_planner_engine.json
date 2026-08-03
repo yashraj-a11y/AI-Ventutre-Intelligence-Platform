@@ -1,0 +1,141 @@
+{
+  "version": "1.0.0",
+  "created_utc": "2026-08-03T12:37:35.490653+00:00",
+  "architecture_layers": [
+    9,
+    10
+  ],
+  "note": "Evolution/scenario planner = configuration over the Day-4 model + Day-8 counterfactual engine. Funding-readiness stages + pre-launch prep + model-simulated multi-variable scenarios; not a causal growth plan.",
+  "engine_config": {
+    "stage": {
+      "strong_margin": 0.15,
+      "out_path": "artifacts/evolution/startup_stage.json"
+    },
+    "roadmap": {
+      "out_path": "artifacts/evolution/roadmap.json"
+    },
+    "milestones": {
+      "out_path": "artifacts/evolution/milestones.json"
+    },
+    "timeline": {
+      "lead_weeks": 4,
+      "out_path": "artifacts/evolution/funding_timeline.json"
+    },
+    "scenario": {
+      "duration_target": 30,
+      "out_path": "artifacts/scenario/scenarios.json"
+    },
+    "simulate": {
+      "out_path": "artifacts/scenario/simulation_results.json"
+    },
+    "comparison": {
+      "worth_it_min": 0.005,
+      "out_path": "artifacts/scenario/comparison_report.json"
+    },
+    "evolution": {
+      "out_path": "artifacts/evolution/evolution_engine.json"
+    },
+    "scenario_report": {
+      "out_path": "artifacts/scenario/scenario_report.json"
+    }
+  },
+  "readiness_definition": {
+    "readiness_rule": {
+      "Strong": "base_p >= threshold + strong_margin",
+      "Ready": "base_p >= threshold",
+      "Fixable": "base_p < threshold <= optimized_p",
+      "Not ready": "optimized_p < threshold"
+    },
+    "strong_margin": 0.15,
+    "scenario_apply_order": [
+      "goal",
+      "shift launched to weekday",
+      "deadline = launched + duration",
+      "title"
+    ],
+    "duration_target": 30,
+    "lead_weeks": 4
+  },
+  "content_hash": "ee3b51065319fc501a239422c69be4c3d2290d385750e83487b50419175d7a87",
+  "dependencies": {
+    "day4_calibrated_model": {
+      "path": "artifacts/models/calibrated_model.joblib",
+      "exists": true,
+      "bytes": 21472372,
+      "sha256": "dde1cdef14554bc57482ce98a985851b02e926cd2dca115cb0ca4423efa3e677"
+    },
+    "day8_counterfactual_engine": {
+      "path": "artifacts/counterfactual/counterfactual_engine.json",
+      "exists": true,
+      "bytes": 4004,
+      "sha256": "e876ff39cb935956861bf34876c5aacae816f8fbcaefa7e4b8b43ea344dae4f2"
+    }
+  },
+  "artifacts": {
+    "startup_stage": {
+      "path": "artifacts/evolution/startup_stage.json",
+      "exists": true,
+      "bytes": 3744,
+      "sha256": "530e29f6342e9081962e8188988483decdbb6c182fba8d64e26d5f780a63115a"
+    },
+    "roadmap": {
+      "path": "artifacts/evolution/roadmap.json",
+      "exists": true,
+      "bytes": 5826,
+      "sha256": "03297c8a14440029c91bc37385062a45c0f4f190b41eb72a3ed75ed3c9691f68"
+    },
+    "milestones": {
+      "path": "artifacts/evolution/milestones.json",
+      "exists": true,
+      "bytes": 7897,
+      "sha256": "a58f724fde844e43fd1862a0ced68d84699db5abecc94b4f6e5cac7aebf1e1fb"
+    },
+    "funding_timeline": {
+      "path": "artifacts/evolution/funding_timeline.json",
+      "exists": true,
+      "bytes": 6323,
+      "sha256": "de9e5f57e6a7c56895417569de64f473b8880e7d173e05aff75fd88be8252ca7"
+    },
+    "evolution_engine": {
+      "path": "artifacts/evolution/evolution_engine.json",
+      "exists": true,
+      "bytes": 29396,
+      "sha256": "cd9e71fabe77e629c8141ac00c145b225aa349e3eac9253e5f884de2feb7f6a0"
+    },
+    "scenarios": {
+      "path": "artifacts/scenario/scenarios.json",
+      "exists": true,
+      "bytes": 4130,
+      "sha256": "a02dbfd184fb394e0c59112c4cc6ac68cb5affe6932ad05ff462db536243f10f"
+    },
+    "simulation_results": {
+      "path": "artifacts/scenario/simulation_results.json",
+      "exists": true,
+      "bytes": 6191,
+      "sha256": "e08ce1eda0414dbacc361505fda1baa90856178336c8dcc919768b8f7a10d996"
+    },
+    "comparison_report": {
+      "path": "artifacts/scenario/comparison_report.json",
+      "exists": true,
+      "bytes": 7509,
+      "sha256": "eb123db5c5f1f70227aad2f315f3fd5bd9fba94eb053bc177c9aba66d35f647e"
+    },
+    "scenario_report": {
+      "path": "artifacts/scenario/scenario_report.json",
+      "exists": true,
+      "bytes": 7509,
+      "sha256": "eb123db5c5f1f70227aad2f315f3fd5bd9fba94eb053bc177c9aba66d35f647e"
+    }
+  },
+  "deferred_items": [
+    "startup_lifecycle",
+    "growth_milestones",
+    "growth_timeline",
+    "validate_customer_problem",
+    "improve_retention",
+    "grow_revenue",
+    "expand_founding_team",
+    "build_partnerships",
+    "improve_unit_economics"
+  ]
+}

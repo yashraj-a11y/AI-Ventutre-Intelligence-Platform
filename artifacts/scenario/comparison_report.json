@@ -1,0 +1,255 @@
+[
+  {
+    "campaign": {
+      "name": "Artificer - Board Game",
+      "main_category": "Games",
+      "usd_goal_real": 30515.72
+    },
+    "current_probability": 0.242,
+    "threshold": 0.329,
+    "ranked_scenarios": [
+      {
+        "rank": 1,
+        "name": "Lower goal + shorten duration + Tuesday launch + add title number",
+        "probability": 0.6864,
+        "gain": 0.4444,
+        "crosses_bar": true,
+        "stage": "Strong"
+      },
+      {
+        "rank": 2,
+        "name": "Lower goal + shorten duration + Tuesday launch",
+        "probability": 0.6442,
+        "gain": 0.4022,
+        "crosses_bar": true,
+        "stage": "Strong"
+      },
+      {
+        "rank": 3,
+        "name": "Lower goal + shorten duration",
+        "probability": 0.6166,
+        "gain": 0.3746,
+        "crosses_bar": true,
+        "stage": "Strong"
+      },
+      {
+        "rank": 4,
+        "name": "Lower goal",
+        "probability": 0.3587,
+        "gain": 0.1167,
+        "crosses_bar": true,
+        "stage": "Ready"
+      },
+      {
+        "rank": 5,
+        "name": "Current (as-is)",
+        "probability": 0.242,
+        "gain": 0.0,
+        "crosses_bar": false,
+        "stage": "Fixable"
+      }
+    ],
+    "marginal_values": [
+      {
+        "change": "goal_usd",
+        "change_label": "Lower goal",
+        "marginal_gain": 0.1167,
+        "worth_it": true
+      },
+      {
+        "change": "duration_days",
+        "change_label": "shorten duration",
+        "marginal_gain": 0.2579,
+        "worth_it": true
+      },
+      {
+        "change": "weekday",
+        "change_label": "Tuesday launch",
+        "marginal_gain": 0.0276,
+        "worth_it": true
+      },
+      {
+        "change": "add_number",
+        "change_label": "add title number",
+        "marginal_gain": 0.0422,
+        "worth_it": true
+      }
+    ],
+    "best_scenario": {
+      "name": "Lower goal + shorten duration + Tuesday launch + add title number",
+      "probability": 0.6864,
+      "stage": "Strong"
+    },
+    "most_efficient_scenario": {
+      "name": "Lower goal",
+      "probability": 0.3587,
+      "n_changes": 1
+    },
+    "recommendation": "Fastest path to Ready: 'Lower goal' \u2014 1 change(s), ~36%. Highest probability overall: 'Lower goal + shorten duration + Tuesday launch + add title number' (~69%).",
+    "honesty_note": "Scenarios ranked by the real calibrated model. 'Marginal value' is the probability gain of adding one change on top of the ones before it (cumulative order), so it depends on what precedes it \u2014 model-simulated over controllable features, not causal."
+  },
+  {
+    "campaign": {
+      "name": "Sequel to \"I'm a Cow\" song and animation video",
+      "main_category": "Film & Video",
+      "usd_goal_real": 15000.0
+    },
+    "current_probability": 0.2312,
+    "threshold": 0.329,
+    "ranked_scenarios": [
+      {
+        "rank": 1,
+        "name": "Lower goal + shorten duration + Tuesday launch",
+        "probability": 0.4968,
+        "gain": 0.2656,
+        "crosses_bar": true,
+        "stage": "Strong"
+      },
+      {
+        "rank": 2,
+        "name": "Lower goal + shorten duration + Tuesday launch + add title number",
+        "probability": 0.4913,
+        "gain": 0.2601,
+        "crosses_bar": true,
+        "stage": "Strong"
+      },
+      {
+        "rank": 3,
+        "name": "Lower goal + shorten duration",
+        "probability": 0.4357,
+        "gain": 0.2045,
+        "crosses_bar": true,
+        "stage": "Ready"
+      },
+      {
+        "rank": 4,
+        "name": "Lower goal",
+        "probability": 0.3217,
+        "gain": 0.0905,
+        "crosses_bar": false,
+        "stage": "Fixable"
+      },
+      {
+        "rank": 5,
+        "name": "Current (as-is)",
+        "probability": 0.2312,
+        "gain": 0.0,
+        "crosses_bar": false,
+        "stage": "Fixable"
+      }
+    ],
+    "marginal_values": [
+      {
+        "change": "goal_usd",
+        "change_label": "Lower goal",
+        "marginal_gain": 0.0905,
+        "worth_it": true
+      },
+      {
+        "change": "duration_days",
+        "change_label": "shorten duration",
+        "marginal_gain": 0.114,
+        "worth_it": true
+      },
+      {
+        "change": "weekday",
+        "change_label": "Tuesday launch",
+        "marginal_gain": 0.0611,
+        "worth_it": true
+      },
+      {
+        "change": "add_number",
+        "change_label": "add title number",
+        "marginal_gain": -0.0055,
+        "worth_it": false
+      }
+    ],
+    "best_scenario": {
+      "name": "Lower goal + shorten duration + Tuesday launch",
+      "probability": 0.4968,
+      "stage": "Strong"
+    },
+    "most_efficient_scenario": {
+      "name": "Lower goal + shorten duration",
+      "probability": 0.4357,
+      "n_changes": 2
+    },
+    "recommendation": "Fastest path to Ready: 'Lower goal + shorten duration' \u2014 2 change(s), ~44%. Highest probability overall: 'Lower goal + shorten duration + Tuesday launch' (~50%). Negligible or harmful, safe to skip: add title number.",
+    "honesty_note": "Scenarios ranked by the real calibrated model. 'Marginal value' is the probability gain of adding one change on top of the ones before it (cumulative order), so it depends on what precedes it \u2014 model-simulated over controllable features, not causal."
+  },
+  {
+    "campaign": {
+      "name": "Organika Cases - Phone cases from real natural materials",
+      "main_category": "Fashion",
+      "usd_goal_real": 13000.0
+    },
+    "current_probability": 0.3509,
+    "threshold": 0.329,
+    "ranked_scenarios": [
+      {
+        "rank": 1,
+        "name": "Lower goal",
+        "probability": 0.3807,
+        "gain": 0.0298,
+        "crosses_bar": true,
+        "stage": "Ready"
+      },
+      {
+        "rank": 2,
+        "name": "Current (as-is)",
+        "probability": 0.3509,
+        "gain": 0.0,
+        "crosses_bar": true,
+        "stage": "Ready"
+      },
+      {
+        "rank": 3,
+        "name": "Lower goal + shorten duration + add title number",
+        "probability": 0.2196,
+        "gain": -0.1313,
+        "crosses_bar": false,
+        "stage": "Fixable"
+      },
+      {
+        "rank": 4,
+        "name": "Lower goal + shorten duration",
+        "probability": 0.2052,
+        "gain": -0.1457,
+        "crosses_bar": false,
+        "stage": "Fixable"
+      }
+    ],
+    "marginal_values": [
+      {
+        "change": "goal_usd",
+        "change_label": "Lower goal",
+        "marginal_gain": 0.0298,
+        "worth_it": true
+      },
+      {
+        "change": "duration_days",
+        "change_label": "shorten duration",
+        "marginal_gain": -0.1755,
+        "worth_it": false
+      },
+      {
+        "change": "add_number",
+        "change_label": "add title number",
+        "marginal_gain": 0.0144,
+        "worth_it": true
+      }
+    ],
+    "best_scenario": {
+      "name": "Lower goal",
+      "probability": 0.3807,
+      "stage": "Ready"
+    },
+    "most_efficient_scenario": {
+      "name": "Current (as-is)",
+      "probability": 0.3509,
+      "n_changes": 0
+    },
+    "recommendation": "Fastest path to Ready: 'Current (as-is)' \u2014 0 change(s), ~35%. Highest probability overall: 'Lower goal' (~38%). Negligible or harmful, safe to skip: shorten duration.",
+    "honesty_note": "Scenarios ranked by the real calibrated model. 'Marginal value' is the probability gain of adding one change on top of the ones before it (cumulative order), so it depends on what precedes it \u2014 model-simulated over controllable features, not causal."
+  }
+]

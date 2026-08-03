@@ -1,0 +1,142 @@
+[
+  {
+    "campaign": {
+      "name": "Artificer - Board Game",
+      "main_category": "Games",
+      "usd_goal_real": 30515.72
+    },
+    "n_scenarios": 5,
+    "scenarios": [
+      {
+        "name": "Current (as-is)",
+        "changes": {},
+        "description": "no changes"
+      },
+      {
+        "name": "Lower goal",
+        "changes": {
+          "goal_usd": 5000.0
+        },
+        "description": "goal \u2192 $5,000"
+      },
+      {
+        "name": "Lower goal + shorten duration",
+        "changes": {
+          "goal_usd": 5000.0,
+          "duration_days": 15
+        },
+        "description": "goal \u2192 $5,000; duration \u2192 15d"
+      },
+      {
+        "name": "Lower goal + shorten duration + Tuesday launch",
+        "changes": {
+          "goal_usd": 5000.0,
+          "duration_days": 15,
+          "weekday": "Tuesday"
+        },
+        "description": "goal \u2192 $5,000; duration \u2192 15d; launch \u2192 Tuesday"
+      },
+      {
+        "name": "Lower goal + shorten duration + Tuesday launch + add title number",
+        "changes": {
+          "goal_usd": 5000.0,
+          "duration_days": 15,
+          "weekday": "Tuesday",
+          "add_number": true
+        },
+        "description": "goal \u2192 $5,000; duration \u2192 15d; launch \u2192 Tuesday; title \u2192 add number"
+      }
+    ],
+    "note": "Multi-variable what-if scenarios over controllable features only, composed canonically. Model-simulated (Phase F), not causal."
+  },
+  {
+    "campaign": {
+      "name": "Sequel to \"I'm a Cow\" song and animation video",
+      "main_category": "Film & Video",
+      "usd_goal_real": 15000.0
+    },
+    "n_scenarios": 5,
+    "scenarios": [
+      {
+        "name": "Current (as-is)",
+        "changes": {},
+        "description": "no changes"
+      },
+      {
+        "name": "Lower goal",
+        "changes": {
+          "goal_usd": 5000.0
+        },
+        "description": "goal \u2192 $5,000"
+      },
+      {
+        "name": "Lower goal + shorten duration",
+        "changes": {
+          "goal_usd": 5000.0,
+          "duration_days": 30
+        },
+        "description": "goal \u2192 $5,000; duration \u2192 30d"
+      },
+      {
+        "name": "Lower goal + shorten duration + Tuesday launch",
+        "changes": {
+          "goal_usd": 5000.0,
+          "duration_days": 30,
+          "weekday": "Tuesday"
+        },
+        "description": "goal \u2192 $5,000; duration \u2192 30d; launch \u2192 Tuesday"
+      },
+      {
+        "name": "Lower goal + shorten duration + Tuesday launch + add title number",
+        "changes": {
+          "goal_usd": 5000.0,
+          "duration_days": 30,
+          "weekday": "Tuesday",
+          "add_number": true
+        },
+        "description": "goal \u2192 $5,000; duration \u2192 30d; launch \u2192 Tuesday; title \u2192 add number"
+      }
+    ],
+    "note": "Multi-variable what-if scenarios over controllable features only, composed canonically. Model-simulated (Phase F), not causal."
+  },
+  {
+    "campaign": {
+      "name": "Organika Cases - Phone cases from real natural materials",
+      "main_category": "Fashion",
+      "usd_goal_real": 13000.0
+    },
+    "n_scenarios": 4,
+    "scenarios": [
+      {
+        "name": "Current (as-is)",
+        "changes": {},
+        "description": "no changes"
+      },
+      {
+        "name": "Lower goal",
+        "changes": {
+          "goal_usd": 5000.0
+        },
+        "description": "goal \u2192 $5,000"
+      },
+      {
+        "name": "Lower goal + shorten duration",
+        "changes": {
+          "goal_usd": 5000.0,
+          "duration_days": 15
+        },
+        "description": "goal \u2192 $5,000; duration \u2192 15d"
+      },
+      {
+        "name": "Lower goal + shorten duration + add title number",
+        "changes": {
+          "goal_usd": 5000.0,
+          "duration_days": 15,
+          "add_number": true
+        },
+        "description": "goal \u2192 $5,000; duration \u2192 15d; title \u2192 add number"
+      }
+    ],
+    "note": "Multi-variable what-if scenarios over controllable features only, composed canonically. Model-simulated (Phase F), not causal."
+  }
+]

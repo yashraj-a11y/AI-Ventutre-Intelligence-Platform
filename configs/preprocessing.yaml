@@ -644,3 +644,63 @@ day9:
       competitor_analysis: artifacts/copilot/competitor_analysis.json
       recommendations: artifacts/copilot/recommendations.json
       venture_copilot_brief: artifacts/copilot/venture_copilot_brief.json
+
+# ============================================================================
+# Day 10 — Startup Evolution Planner & Scenario Simulator (Layers 9/10)
+# ============================================================================
+day10:
+  # --- Phase B: funding-readiness stage detector -------------------------------
+  stage:
+    strong_margin: 0.15              # base_p >= threshold + this -> "Strong"
+    out_path: artifacts/evolution/startup_stage.json
+
+  # --- Phase C: pre-launch preparation roadmap (Day-8 levers + readiness stages)
+  roadmap:
+    out_path: artifacts/evolution/roadmap.json
+
+  # --- Phase D: milestone recommendation engine (Day-8 ranked levers) ----------
+  milestones:
+    out_path: artifacts/evolution/milestones.json
+
+  # --- Phase E: scenario generator (multi-variable, canonical composition) -----
+  scenario:
+    duration_target: 30              # preferred campaign length for scenarios
+    out_path: artifacts/scenario/scenarios.json
+
+  # --- Phase F: scenario simulation engine (score each scenario via Day-4 model)
+  simulate:
+    out_path: artifacts/scenario/simulation_results.json
+
+  # --- Phase G: scenario comparison engine (rank + marginal value + best) ------
+  comparison:
+    worth_it_min: 0.005              # marginal gain above this = "worth it"
+    out_path: artifacts/scenario/comparison_report.json
+
+  # --- Phase H: funding-readiness PREPARATION timeline (pre-launch, not growth) -
+  timeline:
+    lead_weeks: 4                    # pre-launch preparation window (weeks before launch)
+    out_path: artifacts/evolution/funding_timeline.json
+
+  # --- Phase I: combined orchestration reports (one warm stack, one analyze) ----
+  evolution:
+    out_path: artifacts/evolution/evolution_engine.json
+  scenario_report:
+    out_path: artifacts/scenario/scenario_report.json
+
+  # --- Phase J: evolution+scenario engine serialization (content-hash JSON) -----
+  serialization:
+    version: "1.0.0"
+    manifest_path: artifacts/evolution/evolution_planner_engine.json
+    dependencies:
+      day4_calibrated_model: artifacts/models/calibrated_model.joblib
+      day8_counterfactual_engine: artifacts/counterfactual/counterfactual_engine.json
+    artifacts:
+      startup_stage: artifacts/evolution/startup_stage.json
+      roadmap: artifacts/evolution/roadmap.json
+      milestones: artifacts/evolution/milestones.json
+      funding_timeline: artifacts/evolution/funding_timeline.json
+      evolution_engine: artifacts/evolution/evolution_engine.json
+      scenarios: artifacts/scenario/scenarios.json
+      simulation_results: artifacts/scenario/simulation_results.json
+      comparison_report: artifacts/scenario/comparison_report.json
+      scenario_report: artifacts/scenario/scenario_report.json
