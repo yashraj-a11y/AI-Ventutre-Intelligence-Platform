@@ -878,3 +878,55 @@ day12:
       investment_analysis: artifacts/agents/investment_analysis.json
       agent_reports: artifacts/agents/agent_reports.json
       committee_decision: artifacts/agents/committee_decision.json
+
+# ============================ DAY 13 — Layer 13 ==============================
+# Report Generation. PRESENTATION-ONLY reformatting of Days 4-12 outputs. NO new
+# analysis, NO LLM, deterministic, JSON/MD/HTML (PDF optional). Honesty inherited
+# via the NO-NEW-CLAIMS rule (every section carries a `source` provenance tag).
+day13:
+  # --- Phase B: Founder Intelligence Report -----------------------------------
+  founder:
+    top_drivers: 4                   # strengths / weaknesses to surface (Day-5)
+    top_scenarios: 5
+    out_path: artifacts/reports/founder_report.json
+
+  # --- Phase C: Investor Due Diligence Report ---------------------------------
+  investor:
+    out_path: artifacts/reports/investor_report.json
+
+  # --- Phase D: Investment Memo (VC-style narrative + deterministic thesis) ----
+  memo:
+    out_path: artifacts/reports/investment_memo.json
+
+  # --- Phase E: Executive Summary (dashboard one-liners) ----------------------
+  executive:
+    out_path: artifacts/reports/executive_summary.json
+
+  # --- Phase F: Venture Copilot Q&A (deterministic intent-router; NO LLM) ------
+  copilot:
+    out_path: artifacts/reports/copilot_log.json
+
+  # --- Phase G: Report Export Engine (JSON/MD/HTML deps-free; PDF optional) ----
+  export:
+    out_dir: outputs/reports
+    formats: [json, markdown, html]  # pdf added automatically iff a PDF lib is importable
+
+  # --- Phase H: Reporting Pipeline (one bundle -> all reports + copilot) -------
+  pipeline:
+    out_dir: outputs/reports
+    out_path: artifacts/reports/report_suite.json
+
+  # --- Phase I: reporting engine serialization (content-hash JSON, ts-excluded)
+  serialization:
+    version: "1.0.0"
+    manifest_path: artifacts/reports/reporting_engine.json
+    dependencies:
+      day4_calibrated_model: artifacts/models/calibrated_model.joblib
+      day11_recommendation_engine: artifacts/recommendation/recommendation_engine.json
+      day12_agent_system_engine: artifacts/agents/agent_system_engine.json
+    artifacts:
+      founder_report: artifacts/reports/founder_report.json
+      investor_report: artifacts/reports/investor_report.json
+      investment_memo: artifacts/reports/investment_memo.json
+      executive_summary: artifacts/reports/executive_summary.json
+      copilot_log: artifacts/reports/copilot_log.json

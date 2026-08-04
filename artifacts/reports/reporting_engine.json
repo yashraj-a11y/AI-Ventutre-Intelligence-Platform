@@ -1,0 +1,146 @@
+{
+  "version": "1.0.0",
+  "created_utc": "2026-08-04T21:01:35.663580+00:00",
+  "architecture_layer": 13,
+  "note": "Reporting engine = deterministic report templates + a copilot over the Day-11 decision + Day-12 committee. Presentation only (no new analysis); every section names its source. No LLM. Model-simulated, not causal.",
+  "engine_config": {
+    "founder": {
+      "top_drivers": 4,
+      "top_scenarios": 5,
+      "out_path": "artifacts/reports/founder_report.json"
+    },
+    "investor": {
+      "out_path": "artifacts/reports/investor_report.json"
+    },
+    "memo": {
+      "out_path": "artifacts/reports/investment_memo.json"
+    },
+    "executive": {
+      "out_path": "artifacts/reports/executive_summary.json"
+    },
+    "copilot": {
+      "out_path": "artifacts/reports/copilot_log.json"
+    },
+    "export": {
+      "out_dir": "outputs/reports",
+      "formats": [
+        "json",
+        "markdown",
+        "html"
+      ]
+    },
+    "pipeline": {
+      "out_dir": "outputs/reports",
+      "out_path": "artifacts/reports/report_suite.json"
+    }
+  },
+  "reporting_policy": {
+    "report_types": [
+      "Founder Intelligence Report",
+      "Investor Due Diligence Report",
+      "Investment Memo",
+      "Executive Summary"
+    ],
+    "export_formats": [
+      "json",
+      "markdown",
+      "html"
+    ],
+    "copilot_intents": [
+      "probability",
+      "improve",
+      "similar",
+      "why_fail",
+      "risk",
+      "before_launch",
+      "recommendation",
+      "strengths",
+      "deferred",
+      "unknown"
+    ],
+    "rule": "NO NEW CLAIMS \u2014 presentation-only reformatting of the Day 4-12 outputs; every section carries a source provenance tag; deferred items appended, not fabricated.",
+    "no_llm": true
+  },
+  "content_hash": "222007d6df2755f02b8fa5f496fdb33ab69c2a4233ed823a780ed0b8e94bb6bf",
+  "dependencies": {
+    "day4_calibrated_model": {
+      "path": "artifacts/models/calibrated_model.joblib",
+      "exists": true,
+      "bytes": 21472372,
+      "hash_mode": "file",
+      "sha256": "dde1cdef14554bc57482ce98a985851b02e926cd2dca115cb0ca4423efa3e677"
+    },
+    "day11_recommendation_engine": {
+      "path": "artifacts/recommendation/recommendation_engine.json",
+      "exists": true,
+      "bytes": 6253,
+      "hash_mode": "file",
+      "sha256": "6bbef1826b7c1b8d0ef7231e292714043f5c575902f1e46728f062716ee78e73"
+    },
+    "day12_agent_system_engine": {
+      "path": "artifacts/agents/agent_system_engine.json",
+      "exists": true,
+      "bytes": 6253,
+      "hash_mode": "file",
+      "sha256": "8b011fa4bfc0f3d07cc29aed6f81f001b9faf0c9e2657f8ca4cbefdd0c560d73"
+    }
+  },
+  "artifacts": {
+    "founder_report": {
+      "path": "artifacts/reports/founder_report.json",
+      "exists": true,
+      "bytes": 20750,
+      "hash_mode": "content(ts-excluded)",
+      "sha256": "ec959a99c3ea4dc2a849a3f78d720451c0ba2e4a5b9a3233eb579c4669d9c58b"
+    },
+    "investor_report": {
+      "path": "artifacts/reports/investor_report.json",
+      "exists": true,
+      "bytes": 23281,
+      "hash_mode": "content(ts-excluded)",
+      "sha256": "4e0c20d0cfa28a11f6823c1f589d4508d05e66512c140b5fc94ce435f0990156"
+    },
+    "investment_memo": {
+      "path": "artifacts/reports/investment_memo.json",
+      "exists": true,
+      "bytes": 17933,
+      "hash_mode": "content(ts-excluded)",
+      "sha256": "682cd36038320b418005d00df515078d5b747a461f93796a99f4abc404585a40"
+    },
+    "executive_summary": {
+      "path": "artifacts/reports/executive_summary.json",
+      "exists": true,
+      "bytes": 12285,
+      "hash_mode": "content(ts-excluded)",
+      "sha256": "83a5b177d110a9517d1cf14b1fc3d58d8ed5f4437125d5fe447f669fe2c9e653"
+    },
+    "copilot_log": {
+      "path": "artifacts/reports/copilot_log.json",
+      "exists": true,
+      "bytes": 6799,
+      "hash_mode": "content(ts-excluded)",
+      "sha256": "e6b1327e2105fe7197687e9502f4f3dec229b5cac02e6b57eeb443b20d54c1f3"
+    }
+  },
+  "deferred_items": [
+    "founder_experience",
+    "team_composition",
+    "leadership",
+    "advisory_board",
+    "revenue",
+    "mrr",
+    "retention",
+    "burn_rate",
+    "runway",
+    "cac_ltv",
+    "unit_economics",
+    "competitive_moat",
+    "differentiation",
+    "named_competitors",
+    "market_size_tam",
+    "expected_return",
+    "irr",
+    "valuation",
+    "comparable_funding_rounds"
+  ]
+}

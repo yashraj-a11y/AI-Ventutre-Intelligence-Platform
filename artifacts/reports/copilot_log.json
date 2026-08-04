@@ -1,0 +1,136 @@
+[
+  {
+    "campaign": {
+      "name": "Artificer - Board Game",
+      "main_category": "Games",
+      "usd_goal_real": 30515.72,
+      "country": "CA"
+    },
+    "turns": [
+      {
+        "question": "Why is my funding probability low?",
+        "intent": "probability",
+        "deferred": false,
+        "source": "Days 4 / 10 / 11",
+        "answer": "Your funding probability is 24% (Fixable). With the priority pre-launch changes it's reachable to ~66%. Confidence 83%."
+      },
+      {
+        "question": "What should I improve first?",
+        "intent": "improve",
+        "deferred": false,
+        "source": "Day-11 prioritization (Day-7 evidence)",
+        "answer": "First: Shorten your campaign from 29 to 15 days \u2014 the model estimates about +30 points. Games campaigns with a <=15d campaign funded at 66% vs a 40% baseline (lift 1.62, n=1,331)."
+      },
+      {
+        "question": "Which campaigns are most similar to mine?",
+        "intent": "similar",
+        "deferred": false,
+        "source": "Day-9 category cohort",
+        "answer": "The closest comparison is the 22,878 other Games campaigns in our data, which fund at 44% (vs a 40% baseline). You're positioned like the strugglers."
+      },
+      {
+        "question": "Why do similar campaigns fail?",
+        "intent": "why_fail",
+        "deferred": false,
+        "source": "Day-9 competition (what winners do)",
+        "answer": "Ask for less: funded campaigns' median goal is $5,000 vs $10,000 for those that failed. Your $30,516 goal is 6.1x the winners' median ($5,000) \u2014 priced like the campaigns that failed."
+      },
+      {
+        "question": "What is my biggest risk?",
+        "intent": "risk",
+        "deferred": false,
+        "source": "Day-9 risk analysis",
+        "answer": "Your biggest risk: Goal $30,516 is 6.1x the Games funded-median ($5,000); large goals are harder to reach. (Overall risk: High)."
+      },
+      {
+        "question": "What should I do before I launch?",
+        "intent": "before_launch",
+        "deferred": false,
+        "source": "Day-11 founder strategy",
+        "answer": "Before you launch, focus on: shorten your campaign from 29 to 15 days; lower your funding goal from $30,516 to $5,000. These are the highest-impact controllable changes."
+      },
+      {
+        "question": "Should an investor invest?",
+        "intent": "recommendation",
+        "deferred": false,
+        "source": "Day-12 committee",
+        "answer": "The committee's recommendation is Do Not Invest (78% confidence). Committee recommendation: Do Not Invest (score -0.69; 1 positive / 5 negative of 6 agents). Dissent: MarketAgent (positive)."
+      },
+      {
+        "question": "What is my MRR?",
+        "intent": "deferred",
+        "deferred": true,
+        "source": "deferred",
+        "answer": "That isn't available \u2014 this platform has no mrr data for Kickstarter campaigns (they're anonymous, pre-launch). I can answer questions about funding probability, what to improve, similar campaigns, risks, and pre-launch steps."
+      }
+    ],
+    "honesty_note": "Deterministic intent-router over the real Day 4-12 outputs \u2014 not an LLM, never invents an answer. Out-of-scope questions (revenue / moat / founder background / \u2026) return an honest 'not available' fallback. Model-simulated, not causal."
+  },
+  {
+    "campaign": {
+      "name": "Sequel to \"I'm a Cow\" song and animation video",
+      "main_category": "Film & Video",
+      "usd_goal_real": 15000.0,
+      "country": "US"
+    },
+    "turns": [
+      {
+        "question": "Why is my funding probability low?",
+        "intent": "probability",
+        "deferred": false,
+        "source": "Days 4 / 10 / 11",
+        "answer": "Your funding probability is 23% (Fixable). With the priority pre-launch changes it's reachable to ~44%. Confidence 77%."
+      },
+      {
+        "question": "What should I improve first?",
+        "intent": "improve",
+        "deferred": false,
+        "source": "Day-11 prioritization (Day-7 evidence)",
+        "answer": "First: Lower your funding goal from $15,000 to $5,000 \u2014 the model estimates about +9 points. Film & Video campaigns asking goal <= $5,000 funded at 51% vs a 40% baseline (lift 1.27, n=20,767). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+      },
+      {
+        "question": "Which campaigns are most similar to mine?",
+        "intent": "similar",
+        "deferred": false,
+        "source": "Day-9 category cohort",
+        "answer": "The closest comparison is the 45,162 other Film & Video campaigns in our data, which fund at 42% (vs a 40% baseline). You're positioned like the strugglers."
+      },
+      {
+        "question": "Why do similar campaigns fail?",
+        "intent": "why_fail",
+        "deferred": false,
+        "source": "Day-9 competition (what winners do)",
+        "answer": "Ask for less: funded campaigns' median goal is $5,000 vs $10,000 for those that failed. Your $15,000 goal is 3.0x the winners' median ($5,000) \u2014 priced like the campaigns that failed."
+      },
+      {
+        "question": "What is my biggest risk?",
+        "intent": "risk",
+        "deferred": false,
+        "source": "Day-9 risk analysis",
+        "answer": "Your biggest risk: Goal $15,000 is 3.0x the Film & Video funded-median ($5,000); large goals are harder to reach. (Overall risk: High)."
+      },
+      {
+        "question": "What should I do before I launch?",
+        "intent": "before_launch",
+        "deferred": false,
+        "source": "Day-11 founder strategy",
+        "answer": "Before you launch, focus on: lower your funding goal from $15,000 to $5,000; shorten your campaign from 18 to 30 days. These are the highest-impact controllable changes."
+      },
+      {
+        "question": "Should an investor invest?",
+        "intent": "recommendation",
+        "deferred": false,
+        "source": "Day-12 committee",
+        "answer": "The committee's recommendation is Do Not Invest (64% confidence). Committee recommendation: Do Not Invest (score -0.57; 0 positive / 3 negative of 6 agents)."
+      },
+      {
+        "question": "What is my MRR?",
+        "intent": "deferred",
+        "deferred": true,
+        "source": "deferred",
+        "answer": "That isn't available \u2014 this platform has no mrr data for Kickstarter campaigns (they're anonymous, pre-launch). I can answer questions about funding probability, what to improve, similar campaigns, risks, and pre-launch steps."
+      }
+    ],
+    "honesty_note": "Deterministic intent-router over the real Day 4-12 outputs \u2014 not an LLM, never invents an answer. Out-of-scope questions (revenue / moat / founder background / \u2026) return an honest 'not available' fallback. Model-simulated, not causal."
+  }
+]

@@ -1,0 +1,382 @@
+[
+  {
+    "report_type": "Executive Summary",
+    "campaign": {
+      "name": "Artificer - Board Game",
+      "main_category": "Games",
+      "usd_goal_real": 30515.72,
+      "country": "CA"
+    },
+    "generated_utc": "2026-08-04T21:01:02.790698+00:00",
+    "headline": "Artificer - Board Game: Do Not Invest \u2014 Fixable at 24% (readiness 45), 78% confidence.",
+    "sections": [
+      {
+        "id": "headline",
+        "title": "Executive Summary",
+        "source": "Day-12 committee + Day-11",
+        "kind": "text",
+        "body": "Artificer - Board Game: Do Not Invest \u2014 Fixable at 24% (readiness 45), 78% confidence."
+      },
+      {
+        "id": "dashboard",
+        "title": "Dashboard",
+        "source": "Days 4 / 10 / 11 / 12",
+        "kind": "metrics",
+        "body": {
+          "Startup score": 45,
+          "Funding probability": "24%",
+          "Risk": "High",
+          "Recommendation": "Do Not Invest",
+          "Confidence": "78%"
+        }
+      }
+    ],
+    "deferred_appendix": {
+      "note": "Not covered \u2014 the dataset has no data for these; not fabricated.",
+      "items": [
+        "Financial Strategy",
+        "Go-To-Market Strategy",
+        "Product Strategy",
+        "Team Strategy",
+        "Technology Strategy",
+        "build_partnerships",
+        "cap_table",
+        "competitive_moat",
+        "customer_retention",
+        "delay_fundraising_timing",
+        "expand_founding_team",
+        "financial_diligence",
+        "founder_experience",
+        "funding_rounds",
+        "grow_monthly_revenue",
+        "grow_revenue",
+        "growth_milestones",
+        "growth_timeline",
+        "growth_trajectory",
+        "hire_technical_cofounder",
+        "improve_retention",
+        "improve_retention_before_fundraising",
+        "improve_unit_economics",
+        "market_size_tam",
+        "market_sizing",
+        "monthly_revenue",
+        "named_competitors",
+        "pricing_strategy",
+        "product_traction",
+        "revenue_growth",
+        "startup_lifecycle",
+        "team_diligence",
+        "team_size",
+        "traction_metrics",
+        "unit_economics",
+        "validate_customer_problem",
+        "validate_pricing_strategy"
+      ]
+    },
+    "honesty_note": "Executive Summary \u2014 five headline numbers reformatted from the Day 4-12 analysis (no new analysis). Model-simulated, not causal."
+  },
+  {
+    "report_type": "Executive Summary",
+    "campaign": {
+      "name": "Sequel to \"I'm a Cow\" song and animation video",
+      "main_category": "Film & Video",
+      "usd_goal_real": 15000.0,
+      "country": "US"
+    },
+    "generated_utc": "2026-08-04T21:01:05.136335+00:00",
+    "headline": "Sequel to \"I'm a Cow\" song and animation video: Do Not Invest \u2014 Fixable at 23% (readiness 33), 64% confidence.",
+    "sections": [
+      {
+        "id": "headline",
+        "title": "Executive Summary",
+        "source": "Day-12 committee + Day-11",
+        "kind": "text",
+        "body": "Sequel to \"I'm a Cow\" song and animation video: Do Not Invest \u2014 Fixable at 23% (readiness 33), 64% confidence."
+      },
+      {
+        "id": "dashboard",
+        "title": "Dashboard",
+        "source": "Days 4 / 10 / 11 / 12",
+        "kind": "metrics",
+        "body": {
+          "Startup score": 33,
+          "Funding probability": "23%",
+          "Risk": "High",
+          "Recommendation": "Do Not Invest",
+          "Confidence": "64%"
+        }
+      }
+    ],
+    "deferred_appendix": {
+      "note": "Not covered \u2014 the dataset has no data for these; not fabricated.",
+      "items": [
+        "Financial Strategy",
+        "Go-To-Market Strategy",
+        "Product Strategy",
+        "Team Strategy",
+        "Technology Strategy",
+        "build_partnerships",
+        "cap_table",
+        "competitive_moat",
+        "customer_retention",
+        "delay_fundraising_timing",
+        "expand_founding_team",
+        "financial_diligence",
+        "founder_experience",
+        "funding_rounds",
+        "grow_monthly_revenue",
+        "grow_revenue",
+        "growth_milestones",
+        "growth_timeline",
+        "growth_trajectory",
+        "hire_technical_cofounder",
+        "improve_retention",
+        "improve_retention_before_fundraising",
+        "improve_unit_economics",
+        "market_size_tam",
+        "market_sizing",
+        "monthly_revenue",
+        "named_competitors",
+        "pricing_strategy",
+        "product_traction",
+        "revenue_growth",
+        "startup_lifecycle",
+        "team_diligence",
+        "team_size",
+        "traction_metrics",
+        "unit_economics",
+        "validate_customer_problem",
+        "validate_pricing_strategy"
+      ]
+    },
+    "honesty_note": "Executive Summary \u2014 five headline numbers reformatted from the Day 4-12 analysis (no new analysis). Model-simulated, not causal."
+  },
+  {
+    "report_type": "Executive Summary",
+    "campaign": {
+      "name": "Organika Cases - Phone cases from real natural materials",
+      "main_category": "Fashion",
+      "usd_goal_real": 13000.0,
+      "country": "US"
+    },
+    "generated_utc": "2026-08-04T21:01:06.872930+00:00",
+    "headline": "Organika Cases - Phone cases from real natural materials: Monitor Progress \u2014 Ready at 35% (readiness 37), 56% confidence.",
+    "sections": [
+      {
+        "id": "headline",
+        "title": "Executive Summary",
+        "source": "Day-12 committee + Day-11",
+        "kind": "text",
+        "body": "Organika Cases - Phone cases from real natural materials: Monitor Progress \u2014 Ready at 35% (readiness 37), 56% confidence."
+      },
+      {
+        "id": "dashboard",
+        "title": "Dashboard",
+        "source": "Days 4 / 10 / 11 / 12",
+        "kind": "metrics",
+        "body": {
+          "Startup score": 37,
+          "Funding probability": "35%",
+          "Risk": "High",
+          "Recommendation": "Monitor Progress",
+          "Confidence": "56%"
+        }
+      }
+    ],
+    "deferred_appendix": {
+      "note": "Not covered \u2014 the dataset has no data for these; not fabricated.",
+      "items": [
+        "Financial Strategy",
+        "Go-To-Market Strategy",
+        "Product Strategy",
+        "Team Strategy",
+        "Technology Strategy",
+        "build_partnerships",
+        "cap_table",
+        "competitive_moat",
+        "customer_retention",
+        "delay_fundraising_timing",
+        "expand_founding_team",
+        "financial_diligence",
+        "founder_experience",
+        "funding_rounds",
+        "grow_monthly_revenue",
+        "grow_revenue",
+        "growth_milestones",
+        "growth_timeline",
+        "growth_trajectory",
+        "hire_technical_cofounder",
+        "improve_retention",
+        "improve_retention_before_fundraising",
+        "improve_unit_economics",
+        "market_size_tam",
+        "market_sizing",
+        "monthly_revenue",
+        "named_competitors",
+        "pricing_strategy",
+        "product_traction",
+        "revenue_growth",
+        "startup_lifecycle",
+        "team_diligence",
+        "team_size",
+        "traction_metrics",
+        "unit_economics",
+        "validate_customer_problem",
+        "validate_pricing_strategy"
+      ]
+    },
+    "honesty_note": "Executive Summary \u2014 five headline numbers reformatted from the Day 4-12 analysis (no new analysis). Model-simulated, not causal."
+  },
+  {
+    "report_type": "Executive Summary",
+    "campaign": {
+      "name": "Hark Fu Kune Black Tiger Fist",
+      "main_category": "Publishing",
+      "usd_goal_real": 50000.0,
+      "country": "US"
+    },
+    "generated_utc": "2026-08-04T21:01:09.478556+00:00",
+    "headline": "Hark Fu Kune Black Tiger Fist: Do Not Invest \u2014 Fixable at 16% (readiness 36), 77% confidence.",
+    "sections": [
+      {
+        "id": "headline",
+        "title": "Executive Summary",
+        "source": "Day-12 committee + Day-11",
+        "kind": "text",
+        "body": "Hark Fu Kune Black Tiger Fist: Do Not Invest \u2014 Fixable at 16% (readiness 36), 77% confidence."
+      },
+      {
+        "id": "dashboard",
+        "title": "Dashboard",
+        "source": "Days 4 / 10 / 11 / 12",
+        "kind": "metrics",
+        "body": {
+          "Startup score": 36,
+          "Funding probability": "16%",
+          "Risk": "High",
+          "Recommendation": "Do Not Invest",
+          "Confidence": "77%"
+        }
+      }
+    ],
+    "deferred_appendix": {
+      "note": "Not covered \u2014 the dataset has no data for these; not fabricated.",
+      "items": [
+        "Financial Strategy",
+        "Go-To-Market Strategy",
+        "Product Strategy",
+        "Team Strategy",
+        "Technology Strategy",
+        "build_partnerships",
+        "cap_table",
+        "competitive_moat",
+        "customer_retention",
+        "delay_fundraising_timing",
+        "expand_founding_team",
+        "financial_diligence",
+        "founder_experience",
+        "funding_rounds",
+        "grow_monthly_revenue",
+        "grow_revenue",
+        "growth_milestones",
+        "growth_timeline",
+        "growth_trajectory",
+        "hire_technical_cofounder",
+        "improve_retention",
+        "improve_retention_before_fundraising",
+        "improve_unit_economics",
+        "market_size_tam",
+        "market_sizing",
+        "monthly_revenue",
+        "named_competitors",
+        "pricing_strategy",
+        "product_traction",
+        "revenue_growth",
+        "startup_lifecycle",
+        "team_diligence",
+        "team_size",
+        "traction_metrics",
+        "unit_economics",
+        "validate_customer_problem",
+        "validate_pricing_strategy"
+      ]
+    },
+    "honesty_note": "Executive Summary \u2014 five headline numbers reformatted from the Day 4-12 analysis (no new analysis). Model-simulated, not causal."
+  },
+  {
+    "report_type": "Executive Summary",
+    "campaign": {
+      "name": "Bottom of the 9th: A Dice & Card Game of Classic Baseball",
+      "main_category": "Games",
+      "usd_goal_real": 20000.0,
+      "country": "US"
+    },
+    "generated_utc": "2026-08-04T21:01:11.250001+00:00",
+    "headline": "Bottom of the 9th: A Dice & Card Game of Classic Baseball: Strong Invest \u2014 Strong at 85% (readiness 86), 81% confidence.",
+    "sections": [
+      {
+        "id": "headline",
+        "title": "Executive Summary",
+        "source": "Day-12 committee + Day-11",
+        "kind": "text",
+        "body": "Bottom of the 9th: A Dice & Card Game of Classic Baseball: Strong Invest \u2014 Strong at 85% (readiness 86), 81% confidence."
+      },
+      {
+        "id": "dashboard",
+        "title": "Dashboard",
+        "source": "Days 4 / 10 / 11 / 12",
+        "kind": "metrics",
+        "body": {
+          "Startup score": 86,
+          "Funding probability": "85%",
+          "Risk": "Low",
+          "Recommendation": "Strong Invest",
+          "Confidence": "81%"
+        }
+      }
+    ],
+    "deferred_appendix": {
+      "note": "Not covered \u2014 the dataset has no data for these; not fabricated.",
+      "items": [
+        "Financial Strategy",
+        "Go-To-Market Strategy",
+        "Product Strategy",
+        "Team Strategy",
+        "Technology Strategy",
+        "build_partnerships",
+        "cap_table",
+        "competitive_moat",
+        "customer_retention",
+        "delay_fundraising_timing",
+        "expand_founding_team",
+        "financial_diligence",
+        "founder_experience",
+        "funding_rounds",
+        "grow_monthly_revenue",
+        "grow_revenue",
+        "growth_milestones",
+        "growth_timeline",
+        "growth_trajectory",
+        "hire_technical_cofounder",
+        "improve_retention",
+        "improve_retention_before_fundraising",
+        "improve_unit_economics",
+        "market_size_tam",
+        "market_sizing",
+        "monthly_revenue",
+        "named_competitors",
+        "pricing_strategy",
+        "product_traction",
+        "revenue_growth",
+        "startup_lifecycle",
+        "team_diligence",
+        "team_size",
+        "traction_metrics",
+        "unit_economics",
+        "validate_customer_problem",
+        "validate_pricing_strategy"
+      ]
+    },
+    "honesty_note": "Executive Summary \u2014 five headline numbers reformatted from the Day 4-12 analysis (no new analysis). Model-simulated, not causal."
+  }
+]

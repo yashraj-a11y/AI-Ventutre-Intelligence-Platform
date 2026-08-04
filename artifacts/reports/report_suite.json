@@ -1,0 +1,1548 @@
+[
+  {
+    "campaign": {
+      "name": "Artificer - Board Game",
+      "main_category": "Games",
+      "usd_goal_real": 30515.72,
+      "country": "CA"
+    },
+    "reports": {
+      "founder": {
+        "report_type": "Founder Intelligence Report",
+        "campaign": {
+          "name": "Artificer - Board Game",
+          "main_category": "Games",
+          "usd_goal_real": 30515.72,
+          "country": "CA"
+        },
+        "generated_utc": "2026-08-04T21:01:31.779240+00:00",
+        "sections": [
+          {
+            "id": "executive_summary",
+            "title": "Executive Summary",
+            "source": "Day-11 synthesis",
+            "kind": "text",
+            "body": "Proceed with Caution: Fixable at 24% (reachable ~66%), confidence 83%. Founder priority: shorten your campaign from 29 to 15 days; lower your funding goal from $30,516 to $5,000."
+          },
+          {
+            "id": "scorecard",
+            "title": "Scorecard",
+            "source": "Days 4 / 10 / 11",
+            "kind": "metrics",
+            "body": {
+              "Startup score (readiness index)": 45,
+              "Funding probability": "24%",
+              "Investment readiness": "Fixable (reachable 66%)",
+              "Confidence": "83%"
+            }
+          },
+          {
+            "id": "strengths",
+            "title": "Strengths",
+            "source": "Day-5 SHAP (positive drivers)",
+            "kind": "list",
+            "body": [
+              "your category's overall popularity works in your favor.",
+              "being in the Games category works in your favor.",
+              "your title's capitalization style works in your favor.",
+              "title term 'board game' works in your favor."
+            ]
+          },
+          {
+            "id": "weaknesses",
+            "title": "Weaknesses",
+            "source": "Day-5 SHAP (negative drivers)",
+            "kind": "list",
+            "body": [
+              "your funding goal size weighs against you.",
+              "title term 'game' weighs against you.",
+              "your goal relative to the campaign length weighs against you.",
+              "your title length weighs against you."
+            ]
+          },
+          {
+            "id": "priority_improvements",
+            "title": "Priority Improvements",
+            "source": "Day-11 prioritization (Day-7 evidence)",
+            "kind": "table",
+            "body": {
+              "columns": [
+                "#",
+                "Action",
+                "Impact",
+                "Evidence"
+              ],
+              "rows": [
+                [
+                  1,
+                  "Shorten your campaign from 29 to 15 days",
+                  "+30 pts",
+                  "Games campaigns with a <=15d campaign funded at 66% vs a 40% baseline (lift 1.62, n=1,331)."
+                ],
+                [
+                  2,
+                  "Lower your funding goal from $30,516 to $5,000",
+                  "+12 pts",
+                  "Games campaigns asking goal <= $5,000 funded at 55% vs a 40% baseline (lift 1.36, n=9,834). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+                ],
+                [
+                  3,
+                  "Add a number to your title (e.g. an edition or volume number)",
+                  "+4 pts",
+                  "Games campaigns with a number in the title funded at 59% vs a 40% baseline (lift 1.46, n=2,823)."
+                ],
+                [
+                  4,
+                  "Launch on Tuesday instead of Thursday",
+                  "+3 pts",
+                  "Games campaigns launched on Tuesday funded at 50% vs a 40% baseline (lift 1.24, n=5,071)."
+                ]
+              ]
+            }
+          },
+          {
+            "id": "evolution_roadmap",
+            "title": "Evolution Roadmap",
+            "source": "Day-10 preparation roadmap",
+            "kind": "table",
+            "body": {
+              "columns": [
+                "Step",
+                "Action",
+                "Stage after",
+                "Crosses bar"
+              ],
+              "rows": [
+                [
+                  1,
+                  "Shorten your campaign from 29 to 15 days",
+                  "Strong",
+                  "yes"
+                ],
+                [
+                  2,
+                  "Lower your funding goal from $30,516 to $5,000",
+                  "Strong",
+                  "yes"
+                ],
+                [
+                  3,
+                  "Add a number to your title (e.g. an edition or volume number)",
+                  "Strong",
+                  "yes"
+                ]
+              ]
+            }
+          },
+          {
+            "id": "scenario_analysis",
+            "title": "Scenario Analysis",
+            "source": "Day-10 scenario simulator",
+            "kind": "table",
+            "body": {
+              "columns": [
+                "Scenario",
+                "Probability",
+                "Stage"
+              ],
+              "rows": [
+                [
+                  "Lower goal + shorten duration + Tuesday launch + add title number",
+                  "69%",
+                  "Strong"
+                ],
+                [
+                  "Lower goal + shorten duration + Tuesday launch",
+                  "64%",
+                  "Strong"
+                ],
+                [
+                  "Lower goal + shorten duration",
+                  "62%",
+                  "Strong"
+                ],
+                [
+                  "Lower goal",
+                  "36%",
+                  "Ready"
+                ],
+                [
+                  "Current (as-is)",
+                  "24%",
+                  "Fixable"
+                ]
+              ]
+            }
+          },
+          {
+            "id": "next_milestones",
+            "title": "Next Milestones",
+            "source": "Day-10 milestones",
+            "kind": "table",
+            "body": {
+              "columns": [
+                "Priority",
+                "Milestone",
+                "Action"
+              ],
+              "rows": [
+                [
+                  1,
+                  "Choose an optimal campaign length",
+                  "Shorten your campaign from 29 to 15 days"
+                ],
+                [
+                  2,
+                  "Set a fundable funding goal",
+                  "Lower your funding goal from $30,516 to $5,000"
+                ],
+                [
+                  3,
+                  "Strengthen your campaign title",
+                  "Add a number to your title (e.g. an edition or volume number)"
+                ],
+                [
+                  4,
+                  "Time your launch well",
+                  "Launch on Tuesday instead of Thursday"
+                ]
+              ]
+            }
+          }
+        ],
+        "deferred_appendix": {
+          "note": "Not covered \u2014 the dataset has no data for these; not fabricated.",
+          "items": [
+            "Financial Strategy",
+            "Go-To-Market Strategy",
+            "Product Strategy",
+            "Team Strategy",
+            "Technology Strategy",
+            "build_partnerships",
+            "cap_table",
+            "competitive_moat",
+            "customer_retention",
+            "delay_fundraising_timing",
+            "expand_founding_team",
+            "financial_diligence",
+            "founder_experience",
+            "funding_rounds",
+            "grow_monthly_revenue",
+            "grow_revenue",
+            "growth_milestones",
+            "growth_timeline",
+            "growth_trajectory",
+            "hire_technical_cofounder",
+            "improve_retention",
+            "improve_retention_before_fundraising",
+            "improve_unit_economics",
+            "market_size_tam",
+            "market_sizing",
+            "monthly_revenue",
+            "named_competitors",
+            "pricing_strategy",
+            "product_traction",
+            "revenue_growth",
+            "startup_lifecycle",
+            "team_diligence",
+            "team_size",
+            "traction_metrics",
+            "unit_economics",
+            "validate_customer_problem",
+            "validate_pricing_strategy"
+          ]
+        },
+        "honesty_note": "Founder Intelligence Report \u2014 a deterministic reformatting of the Day 4-12 analysis (no new analysis). Every section names its source. Model-simulated over controllable features, not causal; founder / team / revenue / moat items are deferred (no data)."
+      },
+      "investor": {
+        "report_type": "Investor Due Diligence Report",
+        "campaign": {
+          "name": "Artificer - Board Game",
+          "main_category": "Games",
+          "usd_goal_real": 30515.72,
+          "country": "CA"
+        },
+        "generated_utc": "2026-08-04T21:01:31.779291+00:00",
+        "recommendation": "Do Not Invest",
+        "risk_veto": {
+          "eligible": true,
+          "applied": false
+        },
+        "sections": [
+          {
+            "id": "executive_summary",
+            "title": "Executive Summary",
+            "source": "Day-12 committee",
+            "kind": "text",
+            "body": "Committee recommendation: Do Not Invest (score -0.69; 1 positive / 5 negative of 6 agents). Dissent: MarketAgent (positive)."
+          },
+          {
+            "id": "investment_recommendation",
+            "title": "Investment Recommendation",
+            "source": "Day-12 committee",
+            "kind": "metrics",
+            "body": {
+              "Recommendation": "Do Not Invest",
+              "Overall confidence": "78%",
+              "Agreement": "83%",
+              "Committee score": "-0.69"
+            }
+          },
+          {
+            "id": "market_analysis",
+            "title": "Market Analysis",
+            "source": "Day-12 market agent",
+            "kind": "list",
+            "body": [
+              "Verdict: positive (score 72/100, confidence 87%).",
+              "Games campaigns fund at 44% vs a 40% platform baseline (lift 1.09).",
+              "Market timing is favorable; the Games trend is rising (22,878 campaigns).",
+              "The category is crowded."
+            ]
+          },
+          {
+            "id": "competitive_landscape",
+            "title": "Competitive Landscape",
+            "source": "Day-12 competition agent",
+            "kind": "list",
+            "body": [
+              "Verdict: negative (score 17/100, confidence 99%).",
+              "Ask for less: funded campaigns' median goal is $5,000 vs $10,000 for those that failed.",
+              "Your $30,516 goal is 6.1x the winners' median ($5,000) \u2014 priced like the campaigns that failed.",
+              "Category is crowded \u2014 22,878 campaigns (9% of all)."
+            ]
+          },
+          {
+            "id": "founder_assessment",
+            "title": "Founder Assessment (creator execution)",
+            "source": "Day-12 founder agent",
+            "kind": "list",
+            "body": [
+              "Verdict: negative (score 36/100, confidence 83%).",
+              "The creator left ~42 points of controllable upside unrealized (24% of a reachable 66%) \u2014 craft gaps below.",
+              "Craft gap: Shorten your campaign from 29 to 15 days (~30 pts).",
+              "Craft gap: Lower your funding goal from $30,516 to $5,000 (~12 pts)."
+            ]
+          },
+          {
+            "id": "financial_assessment",
+            "title": "Financial Assessment (funding viability)",
+            "source": "Day-12 financial agent",
+            "kind": "list",
+            "body": [
+              "Verdict: negative (score 24/100, confidence 78%).",
+              "Goal $30,516 is 6.1x the category winners' median ($5,000).",
+              "Calibrated funding probability 24% vs the 33% decision bar.",
+              "Goal-size risk (High): Goal $30,516 is 6.1x the Games funded-median ($5,000); large goals are harder to reach."
+            ]
+          },
+          {
+            "id": "similar_startups",
+            "title": "Similar Startups",
+            "source": "Day-9 category cohort (our data)",
+            "kind": "metrics",
+            "body": {
+              "Category": "Games",
+              "Similar campaigns": "22,878",
+              "Category funding rate": "44%",
+              "Platform baseline": "40%"
+            }
+          },
+          {
+            "id": "risks_and_red_flags",
+            "title": "Risks & Red Flags",
+            "source": "Day-12 risk agent + Day-9 objections",
+            "kind": "list",
+            "body": [
+              "Overall risk: High. Modeled failure risk 76%.",
+              "High \u2014 Goal $30,516 is 6.1x the Games funded-median ($5,000); large goals are harder to reach.",
+              "High \u2014 Modeled failure risk 76% (funding probability 24%, below the 33% threshold).",
+              "3 investor objection(s) raised; top: goal_size.",
+              "Investor objection (High): Your $30,516 goal is high for Games, where funded campaigns typically ask a median of $5,000. Why this ask \u2014 and can you hit it?",
+              "Investor objection (Medium): The model estimates only a 24% funding probability \u2014 below the ~33% decision threshold. How will you beat these odds?",
+              "Investor objection (Medium): Among campaigns most like yours (Games, a large goal), only 31% funded. What sets you apart from the 4,712 that came before?"
+            ]
+          },
+          {
+            "id": "opportunities",
+            "title": "Opportunities",
+            "source": "Day-11",
+            "kind": "list",
+            "body": [
+              "Priority changes can lift funding odds from 24% to ~66%.",
+              "Games funds at 44% vs the 40% baseline \u2014 a favorable category.",
+              "Working in your favor: category_freq.",
+              "Working in your favor: main_category_Games."
+            ]
+          },
+          {
+            "id": "investment_decision",
+            "title": "Investment Decision",
+            "source": "Day-12 committee",
+            "kind": "table",
+            "body": {
+              "columns": [
+                "Agent",
+                "Vote",
+                "Confidence",
+                "Weight"
+              ],
+              "rows": [
+                [
+                  "MarketAgent",
+                  "positive",
+                  "0.87",
+                  1.0
+                ],
+                [
+                  "FounderAgent",
+                  "negative",
+                  "0.83",
+                  1.0
+                ],
+                [
+                  "FinancialAgent",
+                  "negative",
+                  "0.78",
+                  1.0
+                ],
+                [
+                  "CompetitionAgent",
+                  "negative",
+                  "0.99",
+                  0.8
+                ],
+                [
+                  "RiskAgent",
+                  "negative",
+                  "0.78",
+                  1.5
+                ],
+                [
+                  "InvestmentAgent",
+                  "negative",
+                  "0.82",
+                  1.5
+                ]
+              ]
+            }
+          }
+        ],
+        "deferred_appendix": {
+          "note": "Not covered \u2014 the dataset has no data for these; not fabricated.",
+          "items": [
+            "Financial Strategy",
+            "Go-To-Market Strategy",
+            "Product Strategy",
+            "Team Strategy",
+            "Technology Strategy",
+            "build_partnerships",
+            "cap_table",
+            "comparable_funding_rounds",
+            "competitive_moat",
+            "customer_retention",
+            "delay_fundraising_timing",
+            "exit_multiple",
+            "expand_founding_team",
+            "expected_return",
+            "financial_diligence",
+            "founder_experience",
+            "funding_rounds",
+            "grow_monthly_revenue",
+            "grow_revenue",
+            "growth_milestones",
+            "growth_timeline",
+            "growth_trajectory",
+            "hire_technical_cofounder",
+            "improve_retention",
+            "improve_retention_before_fundraising",
+            "improve_unit_economics",
+            "irr",
+            "market_size_tam",
+            "market_sizing",
+            "monthly_revenue",
+            "named_competitors",
+            "pricing_strategy",
+            "product_traction",
+            "revenue_growth",
+            "startup_lifecycle",
+            "team_diligence",
+            "team_size",
+            "traction_metrics",
+            "unit_economics",
+            "validate_customer_problem",
+            "validate_pricing_strategy",
+            "valuation"
+          ]
+        },
+        "honesty_note": "Investor Due Diligence Report \u2014 a deterministic reformatting of the Day 4-12 analysis (no new analysis). Every section names its source; agents are correlated views of one signal set, not independent experts. Model-simulated, not causal; expected return / comparable rounds / valuation / founder background / financials are deferred (no data)."
+      },
+      "memo": {
+        "report_type": "Investment Memo",
+        "campaign": {
+          "name": "Artificer - Board Game",
+          "main_category": "Games",
+          "usd_goal_real": 30515.72,
+          "country": "CA"
+        },
+        "generated_utc": "2026-08-04T21:01:31.779319+00:00",
+        "recommendation": "Do Not Invest",
+        "sections": [
+          {
+            "id": "executive_summary",
+            "title": "Executive Summary",
+            "source": "Day-12 committee",
+            "kind": "text",
+            "body": "Artificer - Board Game (Games, goal $30,516). The committee recommends Do Not Invest at 78% confidence."
+          },
+          {
+            "id": "startup_overview",
+            "title": "Startup Overview",
+            "source": "Days 4 / 10",
+            "kind": "metrics",
+            "body": {
+              "Name": "Artificer - Board Game",
+              "Category": "Games",
+              "Funding goal": "$30,516",
+              "Funding probability": "24%",
+              "Readiness stage": "Fixable"
+            }
+          },
+          {
+            "id": "market_opportunity",
+            "title": "Market Opportunity",
+            "source": "Day-12 market agent",
+            "kind": "text",
+            "body": "Positive (score 72/100). Games campaigns fund at 44% vs a 40% platform baseline (lift 1.09). Market timing is favorable; the Games trend is rising (22,878 campaigns). The category is crowded."
+          },
+          {
+            "id": "competitive_position",
+            "title": "Competitive Position",
+            "source": "Day-12 competition agent",
+            "kind": "text",
+            "body": "Negative (score 17/100). Ask for less: funded campaigns' median goal is $5,000 vs $10,000 for those that failed. Your $30,516 goal is 6.1x the winners' median ($5,000) \u2014 priced like the campaigns that failed. Category is crowded \u2014 22,878 campaigns (9% of all)."
+          },
+          {
+            "id": "founder_analysis",
+            "title": "Founder Analysis (creator execution)",
+            "source": "Day-12 founder agent",
+            "kind": "text",
+            "body": "Negative (score 36/100). The creator left ~42 points of controllable upside unrealized (24% of a reachable 66%) \u2014 craft gaps below. Craft gap: Shorten your campaign from 29 to 15 days (~30 pts). Craft gap: Lower your funding goal from $30,516 to $5,000 (~12 pts)."
+          },
+          {
+            "id": "financial_analysis",
+            "title": "Financial Analysis (funding viability)",
+            "source": "Day-12 financial agent",
+            "kind": "text",
+            "body": "Negative (score 24/100). Goal $30,516 is 6.1x the category winners' median ($5,000). Calibrated funding probability 24% vs the 33% decision bar. Goal-size risk (High): Goal $30,516 is 6.1x the Games funded-median ($5,000); large goals are harder to reach."
+          },
+          {
+            "id": "risk_assessment",
+            "title": "Risk Assessment",
+            "source": "Day-12 risk agent",
+            "kind": "text",
+            "body": "Negative (score 27/100). Overall risk: High. Modeled failure risk 76%. High \u2014 Goal $30,516 is 6.1x the Games funded-median ($5,000); large goals are harder to reach. High \u2014 Modeled failure risk 76% (funding probability 24%, below the 33% threshold). 3 investor objection(s) raised; top: goal_size."
+          },
+          {
+            "id": "investment_thesis",
+            "title": "Investment Thesis",
+            "source": "Day-12 committee + Days 10/11 synthesis",
+            "kind": "text",
+            "body": "The committee recommends Do Not Invest at 78% confidence. Bull case (Market): Games campaigns fund at 44% vs a 40% platform baseline (lift 1.09). Bear case (Competition): Ask for less: funded campaigns' median goal is $5,000 vs $10,000 for those that failed. As presented the campaign is not fundable (24%), but it is fixable \u2014 reachable to ~66% with the priority pre-launch changes. Conditional on those fixes the thesis could clear the bar; unchanged, pass."
+          },
+          {
+            "id": "recommendation",
+            "title": "Recommendation",
+            "source": "Day-12 committee",
+            "kind": "metrics",
+            "body": {
+              "Recommendation": "Do Not Invest",
+              "Overall confidence": "78%",
+              "Committee score": "-0.69",
+              "Risk veto applied": false
+            }
+          }
+        ],
+        "deferred_appendix": {
+          "note": "Not covered \u2014 the dataset has no data for these; not fabricated.",
+          "items": [
+            "Financial Strategy",
+            "Go-To-Market Strategy",
+            "Product Strategy",
+            "Team Strategy",
+            "Technology Strategy",
+            "build_partnerships",
+            "cap_table",
+            "comparable_funding_rounds",
+            "competitive_moat",
+            "customer_retention",
+            "delay_fundraising_timing",
+            "exit_multiple",
+            "expand_founding_team",
+            "expected_return",
+            "financial_diligence",
+            "founder_background",
+            "founder_experience",
+            "funding_rounds",
+            "grow_monthly_revenue",
+            "grow_revenue",
+            "growth_milestones",
+            "growth_timeline",
+            "growth_trajectory",
+            "hire_technical_cofounder",
+            "improve_retention",
+            "improve_retention_before_fundraising",
+            "improve_unit_economics",
+            "irr",
+            "market_size_tam",
+            "market_sizing",
+            "monthly_revenue",
+            "named_competitors",
+            "pricing_strategy",
+            "product_traction",
+            "revenue_growth",
+            "startup_lifecycle",
+            "team_diligence",
+            "team_size",
+            "traction_metrics",
+            "unit_economics",
+            "validate_customer_problem",
+            "validate_pricing_strategy",
+            "valuation"
+          ]
+        },
+        "honesty_note": "Investment Memo \u2014 a deterministic narrative reformatting of the Day 4-12 analysis (no new analysis). The investment thesis is a synthesis of the committee + readiness + the bull/bear agents. Model-simulated, not causal; expected return / valuation / comparable rounds / founder background / financials are deferred (no data)."
+      },
+      "executive": {
+        "report_type": "Executive Summary",
+        "campaign": {
+          "name": "Artificer - Board Game",
+          "main_category": "Games",
+          "usd_goal_real": 30515.72,
+          "country": "CA"
+        },
+        "generated_utc": "2026-08-04T21:01:31.779328+00:00",
+        "headline": "Artificer - Board Game: Do Not Invest \u2014 Fixable at 24% (readiness 45), 78% confidence.",
+        "sections": [
+          {
+            "id": "headline",
+            "title": "Executive Summary",
+            "source": "Day-12 committee + Day-11",
+            "kind": "text",
+            "body": "Artificer - Board Game: Do Not Invest \u2014 Fixable at 24% (readiness 45), 78% confidence."
+          },
+          {
+            "id": "dashboard",
+            "title": "Dashboard",
+            "source": "Days 4 / 10 / 11 / 12",
+            "kind": "metrics",
+            "body": {
+              "Startup score": 45,
+              "Funding probability": "24%",
+              "Risk": "High",
+              "Recommendation": "Do Not Invest",
+              "Confidence": "78%"
+            }
+          }
+        ],
+        "deferred_appendix": {
+          "note": "Not covered \u2014 the dataset has no data for these; not fabricated.",
+          "items": [
+            "Financial Strategy",
+            "Go-To-Market Strategy",
+            "Product Strategy",
+            "Team Strategy",
+            "Technology Strategy",
+            "build_partnerships",
+            "cap_table",
+            "competitive_moat",
+            "customer_retention",
+            "delay_fundraising_timing",
+            "expand_founding_team",
+            "financial_diligence",
+            "founder_experience",
+            "funding_rounds",
+            "grow_monthly_revenue",
+            "grow_revenue",
+            "growth_milestones",
+            "growth_timeline",
+            "growth_trajectory",
+            "hire_technical_cofounder",
+            "improve_retention",
+            "improve_retention_before_fundraising",
+            "improve_unit_economics",
+            "market_size_tam",
+            "market_sizing",
+            "monthly_revenue",
+            "named_competitors",
+            "pricing_strategy",
+            "product_traction",
+            "revenue_growth",
+            "startup_lifecycle",
+            "team_diligence",
+            "team_size",
+            "traction_metrics",
+            "unit_economics",
+            "validate_customer_problem",
+            "validate_pricing_strategy"
+          ]
+        },
+        "honesty_note": "Executive Summary \u2014 five headline numbers reformatted from the Day 4-12 analysis (no new analysis). Model-simulated, not causal."
+      }
+    },
+    "copilot": {
+      "campaign": {
+        "name": "Artificer - Board Game",
+        "main_category": "Games",
+        "usd_goal_real": 30515.72,
+        "country": "CA"
+      },
+      "turns": [
+        {
+          "question": "Why is my funding probability low?",
+          "intent": "probability",
+          "deferred": false,
+          "source": "Days 4 / 10 / 11",
+          "answer": "Your funding probability is 24% (Fixable). With the priority pre-launch changes it's reachable to ~66%. Confidence 83%."
+        },
+        {
+          "question": "What should I improve first?",
+          "intent": "improve",
+          "deferred": false,
+          "source": "Day-11 prioritization (Day-7 evidence)",
+          "answer": "First: Shorten your campaign from 29 to 15 days \u2014 the model estimates about +30 points. Games campaigns with a <=15d campaign funded at 66% vs a 40% baseline (lift 1.62, n=1,331)."
+        },
+        {
+          "question": "Which campaigns are most similar to mine?",
+          "intent": "similar",
+          "deferred": false,
+          "source": "Day-9 category cohort",
+          "answer": "The closest comparison is the 22,878 other Games campaigns in our data, which fund at 44% (vs a 40% baseline). You're positioned like the strugglers."
+        },
+        {
+          "question": "Why do similar campaigns fail?",
+          "intent": "why_fail",
+          "deferred": false,
+          "source": "Day-9 competition (what winners do)",
+          "answer": "Ask for less: funded campaigns' median goal is $5,000 vs $10,000 for those that failed. Your $30,516 goal is 6.1x the winners' median ($5,000) \u2014 priced like the campaigns that failed."
+        },
+        {
+          "question": "What is my biggest risk?",
+          "intent": "risk",
+          "deferred": false,
+          "source": "Day-9 risk analysis",
+          "answer": "Your biggest risk: Goal $30,516 is 6.1x the Games funded-median ($5,000); large goals are harder to reach. (Overall risk: High)."
+        },
+        {
+          "question": "What should I do before I launch?",
+          "intent": "before_launch",
+          "deferred": false,
+          "source": "Day-11 founder strategy",
+          "answer": "Before you launch, focus on: shorten your campaign from 29 to 15 days; lower your funding goal from $30,516 to $5,000. These are the highest-impact controllable changes."
+        },
+        {
+          "question": "Should an investor invest?",
+          "intent": "recommendation",
+          "deferred": false,
+          "source": "Day-12 committee",
+          "answer": "The committee's recommendation is Do Not Invest (78% confidence). Committee recommendation: Do Not Invest (score -0.69; 1 positive / 5 negative of 6 agents). Dissent: MarketAgent (positive)."
+        },
+        {
+          "question": "What is my MRR?",
+          "intent": "deferred",
+          "deferred": true,
+          "source": "deferred",
+          "answer": "That isn't available \u2014 this platform has no mrr data for Kickstarter campaigns (they're anonymous, pre-launch). I can answer questions about funding probability, what to improve, similar campaigns, risks, and pre-launch steps."
+        }
+      ],
+      "honesty_note": "Deterministic intent-router over the real Day 4-12 outputs \u2014 not an LLM, never invents an answer. Out-of-scope questions (revenue / moat / founder background / \u2026) return an honest 'not available' fallback. Model-simulated, not causal."
+    },
+    "honesty_note": "A full report suite reformatted from the Day 4-12 analysis on one warm faiss-free stack (no new analysis). Every section names its source; deferred items are appended, not fabricated. Deterministic, no LLM. Model-simulated, not causal.",
+    "exported": {
+      "founder": {
+        "json": "outputs/reports/founder_intelligence_report__artificer_board_game.json",
+        "markdown": "outputs/reports/founder_intelligence_report__artificer_board_game.md",
+        "html": "outputs/reports/founder_intelligence_report__artificer_board_game.html"
+      },
+      "investor": {
+        "json": "outputs/reports/investor_due_diligence_report__artificer_board_game.json",
+        "markdown": "outputs/reports/investor_due_diligence_report__artificer_board_game.md",
+        "html": "outputs/reports/investor_due_diligence_report__artificer_board_game.html"
+      },
+      "memo": {
+        "json": "outputs/reports/investment_memo__artificer_board_game.json",
+        "markdown": "outputs/reports/investment_memo__artificer_board_game.md",
+        "html": "outputs/reports/investment_memo__artificer_board_game.html"
+      },
+      "executive": {
+        "json": "outputs/reports/executive_summary__artificer_board_game.json",
+        "markdown": "outputs/reports/executive_summary__artificer_board_game.md",
+        "html": "outputs/reports/executive_summary__artificer_board_game.html"
+      }
+    }
+  },
+  {
+    "campaign": {
+      "name": "Sequel to \"I'm a Cow\" song and animation video",
+      "main_category": "Film & Video",
+      "usd_goal_real": 15000.0,
+      "country": "US"
+    },
+    "reports": {
+      "founder": {
+        "report_type": "Founder Intelligence Report",
+        "campaign": {
+          "name": "Sequel to \"I'm a Cow\" song and animation video",
+          "main_category": "Film & Video",
+          "usd_goal_real": 15000.0,
+          "country": "US"
+        },
+        "generated_utc": "2026-08-04T21:01:35.343090+00:00",
+        "sections": [
+          {
+            "id": "executive_summary",
+            "title": "Executive Summary",
+            "source": "Day-11 synthesis",
+            "kind": "text",
+            "body": "Monitor Progress: Fixable at 23% (reachable ~44%), confidence 77%. Founder priority: lower your funding goal from $15,000 to $5,000; shorten your campaign from 18 to 30 days."
+          },
+          {
+            "id": "scorecard",
+            "title": "Scorecard",
+            "source": "Days 4 / 10 / 11",
+            "kind": "metrics",
+            "body": {
+              "Startup score (readiness index)": 33,
+              "Funding probability": "23%",
+              "Investment readiness": "Fixable (reachable 44%)",
+              "Confidence": "77%"
+            }
+          },
+          {
+            "id": "strengths",
+            "title": "Strengths",
+            "source": "Day-5 SHAP (positive drivers)",
+            "kind": "list",
+            "body": [
+              "your campaign length works in your favor.",
+              "word count works in your favor.",
+              "your title length works in your favor.",
+              "being in the Film & Video category works in your favor."
+            ]
+          },
+          {
+            "id": "weaknesses",
+            "title": "Weaknesses",
+            "source": "Day-5 SHAP (negative drivers)",
+            "kind": "list",
+            "body": [
+              "title term 'video' weighs against you.",
+              "your title's capitalization style weighs against you.",
+              "your launch-day timing weighs against you.",
+              "your goal relative to the campaign length weighs against you."
+            ]
+          },
+          {
+            "id": "priority_improvements",
+            "title": "Priority Improvements",
+            "source": "Day-11 prioritization (Day-7 evidence)",
+            "kind": "table",
+            "body": {
+              "columns": [
+                "#",
+                "Action",
+                "Impact",
+                "Evidence"
+              ],
+              "rows": [
+                [
+                  1,
+                  "Lower your funding goal from $15,000 to $5,000",
+                  "+9 pts",
+                  "Film & Video campaigns asking goal <= $5,000 funded at 51% vs a 40% baseline (lift 1.27, n=20,767). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+                ],
+                [
+                  2,
+                  "Shorten your campaign from 18 to 30 days",
+                  "+12 pts",
+                  "Film & Video campaigns with a 16-30d campaign funded at 44% vs a 40% baseline (lift 1.10, n=26,194)."
+                ],
+                [
+                  3,
+                  "Launch on Tuesday instead of Sunday",
+                  "+7 pts",
+                  "Film & Video campaigns launched on Tuesday funded at 43% vs a 40% baseline (lift 1.07, n=8,753)."
+                ]
+              ]
+            }
+          },
+          {
+            "id": "evolution_roadmap",
+            "title": "Evolution Roadmap",
+            "source": "Day-10 preparation roadmap",
+            "kind": "table",
+            "body": {
+              "columns": [
+                "Step",
+                "Action",
+                "Stage after",
+                "Crosses bar"
+              ],
+              "rows": [
+                [
+                  1,
+                  "Shorten your campaign from 18 to 30 days",
+                  "Ready",
+                  "yes"
+                ],
+                [
+                  2,
+                  "Lower your funding goal from $15,000 to $5,000",
+                  "Ready",
+                  "yes"
+                ]
+              ]
+            }
+          },
+          {
+            "id": "scenario_analysis",
+            "title": "Scenario Analysis",
+            "source": "Day-10 scenario simulator",
+            "kind": "table",
+            "body": {
+              "columns": [
+                "Scenario",
+                "Probability",
+                "Stage"
+              ],
+              "rows": [
+                [
+                  "Lower goal + shorten duration + Tuesday launch",
+                  "50%",
+                  "Strong"
+                ],
+                [
+                  "Lower goal + shorten duration + Tuesday launch + add title number",
+                  "49%",
+                  "Strong"
+                ],
+                [
+                  "Lower goal + shorten duration",
+                  "44%",
+                  "Ready"
+                ],
+                [
+                  "Lower goal",
+                  "32%",
+                  "Fixable"
+                ],
+                [
+                  "Current (as-is)",
+                  "23%",
+                  "Fixable"
+                ]
+              ]
+            }
+          },
+          {
+            "id": "next_milestones",
+            "title": "Next Milestones",
+            "source": "Day-10 milestones",
+            "kind": "table",
+            "body": {
+              "columns": [
+                "Priority",
+                "Milestone",
+                "Action"
+              ],
+              "rows": [
+                [
+                  1,
+                  "Set a fundable funding goal",
+                  "Lower your funding goal from $15,000 to $5,000"
+                ],
+                [
+                  2,
+                  "Choose an optimal campaign length",
+                  "Shorten your campaign from 18 to 30 days"
+                ],
+                [
+                  3,
+                  "Time your launch well",
+                  "Launch on Tuesday instead of Sunday"
+                ]
+              ]
+            }
+          }
+        ],
+        "deferred_appendix": {
+          "note": "Not covered \u2014 the dataset has no data for these; not fabricated.",
+          "items": [
+            "Financial Strategy",
+            "Go-To-Market Strategy",
+            "Product Strategy",
+            "Team Strategy",
+            "Technology Strategy",
+            "build_partnerships",
+            "cap_table",
+            "competitive_moat",
+            "customer_retention",
+            "delay_fundraising_timing",
+            "expand_founding_team",
+            "financial_diligence",
+            "founder_experience",
+            "funding_rounds",
+            "grow_monthly_revenue",
+            "grow_revenue",
+            "growth_milestones",
+            "growth_timeline",
+            "growth_trajectory",
+            "hire_technical_cofounder",
+            "improve_retention",
+            "improve_retention_before_fundraising",
+            "improve_unit_economics",
+            "market_size_tam",
+            "market_sizing",
+            "monthly_revenue",
+            "named_competitors",
+            "pricing_strategy",
+            "product_traction",
+            "revenue_growth",
+            "startup_lifecycle",
+            "team_diligence",
+            "team_size",
+            "traction_metrics",
+            "unit_economics",
+            "validate_customer_problem",
+            "validate_pricing_strategy"
+          ]
+        },
+        "honesty_note": "Founder Intelligence Report \u2014 a deterministic reformatting of the Day 4-12 analysis (no new analysis). Every section names its source. Model-simulated over controllable features, not causal; founder / team / revenue / moat items are deferred (no data)."
+      },
+      "investor": {
+        "report_type": "Investor Due Diligence Report",
+        "campaign": {
+          "name": "Sequel to \"I'm a Cow\" song and animation video",
+          "main_category": "Film & Video",
+          "usd_goal_real": 15000.0,
+          "country": "US"
+        },
+        "generated_utc": "2026-08-04T21:01:35.343114+00:00",
+        "recommendation": "Do Not Invest",
+        "risk_veto": {
+          "eligible": true,
+          "applied": false
+        },
+        "sections": [
+          {
+            "id": "executive_summary",
+            "title": "Executive Summary",
+            "source": "Day-12 committee",
+            "kind": "text",
+            "body": "Committee recommendation: Do Not Invest (score -0.57; 0 positive / 3 negative of 6 agents)."
+          },
+          {
+            "id": "investment_recommendation",
+            "title": "Investment Recommendation",
+            "source": "Day-12 committee",
+            "kind": "metrics",
+            "body": {
+              "Recommendation": "Do Not Invest",
+              "Overall confidence": "64%",
+              "Agreement": "50%",
+              "Committee score": "-0.57"
+            }
+          },
+          {
+            "id": "market_analysis",
+            "title": "Market Analysis",
+            "source": "Day-12 market agent",
+            "kind": "list",
+            "body": [
+              "Verdict: cautious (score 53/100, confidence 93%).",
+              "Film & Video campaigns fund at 42% vs a 40% platform baseline (lift 1.03).",
+              "Market timing is neutral; the Film & Video trend is stable (45,162 campaigns).",
+              "The category is highly crowded."
+            ]
+          },
+          {
+            "id": "competitive_landscape",
+            "title": "Competitive Landscape",
+            "source": "Day-12 competition agent",
+            "kind": "list",
+            "body": [
+              "Verdict: negative (score 25/100, confidence 92%).",
+              "Ask for less: funded campaigns' median goal is $5,000 vs $10,000 for those that failed.",
+              "Your $15,000 goal is 3.0x the winners' median ($5,000) \u2014 priced like the campaigns that failed.",
+              "Category is highly crowded \u2014 45,162 campaigns (17% of all)."
+            ]
+          },
+          {
+            "id": "founder_assessment",
+            "title": "Founder Assessment (creator execution)",
+            "source": "Day-12 founder agent",
+            "kind": "list",
+            "body": [
+              "Verdict: cautious (score 53/100, confidence 67%).",
+              "The creator left ~20 points of controllable upside unrealized (23% of a reachable 44%) \u2014 craft gaps below.",
+              "Craft gap: Lower your funding goal from $15,000 to $5,000 (~9 pts).",
+              "Craft gap: Shorten your campaign from 18 to 30 days (~12 pts)."
+            ]
+          },
+          {
+            "id": "financial_assessment",
+            "title": "Financial Assessment (funding viability)",
+            "source": "Day-12 financial agent",
+            "kind": "list",
+            "body": [
+              "Verdict: cautious (score 44/100, confidence 73%).",
+              "Goal $15,000 is 3.0x the category winners' median ($5,000).",
+              "Calibrated funding probability 23% vs the 33% decision bar.",
+              "Goal-size risk (High): Goal $15,000 is 3.0x the Film & Video funded-median ($5,000); large goals are harder to reach."
+            ]
+          },
+          {
+            "id": "similar_startups",
+            "title": "Similar Startups",
+            "source": "Day-9 category cohort (our data)",
+            "kind": "metrics",
+            "body": {
+              "Category": "Film & Video",
+              "Similar campaigns": "45,162",
+              "Category funding rate": "42%",
+              "Platform baseline": "40%"
+            }
+          },
+          {
+            "id": "risks_and_red_flags",
+            "title": "Risks & Red Flags",
+            "source": "Day-12 risk agent + Day-9 objections",
+            "kind": "list",
+            "body": [
+              "Overall risk: High. Modeled failure risk 77%.",
+              "High \u2014 Goal $15,000 is 3.0x the Film & Video funded-median ($5,000); large goals are harder to reach.",
+              "High \u2014 Modeled failure risk 77% (funding probability 23%, below the 33% threshold).",
+              "2 investor objection(s) raised; top: goal_size.",
+              "Investor objection (High): Your $15,000 goal is high for Film & Video, where funded campaigns typically ask a median of $5,000. Why this ask \u2014 and can you hit it?",
+              "Investor objection (Medium): The model estimates only a 23% funding probability \u2014 below the ~33% decision threshold. How will you beat these odds?"
+            ]
+          },
+          {
+            "id": "opportunities",
+            "title": "Opportunities",
+            "source": "Day-11",
+            "kind": "list",
+            "body": [
+              "Priority changes can lift funding odds from 23% to ~44%.",
+              "Film & Video funds at 42% vs the 40% baseline \u2014 a favorable category.",
+              "Working in your favor: campaign_duration.",
+              "Working in your favor: word_count."
+            ]
+          },
+          {
+            "id": "investment_decision",
+            "title": "Investment Decision",
+            "source": "Day-12 committee",
+            "kind": "table",
+            "body": {
+              "columns": [
+                "Agent",
+                "Vote",
+                "Confidence",
+                "Weight"
+              ],
+              "rows": [
+                [
+                  "MarketAgent",
+                  "cautious",
+                  "0.93",
+                  1.0
+                ],
+                [
+                  "FounderAgent",
+                  "cautious",
+                  "0.67",
+                  1.0
+                ],
+                [
+                  "FinancialAgent",
+                  "cautious",
+                  "0.73",
+                  1.0
+                ],
+                [
+                  "CompetitionAgent",
+                  "negative",
+                  "0.93",
+                  0.8
+                ],
+                [
+                  "RiskAgent",
+                  "negative",
+                  "0.85",
+                  1.5
+                ],
+                [
+                  "InvestmentAgent",
+                  "negative",
+                  "0.71",
+                  1.5
+                ]
+              ]
+            }
+          }
+        ],
+        "deferred_appendix": {
+          "note": "Not covered \u2014 the dataset has no data for these; not fabricated.",
+          "items": [
+            "Financial Strategy",
+            "Go-To-Market Strategy",
+            "Product Strategy",
+            "Team Strategy",
+            "Technology Strategy",
+            "build_partnerships",
+            "cap_table",
+            "comparable_funding_rounds",
+            "competitive_moat",
+            "customer_retention",
+            "delay_fundraising_timing",
+            "exit_multiple",
+            "expand_founding_team",
+            "expected_return",
+            "financial_diligence",
+            "founder_experience",
+            "funding_rounds",
+            "grow_monthly_revenue",
+            "grow_revenue",
+            "growth_milestones",
+            "growth_timeline",
+            "growth_trajectory",
+            "hire_technical_cofounder",
+            "improve_retention",
+            "improve_retention_before_fundraising",
+            "improve_unit_economics",
+            "irr",
+            "market_size_tam",
+            "market_sizing",
+            "monthly_revenue",
+            "named_competitors",
+            "pricing_strategy",
+            "product_traction",
+            "revenue_growth",
+            "startup_lifecycle",
+            "team_diligence",
+            "team_size",
+            "traction_metrics",
+            "unit_economics",
+            "validate_customer_problem",
+            "validate_pricing_strategy",
+            "valuation"
+          ]
+        },
+        "honesty_note": "Investor Due Diligence Report \u2014 a deterministic reformatting of the Day 4-12 analysis (no new analysis). Every section names its source; agents are correlated views of one signal set, not independent experts. Model-simulated, not causal; expected return / comparable rounds / valuation / founder background / financials are deferred (no data)."
+      },
+      "memo": {
+        "report_type": "Investment Memo",
+        "campaign": {
+          "name": "Sequel to \"I'm a Cow\" song and animation video",
+          "main_category": "Film & Video",
+          "usd_goal_real": 15000.0,
+          "country": "US"
+        },
+        "generated_utc": "2026-08-04T21:01:35.343139+00:00",
+        "recommendation": "Do Not Invest",
+        "sections": [
+          {
+            "id": "executive_summary",
+            "title": "Executive Summary",
+            "source": "Day-12 committee",
+            "kind": "text",
+            "body": "Sequel to \"I'm a Cow\" song and animation video (Film & Video, goal $15,000). The committee recommends Do Not Invest at 64% confidence."
+          },
+          {
+            "id": "startup_overview",
+            "title": "Startup Overview",
+            "source": "Days 4 / 10",
+            "kind": "metrics",
+            "body": {
+              "Name": "Sequel to \"I'm a Cow\" song and animation video",
+              "Category": "Film & Video",
+              "Funding goal": "$15,000",
+              "Funding probability": "23%",
+              "Readiness stage": "Fixable"
+            }
+          },
+          {
+            "id": "market_opportunity",
+            "title": "Market Opportunity",
+            "source": "Day-12 market agent",
+            "kind": "text",
+            "body": "Cautious (score 53/100). Film & Video campaigns fund at 42% vs a 40% platform baseline (lift 1.03). Market timing is neutral; the Film & Video trend is stable (45,162 campaigns). The category is highly crowded."
+          },
+          {
+            "id": "competitive_position",
+            "title": "Competitive Position",
+            "source": "Day-12 competition agent",
+            "kind": "text",
+            "body": "Negative (score 25/100). Ask for less: funded campaigns' median goal is $5,000 vs $10,000 for those that failed. Your $15,000 goal is 3.0x the winners' median ($5,000) \u2014 priced like the campaigns that failed. Category is highly crowded \u2014 45,162 campaigns (17% of all)."
+          },
+          {
+            "id": "founder_analysis",
+            "title": "Founder Analysis (creator execution)",
+            "source": "Day-12 founder agent",
+            "kind": "text",
+            "body": "Cautious (score 53/100). The creator left ~20 points of controllable upside unrealized (23% of a reachable 44%) \u2014 craft gaps below. Craft gap: Lower your funding goal from $15,000 to $5,000 (~9 pts). Craft gap: Shorten your campaign from 18 to 30 days (~12 pts)."
+          },
+          {
+            "id": "financial_analysis",
+            "title": "Financial Analysis (funding viability)",
+            "source": "Day-12 financial agent",
+            "kind": "text",
+            "body": "Cautious (score 44/100). Goal $15,000 is 3.0x the category winners' median ($5,000). Calibrated funding probability 23% vs the 33% decision bar. Goal-size risk (High): Goal $15,000 is 3.0x the Film & Video funded-median ($5,000); large goals are harder to reach."
+          },
+          {
+            "id": "risk_assessment",
+            "title": "Risk Assessment",
+            "source": "Day-12 risk agent",
+            "kind": "text",
+            "body": "Negative (score 26/100). Overall risk: High. Modeled failure risk 77%. High \u2014 Goal $15,000 is 3.0x the Film & Video funded-median ($5,000); large goals are harder to reach. High \u2014 Modeled failure risk 77% (funding probability 23%, below the 33% threshold). 2 investor objection(s) raised; top: goal_size."
+          },
+          {
+            "id": "investment_thesis",
+            "title": "Investment Thesis",
+            "source": "Day-12 committee + Days 10/11 synthesis",
+            "kind": "text",
+            "body": "The committee recommends Do Not Invest at 64% confidence. Bull case (Market): Film & Video campaigns fund at 42% vs a 40% platform baseline (lift 1.03). Bear case (Competition): Ask for less: funded campaigns' median goal is $5,000 vs $10,000 for those that failed. As presented the campaign is not fundable (23%), but it is fixable \u2014 reachable to ~44% with the priority pre-launch changes. Conditional on those fixes the thesis could clear the bar; unchanged, pass."
+          },
+          {
+            "id": "recommendation",
+            "title": "Recommendation",
+            "source": "Day-12 committee",
+            "kind": "metrics",
+            "body": {
+              "Recommendation": "Do Not Invest",
+              "Overall confidence": "64%",
+              "Committee score": "-0.57",
+              "Risk veto applied": false
+            }
+          }
+        ],
+        "deferred_appendix": {
+          "note": "Not covered \u2014 the dataset has no data for these; not fabricated.",
+          "items": [
+            "Financial Strategy",
+            "Go-To-Market Strategy",
+            "Product Strategy",
+            "Team Strategy",
+            "Technology Strategy",
+            "build_partnerships",
+            "cap_table",
+            "comparable_funding_rounds",
+            "competitive_moat",
+            "customer_retention",
+            "delay_fundraising_timing",
+            "exit_multiple",
+            "expand_founding_team",
+            "expected_return",
+            "financial_diligence",
+            "founder_background",
+            "founder_experience",
+            "funding_rounds",
+            "grow_monthly_revenue",
+            "grow_revenue",
+            "growth_milestones",
+            "growth_timeline",
+            "growth_trajectory",
+            "hire_technical_cofounder",
+            "improve_retention",
+            "improve_retention_before_fundraising",
+            "improve_unit_economics",
+            "irr",
+            "market_size_tam",
+            "market_sizing",
+            "monthly_revenue",
+            "named_competitors",
+            "pricing_strategy",
+            "product_traction",
+            "revenue_growth",
+            "startup_lifecycle",
+            "team_diligence",
+            "team_size",
+            "traction_metrics",
+            "unit_economics",
+            "validate_customer_problem",
+            "validate_pricing_strategy",
+            "valuation"
+          ]
+        },
+        "honesty_note": "Investment Memo \u2014 a deterministic narrative reformatting of the Day 4-12 analysis (no new analysis). The investment thesis is a synthesis of the committee + readiness + the bull/bear agents. Model-simulated, not causal; expected return / valuation / comparable rounds / founder background / financials are deferred (no data)."
+      },
+      "executive": {
+        "report_type": "Executive Summary",
+        "campaign": {
+          "name": "Sequel to \"I'm a Cow\" song and animation video",
+          "main_category": "Film & Video",
+          "usd_goal_real": 15000.0,
+          "country": "US"
+        },
+        "generated_utc": "2026-08-04T21:01:35.343163+00:00",
+        "headline": "Sequel to \"I'm a Cow\" song and animation video: Do Not Invest \u2014 Fixable at 23% (readiness 33), 64% confidence.",
+        "sections": [
+          {
+            "id": "headline",
+            "title": "Executive Summary",
+            "source": "Day-12 committee + Day-11",
+            "kind": "text",
+            "body": "Sequel to \"I'm a Cow\" song and animation video: Do Not Invest \u2014 Fixable at 23% (readiness 33), 64% confidence."
+          },
+          {
+            "id": "dashboard",
+            "title": "Dashboard",
+            "source": "Days 4 / 10 / 11 / 12",
+            "kind": "metrics",
+            "body": {
+              "Startup score": 33,
+              "Funding probability": "23%",
+              "Risk": "High",
+              "Recommendation": "Do Not Invest",
+              "Confidence": "64%"
+            }
+          }
+        ],
+        "deferred_appendix": {
+          "note": "Not covered \u2014 the dataset has no data for these; not fabricated.",
+          "items": [
+            "Financial Strategy",
+            "Go-To-Market Strategy",
+            "Product Strategy",
+            "Team Strategy",
+            "Technology Strategy",
+            "build_partnerships",
+            "cap_table",
+            "competitive_moat",
+            "customer_retention",
+            "delay_fundraising_timing",
+            "expand_founding_team",
+            "financial_diligence",
+            "founder_experience",
+            "funding_rounds",
+            "grow_monthly_revenue",
+            "grow_revenue",
+            "growth_milestones",
+            "growth_timeline",
+            "growth_trajectory",
+            "hire_technical_cofounder",
+            "improve_retention",
+            "improve_retention_before_fundraising",
+            "improve_unit_economics",
+            "market_size_tam",
+            "market_sizing",
+            "monthly_revenue",
+            "named_competitors",
+            "pricing_strategy",
+            "product_traction",
+            "revenue_growth",
+            "startup_lifecycle",
+            "team_diligence",
+            "team_size",
+            "traction_metrics",
+            "unit_economics",
+            "validate_customer_problem",
+            "validate_pricing_strategy"
+          ]
+        },
+        "honesty_note": "Executive Summary \u2014 five headline numbers reformatted from the Day 4-12 analysis (no new analysis). Model-simulated, not causal."
+      }
+    },
+    "copilot": {
+      "campaign": {
+        "name": "Sequel to \"I'm a Cow\" song and animation video",
+        "main_category": "Film & Video",
+        "usd_goal_real": 15000.0,
+        "country": "US"
+      },
+      "turns": [
+        {
+          "question": "Why is my funding probability low?",
+          "intent": "probability",
+          "deferred": false,
+          "source": "Days 4 / 10 / 11",
+          "answer": "Your funding probability is 23% (Fixable). With the priority pre-launch changes it's reachable to ~44%. Confidence 77%."
+        },
+        {
+          "question": "What should I improve first?",
+          "intent": "improve",
+          "deferred": false,
+          "source": "Day-11 prioritization (Day-7 evidence)",
+          "answer": "First: Lower your funding goal from $15,000 to $5,000 \u2014 the model estimates about +9 points. Film & Video campaigns asking goal <= $5,000 funded at 51% vs a 40% baseline (lift 1.27, n=20,767). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+        },
+        {
+          "question": "Which campaigns are most similar to mine?",
+          "intent": "similar",
+          "deferred": false,
+          "source": "Day-9 category cohort",
+          "answer": "The closest comparison is the 45,162 other Film & Video campaigns in our data, which fund at 42% (vs a 40% baseline). You're positioned like the strugglers."
+        },
+        {
+          "question": "Why do similar campaigns fail?",
+          "intent": "why_fail",
+          "deferred": false,
+          "source": "Day-9 competition (what winners do)",
+          "answer": "Ask for less: funded campaigns' median goal is $5,000 vs $10,000 for those that failed. Your $15,000 goal is 3.0x the winners' median ($5,000) \u2014 priced like the campaigns that failed."
+        },
+        {
+          "question": "What is my biggest risk?",
+          "intent": "risk",
+          "deferred": false,
+          "source": "Day-9 risk analysis",
+          "answer": "Your biggest risk: Goal $15,000 is 3.0x the Film & Video funded-median ($5,000); large goals are harder to reach. (Overall risk: High)."
+        },
+        {
+          "question": "What should I do before I launch?",
+          "intent": "before_launch",
+          "deferred": false,
+          "source": "Day-11 founder strategy",
+          "answer": "Before you launch, focus on: lower your funding goal from $15,000 to $5,000; shorten your campaign from 18 to 30 days. These are the highest-impact controllable changes."
+        },
+        {
+          "question": "Should an investor invest?",
+          "intent": "recommendation",
+          "deferred": false,
+          "source": "Day-12 committee",
+          "answer": "The committee's recommendation is Do Not Invest (64% confidence). Committee recommendation: Do Not Invest (score -0.57; 0 positive / 3 negative of 6 agents)."
+        },
+        {
+          "question": "What is my MRR?",
+          "intent": "deferred",
+          "deferred": true,
+          "source": "deferred",
+          "answer": "That isn't available \u2014 this platform has no mrr data for Kickstarter campaigns (they're anonymous, pre-launch). I can answer questions about funding probability, what to improve, similar campaigns, risks, and pre-launch steps."
+        }
+      ],
+      "honesty_note": "Deterministic intent-router over the real Day 4-12 outputs \u2014 not an LLM, never invents an answer. Out-of-scope questions (revenue / moat / founder background / \u2026) return an honest 'not available' fallback. Model-simulated, not causal."
+    },
+    "honesty_note": "A full report suite reformatted from the Day 4-12 analysis on one warm faiss-free stack (no new analysis). Every section names its source; deferred items are appended, not fabricated. Deterministic, no LLM. Model-simulated, not causal.",
+    "exported": {
+      "founder": {
+        "json": "outputs/reports/founder_intelligence_report__sequel_to_i_m_a_cow_song_and_animation_video.json",
+        "markdown": "outputs/reports/founder_intelligence_report__sequel_to_i_m_a_cow_song_and_animation_video.md",
+        "html": "outputs/reports/founder_intelligence_report__sequel_to_i_m_a_cow_song_and_animation_video.html"
+      },
+      "investor": {
+        "json": "outputs/reports/investor_due_diligence_report__sequel_to_i_m_a_cow_song_and_animation_video.json",
+        "markdown": "outputs/reports/investor_due_diligence_report__sequel_to_i_m_a_cow_song_and_animation_video.md",
+        "html": "outputs/reports/investor_due_diligence_report__sequel_to_i_m_a_cow_song_and_animation_video.html"
+      },
+      "memo": {
+        "json": "outputs/reports/investment_memo__sequel_to_i_m_a_cow_song_and_animation_video.json",
+        "markdown": "outputs/reports/investment_memo__sequel_to_i_m_a_cow_song_and_animation_video.md",
+        "html": "outputs/reports/investment_memo__sequel_to_i_m_a_cow_song_and_animation_video.html"
+      },
+      "executive": {
+        "json": "outputs/reports/executive_summary__sequel_to_i_m_a_cow_song_and_animation_video.json",
+        "markdown": "outputs/reports/executive_summary__sequel_to_i_m_a_cow_song_and_animation_video.md",
+        "html": "outputs/reports/executive_summary__sequel_to_i_m_a_cow_song_and_animation_video.html"
+      }
+    }
+  }
+]

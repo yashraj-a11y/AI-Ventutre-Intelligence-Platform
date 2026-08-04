@@ -1,0 +1,670 @@
+[
+  {
+    "report_type": "Investor Due Diligence Report",
+    "campaign": {
+      "name": "Artificer - Board Game",
+      "main_category": "Games",
+      "usd_goal_real": 30515.72,
+      "country": "CA"
+    },
+    "generated_utc": "2026-08-04T21:00:40.009277+00:00",
+    "recommendation": "Do Not Invest",
+    "risk_veto": {
+      "eligible": true,
+      "applied": false
+    },
+    "sections": [
+      {
+        "id": "executive_summary",
+        "title": "Executive Summary",
+        "source": "Day-12 committee",
+        "kind": "text",
+        "body": "Committee recommendation: Do Not Invest (score -0.69; 1 positive / 5 negative of 6 agents). Dissent: MarketAgent (positive)."
+      },
+      {
+        "id": "investment_recommendation",
+        "title": "Investment Recommendation",
+        "source": "Day-12 committee",
+        "kind": "metrics",
+        "body": {
+          "Recommendation": "Do Not Invest",
+          "Overall confidence": "78%",
+          "Agreement": "83%",
+          "Committee score": "-0.69"
+        }
+      },
+      {
+        "id": "market_analysis",
+        "title": "Market Analysis",
+        "source": "Day-12 market agent",
+        "kind": "list",
+        "body": [
+          "Verdict: positive (score 72/100, confidence 87%).",
+          "Games campaigns fund at 44% vs a 40% platform baseline (lift 1.09).",
+          "Market timing is favorable; the Games trend is rising (22,878 campaigns).",
+          "The category is crowded."
+        ]
+      },
+      {
+        "id": "competitive_landscape",
+        "title": "Competitive Landscape",
+        "source": "Day-12 competition agent",
+        "kind": "list",
+        "body": [
+          "Verdict: negative (score 17/100, confidence 99%).",
+          "Ask for less: funded campaigns' median goal is $5,000 vs $10,000 for those that failed.",
+          "Your $30,516 goal is 6.1x the winners' median ($5,000) \u2014 priced like the campaigns that failed.",
+          "Category is crowded \u2014 22,878 campaigns (9% of all)."
+        ]
+      },
+      {
+        "id": "founder_assessment",
+        "title": "Founder Assessment (creator execution)",
+        "source": "Day-12 founder agent",
+        "kind": "list",
+        "body": [
+          "Verdict: negative (score 36/100, confidence 83%).",
+          "The creator left ~42 points of controllable upside unrealized (24% of a reachable 66%) \u2014 craft gaps below.",
+          "Craft gap: Shorten your campaign from 29 to 15 days (~30 pts).",
+          "Craft gap: Lower your funding goal from $30,516 to $5,000 (~12 pts)."
+        ]
+      },
+      {
+        "id": "financial_assessment",
+        "title": "Financial Assessment (funding viability)",
+        "source": "Day-12 financial agent",
+        "kind": "list",
+        "body": [
+          "Verdict: negative (score 24/100, confidence 78%).",
+          "Goal $30,516 is 6.1x the category winners' median ($5,000).",
+          "Calibrated funding probability 24% vs the 33% decision bar.",
+          "Goal-size risk (High): Goal $30,516 is 6.1x the Games funded-median ($5,000); large goals are harder to reach."
+        ]
+      },
+      {
+        "id": "similar_startups",
+        "title": "Similar Startups",
+        "source": "Day-9 category cohort (our data)",
+        "kind": "metrics",
+        "body": {
+          "Category": "Games",
+          "Similar campaigns": "22,878",
+          "Category funding rate": "44%",
+          "Platform baseline": "40%"
+        }
+      },
+      {
+        "id": "risks_and_red_flags",
+        "title": "Risks & Red Flags",
+        "source": "Day-12 risk agent + Day-9 objections",
+        "kind": "list",
+        "body": [
+          "Overall risk: High. Modeled failure risk 76%.",
+          "High \u2014 Goal $30,516 is 6.1x the Games funded-median ($5,000); large goals are harder to reach.",
+          "High \u2014 Modeled failure risk 76% (funding probability 24%, below the 33% threshold).",
+          "3 investor objection(s) raised; top: goal_size.",
+          "Investor objection (High): Your $30,516 goal is high for Games, where funded campaigns typically ask a median of $5,000. Why this ask \u2014 and can you hit it?",
+          "Investor objection (Medium): The model estimates only a 24% funding probability \u2014 below the ~33% decision threshold. How will you beat these odds?",
+          "Investor objection (Medium): Among campaigns most like yours (Games, a large goal), only 31% funded. What sets you apart from the 4,712 that came before?"
+        ]
+      },
+      {
+        "id": "opportunities",
+        "title": "Opportunities",
+        "source": "Day-11",
+        "kind": "list",
+        "body": [
+          "Priority changes can lift funding odds from 24% to ~66%.",
+          "Games funds at 44% vs the 40% baseline \u2014 a favorable category.",
+          "Working in your favor: category_freq.",
+          "Working in your favor: main_category_Games."
+        ]
+      },
+      {
+        "id": "investment_decision",
+        "title": "Investment Decision",
+        "source": "Day-12 committee",
+        "kind": "table",
+        "body": {
+          "columns": [
+            "Agent",
+            "Vote",
+            "Confidence",
+            "Weight"
+          ],
+          "rows": [
+            [
+              "MarketAgent",
+              "positive",
+              "0.87",
+              1.0
+            ],
+            [
+              "FounderAgent",
+              "negative",
+              "0.83",
+              1.0
+            ],
+            [
+              "FinancialAgent",
+              "negative",
+              "0.78",
+              1.0
+            ],
+            [
+              "CompetitionAgent",
+              "negative",
+              "0.99",
+              0.8
+            ],
+            [
+              "RiskAgent",
+              "negative",
+              "0.78",
+              1.5
+            ],
+            [
+              "InvestmentAgent",
+              "negative",
+              "0.82",
+              1.5
+            ]
+          ]
+        }
+      }
+    ],
+    "deferred_appendix": {
+      "note": "Not covered \u2014 the dataset has no data for these; not fabricated.",
+      "items": [
+        "Financial Strategy",
+        "Go-To-Market Strategy",
+        "Product Strategy",
+        "Team Strategy",
+        "Technology Strategy",
+        "build_partnerships",
+        "cap_table",
+        "comparable_funding_rounds",
+        "competitive_moat",
+        "customer_retention",
+        "delay_fundraising_timing",
+        "exit_multiple",
+        "expand_founding_team",
+        "expected_return",
+        "financial_diligence",
+        "founder_experience",
+        "funding_rounds",
+        "grow_monthly_revenue",
+        "grow_revenue",
+        "growth_milestones",
+        "growth_timeline",
+        "growth_trajectory",
+        "hire_technical_cofounder",
+        "improve_retention",
+        "improve_retention_before_fundraising",
+        "improve_unit_economics",
+        "irr",
+        "market_size_tam",
+        "market_sizing",
+        "monthly_revenue",
+        "named_competitors",
+        "pricing_strategy",
+        "product_traction",
+        "revenue_growth",
+        "startup_lifecycle",
+        "team_diligence",
+        "team_size",
+        "traction_metrics",
+        "unit_economics",
+        "validate_customer_problem",
+        "validate_pricing_strategy",
+        "valuation"
+      ]
+    },
+    "honesty_note": "Investor Due Diligence Report \u2014 a deterministic reformatting of the Day 4-12 analysis (no new analysis). Every section names its source; agents are correlated views of one signal set, not independent experts. Model-simulated, not causal; expected return / comparable rounds / valuation / founder background / financials are deferred (no data)."
+  },
+  {
+    "report_type": "Investor Due Diligence Report",
+    "campaign": {
+      "name": "Sequel to \"I'm a Cow\" song and animation video",
+      "main_category": "Film & Video",
+      "usd_goal_real": 15000.0,
+      "country": "US"
+    },
+    "generated_utc": "2026-08-04T21:00:43.510244+00:00",
+    "recommendation": "Do Not Invest",
+    "risk_veto": {
+      "eligible": true,
+      "applied": false
+    },
+    "sections": [
+      {
+        "id": "executive_summary",
+        "title": "Executive Summary",
+        "source": "Day-12 committee",
+        "kind": "text",
+        "body": "Committee recommendation: Do Not Invest (score -0.57; 0 positive / 3 negative of 6 agents)."
+      },
+      {
+        "id": "investment_recommendation",
+        "title": "Investment Recommendation",
+        "source": "Day-12 committee",
+        "kind": "metrics",
+        "body": {
+          "Recommendation": "Do Not Invest",
+          "Overall confidence": "64%",
+          "Agreement": "50%",
+          "Committee score": "-0.57"
+        }
+      },
+      {
+        "id": "market_analysis",
+        "title": "Market Analysis",
+        "source": "Day-12 market agent",
+        "kind": "list",
+        "body": [
+          "Verdict: cautious (score 53/100, confidence 93%).",
+          "Film & Video campaigns fund at 42% vs a 40% platform baseline (lift 1.03).",
+          "Market timing is neutral; the Film & Video trend is stable (45,162 campaigns).",
+          "The category is highly crowded."
+        ]
+      },
+      {
+        "id": "competitive_landscape",
+        "title": "Competitive Landscape",
+        "source": "Day-12 competition agent",
+        "kind": "list",
+        "body": [
+          "Verdict: negative (score 25/100, confidence 92%).",
+          "Ask for less: funded campaigns' median goal is $5,000 vs $10,000 for those that failed.",
+          "Your $15,000 goal is 3.0x the winners' median ($5,000) \u2014 priced like the campaigns that failed.",
+          "Category is highly crowded \u2014 45,162 campaigns (17% of all)."
+        ]
+      },
+      {
+        "id": "founder_assessment",
+        "title": "Founder Assessment (creator execution)",
+        "source": "Day-12 founder agent",
+        "kind": "list",
+        "body": [
+          "Verdict: cautious (score 53/100, confidence 67%).",
+          "The creator left ~20 points of controllable upside unrealized (23% of a reachable 44%) \u2014 craft gaps below.",
+          "Craft gap: Lower your funding goal from $15,000 to $5,000 (~9 pts).",
+          "Craft gap: Shorten your campaign from 18 to 30 days (~12 pts)."
+        ]
+      },
+      {
+        "id": "financial_assessment",
+        "title": "Financial Assessment (funding viability)",
+        "source": "Day-12 financial agent",
+        "kind": "list",
+        "body": [
+          "Verdict: cautious (score 44/100, confidence 73%).",
+          "Goal $15,000 is 3.0x the category winners' median ($5,000).",
+          "Calibrated funding probability 23% vs the 33% decision bar.",
+          "Goal-size risk (High): Goal $15,000 is 3.0x the Film & Video funded-median ($5,000); large goals are harder to reach."
+        ]
+      },
+      {
+        "id": "similar_startups",
+        "title": "Similar Startups",
+        "source": "Day-9 category cohort (our data)",
+        "kind": "metrics",
+        "body": {
+          "Category": "Film & Video",
+          "Similar campaigns": "45,162",
+          "Category funding rate": "42%",
+          "Platform baseline": "40%"
+        }
+      },
+      {
+        "id": "risks_and_red_flags",
+        "title": "Risks & Red Flags",
+        "source": "Day-12 risk agent + Day-9 objections",
+        "kind": "list",
+        "body": [
+          "Overall risk: High. Modeled failure risk 77%.",
+          "High \u2014 Goal $15,000 is 3.0x the Film & Video funded-median ($5,000); large goals are harder to reach.",
+          "High \u2014 Modeled failure risk 77% (funding probability 23%, below the 33% threshold).",
+          "2 investor objection(s) raised; top: goal_size.",
+          "Investor objection (High): Your $15,000 goal is high for Film & Video, where funded campaigns typically ask a median of $5,000. Why this ask \u2014 and can you hit it?",
+          "Investor objection (Medium): The model estimates only a 23% funding probability \u2014 below the ~33% decision threshold. How will you beat these odds?"
+        ]
+      },
+      {
+        "id": "opportunities",
+        "title": "Opportunities",
+        "source": "Day-11",
+        "kind": "list",
+        "body": [
+          "Priority changes can lift funding odds from 23% to ~44%.",
+          "Film & Video funds at 42% vs the 40% baseline \u2014 a favorable category.",
+          "Working in your favor: campaign_duration.",
+          "Working in your favor: word_count."
+        ]
+      },
+      {
+        "id": "investment_decision",
+        "title": "Investment Decision",
+        "source": "Day-12 committee",
+        "kind": "table",
+        "body": {
+          "columns": [
+            "Agent",
+            "Vote",
+            "Confidence",
+            "Weight"
+          ],
+          "rows": [
+            [
+              "MarketAgent",
+              "cautious",
+              "0.93",
+              1.0
+            ],
+            [
+              "FounderAgent",
+              "cautious",
+              "0.67",
+              1.0
+            ],
+            [
+              "FinancialAgent",
+              "cautious",
+              "0.73",
+              1.0
+            ],
+            [
+              "CompetitionAgent",
+              "negative",
+              "0.93",
+              0.8
+            ],
+            [
+              "RiskAgent",
+              "negative",
+              "0.85",
+              1.5
+            ],
+            [
+              "InvestmentAgent",
+              "negative",
+              "0.71",
+              1.5
+            ]
+          ]
+        }
+      }
+    ],
+    "deferred_appendix": {
+      "note": "Not covered \u2014 the dataset has no data for these; not fabricated.",
+      "items": [
+        "Financial Strategy",
+        "Go-To-Market Strategy",
+        "Product Strategy",
+        "Team Strategy",
+        "Technology Strategy",
+        "build_partnerships",
+        "cap_table",
+        "comparable_funding_rounds",
+        "competitive_moat",
+        "customer_retention",
+        "delay_fundraising_timing",
+        "exit_multiple",
+        "expand_founding_team",
+        "expected_return",
+        "financial_diligence",
+        "founder_experience",
+        "funding_rounds",
+        "grow_monthly_revenue",
+        "grow_revenue",
+        "growth_milestones",
+        "growth_timeline",
+        "growth_trajectory",
+        "hire_technical_cofounder",
+        "improve_retention",
+        "improve_retention_before_fundraising",
+        "improve_unit_economics",
+        "irr",
+        "market_size_tam",
+        "market_sizing",
+        "monthly_revenue",
+        "named_competitors",
+        "pricing_strategy",
+        "product_traction",
+        "revenue_growth",
+        "startup_lifecycle",
+        "team_diligence",
+        "team_size",
+        "traction_metrics",
+        "unit_economics",
+        "validate_customer_problem",
+        "validate_pricing_strategy",
+        "valuation"
+      ]
+    },
+    "honesty_note": "Investor Due Diligence Report \u2014 a deterministic reformatting of the Day 4-12 analysis (no new analysis). Every section names its source; agents are correlated views of one signal set, not independent experts. Model-simulated, not causal; expected return / comparable rounds / valuation / founder background / financials are deferred (no data)."
+  },
+  {
+    "report_type": "Investor Due Diligence Report",
+    "campaign": {
+      "name": "Organika Cases - Phone cases from real natural materials",
+      "main_category": "Fashion",
+      "usd_goal_real": 13000.0,
+      "country": "US"
+    },
+    "generated_utc": "2026-08-04T21:00:45.962246+00:00",
+    "recommendation": "Monitor Progress",
+    "risk_veto": {
+      "eligible": false,
+      "applied": false
+    },
+    "sections": [
+      {
+        "id": "executive_summary",
+        "title": "Executive Summary",
+        "source": "Day-12 committee",
+        "kind": "text",
+        "body": "Committee recommendation: Monitor Progress (score -0.24; 1 positive / 2 negative of 6 agents)."
+      },
+      {
+        "id": "investment_recommendation",
+        "title": "Investment Recommendation",
+        "source": "Day-12 committee",
+        "kind": "metrics",
+        "body": {
+          "Recommendation": "Monitor Progress",
+          "Overall confidence": "56%",
+          "Agreement": "50%",
+          "Committee score": "-0.24"
+        }
+      },
+      {
+        "id": "market_analysis",
+        "title": "Market Analysis",
+        "source": "Day-12 market agent",
+        "kind": "list",
+        "body": [
+          "Verdict: negative (score 38/100, confidence 91%).",
+          "Fashion campaigns fund at 28% vs a 40% platform baseline (lift 0.70).",
+          "Market timing is favorable; the Fashion trend is rising (15,809 campaigns).",
+          "The category is crowded."
+        ]
+      },
+      {
+        "id": "competitive_landscape",
+        "title": "Competitive Landscape",
+        "source": "Day-12 competition agent",
+        "kind": "list",
+        "body": [
+          "Verdict: negative (score 17/100, confidence 90%).",
+          "Ask for less: funded campaigns' median goal is $5,000 vs $6,000 for those that failed.",
+          "Your $13,000 goal is 2.6x the winners' median ($5,000) \u2014 priced like the campaigns that failed.",
+          "Category is crowded \u2014 15,809 campaigns (6% of all)."
+        ]
+      },
+      {
+        "id": "founder_assessment",
+        "title": "Founder Assessment (creator execution)",
+        "source": "Day-12 founder agent",
+        "kind": "list",
+        "body": [
+          "Verdict: positive (score 90/100, confidence 50%).",
+          "The creator's controllable choices are already near their modeled optimum (35% of a reachable 39%).",
+          "Craft gap: Lower your funding goal from $13,000 to $5,000 (~3 pts).",
+          "Craft gap: Lower your funding goal from $13,000 to $6,500 (~3 pts)."
+        ]
+      },
+      {
+        "id": "financial_assessment",
+        "title": "Financial Assessment (funding viability)",
+        "source": "Day-12 financial agent",
+        "kind": "list",
+        "body": [
+          "Verdict: cautious (score 58/100, confidence 63%).",
+          "Goal $13,000 is 2.6x the category winners' median ($5,000).",
+          "Calibrated funding probability 35% vs the 33% decision bar.",
+          "Goal-size risk (High): Goal $13,000 is 2.6x the Fashion funded-median ($5,000); large goals are harder to reach."
+        ]
+      },
+      {
+        "id": "similar_startups",
+        "title": "Similar Startups",
+        "source": "Day-9 category cohort (our data)",
+        "kind": "metrics",
+        "body": {
+          "Category": "Fashion",
+          "Similar campaigns": "15,809",
+          "Category funding rate": "28%",
+          "Platform baseline": "40%"
+        }
+      },
+      {
+        "id": "risks_and_red_flags",
+        "title": "Risks & Red Flags",
+        "source": "Day-12 risk agent + Day-9 objections",
+        "kind": "list",
+        "body": [
+          "Overall risk: High. Modeled failure risk 65%.",
+          "High \u2014 Goal $13,000 is 2.6x the Fashion funded-median ($5,000); large goals are harder to reach.",
+          "Medium \u2014 Modeled failure risk 65% (funding probability 35%)..",
+          "4 investor objection(s) raised; top: goal_size.",
+          "Investor objection (High): Your $13,000 goal is high for Fashion, where funded campaigns typically ask a median of $5,000. Why this ask \u2014 and can you hit it?",
+          "Investor objection (Medium): Your 30-day campaign sits in a band that funds at 28% (lift 0.69). Would a shorter campaign convert better?",
+          "Investor objection (Medium): Among campaigns most like yours (Fashion, a modest goal), only 28% funded. What sets you apart from the 6,047 that came before?",
+          "Investor objection (Medium): Fashion campaigns historically fund at 28% (lift 0.70) \u2014 below the 40% baseline. How do you overcome the category headwind?"
+        ]
+      },
+      {
+        "id": "opportunities",
+        "title": "Opportunities",
+        "source": "Day-11",
+        "kind": "list",
+        "body": [
+          "Priority changes can lift funding odds from 35% to ~39%.",
+          "Working in your favor: campaign_duration.",
+          "Working in your favor: word_count."
+        ]
+      },
+      {
+        "id": "investment_decision",
+        "title": "Investment Decision",
+        "source": "Day-12 committee",
+        "kind": "table",
+        "body": {
+          "columns": [
+            "Agent",
+            "Vote",
+            "Confidence",
+            "Weight"
+          ],
+          "rows": [
+            [
+              "MarketAgent",
+              "negative",
+              "0.91",
+              1.0
+            ],
+            [
+              "FounderAgent",
+              "positive",
+              "0.50",
+              1.0
+            ],
+            [
+              "FinancialAgent",
+              "cautious",
+              "0.63",
+              1.0
+            ],
+            [
+              "CompetitionAgent",
+              "negative",
+              "0.90",
+              0.8
+            ],
+            [
+              "RiskAgent",
+              "cautious",
+              "0.74",
+              1.5
+            ],
+            [
+              "InvestmentAgent",
+              "cautious",
+              "0.57",
+              1.5
+            ]
+          ]
+        }
+      }
+    ],
+    "deferred_appendix": {
+      "note": "Not covered \u2014 the dataset has no data for these; not fabricated.",
+      "items": [
+        "Financial Strategy",
+        "Go-To-Market Strategy",
+        "Product Strategy",
+        "Team Strategy",
+        "Technology Strategy",
+        "build_partnerships",
+        "cap_table",
+        "comparable_funding_rounds",
+        "competitive_moat",
+        "customer_retention",
+        "delay_fundraising_timing",
+        "exit_multiple",
+        "expand_founding_team",
+        "expected_return",
+        "financial_diligence",
+        "founder_experience",
+        "funding_rounds",
+        "grow_monthly_revenue",
+        "grow_revenue",
+        "growth_milestones",
+        "growth_timeline",
+        "growth_trajectory",
+        "hire_technical_cofounder",
+        "improve_retention",
+        "improve_retention_before_fundraising",
+        "improve_unit_economics",
+        "irr",
+        "market_size_tam",
+        "market_sizing",
+        "monthly_revenue",
+        "named_competitors",
+        "pricing_strategy",
+        "product_traction",
+        "revenue_growth",
+        "startup_lifecycle",
+        "team_diligence",
+        "team_size",
+        "traction_metrics",
+        "unit_economics",
+        "validate_customer_problem",
+        "validate_pricing_strategy",
+        "valuation"
+      ]
+    },
+    "honesty_note": "Investor Due Diligence Report \u2014 a deterministic reformatting of the Day 4-12 analysis (no new analysis). Every section names its source; agents are correlated views of one signal set, not independent experts. Model-simulated, not causal; expected return / comparable rounds / valuation / founder background / financials are deferred (no data)."
+  }
+]
