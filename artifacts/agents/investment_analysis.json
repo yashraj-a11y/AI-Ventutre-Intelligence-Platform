@@ -1,0 +1,107 @@
+[
+  {
+    "agent": "InvestmentAgent",
+    "perspective": "Committee synthesis over the five specialist agents",
+    "score": 35,
+    "stance": "negative",
+    "confidence": 0.825,
+    "findings": [
+      "1 positive / 0 cautious / 4 negative across 5 specialist agents.",
+      "Funding-readiness: Fixable (24% -> reachable 66%).",
+      "Strongest view: MarketAgent (72); weakest: CompetitionAgent (17)."
+    ],
+    "key_metric": {
+      "name": "preliminary_recommendation",
+      "value": "Do Not Invest"
+    },
+    "deferred": {
+      "expected_return": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "irr": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "valuation": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "exit_multiple": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      }
+    },
+    "caption": "Investment synthesis = confidence-weighted mean of the five specialist agents + readiness. One agent's opinion (a score-mean), distinct from the Phase-I consensus (a stance-vote with veto). Model-simulated, not causal; expected return / IRR / valuation are deferred."
+  },
+  {
+    "agent": "InvestmentAgent",
+    "perspective": "Committee synthesis over the five specialist agents",
+    "score": 39,
+    "stance": "negative",
+    "confidence": 0.71,
+    "findings": [
+      "0 positive / 3 cautious / 2 negative across 5 specialist agents.",
+      "Funding-readiness: Fixable (23% -> reachable 44%).",
+      "Strongest view: MarketAgent (53); weakest: CompetitionAgent (25)."
+    ],
+    "key_metric": {
+      "name": "preliminary_recommendation",
+      "value": "Do Not Invest"
+    },
+    "deferred": {
+      "expected_return": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "irr": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "valuation": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "exit_multiple": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      }
+    },
+    "caption": "Investment synthesis = confidence-weighted mean of the five specialist agents + readiness. One agent's opinion (a score-mean), distinct from the Phase-I consensus (a stance-vote with veto). Model-simulated, not causal; expected return / IRR / valuation are deferred."
+  },
+  {
+    "agent": "InvestmentAgent",
+    "perspective": "Committee synthesis over the five specialist agents",
+    "score": 45,
+    "stance": "cautious",
+    "confidence": 0.568,
+    "findings": [
+      "1 positive / 2 cautious / 2 negative across 5 specialist agents.",
+      "Funding-readiness: Ready (35% -> reachable 39%).",
+      "Strongest view: FounderAgent (90); weakest: CompetitionAgent (17)."
+    ],
+    "key_metric": {
+      "name": "preliminary_recommendation",
+      "value": "Monitor Progress"
+    },
+    "deferred": {
+      "expected_return": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "irr": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "valuation": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "exit_multiple": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      }
+    },
+    "caption": "Investment synthesis = confidence-weighted mean of the five specialist agents + readiness. One agent's opinion (a score-mean), distinct from the Phase-I consensus (a stance-vote with veto). Model-simulated, not causal; expected return / IRR / valuation are deferred."
+  }
+]

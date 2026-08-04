@@ -788,3 +788,93 @@ day11:
       investor_strategy: artifacts/recommendation/investor_strategy.json
       confidence_scores: artifacts/recommendation/confidence_scores.json
       unified_recommendations: artifacts/recommendation/unified_recommendations.json
+
+# ============================ DAY 12 — Layer 12 ==============================
+# Multi-Agent Venture Intelligence. Six specialist agents = correlated views over
+# ONE Day-11 VentureIntelligence. Deterministic, no LLM, faiss-free, JSON not pkl.
+day12:
+  # --- Phase B: Market Agent (category attractiveness & market timing) ---------
+  market:
+    positive_at: 60                  # score >= this -> positive stance
+    negative_at: 40                  # score < this -> negative stance
+    n_full_confidence: 5000          # cohort size at which the n-component of confidence saturates
+    out_path: artifacts/agents/market_analysis.json
+
+  # --- Phase C: Founder Agent (Creator Execution — campaign craft, not the person)
+  founder:
+    positive_at: 60
+    negative_at: 40
+    top_gaps: 2                      # how many craft-gap levers to surface as findings
+    out_path: artifacts/agents/founder_analysis.json
+
+  # --- Phase D: Financial Agent (Funding Viability — goal realism + odds) ------
+  financial:
+    positive_at: 60
+    negative_at: 40
+    odds_weight: 0.65                # weight on funding-odds-vs-bar
+    realism_weight: 0.35             # weight on goal realism vs category winners' median
+    realism_penalty_per_x: 20        # realism points lost per 1x over the winners' median
+    out_path: artifacts/agents/financial_analysis.json
+
+  # --- Phase E: Competition Agent (cohort competition & positioning) -----------
+  competition:
+    positive_at: 60
+    negative_at: 40
+    n_full_confidence: 5000
+    out_path: artifacts/agents/competition_analysis.json
+
+  # --- Phase F: Risk Agent (risk & investor objections; carries the veto) ------
+  risk:
+    positive_at: 60                  # safety score >= this -> positive (low risk)
+    negative_at: 40                  # safety score < this -> negative (risky)
+    failure_weight: 70               # risk_score = failure_risk*this + high-severity bonus
+    high_severity_bonus: 10          # per High-severity risk
+    high_severity_cap: 30            # cap on the severity bonus
+    top_risks: 2
+    out_path: artifacts/agents/risk_analysis.json
+
+  # --- Phase G: Investment Agent (committee synthesis over the other 5) --------
+  investment:
+    positive_at: 60
+    negative_at: 40
+    strong_invest_at: 70             # investment score >= this -> "Strong Invest"
+    proceed_dd_at: 55                # >= this -> "Proceed to Due Diligence"
+    monitor_at: 40                   # >= this -> "Monitor Progress", else "Do Not Invest"
+    out_path: artifacts/agents/investment_analysis.json
+
+  # --- Phase H: Agent Orchestrator (one aggregation -> run 6 agents) -----------
+  orchestrator:
+    out_path: artifacts/agents/agent_reports.json
+
+  # --- Phase I: Consensus Engine (weighted stance vote + risk veto) ------------
+  consensus:
+    weights:                         # RiskAgent/InvestmentAgent up; CompetitionAgent down (C-7 overlap)
+      MarketAgent: 1.0
+      FounderAgent: 1.0
+      FinancialAgent: 1.0
+      CompetitionAgent: 0.8          # correlated with FinancialAgent (goal-vs-median) -> down-weighted
+      RiskAgent: 1.5
+      InvestmentAgent: 1.5
+    veto_confidence: 0.6             # RiskAgent negative at >= this confidence -> veto eligible
+    strong_at: 0.40                  # committee score (in [-1,1]) cutoffs -> band
+    proceed_at: 0.10
+    monitor_at: -0.30
+    out_path: artifacts/agents/committee_decision.json
+
+  # --- Phase J: multi-agent system serialization (content-hash JSON) ----------
+  serialization:
+    version: "1.0.0"
+    manifest_path: artifacts/agents/agent_system_engine.json
+    dependencies:
+      day4_calibrated_model: artifacts/models/calibrated_model.joblib
+      day8_counterfactual_engine: artifacts/counterfactual/counterfactual_engine.json
+      day11_recommendation_engine: artifacts/recommendation/recommendation_engine.json
+    artifacts:
+      market_analysis: artifacts/agents/market_analysis.json
+      founder_analysis: artifacts/agents/founder_analysis.json
+      financial_analysis: artifacts/agents/financial_analysis.json
+      competition_analysis: artifacts/agents/competition_analysis.json
+      risk_analysis: artifacts/agents/risk_analysis.json
+      investment_analysis: artifacts/agents/investment_analysis.json
+      agent_reports: artifacts/agents/agent_reports.json
+      committee_decision: artifacts/agents/committee_decision.json

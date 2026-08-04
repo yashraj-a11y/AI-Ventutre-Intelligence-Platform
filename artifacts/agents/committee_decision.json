@@ -1,0 +1,1377 @@
+[
+  {
+    "committee_recommendation": "Do Not Invest",
+    "committee_score": -0.693,
+    "overall_confidence": 0.78,
+    "agreement_level": 0.833,
+    "agent_votes": [
+      {
+        "agent": "MarketAgent",
+        "stance": "positive",
+        "confidence": 0.873,
+        "weight": 1.0
+      },
+      {
+        "agent": "FounderAgent",
+        "stance": "negative",
+        "confidence": 0.827,
+        "weight": 1.0
+      },
+      {
+        "agent": "FinancialAgent",
+        "stance": "negative",
+        "confidence": 0.781,
+        "weight": 1.0
+      },
+      {
+        "agent": "CompetitionAgent",
+        "stance": "negative",
+        "confidence": 0.99,
+        "weight": 0.8
+      },
+      {
+        "agent": "RiskAgent",
+        "stance": "negative",
+        "confidence": 0.782,
+        "weight": 1.5
+      },
+      {
+        "agent": "InvestmentAgent",
+        "stance": "negative",
+        "confidence": 0.825,
+        "weight": 1.5
+      }
+    ],
+    "conflicts": [
+      {
+        "agent": "MarketAgent",
+        "stance": "positive",
+        "vs_majority": "negative",
+        "score": 72
+      }
+    ],
+    "risk_veto": {
+      "eligible": true,
+      "applied": false
+    },
+    "rationale": "Committee recommendation: Do Not Invest (score -0.69; 1 positive / 5 negative of 6 agents). Dissent: MarketAgent (positive).",
+    "deferred": {
+      "market_size_tam": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "industry_cagr": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "addressable_market": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "industry_growth_rate": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "founder_experience": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "team_composition": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "leadership": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "advisory_board": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "domain_expertise": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "founder_track_record": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "burn_rate": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "runway": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "revenue": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "revenue_growth": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "cac_ltv": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "unit_economics": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "profitability": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "competitive_moat": {
+        "status": "deferred",
+        "reason": "no product / competitor data in this dataset"
+      },
+      "differentiation": {
+        "status": "deferred",
+        "reason": "no product / competitor data in this dataset"
+      },
+      "named_competitors": {
+        "status": "deferred",
+        "reason": "no competitor data in this dataset"
+      },
+      "network_effects": {
+        "status": "deferred",
+        "reason": "no product / competitor data in this dataset"
+      },
+      "moat_defensibility": {
+        "status": "deferred",
+        "reason": "no product/IP data"
+      },
+      "proprietary_data_network_effects": {
+        "status": "deferred",
+        "reason": "no such data"
+      },
+      "regulatory_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "legal_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "ip_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "operational_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "technology_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "founder_team_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "unit_economics_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "market_size_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "expected_return": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "irr": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "valuation": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "exit_multiple": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      }
+    },
+    "honesty_note": "Committee = confidence-weighted stance vote over correlated specialist views of ONE shared signal set (not independent experts) \u2014 so confidence is NOT inflated by agent count, and the CompetitionAgent is down-weighted for overlap with the FinancialAgent. A decisive RiskAgent negative vetoes a positive committee. Model-simulated, not causal.",
+    "campaign": {
+      "name": "Artificer - Board Game",
+      "main_category": "Games",
+      "usd_goal_real": 30515.72,
+      "country": "CA"
+    },
+    "agent_reports": [
+      {
+        "agent": "MarketAgent",
+        "perspective": "Category attractiveness & market timing",
+        "score": 72,
+        "stance": "positive",
+        "confidence": 0.873,
+        "findings": [
+          "Games campaigns fund at 44% vs a 40% platform baseline (lift 1.09).",
+          "Market timing is favorable; the Games trend is rising (22,878 campaigns).",
+          "The category is crowded."
+        ],
+        "key_metric": {
+          "name": "category_funding_rate",
+          "value": 0.4395
+        },
+        "deferred": {
+          "market_size_tam": {
+            "status": "deferred",
+            "reason": "no addressable-market data in a Kickstarter category"
+          },
+          "industry_cagr": {
+            "status": "deferred",
+            "reason": "no addressable-market data in a Kickstarter category"
+          },
+          "addressable_market": {
+            "status": "deferred",
+            "reason": "no addressable-market data in a Kickstarter category"
+          },
+          "industry_growth_rate": {
+            "status": "deferred",
+            "reason": "no addressable-market data in a Kickstarter category"
+          }
+        },
+        "caption": "Market = the Kickstarter category cohort (funding rate, crowding, trend, timing), not an addressable market. Model-simulated, not causal; TAM / market size / CAGR are deferred."
+      },
+      {
+        "agent": "FounderAgent",
+        "perspective": "Creator's controllable campaign craft (goal / title / structure)",
+        "score": 36,
+        "stance": "negative",
+        "confidence": 0.827,
+        "findings": [
+          "The creator left ~42 points of controllable upside unrealized (24% of a reachable 66%) \u2014 craft gaps below.",
+          "Craft gap: Shorten your campaign from 29 to 15 days (~30 pts).",
+          "Craft gap: Lower your funding goal from $30,516 to $5,000 (~12 pts)."
+        ],
+        "key_metric": {
+          "name": "execution_ratio",
+          "value": 0.364
+        },
+        "deferred": {
+          "founder_experience": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          },
+          "team_composition": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          },
+          "leadership": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          },
+          "advisory_board": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          },
+          "domain_expertise": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          },
+          "founder_track_record": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          }
+        },
+        "caption": "'Founder' analysis = the creator's controllable CAMPAIGN CRAFT (goal / title / structure), not the person \u2014 Kickstarter has no founder data. Execution = share of the modeled reachable optimum already captured. Model-simulated, not causal; founder experience / team / leadership are deferred."
+      },
+      {
+        "agent": "FinancialAgent",
+        "perspective": "Funding viability (goal realism + funding odds)",
+        "score": 24,
+        "stance": "negative",
+        "confidence": 0.781,
+        "findings": [
+          "Goal $30,516 is 6.1x the category winners' median ($5,000).",
+          "Calibrated funding probability 24% vs the 33% decision bar.",
+          "Goal-size risk (High): Goal $30,516 is 6.1x the Games funded-median ($5,000); large goals are harder to reach."
+        ],
+        "key_metric": {
+          "name": "goal_to_median_ratio",
+          "value": 6.1
+        },
+        "deferred": {
+          "burn_rate": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "runway": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "revenue": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "revenue_growth": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "cac_ltv": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "unit_economics": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "profitability": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          }
+        },
+        "caption": "Funding viability = goal realism (vs category winners' median) + funding odds (vs the decision bar). The only 'financial' signal in the data is the goal. Model-simulated, not causal; burn / runway / revenue / CAC-LTV are deferred."
+      },
+      {
+        "agent": "CompetitionAgent",
+        "perspective": "Cohort competition & positioning vs winners",
+        "score": 17,
+        "stance": "negative",
+        "confidence": 0.99,
+        "findings": [
+          "Ask for less: funded campaigns' median goal is $5,000 vs $10,000 for those that failed.",
+          "Your $30,516 goal is 6.1x the winners' median ($5,000) \u2014 priced like the campaigns that failed.",
+          "Category is crowded \u2014 22,878 campaigns (9% of all)."
+        ],
+        "key_metric": {
+          "name": "positioned_like",
+          "value": "strugglers"
+        },
+        "deferred": {
+          "competitive_moat": {
+            "status": "deferred",
+            "reason": "no product / competitor data in this dataset"
+          },
+          "differentiation": {
+            "status": "deferred",
+            "reason": "no product / competitor data in this dataset"
+          },
+          "named_competitors": {
+            "status": "deferred",
+            "reason": "no competitor data in this dataset"
+          },
+          "network_effects": {
+            "status": "deferred",
+            "reason": "no product / competitor data in this dataset"
+          },
+          "moat_defensibility": {
+            "status": "deferred",
+            "reason": "no product/IP data"
+          },
+          "proprietary_data_network_effects": {
+            "status": "deferred",
+            "reason": "no such data"
+          }
+        },
+        "caption": "Competition = other campaigns in your category (our own data), not named rivals. The winners-vs-strugglers position overlaps the financial agent (both read goal-vs-median) \u2014 not an independent signal. Moat / differentiation / named competitors are deferred."
+      },
+      {
+        "agent": "RiskAgent",
+        "perspective": "Risk & investor objections (score = safety, higher = safer)",
+        "score": 27,
+        "stance": "negative",
+        "confidence": 0.782,
+        "findings": [
+          "Overall risk: High. Modeled failure risk 76%.",
+          "High \u2014 Goal $30,516 is 6.1x the Games funded-median ($5,000); large goals are harder to reach.",
+          "High \u2014 Modeled failure risk 76% (funding probability 24%, below the 33% threshold).",
+          "3 investor objection(s) raised; top: goal_size."
+        ],
+        "key_metric": {
+          "name": "modeled_failure_risk",
+          "value": 0.758
+        },
+        "deferred": {
+          "regulatory_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "legal_risk": {
+            "status": "deferred",
+            "reason": "no legal / regulatory / operational data in the dataset"
+          },
+          "ip_risk": {
+            "status": "deferred",
+            "reason": "no legal / regulatory / operational data in the dataset"
+          },
+          "operational_risk": {
+            "status": "deferred",
+            "reason": "no legal / regulatory / operational data in the dataset"
+          },
+          "technology_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "founder_team_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "unit_economics_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "market_size_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          }
+        },
+        "caption": "Risk = modeled failure risk + goal / funding / cohort risks (Day-9) + investor objections. Score is SAFETY (100 - risk). Model-simulated, not causal; regulatory / legal / IP / operational risks are deferred."
+      },
+      {
+        "agent": "InvestmentAgent",
+        "perspective": "Committee synthesis over the five specialist agents",
+        "score": 35,
+        "stance": "negative",
+        "confidence": 0.825,
+        "findings": [
+          "1 positive / 0 cautious / 4 negative across 5 specialist agents.",
+          "Funding-readiness: Fixable (24% -> reachable 66%).",
+          "Strongest view: MarketAgent (72); weakest: CompetitionAgent (17)."
+        ],
+        "key_metric": {
+          "name": "preliminary_recommendation",
+          "value": "Do Not Invest"
+        },
+        "deferred": {
+          "expected_return": {
+            "status": "deferred",
+            "reason": "no financial-return data in a Kickstarter snapshot"
+          },
+          "irr": {
+            "status": "deferred",
+            "reason": "no financial-return data in a Kickstarter snapshot"
+          },
+          "valuation": {
+            "status": "deferred",
+            "reason": "no financial-return data in a Kickstarter snapshot"
+          },
+          "exit_multiple": {
+            "status": "deferred",
+            "reason": "no financial-return data in a Kickstarter snapshot"
+          }
+        },
+        "caption": "Investment synthesis = confidence-weighted mean of the five specialist agents + readiness. One agent's opinion (a score-mean), distinct from the Phase-I consensus (a stance-vote with veto). Model-simulated, not causal; expected return / IRR / valuation are deferred."
+      }
+    ]
+  },
+  {
+    "committee_recommendation": "Do Not Invest",
+    "committee_score": -0.571,
+    "overall_confidence": 0.636,
+    "agreement_level": 0.5,
+    "agent_votes": [
+      {
+        "agent": "MarketAgent",
+        "stance": "cautious",
+        "confidence": 0.926,
+        "weight": 1.0
+      },
+      {
+        "agent": "FounderAgent",
+        "stance": "cautious",
+        "confidence": 0.668,
+        "weight": 1.0
+      },
+      {
+        "agent": "FinancialAgent",
+        "stance": "cautious",
+        "confidence": 0.727,
+        "weight": 1.0
+      },
+      {
+        "agent": "CompetitionAgent",
+        "stance": "negative",
+        "confidence": 0.925,
+        "weight": 0.8
+      },
+      {
+        "agent": "RiskAgent",
+        "stance": "negative",
+        "confidence": 0.854,
+        "weight": 1.5
+      },
+      {
+        "agent": "InvestmentAgent",
+        "stance": "negative",
+        "confidence": 0.71,
+        "weight": 1.5
+      }
+    ],
+    "conflicts": [],
+    "risk_veto": {
+      "eligible": true,
+      "applied": false
+    },
+    "rationale": "Committee recommendation: Do Not Invest (score -0.57; 0 positive / 3 negative of 6 agents).",
+    "deferred": {
+      "market_size_tam": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "industry_cagr": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "addressable_market": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "industry_growth_rate": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "founder_experience": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "team_composition": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "leadership": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "advisory_board": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "domain_expertise": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "founder_track_record": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "burn_rate": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "runway": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "revenue": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "revenue_growth": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "cac_ltv": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "unit_economics": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "profitability": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "competitive_moat": {
+        "status": "deferred",
+        "reason": "no product / competitor data in this dataset"
+      },
+      "differentiation": {
+        "status": "deferred",
+        "reason": "no product / competitor data in this dataset"
+      },
+      "named_competitors": {
+        "status": "deferred",
+        "reason": "no competitor data in this dataset"
+      },
+      "network_effects": {
+        "status": "deferred",
+        "reason": "no product / competitor data in this dataset"
+      },
+      "moat_defensibility": {
+        "status": "deferred",
+        "reason": "no product/IP data"
+      },
+      "proprietary_data_network_effects": {
+        "status": "deferred",
+        "reason": "no such data"
+      },
+      "regulatory_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "legal_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "ip_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "operational_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "technology_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "founder_team_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "unit_economics_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "market_size_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "expected_return": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "irr": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "valuation": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "exit_multiple": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      }
+    },
+    "honesty_note": "Committee = confidence-weighted stance vote over correlated specialist views of ONE shared signal set (not independent experts) \u2014 so confidence is NOT inflated by agent count, and the CompetitionAgent is down-weighted for overlap with the FinancialAgent. A decisive RiskAgent negative vetoes a positive committee. Model-simulated, not causal.",
+    "campaign": {
+      "name": "Sequel to \"I'm a Cow\" song and animation video",
+      "main_category": "Film & Video",
+      "usd_goal_real": 15000.0,
+      "country": "US"
+    },
+    "agent_reports": [
+      {
+        "agent": "MarketAgent",
+        "perspective": "Category attractiveness & market timing",
+        "score": 53,
+        "stance": "cautious",
+        "confidence": 0.926,
+        "findings": [
+          "Film & Video campaigns fund at 42% vs a 40% platform baseline (lift 1.03).",
+          "Market timing is neutral; the Film & Video trend is stable (45,162 campaigns).",
+          "The category is highly crowded."
+        ],
+        "key_metric": {
+          "name": "category_funding_rate",
+          "value": 0.4175
+        },
+        "deferred": {
+          "market_size_tam": {
+            "status": "deferred",
+            "reason": "no addressable-market data in a Kickstarter category"
+          },
+          "industry_cagr": {
+            "status": "deferred",
+            "reason": "no addressable-market data in a Kickstarter category"
+          },
+          "addressable_market": {
+            "status": "deferred",
+            "reason": "no addressable-market data in a Kickstarter category"
+          },
+          "industry_growth_rate": {
+            "status": "deferred",
+            "reason": "no addressable-market data in a Kickstarter category"
+          }
+        },
+        "caption": "Market = the Kickstarter category cohort (funding rate, crowding, trend, timing), not an addressable market. Model-simulated, not causal; TAM / market size / CAGR are deferred."
+      },
+      {
+        "agent": "FounderAgent",
+        "perspective": "Creator's controllable campaign craft (goal / title / structure)",
+        "score": 53,
+        "stance": "cautious",
+        "confidence": 0.668,
+        "findings": [
+          "The creator left ~20 points of controllable upside unrealized (23% of a reachable 44%) \u2014 craft gaps below.",
+          "Craft gap: Lower your funding goal from $15,000 to $5,000 (~9 pts).",
+          "Craft gap: Shorten your campaign from 18 to 30 days (~12 pts)."
+        ],
+        "key_metric": {
+          "name": "execution_ratio",
+          "value": 0.531
+        },
+        "deferred": {
+          "founder_experience": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          },
+          "team_composition": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          },
+          "leadership": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          },
+          "advisory_board": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          },
+          "domain_expertise": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          },
+          "founder_track_record": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          }
+        },
+        "caption": "'Founder' analysis = the creator's controllable CAMPAIGN CRAFT (goal / title / structure), not the person \u2014 Kickstarter has no founder data. Execution = share of the modeled reachable optimum already captured. Model-simulated, not causal; founder experience / team / leadership are deferred."
+      },
+      {
+        "agent": "FinancialAgent",
+        "perspective": "Funding viability (goal realism + funding odds)",
+        "score": 44,
+        "stance": "cautious",
+        "confidence": 0.727,
+        "findings": [
+          "Goal $15,000 is 3.0x the category winners' median ($5,000).",
+          "Calibrated funding probability 23% vs the 33% decision bar.",
+          "Goal-size risk (High): Goal $15,000 is 3.0x the Film & Video funded-median ($5,000); large goals are harder to reach."
+        ],
+        "key_metric": {
+          "name": "goal_to_median_ratio",
+          "value": 3.0
+        },
+        "deferred": {
+          "burn_rate": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "runway": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "revenue": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "revenue_growth": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "cac_ltv": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "unit_economics": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "profitability": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          }
+        },
+        "caption": "Funding viability = goal realism (vs category winners' median) + funding odds (vs the decision bar). The only 'financial' signal in the data is the goal. Model-simulated, not causal; burn / runway / revenue / CAC-LTV are deferred."
+      },
+      {
+        "agent": "CompetitionAgent",
+        "perspective": "Cohort competition & positioning vs winners",
+        "score": 25,
+        "stance": "negative",
+        "confidence": 0.925,
+        "findings": [
+          "Ask for less: funded campaigns' median goal is $5,000 vs $10,000 for those that failed.",
+          "Your $15,000 goal is 3.0x the winners' median ($5,000) \u2014 priced like the campaigns that failed.",
+          "Category is highly crowded \u2014 45,162 campaigns (17% of all)."
+        ],
+        "key_metric": {
+          "name": "positioned_like",
+          "value": "strugglers"
+        },
+        "deferred": {
+          "competitive_moat": {
+            "status": "deferred",
+            "reason": "no product / competitor data in this dataset"
+          },
+          "differentiation": {
+            "status": "deferred",
+            "reason": "no product / competitor data in this dataset"
+          },
+          "named_competitors": {
+            "status": "deferred",
+            "reason": "no competitor data in this dataset"
+          },
+          "network_effects": {
+            "status": "deferred",
+            "reason": "no product / competitor data in this dataset"
+          },
+          "moat_defensibility": {
+            "status": "deferred",
+            "reason": "no product/IP data"
+          },
+          "proprietary_data_network_effects": {
+            "status": "deferred",
+            "reason": "no such data"
+          }
+        },
+        "caption": "Competition = other campaigns in your category (our own data), not named rivals. The winners-vs-strugglers position overlaps the financial agent (both read goal-vs-median) \u2014 not an independent signal. Moat / differentiation / named competitors are deferred."
+      },
+      {
+        "agent": "RiskAgent",
+        "perspective": "Risk & investor objections (score = safety, higher = safer)",
+        "score": 26,
+        "stance": "negative",
+        "confidence": 0.854,
+        "findings": [
+          "Overall risk: High. Modeled failure risk 77%.",
+          "High \u2014 Goal $15,000 is 3.0x the Film & Video funded-median ($5,000); large goals are harder to reach.",
+          "High \u2014 Modeled failure risk 77% (funding probability 23%, below the 33% threshold).",
+          "2 investor objection(s) raised; top: goal_size."
+        ],
+        "key_metric": {
+          "name": "modeled_failure_risk",
+          "value": 0.769
+        },
+        "deferred": {
+          "regulatory_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "legal_risk": {
+            "status": "deferred",
+            "reason": "no legal / regulatory / operational data in the dataset"
+          },
+          "ip_risk": {
+            "status": "deferred",
+            "reason": "no legal / regulatory / operational data in the dataset"
+          },
+          "operational_risk": {
+            "status": "deferred",
+            "reason": "no legal / regulatory / operational data in the dataset"
+          },
+          "technology_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "founder_team_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "unit_economics_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "market_size_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          }
+        },
+        "caption": "Risk = modeled failure risk + goal / funding / cohort risks (Day-9) + investor objections. Score is SAFETY (100 - risk). Model-simulated, not causal; regulatory / legal / IP / operational risks are deferred."
+      },
+      {
+        "agent": "InvestmentAgent",
+        "perspective": "Committee synthesis over the five specialist agents",
+        "score": 39,
+        "stance": "negative",
+        "confidence": 0.71,
+        "findings": [
+          "0 positive / 3 cautious / 2 negative across 5 specialist agents.",
+          "Funding-readiness: Fixable (23% -> reachable 44%).",
+          "Strongest view: MarketAgent (53); weakest: CompetitionAgent (25)."
+        ],
+        "key_metric": {
+          "name": "preliminary_recommendation",
+          "value": "Do Not Invest"
+        },
+        "deferred": {
+          "expected_return": {
+            "status": "deferred",
+            "reason": "no financial-return data in a Kickstarter snapshot"
+          },
+          "irr": {
+            "status": "deferred",
+            "reason": "no financial-return data in a Kickstarter snapshot"
+          },
+          "valuation": {
+            "status": "deferred",
+            "reason": "no financial-return data in a Kickstarter snapshot"
+          },
+          "exit_multiple": {
+            "status": "deferred",
+            "reason": "no financial-return data in a Kickstarter snapshot"
+          }
+        },
+        "caption": "Investment synthesis = confidence-weighted mean of the five specialist agents + readiness. One agent's opinion (a score-mean), distinct from the Phase-I consensus (a stance-vote with veto). Model-simulated, not causal; expected return / IRR / valuation are deferred."
+      }
+    ]
+  },
+  {
+    "committee_recommendation": "Monitor Progress",
+    "committee_score": -0.239,
+    "overall_confidence": 0.556,
+    "agreement_level": 0.5,
+    "agent_votes": [
+      {
+        "agent": "MarketAgent",
+        "stance": "negative",
+        "confidence": 0.911,
+        "weight": 1.0
+      },
+      {
+        "agent": "FounderAgent",
+        "stance": "positive",
+        "confidence": 0.5,
+        "weight": 1.0
+      },
+      {
+        "agent": "FinancialAgent",
+        "stance": "cautious",
+        "confidence": 0.626,
+        "weight": 1.0
+      },
+      {
+        "agent": "CompetitionAgent",
+        "stance": "negative",
+        "confidence": 0.899,
+        "weight": 0.8
+      },
+      {
+        "agent": "RiskAgent",
+        "stance": "cautious",
+        "confidence": 0.744,
+        "weight": 1.5
+      },
+      {
+        "agent": "InvestmentAgent",
+        "stance": "cautious",
+        "confidence": 0.568,
+        "weight": 1.5
+      }
+    ],
+    "conflicts": [],
+    "risk_veto": {
+      "eligible": false,
+      "applied": false
+    },
+    "rationale": "Committee recommendation: Monitor Progress (score -0.24; 1 positive / 2 negative of 6 agents).",
+    "deferred": {
+      "market_size_tam": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "industry_cagr": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "addressable_market": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "industry_growth_rate": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "founder_experience": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "team_composition": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "leadership": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "advisory_board": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "domain_expertise": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "founder_track_record": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "burn_rate": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "runway": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "revenue": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "revenue_growth": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "cac_ltv": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "unit_economics": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "profitability": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "competitive_moat": {
+        "status": "deferred",
+        "reason": "no product / competitor data in this dataset"
+      },
+      "differentiation": {
+        "status": "deferred",
+        "reason": "no product / competitor data in this dataset"
+      },
+      "named_competitors": {
+        "status": "deferred",
+        "reason": "no competitor data in this dataset"
+      },
+      "network_effects": {
+        "status": "deferred",
+        "reason": "no product / competitor data in this dataset"
+      },
+      "moat_defensibility": {
+        "status": "deferred",
+        "reason": "no product/IP data"
+      },
+      "proprietary_data_network_effects": {
+        "status": "deferred",
+        "reason": "no such data"
+      },
+      "regulatory_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "legal_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "ip_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "operational_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "technology_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "founder_team_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "unit_economics_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "market_size_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "expected_return": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "irr": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "valuation": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      },
+      "exit_multiple": {
+        "status": "deferred",
+        "reason": "no financial-return data in a Kickstarter snapshot"
+      }
+    },
+    "honesty_note": "Committee = confidence-weighted stance vote over correlated specialist views of ONE shared signal set (not independent experts) \u2014 so confidence is NOT inflated by agent count, and the CompetitionAgent is down-weighted for overlap with the FinancialAgent. A decisive RiskAgent negative vetoes a positive committee. Model-simulated, not causal.",
+    "campaign": {
+      "name": "Organika Cases - Phone cases from real natural materials",
+      "main_category": "Fashion",
+      "usd_goal_real": 13000.0,
+      "country": "US"
+    },
+    "agent_reports": [
+      {
+        "agent": "MarketAgent",
+        "perspective": "Category attractiveness & market timing",
+        "score": 38,
+        "stance": "negative",
+        "confidence": 0.911,
+        "findings": [
+          "Fashion campaigns fund at 28% vs a 40% platform baseline (lift 0.70).",
+          "Market timing is favorable; the Fashion trend is rising (15,809 campaigns).",
+          "The category is crowded."
+        ],
+        "key_metric": {
+          "name": "category_funding_rate",
+          "value": 0.2833
+        },
+        "deferred": {
+          "market_size_tam": {
+            "status": "deferred",
+            "reason": "no addressable-market data in a Kickstarter category"
+          },
+          "industry_cagr": {
+            "status": "deferred",
+            "reason": "no addressable-market data in a Kickstarter category"
+          },
+          "addressable_market": {
+            "status": "deferred",
+            "reason": "no addressable-market data in a Kickstarter category"
+          },
+          "industry_growth_rate": {
+            "status": "deferred",
+            "reason": "no addressable-market data in a Kickstarter category"
+          }
+        },
+        "caption": "Market = the Kickstarter category cohort (funding rate, crowding, trend, timing), not an addressable market. Model-simulated, not causal; TAM / market size / CAGR are deferred."
+      },
+      {
+        "agent": "FounderAgent",
+        "perspective": "Creator's controllable campaign craft (goal / title / structure)",
+        "score": 90,
+        "stance": "positive",
+        "confidence": 0.5,
+        "findings": [
+          "The creator's controllable choices are already near their modeled optimum (35% of a reachable 39%).",
+          "Craft gap: Lower your funding goal from $13,000 to $5,000 (~3 pts).",
+          "Craft gap: Lower your funding goal from $13,000 to $6,500 (~3 pts)."
+        ],
+        "key_metric": {
+          "name": "execution_ratio",
+          "value": 0.903
+        },
+        "deferred": {
+          "founder_experience": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          },
+          "team_composition": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          },
+          "leadership": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          },
+          "advisory_board": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          },
+          "domain_expertise": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          },
+          "founder_track_record": {
+            "status": "deferred",
+            "reason": "no founder/team data in an anonymous pre-launch snapshot"
+          }
+        },
+        "caption": "'Founder' analysis = the creator's controllable CAMPAIGN CRAFT (goal / title / structure), not the person \u2014 Kickstarter has no founder data. Execution = share of the modeled reachable optimum already captured. Model-simulated, not causal; founder experience / team / leadership are deferred."
+      },
+      {
+        "agent": "FinancialAgent",
+        "perspective": "Funding viability (goal realism + funding odds)",
+        "score": 58,
+        "stance": "cautious",
+        "confidence": 0.626,
+        "findings": [
+          "Goal $13,000 is 2.6x the category winners' median ($5,000).",
+          "Calibrated funding probability 35% vs the 33% decision bar.",
+          "Goal-size risk (High): Goal $13,000 is 2.6x the Fashion funded-median ($5,000); large goals are harder to reach."
+        ],
+        "key_metric": {
+          "name": "goal_to_median_ratio",
+          "value": 2.6
+        },
+        "deferred": {
+          "burn_rate": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "runway": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "revenue": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "revenue_growth": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "cac_ltv": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "unit_economics": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          },
+          "profitability": {
+            "status": "deferred",
+            "reason": "no financial statements in a Kickstarter snapshot"
+          }
+        },
+        "caption": "Funding viability = goal realism (vs category winners' median) + funding odds (vs the decision bar). The only 'financial' signal in the data is the goal. Model-simulated, not causal; burn / runway / revenue / CAC-LTV are deferred."
+      },
+      {
+        "agent": "CompetitionAgent",
+        "perspective": "Cohort competition & positioning vs winners",
+        "score": 17,
+        "stance": "negative",
+        "confidence": 0.899,
+        "findings": [
+          "Ask for less: funded campaigns' median goal is $5,000 vs $6,000 for those that failed.",
+          "Your $13,000 goal is 2.6x the winners' median ($5,000) \u2014 priced like the campaigns that failed.",
+          "Category is crowded \u2014 15,809 campaigns (6% of all)."
+        ],
+        "key_metric": {
+          "name": "positioned_like",
+          "value": "strugglers"
+        },
+        "deferred": {
+          "competitive_moat": {
+            "status": "deferred",
+            "reason": "no product / competitor data in this dataset"
+          },
+          "differentiation": {
+            "status": "deferred",
+            "reason": "no product / competitor data in this dataset"
+          },
+          "named_competitors": {
+            "status": "deferred",
+            "reason": "no competitor data in this dataset"
+          },
+          "network_effects": {
+            "status": "deferred",
+            "reason": "no product / competitor data in this dataset"
+          },
+          "moat_defensibility": {
+            "status": "deferred",
+            "reason": "no product/IP data"
+          },
+          "proprietary_data_network_effects": {
+            "status": "deferred",
+            "reason": "no such data"
+          }
+        },
+        "caption": "Competition = other campaigns in your category (our own data), not named rivals. The winners-vs-strugglers position overlaps the financial agent (both read goal-vs-median) \u2014 not an independent signal. Moat / differentiation / named competitors are deferred."
+      },
+      {
+        "agent": "RiskAgent",
+        "perspective": "Risk & investor objections (score = safety, higher = safer)",
+        "score": 45,
+        "stance": "cautious",
+        "confidence": 0.744,
+        "findings": [
+          "Overall risk: High. Modeled failure risk 65%.",
+          "High \u2014 Goal $13,000 is 2.6x the Fashion funded-median ($5,000); large goals are harder to reach.",
+          "Medium \u2014 Modeled failure risk 65% (funding probability 35%)..",
+          "4 investor objection(s) raised; top: goal_size."
+        ],
+        "key_metric": {
+          "name": "modeled_failure_risk",
+          "value": 0.649
+        },
+        "deferred": {
+          "regulatory_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "legal_risk": {
+            "status": "deferred",
+            "reason": "no legal / regulatory / operational data in the dataset"
+          },
+          "ip_risk": {
+            "status": "deferred",
+            "reason": "no legal / regulatory / operational data in the dataset"
+          },
+          "operational_risk": {
+            "status": "deferred",
+            "reason": "no legal / regulatory / operational data in the dataset"
+          },
+          "technology_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "founder_team_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "unit_economics_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "market_size_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          }
+        },
+        "caption": "Risk = modeled failure risk + goal / funding / cohort risks (Day-9) + investor objections. Score is SAFETY (100 - risk). Model-simulated, not causal; regulatory / legal / IP / operational risks are deferred."
+      },
+      {
+        "agent": "InvestmentAgent",
+        "perspective": "Committee synthesis over the five specialist agents",
+        "score": 45,
+        "stance": "cautious",
+        "confidence": 0.568,
+        "findings": [
+          "1 positive / 2 cautious / 2 negative across 5 specialist agents.",
+          "Funding-readiness: Ready (35% -> reachable 39%).",
+          "Strongest view: FounderAgent (90); weakest: CompetitionAgent (17)."
+        ],
+        "key_metric": {
+          "name": "preliminary_recommendation",
+          "value": "Monitor Progress"
+        },
+        "deferred": {
+          "expected_return": {
+            "status": "deferred",
+            "reason": "no financial-return data in a Kickstarter snapshot"
+          },
+          "irr": {
+            "status": "deferred",
+            "reason": "no financial-return data in a Kickstarter snapshot"
+          },
+          "valuation": {
+            "status": "deferred",
+            "reason": "no financial-return data in a Kickstarter snapshot"
+          },
+          "exit_multiple": {
+            "status": "deferred",
+            "reason": "no financial-return data in a Kickstarter snapshot"
+          }
+        },
+        "caption": "Investment synthesis = confidence-weighted mean of the five specialist agents + readiness. One agent's opinion (a score-mean), distinct from the Phase-I consensus (a stance-vote with veto). Model-simulated, not causal; expected return / IRR / valuation are deferred."
+      }
+    ]
+  }
+]

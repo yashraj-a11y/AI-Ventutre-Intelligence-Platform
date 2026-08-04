@@ -1,0 +1,158 @@
+[
+  {
+    "agent": "RiskAgent",
+    "perspective": "Risk & investor objections (score = safety, higher = safer)",
+    "score": 27,
+    "stance": "negative",
+    "confidence": 0.782,
+    "findings": [
+      "Overall risk: High. Modeled failure risk 76%.",
+      "High \u2014 Goal $30,516 is 6.1x the Games funded-median ($5,000); large goals are harder to reach.",
+      "High \u2014 Modeled failure risk 76% (funding probability 24%, below the 33% threshold).",
+      "3 investor objection(s) raised; top: goal_size."
+    ],
+    "key_metric": {
+      "name": "modeled_failure_risk",
+      "value": 0.758
+    },
+    "deferred": {
+      "regulatory_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "legal_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "ip_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "operational_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "technology_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "founder_team_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "unit_economics_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "market_size_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      }
+    },
+    "caption": "Risk = modeled failure risk + goal / funding / cohort risks (Day-9) + investor objections. Score is SAFETY (100 - risk). Model-simulated, not causal; regulatory / legal / IP / operational risks are deferred."
+  },
+  {
+    "agent": "RiskAgent",
+    "perspective": "Risk & investor objections (score = safety, higher = safer)",
+    "score": 26,
+    "stance": "negative",
+    "confidence": 0.854,
+    "findings": [
+      "Overall risk: High. Modeled failure risk 77%.",
+      "High \u2014 Goal $15,000 is 3.0x the Film & Video funded-median ($5,000); large goals are harder to reach.",
+      "High \u2014 Modeled failure risk 77% (funding probability 23%, below the 33% threshold).",
+      "2 investor objection(s) raised; top: goal_size."
+    ],
+    "key_metric": {
+      "name": "modeled_failure_risk",
+      "value": 0.769
+    },
+    "deferred": {
+      "regulatory_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "legal_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "ip_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "operational_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "technology_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "founder_team_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "unit_economics_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "market_size_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      }
+    },
+    "caption": "Risk = modeled failure risk + goal / funding / cohort risks (Day-9) + investor objections. Score is SAFETY (100 - risk). Model-simulated, not causal; regulatory / legal / IP / operational risks are deferred."
+  },
+  {
+    "agent": "RiskAgent",
+    "perspective": "Risk & investor objections (score = safety, higher = safer)",
+    "score": 45,
+    "stance": "cautious",
+    "confidence": 0.744,
+    "findings": [
+      "Overall risk: High. Modeled failure risk 65%.",
+      "High \u2014 Goal $13,000 is 2.6x the Fashion funded-median ($5,000); large goals are harder to reach.",
+      "Medium \u2014 Modeled failure risk 65% (funding probability 35%)..",
+      "4 investor objection(s) raised; top: goal_size."
+    ],
+    "key_metric": {
+      "name": "modeled_failure_risk",
+      "value": 0.649
+    },
+    "deferred": {
+      "regulatory_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "legal_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "ip_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "operational_risk": {
+        "status": "deferred",
+        "reason": "no legal / regulatory / operational data in the dataset"
+      },
+      "technology_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "founder_team_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "unit_economics_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "market_size_risk": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      }
+    },
+    "caption": "Risk = modeled failure risk + goal / funding / cohort risks (Day-9) + investor objections. Score is SAFETY (100 - risk). Model-simulated, not causal; regulatory / legal / IP / operational risks are deferred."
+  }
+]

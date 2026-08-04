@@ -1,0 +1,193 @@
+{
+  "version": "1.0.0",
+  "created_utc": "2026-08-04T16:11:59.228885+00:00",
+  "architecture_layer": 12,
+  "note": "Multi-agent system = six deterministic specialist agents + a consensus rule over the Day-11 intelligence. Correlated views of one signal set (not independent experts); no LLM. Model-simulated, not causal.",
+  "agent_roles": {
+    "MarketAgent": "category attractiveness & market timing (not TAM)",
+    "FounderAgent": "creator's controllable campaign craft (not founder background)",
+    "FinancialAgent": "funding viability = goal realism + odds (not P&L)",
+    "CompetitionAgent": "cohort competition & positioning (not moat)",
+    "RiskAgent": "risk & objections; carries the veto (not legal/regulatory)",
+    "InvestmentAgent": "confidence-weighted synthesis of the five specialists"
+  },
+  "engine_config": {
+    "market": {
+      "positive_at": 60,
+      "negative_at": 40,
+      "n_full_confidence": 5000,
+      "out_path": "artifacts/agents/market_analysis.json"
+    },
+    "founder": {
+      "positive_at": 60,
+      "negative_at": 40,
+      "top_gaps": 2,
+      "out_path": "artifacts/agents/founder_analysis.json"
+    },
+    "financial": {
+      "positive_at": 60,
+      "negative_at": 40,
+      "odds_weight": 0.65,
+      "realism_weight": 0.35,
+      "realism_penalty_per_x": 20,
+      "out_path": "artifacts/agents/financial_analysis.json"
+    },
+    "competition": {
+      "positive_at": 60,
+      "negative_at": 40,
+      "n_full_confidence": 5000,
+      "out_path": "artifacts/agents/competition_analysis.json"
+    },
+    "risk": {
+      "positive_at": 60,
+      "negative_at": 40,
+      "failure_weight": 70,
+      "high_severity_bonus": 10,
+      "high_severity_cap": 30,
+      "top_risks": 2,
+      "out_path": "artifacts/agents/risk_analysis.json"
+    },
+    "investment": {
+      "positive_at": 60,
+      "negative_at": 40,
+      "strong_invest_at": 70,
+      "proceed_dd_at": 55,
+      "monitor_at": 40,
+      "out_path": "artifacts/agents/investment_analysis.json"
+    },
+    "orchestrator": {
+      "out_path": "artifacts/agents/agent_reports.json"
+    },
+    "consensus": {
+      "weights": {
+        "MarketAgent": 1.0,
+        "FounderAgent": 1.0,
+        "FinancialAgent": 1.0,
+        "CompetitionAgent": 0.8,
+        "RiskAgent": 1.5,
+        "InvestmentAgent": 1.5
+      },
+      "veto_confidence": 0.6,
+      "strong_at": 0.4,
+      "proceed_at": 0.1,
+      "monitor_at": -0.3,
+      "out_path": "artifacts/agents/committee_decision.json"
+    }
+  },
+  "committee_policy": {
+    "consensus_weights": {
+      "MarketAgent": 1.0,
+      "FounderAgent": 1.0,
+      "FinancialAgent": 1.0,
+      "CompetitionAgent": 0.8,
+      "RiskAgent": 1.5,
+      "InvestmentAgent": 1.5
+    },
+    "band_cutoffs": {
+      "strong_at": 0.4,
+      "proceed_at": 0.1,
+      "monitor_at": -0.3
+    },
+    "risk_veto": {
+      "veto_confidence": 0.6,
+      "rule": "RiskAgent negative at >= veto_confidence caps a positive committee at Monitor Progress"
+    },
+    "committee_score": "sum(weight * confidence * stance) / sum(weight * confidence), stance in {-1,0,+1}",
+    "confidence_note": "NOT inflated by agent count (correlated views); CompetitionAgent down-weighted for overlap"
+  },
+  "content_hash": "f235c7797f4655e77347e7490f99db76e32b8d6e3f93bcb33f50e28bd2a97e60",
+  "dependencies": {
+    "day4_calibrated_model": {
+      "path": "artifacts/models/calibrated_model.joblib",
+      "exists": true,
+      "bytes": 21472372,
+      "sha256": "dde1cdef14554bc57482ce98a985851b02e926cd2dca115cb0ca4423efa3e677"
+    },
+    "day8_counterfactual_engine": {
+      "path": "artifacts/counterfactual/counterfactual_engine.json",
+      "exists": true,
+      "bytes": 4004,
+      "sha256": "e876ff39cb935956861bf34876c5aacae816f8fbcaefa7e4b8b43ea344dae4f2"
+    },
+    "day11_recommendation_engine": {
+      "path": "artifacts/recommendation/recommendation_engine.json",
+      "exists": true,
+      "bytes": 6253,
+      "sha256": "6bbef1826b7c1b8d0ef7231e292714043f5c575902f1e46728f062716ee78e73"
+    }
+  },
+  "artifacts": {
+    "market_analysis": {
+      "path": "artifacts/agents/market_analysis.json",
+      "exists": true,
+      "bytes": 3784,
+      "sha256": "4511f6ad3596fa092530f615053fb0d3f6b26ae3c4efad67759111c099c8b391"
+    },
+    "founder_analysis": {
+      "path": "artifacts/agents/founder_analysis.json",
+      "exists": true,
+      "bytes": 5298,
+      "sha256": "393d635e83d41311aca0e7aa3b8caecbf6589d75ff5387ea5a322d2e495f1764"
+    },
+    "financial_analysis": {
+      "path": "artifacts/agents/financial_analysis.json",
+      "exists": true,
+      "bytes": 5210,
+      "sha256": "1776f4d88b75d747980acbc60f6b0f4ad00f93620db6a600f45891f8ac27dcd8"
+    },
+    "competition_analysis": {
+      "path": "artifacts/agents/competition_analysis.json",
+      "exists": true,
+      "bytes": 4826,
+      "sha256": "518edc274d1a0290cb75d04e027084abcdf6745e8deb6fecf65ea635a898fcbf"
+    },
+    "risk_analysis": {
+      "path": "artifacts/agents/risk_analysis.json",
+      "exists": true,
+      "bytes": 5491,
+      "sha256": "1e7853350ac008fe2a016f96e202d768ac4a9d38e574b4c725233b1e78e275c8"
+    },
+    "investment_analysis": {
+      "path": "artifacts/agents/investment_analysis.json",
+      "exists": true,
+      "bytes": 4065,
+      "sha256": "a7129c29c21d0c785b588d0441c33a77cd06207f1555518778504bffbf73629f"
+    },
+    "agent_reports": {
+      "path": "artifacts/agents/agent_reports.json",
+      "exists": true,
+      "bytes": 33510,
+      "sha256": "4e8c4819e3b35bcff8bf022eb74f37be1f3f24ca88a326cd5ea67de64946420d"
+    },
+    "committee_decision": {
+      "path": "artifacts/agents/committee_decision.json",
+      "exists": true,
+      "bytes": 50956,
+      "sha256": "15597846e7e0e431644a9719d52e46095a4bfd93840189b3e77a021e8dcdcd8d"
+    }
+  },
+  "deferred_items": [
+    "founder_experience",
+    "team_composition",
+    "leadership",
+    "advisory_board",
+    "burn_rate",
+    "runway",
+    "revenue",
+    "cac_ltv",
+    "unit_economics",
+    "profitability",
+    "market_size_tam",
+    "industry_cagr",
+    "competitive_moat",
+    "differentiation",
+    "named_competitors",
+    "network_effects",
+    "regulatory_risk",
+    "legal_risk",
+    "operational_risk",
+    "expected_return",
+    "irr",
+    "valuation"
+  ]
+}

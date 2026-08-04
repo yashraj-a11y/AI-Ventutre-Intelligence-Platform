@@ -1,0 +1,107 @@
+[
+  {
+    "agent": "MarketAgent",
+    "perspective": "Category attractiveness & market timing",
+    "score": 72,
+    "stance": "positive",
+    "confidence": 0.873,
+    "findings": [
+      "Games campaigns fund at 44% vs a 40% platform baseline (lift 1.09).",
+      "Market timing is favorable; the Games trend is rising (22,878 campaigns).",
+      "The category is crowded."
+    ],
+    "key_metric": {
+      "name": "category_funding_rate",
+      "value": 0.4395
+    },
+    "deferred": {
+      "market_size_tam": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "industry_cagr": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "addressable_market": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "industry_growth_rate": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      }
+    },
+    "caption": "Market = the Kickstarter category cohort (funding rate, crowding, trend, timing), not an addressable market. Model-simulated, not causal; TAM / market size / CAGR are deferred."
+  },
+  {
+    "agent": "MarketAgent",
+    "perspective": "Category attractiveness & market timing",
+    "score": 53,
+    "stance": "cautious",
+    "confidence": 0.926,
+    "findings": [
+      "Film & Video campaigns fund at 42% vs a 40% platform baseline (lift 1.03).",
+      "Market timing is neutral; the Film & Video trend is stable (45,162 campaigns).",
+      "The category is highly crowded."
+    ],
+    "key_metric": {
+      "name": "category_funding_rate",
+      "value": 0.4175
+    },
+    "deferred": {
+      "market_size_tam": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "industry_cagr": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "addressable_market": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "industry_growth_rate": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      }
+    },
+    "caption": "Market = the Kickstarter category cohort (funding rate, crowding, trend, timing), not an addressable market. Model-simulated, not causal; TAM / market size / CAGR are deferred."
+  },
+  {
+    "agent": "MarketAgent",
+    "perspective": "Category attractiveness & market timing",
+    "score": 38,
+    "stance": "negative",
+    "confidence": 0.911,
+    "findings": [
+      "Fashion campaigns fund at 28% vs a 40% platform baseline (lift 0.70).",
+      "Market timing is favorable; the Fashion trend is rising (15,809 campaigns).",
+      "The category is crowded."
+    ],
+    "key_metric": {
+      "name": "category_funding_rate",
+      "value": 0.2833
+    },
+    "deferred": {
+      "market_size_tam": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "industry_cagr": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "addressable_market": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      },
+      "industry_growth_rate": {
+        "status": "deferred",
+        "reason": "no addressable-market data in a Kickstarter category"
+      }
+    },
+    "caption": "Market = the Kickstarter category cohort (funding rate, crowding, trend, timing), not an addressable market. Model-simulated, not causal; TAM / market size / CAGR are deferred."
+  }
+]

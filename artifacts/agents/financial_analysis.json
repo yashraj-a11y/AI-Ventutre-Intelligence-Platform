@@ -1,0 +1,143 @@
+[
+  {
+    "agent": "FinancialAgent",
+    "perspective": "Funding viability (goal realism + funding odds)",
+    "score": 24,
+    "stance": "negative",
+    "confidence": 0.781,
+    "findings": [
+      "Goal $30,516 is 6.1x the category winners' median ($5,000).",
+      "Calibrated funding probability 24% vs the 33% decision bar.",
+      "Goal-size risk (High): Goal $30,516 is 6.1x the Games funded-median ($5,000); large goals are harder to reach."
+    ],
+    "key_metric": {
+      "name": "goal_to_median_ratio",
+      "value": 6.1
+    },
+    "deferred": {
+      "burn_rate": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "runway": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "revenue": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "revenue_growth": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "cac_ltv": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "unit_economics": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "profitability": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      }
+    },
+    "caption": "Funding viability = goal realism (vs category winners' median) + funding odds (vs the decision bar). The only 'financial' signal in the data is the goal. Model-simulated, not causal; burn / runway / revenue / CAC-LTV are deferred."
+  },
+  {
+    "agent": "FinancialAgent",
+    "perspective": "Funding viability (goal realism + funding odds)",
+    "score": 44,
+    "stance": "cautious",
+    "confidence": 0.727,
+    "findings": [
+      "Goal $15,000 is 3.0x the category winners' median ($5,000).",
+      "Calibrated funding probability 23% vs the 33% decision bar.",
+      "Goal-size risk (High): Goal $15,000 is 3.0x the Film & Video funded-median ($5,000); large goals are harder to reach."
+    ],
+    "key_metric": {
+      "name": "goal_to_median_ratio",
+      "value": 3.0
+    },
+    "deferred": {
+      "burn_rate": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "runway": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "revenue": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "revenue_growth": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "cac_ltv": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "unit_economics": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "profitability": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      }
+    },
+    "caption": "Funding viability = goal realism (vs category winners' median) + funding odds (vs the decision bar). The only 'financial' signal in the data is the goal. Model-simulated, not causal; burn / runway / revenue / CAC-LTV are deferred."
+  },
+  {
+    "agent": "FinancialAgent",
+    "perspective": "Funding viability (goal realism + funding odds)",
+    "score": 58,
+    "stance": "cautious",
+    "confidence": 0.626,
+    "findings": [
+      "Goal $13,000 is 2.6x the category winners' median ($5,000).",
+      "Calibrated funding probability 35% vs the 33% decision bar.",
+      "Goal-size risk (High): Goal $13,000 is 2.6x the Fashion funded-median ($5,000); large goals are harder to reach."
+    ],
+    "key_metric": {
+      "name": "goal_to_median_ratio",
+      "value": 2.6
+    },
+    "deferred": {
+      "burn_rate": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "runway": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "revenue": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "revenue_growth": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "cac_ltv": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "unit_economics": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      },
+      "profitability": {
+        "status": "deferred",
+        "reason": "no financial statements in a Kickstarter snapshot"
+      }
+    },
+    "caption": "Funding viability = goal realism (vs category winners' median) + funding odds (vs the decision bar). The only 'financial' signal in the data is the goal. Model-simulated, not causal; burn / runway / revenue / CAC-LTV are deferred."
+  }
+]

@@ -1,0 +1,131 @@
+[
+  {
+    "agent": "FounderAgent",
+    "perspective": "Creator's controllable campaign craft (goal / title / structure)",
+    "score": 36,
+    "stance": "negative",
+    "confidence": 0.827,
+    "findings": [
+      "The creator left ~42 points of controllable upside unrealized (24% of a reachable 66%) \u2014 craft gaps below.",
+      "Craft gap: Shorten your campaign from 29 to 15 days (~30 pts).",
+      "Craft gap: Lower your funding goal from $30,516 to $5,000 (~12 pts)."
+    ],
+    "key_metric": {
+      "name": "execution_ratio",
+      "value": 0.364
+    },
+    "deferred": {
+      "founder_experience": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "team_composition": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "leadership": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "advisory_board": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "domain_expertise": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "founder_track_record": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      }
+    },
+    "caption": "'Founder' analysis = the creator's controllable CAMPAIGN CRAFT (goal / title / structure), not the person \u2014 Kickstarter has no founder data. Execution = share of the modeled reachable optimum already captured. Model-simulated, not causal; founder experience / team / leadership are deferred."
+  },
+  {
+    "agent": "FounderAgent",
+    "perspective": "Creator's controllable campaign craft (goal / title / structure)",
+    "score": 53,
+    "stance": "cautious",
+    "confidence": 0.668,
+    "findings": [
+      "The creator left ~20 points of controllable upside unrealized (23% of a reachable 44%) \u2014 craft gaps below.",
+      "Craft gap: Lower your funding goal from $15,000 to $5,000 (~9 pts).",
+      "Craft gap: Shorten your campaign from 18 to 30 days (~12 pts)."
+    ],
+    "key_metric": {
+      "name": "execution_ratio",
+      "value": 0.531
+    },
+    "deferred": {
+      "founder_experience": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "team_composition": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "leadership": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "advisory_board": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "domain_expertise": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "founder_track_record": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      }
+    },
+    "caption": "'Founder' analysis = the creator's controllable CAMPAIGN CRAFT (goal / title / structure), not the person \u2014 Kickstarter has no founder data. Execution = share of the modeled reachable optimum already captured. Model-simulated, not causal; founder experience / team / leadership are deferred."
+  },
+  {
+    "agent": "FounderAgent",
+    "perspective": "Creator's controllable campaign craft (goal / title / structure)",
+    "score": 90,
+    "stance": "positive",
+    "confidence": 0.5,
+    "findings": [
+      "The creator's controllable choices are already near their modeled optimum (35% of a reachable 39%).",
+      "Craft gap: Lower your funding goal from $13,000 to $5,000 (~3 pts).",
+      "Craft gap: Lower your funding goal from $13,000 to $6,500 (~3 pts)."
+    ],
+    "key_metric": {
+      "name": "execution_ratio",
+      "value": 0.903
+    },
+    "deferred": {
+      "founder_experience": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "team_composition": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "leadership": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "advisory_board": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "domain_expertise": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      },
+      "founder_track_record": {
+        "status": "deferred",
+        "reason": "no founder/team data in an anonymous pre-launch snapshot"
+      }
+    },
+    "caption": "'Founder' analysis = the creator's controllable CAMPAIGN CRAFT (goal / title / structure), not the person \u2014 Kickstarter has no founder data. Execution = share of the modeled reachable optimum already captured. Model-simulated, not causal; founder experience / team / leadership are deferred."
+  }
+]
