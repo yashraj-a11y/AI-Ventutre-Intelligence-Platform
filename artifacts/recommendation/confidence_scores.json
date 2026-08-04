@@ -1,0 +1,98 @@
+[
+  {
+    "campaign": {
+      "name": "Artificer - Board Game",
+      "main_category": "Games",
+      "usd_goal_real": 30515.72,
+      "country": "CA"
+    },
+    "score": 0.8298,
+    "factors": {
+      "prediction_margin": 0.29,
+      "cohort_agreement": 0.56,
+      "pattern_support": 0.667,
+      "scenario_stability": 1.0,
+      "cf_stability": 0.888,
+      "model_agreement": 1.0
+    },
+    "weights": {
+      "prediction_margin": 0.25,
+      "cohort_agreement": 0.15,
+      "pattern_support": 0.2,
+      "scenario_stability": 0.15,
+      "cf_stability": 0.15,
+      "model_agreement": 0.1
+    },
+    "reason": "Supported by strong historical pattern support, stable scenario behavior, consistent reachability across methods and agreement across models. Main uncertainty: a clear prediction margin.",
+    "honesty_note": "Confidence is a transparent weighted blend of real agreement signals (each shown) \u2014 prediction margin, similar-campaign agreement, historical pattern support, scenario stability, cross-method reachability, and model agreement. Not a probability; a reliability estimate over the ensemble.",
+    "model_probabilities": {
+      "calibrated": 0.242,
+      "best_model": 0.2706,
+      "logistic_regression": 0.3219
+    }
+  },
+  {
+    "campaign": {
+      "name": "Sequel to \"I'm a Cow\" song and animation video",
+      "main_category": "Film & Video",
+      "usd_goal_real": 15000.0,
+      "country": "US"
+    },
+    "score": 0.7715,
+    "factors": {
+      "prediction_margin": 0.326,
+      "cohort_agreement": 0.583,
+      "pattern_support": 0.343,
+      "scenario_stability": 0.75,
+      "cf_stability": 0.694,
+      "model_agreement": 1.0
+    },
+    "weights": {
+      "prediction_margin": 0.25,
+      "cohort_agreement": 0.15,
+      "pattern_support": 0.2,
+      "scenario_stability": 0.15,
+      "cf_stability": 0.15,
+      "model_agreement": 0.1
+    },
+    "reason": "Supported by stable scenario behavior, consistent reachability across methods and agreement across models. Main uncertainty: a clear prediction margin and strong historical pattern support.",
+    "honesty_note": "Confidence is a transparent weighted blend of real agreement signals (each shown) \u2014 prediction margin, similar-campaign agreement, historical pattern support, scenario stability, cross-method reachability, and model agreement. Not a probability; a reliability estimate over the ensemble.",
+    "model_probabilities": {
+      "calibrated": 0.2312,
+      "best_model": 0.242,
+      "logistic_regression": 0.2492
+    }
+  },
+  {
+    "campaign": {
+      "name": "Organika Cases - Phone cases from real natural materials",
+      "main_category": "Fashion",
+      "usd_goal_real": 13000.0,
+      "country": "US"
+    },
+    "score": 0.682,
+    "factors": {
+      "prediction_margin": 0.073,
+      "cohort_agreement": 0.283,
+      "pattern_support": 0.0,
+      "scenario_stability": 0.667,
+      "cf_stability": 0.96,
+      "model_agreement": 0.667
+    },
+    "weights": {
+      "prediction_margin": 0.25,
+      "cohort_agreement": 0.15,
+      "pattern_support": 0.2,
+      "scenario_stability": 0.15,
+      "cf_stability": 0.15,
+      "model_agreement": 0.1
+    },
+    "reason": "Supported by stable scenario behavior, consistent reachability across methods and agreement across models. Main uncertainty: a clear prediction margin, agreement among similar campaigns and strong historical pattern support.",
+    "honesty_note": "Confidence is a transparent weighted blend of real agreement signals (each shown) \u2014 prediction margin, similar-campaign agreement, historical pattern support, scenario stability, cross-method reachability, and model agreement. Not a probability; a reliability estimate over the ensemble.",
+    "model_probabilities": {
+      "calibrated": 0.3509,
+      "best_model": 0.3889,
+      "logistic_regression": 0.1398
+    }
+  }
+]

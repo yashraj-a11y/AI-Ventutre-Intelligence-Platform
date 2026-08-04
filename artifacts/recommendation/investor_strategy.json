@@ -1,0 +1,167 @@
+[
+  {
+    "campaign": {
+      "name": "Artificer - Board Game",
+      "main_category": "Games",
+      "usd_goal_real": 30515.72,
+      "country": "CA"
+    },
+    "recommendation": "Proceed with Caution",
+    "funding_probability": 0.242,
+    "optimized_probability": 0.664,
+    "threshold": 0.329,
+    "reachable_headroom": 0.422,
+    "overall_risk_level": "High",
+    "reason": "Below the bar as-is (24%) but with strong reachable upside to ~66% if the team executes the priority changes. Main risk: Goal $30,516 is 6.1x the Games funded-median ($5,000); large goals are harder to reach.",
+    "key_risk": {
+      "category": "financial_goal_risk",
+      "severity": "High",
+      "reason": "Goal $30,516 is 6.1x the Games funded-median ($5,000); large goals are harder to reach."
+    },
+    "key_objection": {
+      "dimension": "goal_size",
+      "concern": "Your $30,516 goal is high for Games, where funded campaigns typically ask a median of $5,000. Why this ask \u2014 and can you hit it?"
+    },
+    "conditions_to_reconsider": [
+      "Team addresses the top concern (goal_size).",
+      "Campaign reaches its reachable readiness (~66%) before launch."
+    ],
+    "deferred_diligence": {
+      "financial_diligence": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "cap_table": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "team_diligence": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "market_sizing": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "traction_metrics": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "unit_economics": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      }
+    },
+    "honesty_note": "Investor recommendation band mapped from the funding-readiness stage + reachable headroom (model-simulated, not causal), with the top risk surfaced. Standard diligence (financials, cap table, team, market, traction) is deferred \u2014 no data."
+  },
+  {
+    "campaign": {
+      "name": "Sequel to \"I'm a Cow\" song and animation video",
+      "main_category": "Film & Video",
+      "usd_goal_real": 15000.0,
+      "country": "US"
+    },
+    "recommendation": "Monitor Progress",
+    "funding_probability": 0.2312,
+    "optimized_probability": 0.4357,
+    "threshold": 0.329,
+    "reachable_headroom": 0.2045,
+    "overall_risk_level": "High",
+    "reason": "Below the 33% bar (23%); a path to ~44% exists but is borderline. Watch whether the team addresses: Goal $15,000 is 3.0x the Film & Video funded-median ($5,000); large goals are harder to reach.",
+    "key_risk": {
+      "category": "financial_goal_risk",
+      "severity": "High",
+      "reason": "Goal $15,000 is 3.0x the Film & Video funded-median ($5,000); large goals are harder to reach."
+    },
+    "key_objection": {
+      "dimension": "goal_size",
+      "concern": "Your $15,000 goal is high for Film & Video, where funded campaigns typically ask a median of $5,000. Why this ask \u2014 and can you hit it?"
+    },
+    "conditions_to_reconsider": [
+      "Team addresses the top concern (goal_size).",
+      "Campaign reaches its reachable readiness (~44%) before launch."
+    ],
+    "deferred_diligence": {
+      "financial_diligence": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "cap_table": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "team_diligence": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "market_sizing": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "traction_metrics": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "unit_economics": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      }
+    },
+    "honesty_note": "Investor recommendation band mapped from the funding-readiness stage + reachable headroom (model-simulated, not causal), with the top risk surfaced. Standard diligence (financials, cap table, team, market, traction) is deferred \u2014 no data."
+  },
+  {
+    "campaign": {
+      "name": "Organika Cases - Phone cases from real natural materials",
+      "main_category": "Fashion",
+      "usd_goal_real": 13000.0,
+      "country": "US"
+    },
+    "recommendation": "Proceed with Caution",
+    "funding_probability": 0.3509,
+    "optimized_probability": 0.3887,
+    "threshold": 0.329,
+    "reachable_headroom": 0.0378,
+    "overall_risk_level": "High",
+    "reason": "Fundable as-is at 35% (just above the 33% bar) but on a thin margin. Main risk: Goal $13,000 is 2.6x the Fashion funded-median ($5,000); large goals are harder to reach.",
+    "key_risk": {
+      "category": "financial_goal_risk",
+      "severity": "High",
+      "reason": "Goal $13,000 is 2.6x the Fashion funded-median ($5,000); large goals are harder to reach."
+    },
+    "key_objection": {
+      "dimension": "goal_size",
+      "concern": "Your $13,000 goal is high for Fashion, where funded campaigns typically ask a median of $5,000. Why this ask \u2014 and can you hit it?"
+    },
+    "conditions_to_reconsider": [
+      "Team addresses the top concern (goal_size).",
+      "Campaign reaches its reachable readiness (~39%) before launch."
+    ],
+    "deferred_diligence": {
+      "financial_diligence": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "cap_table": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "team_diligence": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "market_sizing": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "traction_metrics": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "unit_economics": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      }
+    },
+    "honesty_note": "Investor recommendation band mapped from the funding-readiness stage + reachable headroom (model-simulated, not causal), with the top risk surfaced. Standard diligence (financials, cap table, team, market, traction) is deferred \u2014 no data."
+  }
+]

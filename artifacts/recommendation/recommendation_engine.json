@@ -1,0 +1,188 @@
+{
+  "version": "1.0.0",
+  "created_utc": "2026-08-04T11:02:20.785480+00:00",
+  "architecture_layer": 11,
+  "note": "Recommendation engine = decision policy over the Day-4 model + Day-8/9/10 engines. Deterministic, no LLM; aggregates real signals into one evidence-backed venture decision. Model-simulated, not causal.",
+  "engine_config": {
+    "aggregator": {
+      "top_drivers": 4,
+      "out_path": "artifacts/recommendation/venture_intelligence.json"
+    },
+    "generator": {
+      "critical_impact_points": 15,
+      "high_impact_points": 5,
+      "out_path": "artifacts/recommendation/strategic_recommendations.json"
+    },
+    "prioritization": {
+      "weights": {
+        "impact": 0.3,
+        "evidence": 0.2,
+        "investor_overlap": 0.15,
+        "scenario_gain": 0.2,
+        "feasibility": 0.05,
+        "confidence": 0.1
+      },
+      "impact_scale_points": 25,
+      "evidence_lift_span": 0.6,
+      "min_evidence_n": 100,
+      "scenario_gain_scale": 0.25,
+      "out_path": "artifacts/recommendation/prioritized_actions.json"
+    },
+    "founder": {
+      "focus_first_n": 2,
+      "out_path": "artifacts/recommendation/founder_strategy.json"
+    },
+    "investor": {
+      "low_confidence_downgrade": 0.6,
+      "out_path": "artifacts/recommendation/investor_strategy.json"
+    },
+    "confidence": {
+      "weights": {
+        "prediction_margin": 0.25,
+        "cohort_agreement": 0.15,
+        "pattern_support": 0.2,
+        "scenario_stability": 0.15,
+        "cf_stability": 0.15,
+        "model_agreement": 0.1
+      },
+      "margin_scale": 0.3,
+      "pattern_top_k": 3,
+      "pattern_lift_span": 0.6,
+      "pattern_min_n": 100,
+      "stability_scale": 0.2,
+      "floor": 0.5,
+      "ceil": 0.99,
+      "use_model_agreement": true,
+      "extra_models": {
+        "best_model": "artifacts/models/best_model.joblib",
+        "logistic_regression": "artifacts/models/logistic_regression.joblib"
+      },
+      "out_path": "artifacts/recommendation/confidence_scores.json"
+    },
+    "pipeline": {
+      "out_path": "artifacts/recommendation/unified_recommendations.json"
+    }
+  },
+  "decision_policy": {
+    "prioritization_weights": {
+      "impact": 0.3,
+      "evidence": 0.2,
+      "investor_overlap": 0.15,
+      "scenario_gain": 0.2,
+      "feasibility": 0.05,
+      "confidence": 0.1
+    },
+    "confidence_weights": {
+      "prediction_margin": 0.25,
+      "cohort_agreement": 0.15,
+      "pattern_support": 0.2,
+      "scenario_stability": 0.15,
+      "cf_stability": 0.15,
+      "model_agreement": 0.1
+    },
+    "confidence_range": [
+      0.5,
+      0.99
+    ],
+    "use_model_agreement": true,
+    "investor_bands": {
+      "Strong Investment": "stage == Strong",
+      "Proceed with Caution": "stage == Ready, or Fixable with optimized_p >= threshold + strong_margin",
+      "Monitor Progress": "Fixable with borderline optimized_p (or a positive band downgraded by low confidence)",
+      "Do Not Invest Yet": "Not ready (optimized_p < threshold)"
+    },
+    "low_confidence_downgrade": 0.6,
+    "readiness_index": "round(100 * mean(funding_probability, optimized_probability))"
+  },
+  "content_hash": "b3a5439f5991e4f3bd972c8e1f49b26798606ff7c075b76bde8c68fffef9db0e",
+  "dependencies": {
+    "day4_calibrated_model": {
+      "path": "artifacts/models/calibrated_model.joblib",
+      "exists": true,
+      "bytes": 21472372,
+      "sha256": "dde1cdef14554bc57482ce98a985851b02e926cd2dca115cb0ca4423efa3e677"
+    },
+    "day8_counterfactual_engine": {
+      "path": "artifacts/counterfactual/counterfactual_engine.json",
+      "exists": true,
+      "bytes": 4004,
+      "sha256": "e876ff39cb935956861bf34876c5aacae816f8fbcaefa7e4b8b43ea344dae4f2"
+    },
+    "day9_copilot_engine": {
+      "path": "artifacts/copilot/venture_copilot.json",
+      "exists": true,
+      "bytes": 5143,
+      "sha256": "75acdc4a898639d74727dbf8e8cef36b2bb3979da41fa37bb3953c8bb191fcdd"
+    },
+    "day10_evolution_planner": {
+      "path": "artifacts/evolution/evolution_planner_engine.json",
+      "exists": true,
+      "bytes": 4482,
+      "sha256": "0843d97df9588338bc95d8041cddb0b84d66806e2a262f14a075b22eddf8c914"
+    }
+  },
+  "artifacts": {
+    "venture_intelligence": {
+      "path": "artifacts/recommendation/venture_intelligence.json",
+      "exists": true,
+      "bytes": 78341,
+      "sha256": "1810613fc6dfe1d063c8b9e95a4805ce7553dcaba323e182849b33da13a45ac0"
+    },
+    "strategic_recommendations": {
+      "path": "artifacts/recommendation/strategic_recommendations.json",
+      "exists": true,
+      "bytes": 10768,
+      "sha256": "ba86ed7cb47834f25c1ae928c867f3310ea8f06ebe5666146740e8452a6325d3"
+    },
+    "prioritized_actions": {
+      "path": "artifacts/recommendation/prioritized_actions.json",
+      "exists": true,
+      "bytes": 9680,
+      "sha256": "da7e31a99ec4091fdf77f99c24e63cf1b47c7bacce548707002ca45c882e476c"
+    },
+    "founder_strategy": {
+      "path": "artifacts/recommendation/founder_strategy.json",
+      "exists": true,
+      "bytes": 9636,
+      "sha256": "e9e6d0c7229ab27c8b054e2f55ce7409fb591e905c9d612f5eddb2e83c14cf04"
+    },
+    "investor_strategy": {
+      "path": "artifacts/recommendation/investor_strategy.json",
+      "exists": true,
+      "bytes": 6723,
+      "sha256": "9f0e3853f59e240d43c5dd04e96f3e7a1e0effd04d76228803e3aaec6f58bcc1"
+    },
+    "confidence_scores": {
+      "path": "artifacts/recommendation/confidence_scores.json",
+      "exists": true,
+      "bytes": 3866,
+      "sha256": "da60e34048a176883d10ff2e8b2e4cbe45bbc9dcc217548776124fbc160d3a6e"
+    },
+    "unified_recommendations": {
+      "path": "artifacts/recommendation/unified_recommendations.json",
+      "exists": true,
+      "bytes": 65961,
+      "sha256": "828fad0a31320e4667093072bbf87098b7136fff67570305af1aa84065d6f9f0"
+    }
+  },
+  "deferred_items": [
+    "customer_retention",
+    "monthly_revenue",
+    "revenue_growth",
+    "unit_economics",
+    "competitive_moat",
+    "named_competitors",
+    "founder_experience",
+    "team_size",
+    "pricing_strategy",
+    "market_size_tam",
+    "product_traction",
+    "funding_rounds",
+    "growth_trajectory",
+    "product_strategy",
+    "team_strategy",
+    "financial_strategy",
+    "technology_strategy",
+    "go_to_market_strategy"
+  ]
+}

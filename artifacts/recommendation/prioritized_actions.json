@@ -1,0 +1,257 @@
+[
+  {
+    "campaign": {
+      "name": "Artificer - Board Game",
+      "main_category": "Games",
+      "usd_goal_real": 30515.72,
+      "country": "CA"
+    },
+    "weights": {
+      "impact": 0.3,
+      "evidence": 0.2,
+      "investor_overlap": 0.15,
+      "scenario_gain": 0.2,
+      "feasibility": 0.05,
+      "confidence": 0.1
+    },
+    "prioritized_actions": [
+      {
+        "feature": "campaign_duration",
+        "category": "Campaign Strategy",
+        "action": "Shorten your campaign from 29 to 15 days",
+        "priority_label": "Critical",
+        "expected_impact_points": 30,
+        "funding_influence": 0.2957,
+        "reason": "Campaign length materially shifts funding odds; a tighter window concentrates backer momentum.",
+        "evidence": "Games campaigns with a <=15d campaign funded at 66% vs a 40% baseline (lift 1.62, n=1,331).",
+        "confidence": "high",
+        "source_priority": 1,
+        "priority_score": 0.85,
+        "factors": {
+          "impact": 1.0,
+          "evidence": 1.0,
+          "investor_overlap": 0.0,
+          "scenario_gain": 1.0,
+          "feasibility": 1.0,
+          "confidence": 1.0
+        },
+        "rank": 1
+      },
+      {
+        "feature": "goal",
+        "category": "Fundraising Strategy",
+        "action": "Lower your funding goal from $30,516 to $5,000",
+        "priority_label": "High",
+        "expected_impact_points": 12,
+        "funding_influence": 0.1167,
+        "reason": "The funding goal is the single strongest lever on fundability \u2014 right-sizing it to a category-proven level most improves the odds.",
+        "evidence": "Games campaigns asking goal <= $5,000 funded at 55% vs a 40% baseline (lift 1.36, n=9,834). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed.",
+        "confidence": "high",
+        "source_priority": 2,
+        "priority_score": 0.6577,
+        "factors": {
+          "impact": 0.48,
+          "evidence": 0.602,
+          "investor_overlap": 1.0,
+          "scenario_gain": 0.467,
+          "feasibility": 1.0,
+          "confidence": 1.0
+        },
+        "rank": 2
+      },
+      {
+        "feature": "title",
+        "category": "Campaign Strategy",
+        "action": "Add a number to your title (e.g. an edition or volume number)",
+        "priority_label": "Medium",
+        "expected_impact_points": 4,
+        "funding_influence": 0.0352,
+        "reason": "Title framing is a cheap signal the model associates with funded campaigns.",
+        "evidence": "Games campaigns with a number in the title funded at 59% vs a 40% baseline (lift 1.46, n=2,823).",
+        "confidence": "medium",
+        "source_priority": 4,
+        "priority_score": 0.3338,
+        "factors": {
+          "impact": 0.16,
+          "evidence": 0.76,
+          "investor_overlap": 0.0,
+          "scenario_gain": 0.169,
+          "feasibility": 0.8,
+          "confidence": 0.6
+        },
+        "rank": 3
+      },
+      {
+        "feature": "launch_weekday",
+        "category": "Campaign Strategy",
+        "action": "Launch on Tuesday instead of Thursday",
+        "priority_label": "Medium",
+        "expected_impact_points": 3,
+        "funding_influence": 0.0257,
+        "reason": "Launch timing is a near-zero-cost lever \u2014 the funded cohort clusters on specific weekdays.",
+        "evidence": "Games campaigns launched on Tuesday funded at 50% vs a 40% baseline (lift 1.24, n=5,071).",
+        "confidence": "medium",
+        "source_priority": 5,
+        "priority_score": 0.2437,
+        "factors": {
+          "impact": 0.12,
+          "evidence": 0.403,
+          "investor_overlap": 0.0,
+          "scenario_gain": 0.11,
+          "feasibility": 0.9,
+          "confidence": 0.6
+        },
+        "rank": 4
+      }
+    ],
+    "honesty_note": "Ranked by a transparent weighted mean of six cross-layer factors (each shown). This ADDS investor-concern overlap and scenario-gain to Day-8's ranking \u2014 it doesn't override the model. Model-simulated, not causal."
+  },
+  {
+    "campaign": {
+      "name": "Sequel to \"I'm a Cow\" song and animation video",
+      "main_category": "Film & Video",
+      "usd_goal_real": 15000.0,
+      "country": "US"
+    },
+    "weights": {
+      "impact": 0.3,
+      "evidence": 0.2,
+      "investor_overlap": 0.15,
+      "scenario_gain": 0.2,
+      "feasibility": 0.05,
+      "confidence": 0.1
+    },
+    "prioritized_actions": [
+      {
+        "feature": "goal",
+        "category": "Fundraising Strategy",
+        "action": "Lower your funding goal from $15,000 to $5,000",
+        "priority_label": "High",
+        "expected_impact_points": 9,
+        "funding_influence": 0.0905,
+        "reason": "The funding goal is the single strongest lever on fundability \u2014 right-sizing it to a category-proven level most improves the odds.",
+        "evidence": "Film & Video campaigns asking goal <= $5,000 funded at 51% vs a 40% baseline (lift 1.27, n=20,767). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed.",
+        "confidence": "high",
+        "source_priority": 1,
+        "priority_score": 0.5697,
+        "factors": {
+          "impact": 0.36,
+          "evidence": 0.447,
+          "investor_overlap": 1.0,
+          "scenario_gain": 0.362,
+          "feasibility": 1.0,
+          "confidence": 1.0
+        },
+        "rank": 1
+      },
+      {
+        "feature": "campaign_duration",
+        "category": "Campaign Strategy",
+        "action": "Shorten your campaign from 18 to 30 days",
+        "priority_label": "High",
+        "expected_impact_points": 12,
+        "funding_influence": 0.1187,
+        "reason": "Campaign length materially shifts funding odds; a tighter window concentrates backer momentum.",
+        "evidence": "Film & Video campaigns with a 16-30d campaign funded at 44% vs a 40% baseline (lift 1.10, n=26,194).",
+        "confidence": "medium",
+        "source_priority": 2,
+        "priority_score": 0.3782,
+        "factors": {
+          "impact": 0.48,
+          "evidence": 0.165,
+          "investor_overlap": 0.0,
+          "scenario_gain": 0.456,
+          "feasibility": 1.0,
+          "confidence": 0.6
+        },
+        "rank": 2
+      },
+      {
+        "feature": "launch_weekday",
+        "category": "Campaign Strategy",
+        "action": "Launch on Tuesday instead of Sunday",
+        "priority_label": "High",
+        "expected_impact_points": 7,
+        "funding_influence": 0.069,
+        "reason": "Launch timing is a near-zero-cost lever \u2014 the funded cohort clusters on specific weekdays.",
+        "evidence": "Film & Video campaigns launched on Tuesday funded at 43% vs a 40% baseline (lift 1.07, n=8,753).",
+        "confidence": "medium",
+        "source_priority": 4,
+        "priority_score": 0.2595,
+        "factors": {
+          "impact": 0.28,
+          "evidence": 0.108,
+          "investor_overlap": 0.0,
+          "scenario_gain": 0.244,
+          "feasibility": 0.9,
+          "confidence": 0.6
+        },
+        "rank": 3
+      }
+    ],
+    "honesty_note": "Ranked by a transparent weighted mean of six cross-layer factors (each shown). This ADDS investor-concern overlap and scenario-gain to Day-8's ranking \u2014 it doesn't override the model. Model-simulated, not causal."
+  },
+  {
+    "campaign": {
+      "name": "Organika Cases - Phone cases from real natural materials",
+      "main_category": "Fashion",
+      "usd_goal_real": 13000.0,
+      "country": "US"
+    },
+    "weights": {
+      "impact": 0.3,
+      "evidence": 0.2,
+      "investor_overlap": 0.15,
+      "scenario_gain": 0.2,
+      "feasibility": 0.05,
+      "confidence": 0.1
+    },
+    "prioritized_actions": [
+      {
+        "feature": "goal",
+        "category": "Fundraising Strategy",
+        "action": "Lower your funding goal from $13,000 to $5,000",
+        "priority_label": "Medium",
+        "expected_impact_points": 3,
+        "funding_influence": 0.0298,
+        "reason": "The funding goal is the single strongest lever on fundability \u2014 right-sizing it to a category-proven level most improves the odds.",
+        "evidence": "Fashion campaigns asking goal <= $5,000 funded at 31% vs a 40% baseline (lift 0.76, n=7,747). Funded campaigns here had a median goal of $5,000 vs $6,000 for failed.",
+        "confidence": "medium",
+        "source_priority": 1,
+        "priority_score": 0.3198,
+        "factors": {
+          "impact": 0.12,
+          "evidence": 0.0,
+          "investor_overlap": 1.0,
+          "scenario_gain": 0.119,
+          "feasibility": 1.0,
+          "confidence": 0.6
+        },
+        "rank": 1
+      },
+      {
+        "feature": "title",
+        "category": "Campaign Strategy",
+        "action": "Add a number to your title (e.g. an edition or volume number)",
+        "priority_label": "Medium",
+        "expected_impact_points": 1,
+        "funding_influence": 0.0125,
+        "reason": "Title framing is a cheap signal the model associates with funded campaigns.",
+        "evidence": "Fashion campaigns with a number in the title funded at 35% vs a 40% baseline (lift 0.87, n=1,435).",
+        "confidence": "low",
+        "source_priority": 3,
+        "priority_score": 0.0935,
+        "factors": {
+          "impact": 0.04,
+          "evidence": 0.0,
+          "investor_overlap": 0.0,
+          "scenario_gain": 0.058,
+          "feasibility": 0.8,
+          "confidence": 0.3
+        },
+        "rank": 2
+      }
+    ],
+    "honesty_note": "Ranked by a transparent weighted mean of six cross-layer factors (each shown). This ADDS investor-concern overlap and scenario-gain to Day-8's ranking \u2014 it doesn't override the model. Model-simulated, not causal."
+  }
+]

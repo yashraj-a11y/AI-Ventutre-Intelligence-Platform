@@ -1,0 +1,2015 @@
+[
+  {
+    "campaign": {
+      "name": "Artificer - Board Game",
+      "main_category": "Games",
+      "usd_goal_real": 30515.72,
+      "country": "CA"
+    },
+    "prediction": {
+      "funding_probability": 0.242,
+      "predicted_label": "failed",
+      "threshold": 0.329
+    },
+    "drivers": {
+      "top_positive": [
+        {
+          "feature": "category_freq",
+          "contribution": 0.7616,
+          "descriptor": "category_freq"
+        },
+        {
+          "feature": "main_category_Games",
+          "contribution": 0.1414,
+          "descriptor": "main_category_Games"
+        },
+        {
+          "feature": "uppercase_ratio",
+          "contribution": 0.0559,
+          "descriptor": "uppercase_ratio"
+        },
+        {
+          "feature": "board game",
+          "contribution": 0.0335,
+          "descriptor": "title term 'board game'"
+        }
+      ],
+      "top_negative": [
+        {
+          "feature": "usd_goal_real",
+          "contribution": -0.4206,
+          "descriptor": "usd_goal_real"
+        },
+        {
+          "feature": "game",
+          "contribution": -0.2383,
+          "descriptor": "title term 'game'"
+        },
+        {
+          "feature": "goal_per_day",
+          "contribution": -0.1635,
+          "descriptor": "goal_per_day"
+        },
+        {
+          "feature": "title_length",
+          "contribution": -0.1296,
+          "descriptor": "title_length"
+        }
+      ]
+    },
+    "counterfactual": {
+      "ranked_recommendations": [
+        {
+          "feature": "campaign_duration",
+          "current": 29,
+          "proposed": 15,
+          "tier": "moderate",
+          "rationale_key": "shorter_campaign",
+          "baseline_p": 0.242,
+          "new_p": 0.5377,
+          "delta": 0.2957,
+          "raw_changes": {
+            "deadline": "2015-07-31 04:16:42"
+          },
+          "evidence": {
+            "available": true,
+            "source": "pattern_mining (Day-7 train substrate)",
+            "scope": "Games campaigns",
+            "item": "duration_band=<=15d",
+            "n": 1331,
+            "confidence": 0.6551,
+            "lift": 1.622,
+            "base_rate": 0.4038,
+            "statement": "Games campaigns with a <=15d campaign funded at 66% vs a 40% baseline (lift 1.62, n=1,331)."
+          },
+          "score": 0.40768,
+          "feasibility": 1.0,
+          "confidence": "high",
+          "cost_label": "low (pre-launch setting)",
+          "time_label": "immediate (set before launch)",
+          "labels_are_heuristic": true,
+          "priority": 1,
+          "explanation": "Shorten your campaign from 29 to 15 days. The model estimates your funding probability would rise from 24% to 54% (+30 points). Games campaigns with a <=15d campaign funded at 66% vs a 40% baseline (lift 1.62, n=1,331). Confidence: high. Note: this is the model's estimate based on historical association, not a guarantee."
+        },
+        {
+          "feature": "goal",
+          "current": 30515.72,
+          "proposed": 5000.0,
+          "tier": "strong",
+          "rationale_key": "category_funded_median",
+          "baseline_p": 0.242,
+          "new_p": 0.3587,
+          "delta": 0.1167,
+          "raw_changes": {
+            "goal": 6554.0,
+            "usd_goal_real": 5000.0
+          },
+          "evidence": {
+            "available": true,
+            "source": "pattern_mining (Day-7 train substrate)",
+            "scope": "Games campaigns",
+            "item": "goal <= $5,000",
+            "n": 9834,
+            "confidence": 0.5496,
+            "lift": 1.361,
+            "base_rate": 0.4038,
+            "funded_median_goal_usd": 5000.0,
+            "failed_median_goal_usd": 10000.0,
+            "statement": "Games campaigns asking goal <= $5,000 funded at 55% vs a 40% baseline (lift 1.36, n=9,834). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+          },
+          "score": 0.15883,
+          "feasibility": 1.0,
+          "confidence": "high",
+          "cost_label": "low (pre-launch setting)",
+          "time_label": "immediate (set before launch)",
+          "labels_are_heuristic": true,
+          "priority": 2,
+          "explanation": "Lower your funding goal from $30,516 to $5,000. The model estimates your funding probability would rise from 24% to 36% (+12 points). Games campaigns asking goal <= $5,000 funded at 55% vs a 40% baseline (lift 1.36, n=9,834). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed. Confidence: high. Note: this is the model's estimate based on historical association, not a guarantee."
+        },
+        {
+          "feature": "goal",
+          "current": 30515.72,
+          "proposed": 15257.86,
+          "tier": "moderate",
+          "rationale_key": "reduce_to_50pct",
+          "baseline_p": 0.242,
+          "new_p": 0.2758,
+          "delta": 0.0338,
+          "raw_changes": {
+            "goal": 20000.0,
+            "usd_goal_real": 15257.86
+          },
+          "evidence": {
+            "available": true,
+            "source": "pattern_mining (Day-7 train substrate)",
+            "scope": "Games campaigns",
+            "item": "goal <= $15,258",
+            "n": 16294,
+            "confidence": 0.5003,
+            "lift": 1.239,
+            "base_rate": 0.4038,
+            "funded_median_goal_usd": 5000.0,
+            "failed_median_goal_usd": 10000.0,
+            "statement": "Games campaigns asking goal <= $15,258 funded at 50% vs a 40% baseline (lift 1.24, n=16,294). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+          },
+          "score": 0.0356,
+          "feasibility": 1.0,
+          "confidence": "high",
+          "cost_label": "low (pre-launch setting)",
+          "time_label": "immediate (set before launch)",
+          "labels_are_heuristic": true,
+          "priority": 3,
+          "explanation": "Lower your funding goal from $30,516 to $15,258. The model estimates your funding probability would rise from 24% to 28% (+3 points). Games campaigns asking goal <= $15,258 funded at 50% vs a 40% baseline (lift 1.24, n=16,294). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed. Confidence: high. Note: this is the model's estimate based on historical association, not a guarantee."
+        },
+        {
+          "feature": "title",
+          "current": "no number",
+          "proposed": "has number",
+          "tier": "suggestive",
+          "rationale_key": "title_has_number",
+          "baseline_p": 0.242,
+          "new_p": 0.2772,
+          "delta": 0.0352,
+          "raw_changes": {
+            "name": "Artificer - Board Game 2",
+            "name_clean": "artificer board game 2"
+          },
+          "evidence": {
+            "available": true,
+            "source": "pattern_mining (Day-7 train substrate)",
+            "scope": "Games campaigns",
+            "item": "has_number=has number",
+            "n": 2823,
+            "confidence": 0.588,
+            "lift": 1.456,
+            "base_rate": 0.4038,
+            "statement": "Games campaigns with a number in the title funded at 59% vs a 40% baseline (lift 1.46, n=2,823)."
+          },
+          "score": 0.0287,
+          "feasibility": 0.8,
+          "confidence": "medium",
+          "cost_label": "low (pre-launch setting)",
+          "time_label": "immediate (set before launch)",
+          "labels_are_heuristic": true,
+          "priority": 4,
+          "explanation": "Add a number to your title (e.g. an edition or volume number). The model estimates your funding probability would rise from 24% to 28% (+4 points). Games campaigns with a number in the title funded at 59% vs a 40% baseline (lift 1.46, n=2,823). Confidence: medium. Note: this is the model's estimate based on historical association, not a guarantee."
+        },
+        {
+          "feature": "launch_weekday",
+          "current": "Thursday",
+          "proposed": "Tuesday",
+          "tier": "suggestive",
+          "rationale_key": "best_weekday",
+          "baseline_p": 0.242,
+          "new_p": 0.2677,
+          "delta": 0.0257,
+          "raw_changes": {
+            "launched": "2015-07-21 04:16:42",
+            "deadline": "2015-08-20 00:00:00"
+          },
+          "evidence": {
+            "available": true,
+            "source": "pattern_mining (Day-7 train substrate)",
+            "scope": "Games campaigns",
+            "item": "launch_weekday=Tuesday",
+            "n": 5071,
+            "confidence": 0.5017,
+            "lift": 1.242,
+            "base_rate": 0.4038,
+            "statement": "Games campaigns launched on Tuesday funded at 50% vs a 40% baseline (lift 1.24, n=5,071)."
+          },
+          "score": 0.02011,
+          "feasibility": 0.9,
+          "confidence": "medium",
+          "cost_label": "low (pre-launch setting)",
+          "time_label": "immediate (set before launch)",
+          "labels_are_heuristic": true,
+          "priority": 5,
+          "explanation": "Launch on Tuesday instead of Thursday. The model estimates your funding probability would rise from 24% to 27% (+3 points). Games campaigns launched on Tuesday funded at 50% vs a 40% baseline (lift 1.24, n=5,071). Confidence: medium. Note: this is the model's estimate based on historical association, not a guarantee."
+        }
+      ],
+      "optimization_plan": {
+        "baseline_p": 0.242,
+        "final_p": 0.664,
+        "total_gain": 0.422,
+        "n_steps": 3,
+        "steps": [
+          {
+            "feature": "campaign_duration",
+            "current": 29,
+            "proposed": 15,
+            "tier": "moderate",
+            "rationale_key": "shorter_campaign",
+            "cumulative_p": 0.5377,
+            "marginal_gain": 0.2957,
+            "raw_changes": {
+              "deadline": "2015-07-31 04:16:42"
+            },
+            "action": "Shorten your campaign from 29 to 15 days",
+            "confidence": "high",
+            "evidence": "Games campaigns with a <=15d campaign funded at 66% vs a 40% baseline (lift 1.62, n=1,331)."
+          },
+          {
+            "feature": "goal",
+            "current": 30515.72,
+            "proposed": 5000.0,
+            "tier": "strong",
+            "rationale_key": "category_funded_median",
+            "cumulative_p": 0.6166,
+            "marginal_gain": 0.0789,
+            "raw_changes": {
+              "goal": 6554.0,
+              "usd_goal_real": 5000.0
+            },
+            "action": "Lower your funding goal from $30,516 to $5,000",
+            "confidence": "high",
+            "evidence": "Games campaigns asking goal <= $5,000 funded at 55% vs a 40% baseline (lift 1.36, n=9,834). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+          },
+          {
+            "feature": "title",
+            "current": "no number",
+            "proposed": "has number",
+            "tier": "suggestive",
+            "rationale_key": "title_has_number",
+            "cumulative_p": 0.664,
+            "marginal_gain": 0.0474,
+            "raw_changes": {
+              "name": "Artificer - Board Game 2",
+              "name_clean": "artificer board game 2"
+            },
+            "action": "Add a number to your title (e.g. an edition or volume number)",
+            "confidence": "medium",
+            "evidence": "Games campaigns with a number in the title funded at 59% vs a 40% baseline (lift 1.46, n=2,823)."
+          }
+        ],
+        "note": "Cumulative probabilities are re-simulated jointly through the calibrated model, not summed. Model-simulated estimate, not a causal guarantee."
+      }
+    },
+    "copilot": {
+      "investor_objections": [
+        {
+          "dimension": "goal_size",
+          "concern": "Your $30,516 goal is high for Games, where funded campaigns typically ask a median of $5,000. Why this ask \u2014 and can you hit it?",
+          "severity": "High",
+          "concern_score": 1.0,
+          "reason": "Goal $30,516 vs Games funded-median $5,000 (6.1x).",
+          "suggested_response": "Lower your funding goal from $30,516 to $5,000 \u2014 the model estimates about +12 points (36%).",
+          "source_layer": "Day-5 SHAP + Day-7 patterns",
+          "evidence": {
+            "goal": 30515.72,
+            "funded_median": 5000.0
+          },
+          "honesty_note": "Model predictions + historical associations reframed as investor-style concerns \u2014 not a real investor's judgement."
+        },
+        {
+          "dimension": "funding_odds",
+          "concern": "The model estimates only a 24% funding probability \u2014 below the ~33% decision threshold. How will you beat these odds?",
+          "severity": "Medium",
+          "concern_score": 0.264,
+          "reason": "Calibrated funding probability 24% vs 33% bar.",
+          "suggested_response": "Shorten your campaign from 29 to 15 days \u2014 the model estimates about +30 points (54%).",
+          "source_layer": "Day-4 prediction",
+          "evidence": {
+            "probability": 0.242,
+            "threshold": 0.329
+          },
+          "honesty_note": "Model predictions + historical associations reframed as investor-style concerns \u2014 not a real investor's judgement."
+        },
+        {
+          "dimension": "cohort",
+          "concern": "Among campaigns most like yours (Games, a large goal), only 31% funded. What sets you apart from the 4,712 that came before?",
+          "severity": "Medium",
+          "concern_score": 0.231,
+          "reason": "Cohort (Games + a large goal) funding rate 31% vs 40% (n=4,712).",
+          "suggested_response": "Lower your funding goal from $30,516 to $5,000 \u2014 the model estimates about +12 points (36%).",
+          "source_layer": "Day-6/7 cohort",
+          "evidence": {
+            "cohort_rate": 0.3105,
+            "lift": 0.769,
+            "n": 4712
+          },
+          "honesty_note": "Model predictions + historical associations reframed as investor-style concerns \u2014 not a real investor's judgement."
+        }
+      ],
+      "risk_analysis": {
+        "campaign": {
+          "name": "Artificer - Board Game",
+          "main_category": "Games",
+          "usd_goal_real": 30515.72
+        },
+        "funding_probability": 0.242,
+        "failure_risk": 0.758,
+        "overall_risk_level": "High",
+        "risks": [
+          {
+            "category": "financial_goal_risk",
+            "severity": "High",
+            "score": 1.0,
+            "reason": "Goal $30,516 is 6.1x the Games funded-median ($5,000); large goals are harder to reach.",
+            "historical_evidence": "Funded Games campaigns asked a median $5,000.",
+            "source_layer": "Day-7 patterns",
+            "evidence": {
+              "goal": 30515.72,
+              "funded_median": 5000.0
+            }
+          },
+          {
+            "category": "funding_risk",
+            "severity": "High",
+            "score": 0.758,
+            "reason": "Modeled failure risk 76% (funding probability 24%, below the 33% threshold).",
+            "historical_evidence": "Calibrated model: 24% funding probability.",
+            "source_layer": "Day-4 prediction",
+            "evidence": {
+              "failure_risk": 0.758,
+              "threshold": 0.329
+            }
+          },
+          {
+            "category": "cohort_risk",
+            "severity": "Medium",
+            "score": 0.231,
+            "reason": "Similar campaigns (Games, a large goal) funded at only 31% (lift 0.77).",
+            "historical_evidence": "Cohort funding rate 31% vs 40% (n=4,712).",
+            "source_layer": "Day-6/7 cohort",
+            "evidence": {
+              "lift": 0.769,
+              "n": 4712
+            }
+          }
+        ],
+        "deferred_risks": {
+          "technology_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "founder_team_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "unit_economics_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "regulatory_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "market_size_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          }
+        },
+        "honesty_note": "Risks derived from model predictions + historical funding rates (metadata + titles). Founder / market / financial / regulatory risks are deferred \u2014 no data."
+      },
+      "swot": {
+        "campaign": {
+          "name": "Artificer - Board Game",
+          "main_category": "Games",
+          "usd_goal_real": 30515.72
+        },
+        "funding_probability": 0.242,
+        "strengths": [
+          {
+            "point": "A typical project category",
+            "shap_contribution": 0.762,
+            "source": "Day-5 SHAP"
+          },
+          {
+            "point": "Being a Games project",
+            "shap_contribution": 0.141,
+            "source": "Day-5 SHAP"
+          },
+          {
+            "point": "A typical use of capital letters in the title",
+            "shap_contribution": 0.056,
+            "source": "Day-5 SHAP"
+          },
+          {
+            "point": "The title phrase 'board game'",
+            "shap_contribution": 0.034,
+            "source": "Day-5 SHAP"
+          }
+        ],
+        "weaknesses": [
+          {
+            "point": "A large funding goal",
+            "shap_contribution": -0.421,
+            "source": "Day-5 SHAP"
+          },
+          {
+            "point": "The title term 'game'",
+            "shap_contribution": -0.238,
+            "source": "Day-5 SHAP"
+          },
+          {
+            "point": "A steep daily funding target",
+            "shap_contribution": -0.164,
+            "source": "Day-5 SHAP"
+          },
+          {
+            "point": "A short title length",
+            "shap_contribution": -0.13,
+            "source": "Day-5 SHAP"
+          }
+        ],
+        "opportunities": [
+          {
+            "point": "Shorten your campaign from 29 to 15 days",
+            "estimated_gain_points": 30,
+            "source": "Day-8 counterfactual"
+          },
+          {
+            "point": "Lower your funding goal from $30,516 to $5,000",
+            "estimated_gain_points": 12,
+            "source": "Day-8 counterfactual"
+          },
+          {
+            "point": "Lower your funding goal from $30,516 to $15,258",
+            "estimated_gain_points": 3,
+            "source": "Day-8 counterfactual"
+          },
+          {
+            "point": "Add a number to your title (e.g. an edition or volume number)",
+            "estimated_gain_points": 4,
+            "source": "Day-8 counterfactual"
+          }
+        ],
+        "threats": [
+          {
+            "point": "Weak cohort: similar campaigns mostly fail",
+            "evidence": "31% of Games + a large goal campaigns funded (n=4,712)",
+            "source": "Day-6/7 cohort"
+          }
+        ],
+        "deferred_threats": {
+          "market_threats": {
+            "status": "deferred",
+            "reason": "no market data in this dataset"
+          },
+          "competitor_threats": {
+            "status": "deferred",
+            "reason": "no named-competitor data"
+          }
+        },
+        "honesty_note": "SWOT reframed from model SHAP contributions, historical patterns, and counterfactuals \u2014 not a real investor's judgement. Market/competitor threats deferred."
+      },
+      "category_analysis": {
+        "campaign": {
+          "name": "Artificer - Board Game",
+          "main_category": "Games",
+          "usd_goal_real": 30515.72
+        },
+        "category": "Games",
+        "category_funding_rate": 0.4395,
+        "category_lift": 1.088,
+        "n_campaigns": 22878,
+        "market_opportunity": "Neutral",
+        "crowding": "Crowded",
+        "year_trend": {
+          "direction": "rising",
+          "by_year": [
+            {
+              "year": "2010",
+              "funding_rate": 0.3129,
+              "lift": 0.775,
+              "n": 163
+            },
+            {
+              "year": "2011",
+              "funding_rate": 0.4071,
+              "lift": 1.008,
+              "n": 592
+            },
+            {
+              "year": "2012",
+              "funding_rate": 0.385,
+              "lift": 0.953,
+              "n": 1961
+            },
+            {
+              "year": "2013",
+              "funding_rate": 0.4437,
+              "lift": 1.099,
+              "n": 2709
+            },
+            {
+              "year": "2014",
+              "funding_rate": 0.405,
+              "lift": 1.003,
+              "n": 3894
+            },
+            {
+              "year": "2015",
+              "funding_rate": 0.3882,
+              "lift": 0.961,
+              "n": 4737
+            },
+            {
+              "year": "2016",
+              "funding_rate": 0.4658,
+              "lift": 1.154,
+              "n": 4446
+            },
+            {
+              "year": "2017",
+              "funding_rate": 0.5297,
+              "lift": 1.312,
+              "n": 4340
+            }
+          ]
+        },
+        "market_timing": "Favorable",
+        "goal_norms": {
+          "funded_median_goal_usd": 5000.0,
+          "failed_median_goal_usd": 10000.0
+        },
+        "summary": "The Games segment has a 44% historical funding rate (lift 1.09, neutral opportunity), across 22,878 campaigns (crowded). Funding rates have risen over time, making market timing favorable. (Within-Kickstarter read; external market size/CAGR not available.)",
+        "deferred": {
+          "tam_sam_som": {
+            "status": "deferred",
+            "reason": "no market-size data"
+          },
+          "market_cagr_growth": {
+            "status": "deferred",
+            "reason": "no external growth data"
+          },
+          "external_market_data": {
+            "status": "deferred",
+            "reason": "dataset is Kickstarter only"
+          }
+        },
+        "honesty_note": "A within-Kickstarter category read from our own data \u2014 NOT external market size, CAGR, or industry analysis (those are deferred: no data)."
+      },
+      "competition_analysis": {
+        "campaign": {
+          "name": "Artificer - Board Game",
+          "main_category": "Games",
+          "usd_goal_real": 30515.72
+        },
+        "category": "Games",
+        "competitive_intensity": {
+          "level": "Crowded",
+          "n_campaigns": 22878,
+          "share_of_all": 0.0863
+        },
+        "what_winners_do": [
+          "Ask for less: funded campaigns' median goal is $5,000 vs $10,000 for those that failed."
+        ],
+        "your_position": {
+          "goal_usd": 30515.72,
+          "winners_median_goal_usd": 5000.0,
+          "positioned_like": "strugglers",
+          "notes": [
+            "Your $30,516 goal is 6.1x the winners' median ($5,000) \u2014 priced like the campaigns that failed."
+          ]
+        },
+        "deferred": {
+          "named_competitors": {
+            "status": "deferred",
+            "reason": "no competitor data in this dataset"
+          },
+          "moat_defensibility": {
+            "status": "deferred",
+            "reason": "no product/IP data"
+          },
+          "proprietary_data_network_effects": {
+            "status": "deferred",
+            "reason": "no such data"
+          }
+        },
+        "honesty_note": "Competition = other campaigns in your category (our own data). Named competitors, moat, and defensibility are deferred \u2014 no data."
+      },
+      "recommendations": {
+        "campaign": {
+          "name": "Artificer - Board Game",
+          "main_category": "Games",
+          "usd_goal_real": 30515.72
+        },
+        "current_probability": 0.242,
+        "optimized_probability": 0.664,
+        "threshold": 0.329,
+        "recommendations": [
+          {
+            "type": "action",
+            "recommendation": "Shorten your campaign from 29 to 15 days",
+            "rationale": "Games campaigns with a <=15d campaign funded at 66% vs a 40% baseline (lift 1.62, n=1,331).",
+            "estimated_impact": "+30 points",
+            "confidence": "high",
+            "priority": 1
+          },
+          {
+            "type": "action",
+            "recommendation": "Lower your funding goal from $30,516 to $5,000",
+            "rationale": "Games campaigns asking goal <= $5,000 funded at 55% vs a 40% baseline (lift 1.36, n=9,834). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed.",
+            "estimated_impact": "+8 points",
+            "confidence": "high",
+            "priority": 2
+          },
+          {
+            "type": "action",
+            "recommendation": "Add a number to your title (e.g. an edition or volume number)",
+            "rationale": "Games campaigns with a number in the title funded at 59% vs a 40% baseline (lift 1.46, n=2,823).",
+            "estimated_impact": "+5 points",
+            "confidence": "medium",
+            "priority": 3
+          },
+          {
+            "type": "strategic",
+            "recommendation": "The recommended changes could lift you to ~66%, above the 33% bar \u2014 prioritize them before launch.",
+            "rationale": "Optimized probability 66% \u2265 33% threshold.",
+            "estimated_impact": null,
+            "confidence": "medium",
+            "priority": 4
+          }
+        ],
+        "overall_guidance": "Prioritize: shorten your campaign from 29 to 15 days. Applying all recommended changes, the plan reaches ~66%, above the 33% bar (from 24%).",
+        "honesty_note": "Strategic guidance from model simulations + historical patterns over controllable features \u2014 an estimate, not a guarantee. Team/advisor/product actions are out of scope (no data)."
+      }
+    },
+    "evolution": {
+      "stage": {
+        "campaign": {
+          "name": "Artificer - Board Game",
+          "main_category": "Games",
+          "usd_goal_real": 30515.72
+        },
+        "funding_probability": 0.242,
+        "optimized_probability": 0.664,
+        "reachable_gain": 0.422,
+        "threshold": 0.329,
+        "stage": "Fixable",
+        "confidence": 0.9,
+        "reason": "As-is the model estimates 24% (below the 33% bar), but controllable changes could reach ~66% \u2014 above the bar. Fixable before launch.",
+        "deferred_stages": {
+          "startup_lifecycle": {
+            "status": "deferred",
+            "reason": "Idea/MVP/Validation/PMF/Growth/Series-A require observing a company over time; the dataset is a single pre-launch snapshot"
+          }
+        },
+        "honesty_note": "Funding-readiness stage (model-derived from the calibrated probability + the counterfactual's reachable optimum) \u2014 not a startup lifecycle stage, and not a causal guarantee."
+      },
+      "roadmap": {
+        "campaign": {
+          "name": "Artificer - Board Game",
+          "main_category": "Games",
+          "usd_goal_real": 30515.72
+        },
+        "current_stage": "Fixable",
+        "current_probability": 0.242,
+        "steps": [
+          {
+            "order": 1,
+            "action": "Shorten your campaign from 29 to 15 days",
+            "cumulative_probability": 0.5377,
+            "marginal_gain": 0.2957,
+            "stage_after": "Strong",
+            "crosses_bar": true,
+            "confidence": "high",
+            "evidence": "Games campaigns with a <=15d campaign funded at 66% vs a 40% baseline (lift 1.62, n=1,331)."
+          },
+          {
+            "order": 2,
+            "action": "Lower your funding goal from $30,516 to $5,000",
+            "cumulative_probability": 0.6166,
+            "marginal_gain": 0.0789,
+            "stage_after": "Strong",
+            "crosses_bar": true,
+            "confidence": "high",
+            "evidence": "Games campaigns asking goal <= $5,000 funded at 55% vs a 40% baseline (lift 1.36, n=9,834). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+          },
+          {
+            "order": 3,
+            "action": "Add a number to your title (e.g. an edition or volume number)",
+            "cumulative_probability": 0.664,
+            "marginal_gain": 0.0474,
+            "stage_after": "Strong",
+            "crosses_bar": true,
+            "confidence": "medium",
+            "evidence": "Games campaigns with a number in the title funded at 59% vs a 40% baseline (lift 1.46, n=2,823)."
+          }
+        ],
+        "target_stage": "Strong",
+        "target_probability": 0.664,
+        "summary": "Currently Fixable (24%). A 3-step preparation roadmap \u2014 starting with 'shorten your campaign from 29 to 15 days' \u2014 reaches Strong (~66%). You cross the funding bar at step 1.",
+        "deferred": {
+          "growth_milestones": {
+            "status": "deferred",
+            "reason": "post-launch milestones (users / retention / revenue / funding rounds) require data the dataset doesn't have"
+          }
+        },
+        "honesty_note": "A pre-launch preparation roadmap over controllable features (goal / duration / launch timing / title) \u2014 model-simulated, not a causal growth plan. Post-launch growth milestones are deferred."
+      },
+      "milestones": {
+        "campaign": {
+          "name": "Artificer - Board Game",
+          "main_category": "Games",
+          "usd_goal_real": 30515.72
+        },
+        "milestones": [
+          {
+            "priority": 1,
+            "milestone": "Choose an optimal campaign length",
+            "action": "Shorten your campaign from 29 to 15 days",
+            "predicted_impact_points": 30,
+            "funding_influence": 0.2957,
+            "historical_evidence": "Games campaigns with a <=15d campaign funded at 66% vs a 40% baseline (lift 1.62, n=1,331).",
+            "execution_difficulty": "Low",
+            "confidence": "high",
+            "score": 0.40768
+          },
+          {
+            "priority": 2,
+            "milestone": "Set a fundable funding goal",
+            "action": "Lower your funding goal from $30,516 to $5,000",
+            "predicted_impact_points": 12,
+            "funding_influence": 0.1167,
+            "historical_evidence": "Games campaigns asking goal <= $5,000 funded at 55% vs a 40% baseline (lift 1.36, n=9,834). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed.",
+            "execution_difficulty": "Low",
+            "confidence": "high",
+            "score": 0.15883
+          },
+          {
+            "priority": 3,
+            "milestone": "Strengthen your campaign title",
+            "action": "Add a number to your title (e.g. an edition or volume number)",
+            "predicted_impact_points": 4,
+            "funding_influence": 0.0352,
+            "historical_evidence": "Games campaigns with a number in the title funded at 59% vs a 40% baseline (lift 1.46, n=2,823).",
+            "execution_difficulty": "Medium",
+            "confidence": "medium",
+            "score": 0.0287
+          },
+          {
+            "priority": 4,
+            "milestone": "Time your launch well",
+            "action": "Launch on Tuesday instead of Thursday",
+            "predicted_impact_points": 3,
+            "funding_influence": 0.0257,
+            "historical_evidence": "Games campaigns launched on Tuesday funded at 50% vs a 40% baseline (lift 1.24, n=5,071).",
+            "execution_difficulty": "Low",
+            "confidence": "medium",
+            "score": 0.02011
+          }
+        ],
+        "deferred_milestones": {
+          "validate_customer_problem": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "improve_retention": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "grow_revenue": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "expand_founding_team": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "build_partnerships": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "improve_unit_economics": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          }
+        },
+        "honesty_note": "Milestones over controllable pre-launch features (goal / duration / timing / title), ranked by model-estimated impact + historical evidence + feasibility. Difficulty labels are heuristic. Product / team / traction milestones are deferred (no data)."
+      },
+      "timeline": {
+        "campaign": {
+          "name": "Artificer - Board Game",
+          "main_category": "Games",
+          "usd_goal_real": 30515.72
+        },
+        "current_stage": "Fixable",
+        "current_probability": 0.242,
+        "lead_weeks": 4,
+        "checkpoints": [
+          {
+            "checkpoint": 1,
+            "when": "Week -4",
+            "weeks_before_launch": 4,
+            "task": "Shorten your campaign from 29 to 15 days",
+            "cumulative_probability": 0.5377,
+            "marginal_gain": 0.2957,
+            "readiness_after": "Strong",
+            "crosses_bar": true
+          },
+          {
+            "checkpoint": 2,
+            "when": "Week -3",
+            "weeks_before_launch": 3,
+            "task": "Lower your funding goal from $30,516 to $5,000",
+            "cumulative_probability": 0.6166,
+            "marginal_gain": 0.0789,
+            "readiness_after": "Strong",
+            "crosses_bar": true
+          },
+          {
+            "checkpoint": 3,
+            "when": "Week -1",
+            "weeks_before_launch": 1,
+            "task": "Add a number to your title (e.g. an edition or volume number)",
+            "cumulative_probability": 0.664,
+            "marginal_gain": 0.0474,
+            "readiness_after": "Strong",
+            "crosses_bar": true
+          },
+          {
+            "checkpoint": 4,
+            "when": "Launch day",
+            "weeks_before_launch": 0,
+            "task": "Launch the campaign",
+            "cumulative_probability": 0.664,
+            "marginal_gain": null,
+            "readiness_after": "Strong",
+            "crosses_bar": true
+          }
+        ],
+        "target_stage": "Strong",
+        "target_probability": 0.664,
+        "summary": "Currently Fixable (24%). A 3-checkpoint pre-launch timeline \u2014 starting with 'shorten your campaign from 29 to 15 days' by Week -4 \u2014 reaches Strong (~66%) by launch. You clear the funding bar by Week -4.",
+        "deferred": {
+          "growth_timeline": {
+            "status": "deferred",
+            "reason": "a multi-month post-launch growth timeline (users / retention / revenue / funding rounds over time) needs longitudinal data the dataset doesn't have"
+          }
+        },
+        "honesty_note": "The SAME controllable levers as the roadmap (Phase C) and milestones (Phase D), placed on a pre-launch preparation schedule \u2014 decisions to lock in before launch, model-simulated, not a causal multi-month growth plan. Post-launch growth deferred."
+      }
+    },
+    "scenario": {
+      "ranked_scenarios": [
+        {
+          "rank": 1,
+          "name": "Lower goal + shorten duration + Tuesday launch + add title number",
+          "probability": 0.6864,
+          "gain": 0.4444,
+          "crosses_bar": true,
+          "stage": "Strong"
+        },
+        {
+          "rank": 2,
+          "name": "Lower goal + shorten duration + Tuesday launch",
+          "probability": 0.6442,
+          "gain": 0.4022,
+          "crosses_bar": true,
+          "stage": "Strong"
+        },
+        {
+          "rank": 3,
+          "name": "Lower goal + shorten duration",
+          "probability": 0.6166,
+          "gain": 0.3746,
+          "crosses_bar": true,
+          "stage": "Strong"
+        },
+        {
+          "rank": 4,
+          "name": "Lower goal",
+          "probability": 0.3587,
+          "gain": 0.1167,
+          "crosses_bar": true,
+          "stage": "Ready"
+        },
+        {
+          "rank": 5,
+          "name": "Current (as-is)",
+          "probability": 0.242,
+          "gain": 0.0,
+          "crosses_bar": false,
+          "stage": "Fixable"
+        }
+      ],
+      "marginal_values": [
+        {
+          "change": "goal_usd",
+          "change_label": "Lower goal",
+          "marginal_gain": 0.1167,
+          "worth_it": true
+        },
+        {
+          "change": "duration_days",
+          "change_label": "shorten duration",
+          "marginal_gain": 0.2579,
+          "worth_it": true
+        },
+        {
+          "change": "weekday",
+          "change_label": "Tuesday launch",
+          "marginal_gain": 0.0276,
+          "worth_it": true
+        },
+        {
+          "change": "add_number",
+          "change_label": "add title number",
+          "marginal_gain": 0.0422,
+          "worth_it": true
+        }
+      ],
+      "best_scenario": {
+        "name": "Lower goal + shorten duration + Tuesday launch + add title number",
+        "probability": 0.6864,
+        "stage": "Strong"
+      },
+      "most_efficient_scenario": {
+        "name": "Lower goal",
+        "probability": 0.3587,
+        "n_changes": 1
+      },
+      "recommendation": "Fastest path to Ready: 'Lower goal' \u2014 1 change(s), ~36%. Highest probability overall: 'Lower goal + shorten duration + Tuesday launch + add title number' (~69%)."
+    },
+    "cohort": {
+      "main_category": "Games",
+      "n_similar": 22878,
+      "cohort_funding_rate": 0.4395,
+      "platform_base_rate": 0.4038,
+      "note": "Similar = same-category campaigns in our own data (frame cohort, no faiss)."
+    },
+    "deferred": {
+      "customer_retention": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "monthly_revenue": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "revenue_growth": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "unit_economics": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "competitive_moat": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "named_competitors": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "founder_experience": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "team_size": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "pricing_strategy": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "market_size_tam": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "product_traction": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "funding_rounds": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "growth_trajectory": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "startup_lifecycle": {
+        "status": "deferred",
+        "reason": "Idea/MVP/Validation/PMF/Growth/Series-A require observing a company over time; the dataset is a single pre-launch snapshot"
+      },
+      "growth_milestones": {
+        "status": "deferred",
+        "reason": "post-launch milestones (users / retention / revenue / funding rounds) require data the dataset doesn't have"
+      },
+      "validate_customer_problem": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "improve_retention": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "grow_revenue": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "expand_founding_team": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "build_partnerships": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "improve_unit_economics": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "growth_timeline": {
+        "status": "deferred",
+        "reason": "a multi-month post-launch growth timeline (users / retention / revenue / funding rounds over time) needs longitudinal data the dataset doesn't have"
+      }
+    },
+    "honesty_note": "A unified venture-intelligence profile aggregated from the real Day 4-10 layers on one warm stack. Similar startups = same-category cohort in our own data (no semantic retrieval). Model-simulated over controllable features, not causal; product / team / traction / financial signals are deferred (the dataset can't observe them)."
+  },
+  {
+    "campaign": {
+      "name": "Sequel to \"I'm a Cow\" song and animation video",
+      "main_category": "Film & Video",
+      "usd_goal_real": 15000.0,
+      "country": "US"
+    },
+    "prediction": {
+      "funding_probability": 0.2312,
+      "predicted_label": "failed",
+      "threshold": 0.329
+    },
+    "drivers": {
+      "top_positive": [
+        {
+          "feature": "campaign_duration",
+          "contribution": 0.3079,
+          "descriptor": "campaign_duration"
+        },
+        {
+          "feature": "word_count",
+          "contribution": 0.1868,
+          "descriptor": "word_count"
+        },
+        {
+          "feature": "title_length",
+          "contribution": 0.1461,
+          "descriptor": "title_length"
+        },
+        {
+          "feature": "main_category_Film & Video",
+          "contribution": 0.0491,
+          "descriptor": "main_category_Film & Video"
+        }
+      ],
+      "top_negative": [
+        {
+          "feature": "video",
+          "contribution": -0.3851,
+          "descriptor": "title term 'video'"
+        },
+        {
+          "feature": "uppercase_ratio",
+          "contribution": -0.2431,
+          "descriptor": "uppercase_ratio"
+        },
+        {
+          "feature": "launch_weekday",
+          "contribution": -0.2067,
+          "descriptor": "launch_weekday"
+        },
+        {
+          "feature": "goal_per_day",
+          "contribution": -0.198,
+          "descriptor": "goal_per_day"
+        }
+      ]
+    },
+    "counterfactual": {
+      "ranked_recommendations": [
+        {
+          "feature": "goal",
+          "current": 15000.0,
+          "proposed": 5000.0,
+          "tier": "strong",
+          "rationale_key": "category_funded_median",
+          "baseline_p": 0.2312,
+          "new_p": 0.3217,
+          "delta": 0.0905,
+          "raw_changes": {
+            "goal": 5000.0,
+            "usd_goal_real": 5000.0
+          },
+          "evidence": {
+            "available": true,
+            "source": "pattern_mining (Day-7 train substrate)",
+            "scope": "Film & Video campaigns",
+            "item": "goal <= $5,000",
+            "n": 20767,
+            "confidence": 0.512,
+            "lift": 1.268,
+            "base_rate": 0.4038,
+            "funded_median_goal_usd": 5000.0,
+            "failed_median_goal_usd": 10000.0,
+            "statement": "Film & Video campaigns asking goal <= $5,000 funded at 51% vs a 40% baseline (lift 1.27, n=20,767). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+          },
+          "score": 0.11475,
+          "feasibility": 1.0,
+          "confidence": "high",
+          "cost_label": "low (pre-launch setting)",
+          "time_label": "immediate (set before launch)",
+          "labels_are_heuristic": true,
+          "priority": 1,
+          "explanation": "Lower your funding goal from $15,000 to $5,000. The model estimates your funding probability would rise from 23% to 32% (+9 points). Film & Video campaigns asking goal <= $5,000 funded at 51% vs a 40% baseline (lift 1.27, n=20,767). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed. Confidence: high. Note: this is the model's estimate based on historical association, not a guarantee."
+        },
+        {
+          "feature": "campaign_duration",
+          "current": 18,
+          "proposed": 30,
+          "tier": "moderate",
+          "rationale_key": "shorter_campaign",
+          "baseline_p": 0.2312,
+          "new_p": 0.3499,
+          "delta": 0.1187,
+          "raw_changes": {
+            "deadline": "2015-08-11 14:42:03"
+          },
+          "evidence": {
+            "available": true,
+            "source": "pattern_mining (Day-7 train substrate)",
+            "scope": "Film & Video campaigns",
+            "item": "duration_band=16-30d",
+            "n": 26194,
+            "confidence": 0.4438,
+            "lift": 1.099,
+            "base_rate": 0.4038,
+            "statement": "Film & Video campaigns with a 16-30d campaign funded at 44% vs a 40% baseline (lift 1.10, n=26,194)."
+          },
+          "score": 0.11088,
+          "feasibility": 1.0,
+          "confidence": "medium",
+          "cost_label": "low (pre-launch setting)",
+          "time_label": "immediate (set before launch)",
+          "labels_are_heuristic": true,
+          "priority": 2,
+          "explanation": "Shorten your campaign from 18 to 30 days. The model estimates your funding probability would rise from 23% to 35% (+12 points). Film & Video campaigns with a 16-30d campaign funded at 44% vs a 40% baseline (lift 1.10, n=26,194). Confidence: medium. Note: this is the model's estimate based on historical association, not a guarantee."
+        },
+        {
+          "feature": "goal",
+          "current": 15000.0,
+          "proposed": 7500.0,
+          "tier": "moderate",
+          "rationale_key": "reduce_to_50pct",
+          "baseline_p": 0.2312,
+          "new_p": 0.2891,
+          "delta": 0.0579,
+          "raw_changes": {
+            "goal": 7500.0,
+            "usd_goal_real": 7500.0
+          },
+          "evidence": {
+            "available": true,
+            "source": "pattern_mining (Day-7 train substrate)",
+            "scope": "Film & Video campaigns",
+            "item": "goal <= $7,500",
+            "n": 24307,
+            "confidence": 0.505,
+            "lift": 1.25,
+            "base_rate": 0.4038,
+            "funded_median_goal_usd": 5000.0,
+            "failed_median_goal_usd": 10000.0,
+            "statement": "Film & Video campaigns asking goal <= $7,500 funded at 50% vs a 40% baseline (lift 1.25, n=24,307). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+          },
+          "score": 0.06152,
+          "feasibility": 1.0,
+          "confidence": "high",
+          "cost_label": "low (pre-launch setting)",
+          "time_label": "immediate (set before launch)",
+          "labels_are_heuristic": true,
+          "priority": 3,
+          "explanation": "Lower your funding goal from $15,000 to $7,500. The model estimates your funding probability would rise from 23% to 29% (+6 points). Film & Video campaigns asking goal <= $7,500 funded at 50% vs a 40% baseline (lift 1.25, n=24,307). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed. Confidence: high. Note: this is the model's estimate based on historical association, not a guarantee."
+        },
+        {
+          "feature": "launch_weekday",
+          "current": "Sunday",
+          "proposed": "Tuesday",
+          "tier": "suggestive",
+          "rationale_key": "best_weekday",
+          "baseline_p": 0.2312,
+          "new_p": 0.3002,
+          "delta": 0.069,
+          "raw_changes": {
+            "launched": "2015-07-14 14:42:03",
+            "deadline": "2015-08-02 00:00:00"
+          },
+          "evidence": {
+            "available": true,
+            "source": "pattern_mining (Day-7 train substrate)",
+            "scope": "Film & Video campaigns",
+            "item": "launch_weekday=Tuesday",
+            "n": 8753,
+            "confidence": 0.4303,
+            "lift": 1.065,
+            "base_rate": 0.4038,
+            "statement": "Film & Video campaigns launched on Tuesday funded at 43% vs a 40% baseline (lift 1.07, n=8,753)."
+          },
+          "score": 0.0463,
+          "feasibility": 0.9,
+          "confidence": "medium",
+          "cost_label": "low (pre-launch setting)",
+          "time_label": "immediate (set before launch)",
+          "labels_are_heuristic": true,
+          "priority": 4,
+          "explanation": "Launch on Tuesday instead of Sunday. The model estimates your funding probability would rise from 23% to 30% (+7 points). Film & Video campaigns launched on Tuesday funded at 43% vs a 40% baseline (lift 1.07, n=8,753). Confidence: medium. Note: this is the model's estimate based on historical association, not a guarantee."
+        }
+      ],
+      "optimization_plan": {
+        "baseline_p": 0.2312,
+        "final_p": 0.4357,
+        "total_gain": 0.2045,
+        "n_steps": 2,
+        "steps": [
+          {
+            "feature": "campaign_duration",
+            "current": 18,
+            "proposed": 30,
+            "tier": "moderate",
+            "rationale_key": "shorter_campaign",
+            "cumulative_p": 0.3499,
+            "marginal_gain": 0.1187,
+            "raw_changes": {
+              "deadline": "2015-08-11 14:42:03"
+            },
+            "action": "Shorten your campaign from 18 to 30 days",
+            "confidence": "medium",
+            "evidence": "Film & Video campaigns with a 16-30d campaign funded at 44% vs a 40% baseline (lift 1.10, n=26,194)."
+          },
+          {
+            "feature": "goal",
+            "current": 15000.0,
+            "proposed": 5000.0,
+            "tier": "strong",
+            "rationale_key": "category_funded_median",
+            "cumulative_p": 0.4357,
+            "marginal_gain": 0.0858,
+            "raw_changes": {
+              "goal": 5000.0,
+              "usd_goal_real": 5000.0
+            },
+            "action": "Lower your funding goal from $15,000 to $5,000",
+            "confidence": "high",
+            "evidence": "Film & Video campaigns asking goal <= $5,000 funded at 51% vs a 40% baseline (lift 1.27, n=20,767). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+          }
+        ],
+        "note": "Cumulative probabilities are re-simulated jointly through the calibrated model, not summed. Model-simulated estimate, not a causal guarantee."
+      }
+    },
+    "copilot": {
+      "investor_objections": [
+        {
+          "dimension": "goal_size",
+          "concern": "Your $15,000 goal is high for Film & Video, where funded campaigns typically ask a median of $5,000. Why this ask \u2014 and can you hit it?",
+          "severity": "High",
+          "concern_score": 1.0,
+          "reason": "Goal $15,000 vs Film & Video funded-median $5,000 (3.0x).",
+          "suggested_response": "Lower your funding goal from $15,000 to $5,000 \u2014 the model estimates about +9 points (32%).",
+          "source_layer": "Day-5 SHAP + Day-7 patterns",
+          "evidence": {
+            "goal": 15000.0,
+            "funded_median": 5000.0
+          },
+          "honesty_note": "Model predictions + historical associations reframed as investor-style concerns \u2014 not a real investor's judgement."
+        },
+        {
+          "dimension": "funding_odds",
+          "concern": "The model estimates only a 23% funding probability \u2014 below the ~33% decision threshold. How will you beat these odds?",
+          "severity": "Medium",
+          "concern_score": 0.297,
+          "reason": "Calibrated funding probability 23% vs 33% bar.",
+          "suggested_response": "Lower your funding goal from $15,000 to $5,000 \u2014 the model estimates about +9 points (32%).",
+          "source_layer": "Day-4 prediction",
+          "evidence": {
+            "probability": 0.2312,
+            "threshold": 0.329
+          },
+          "honesty_note": "Model predictions + historical associations reframed as investor-style concerns \u2014 not a real investor's judgement."
+        }
+      ],
+      "risk_analysis": {
+        "campaign": {
+          "name": "Sequel to \"I'm a Cow\" song and animation video",
+          "main_category": "Film & Video",
+          "usd_goal_real": 15000.0
+        },
+        "funding_probability": 0.2312,
+        "failure_risk": 0.7688,
+        "overall_risk_level": "High",
+        "risks": [
+          {
+            "category": "financial_goal_risk",
+            "severity": "High",
+            "score": 1.0,
+            "reason": "Goal $15,000 is 3.0x the Film & Video funded-median ($5,000); large goals are harder to reach.",
+            "historical_evidence": "Funded Film & Video campaigns asked a median $5,000.",
+            "source_layer": "Day-7 patterns",
+            "evidence": {
+              "goal": 15000.0,
+              "funded_median": 5000.0
+            }
+          },
+          {
+            "category": "funding_risk",
+            "severity": "High",
+            "score": 0.769,
+            "reason": "Modeled failure risk 77% (funding probability 23%, below the 33% threshold).",
+            "historical_evidence": "Calibrated model: 23% funding probability.",
+            "source_layer": "Day-4 prediction",
+            "evidence": {
+              "failure_risk": 0.7688,
+              "threshold": 0.329
+            }
+          }
+        ],
+        "deferred_risks": {
+          "technology_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "founder_team_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "unit_economics_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "regulatory_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "market_size_risk": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          }
+        },
+        "honesty_note": "Risks derived from model predictions + historical funding rates (metadata + titles). Founder / market / financial / regulatory risks are deferred \u2014 no data."
+      },
+      "swot": {
+        "campaign": {
+          "name": "Sequel to \"I'm a Cow\" song and animation video",
+          "main_category": "Film & Video",
+          "usd_goal_real": 15000.0
+        },
+        "funding_probability": 0.2312,
+        "strengths": [
+          {
+            "point": "A short campaign length",
+            "shap_contribution": 0.308,
+            "source": "Day-5 SHAP"
+          },
+          {
+            "point": "A high title word count",
+            "shap_contribution": 0.187,
+            "source": "Day-5 SHAP"
+          },
+          {
+            "point": "A long title length",
+            "shap_contribution": 0.146,
+            "source": "Day-5 SHAP"
+          },
+          {
+            "point": "Being a Film & Video project",
+            "shap_contribution": 0.049,
+            "source": "Day-5 SHAP"
+          }
+        ],
+        "weaknesses": [
+          {
+            "point": "The title term 'video'",
+            "shap_contribution": -0.385,
+            "source": "Day-5 SHAP"
+          },
+          {
+            "point": "A light use of capital letters in the title",
+            "shap_contribution": -0.243,
+            "source": "Day-5 SHAP"
+          },
+          {
+            "point": "The launch day of the week",
+            "shap_contribution": -0.207,
+            "source": "Day-5 SHAP"
+          },
+          {
+            "point": "A steep daily funding target",
+            "shap_contribution": -0.198,
+            "source": "Day-5 SHAP"
+          }
+        ],
+        "opportunities": [
+          {
+            "point": "Lower your funding goal from $15,000 to $5,000",
+            "estimated_gain_points": 9,
+            "source": "Day-8 counterfactual"
+          },
+          {
+            "point": "Shorten your campaign from 18 to 30 days",
+            "estimated_gain_points": 12,
+            "source": "Day-8 counterfactual"
+          },
+          {
+            "point": "Lower your funding goal from $15,000 to $7,500",
+            "estimated_gain_points": 6,
+            "source": "Day-8 counterfactual"
+          },
+          {
+            "point": "Launch on Tuesday instead of Sunday",
+            "estimated_gain_points": 7,
+            "source": "Day-8 counterfactual"
+          }
+        ],
+        "threats": [],
+        "deferred_threats": {
+          "market_threats": {
+            "status": "deferred",
+            "reason": "no market data in this dataset"
+          },
+          "competitor_threats": {
+            "status": "deferred",
+            "reason": "no named-competitor data"
+          }
+        },
+        "honesty_note": "SWOT reframed from model SHAP contributions, historical patterns, and counterfactuals \u2014 not a real investor's judgement. Market/competitor threats deferred."
+      },
+      "category_analysis": {
+        "campaign": {
+          "name": "Sequel to \"I'm a Cow\" song and animation video",
+          "main_category": "Film & Video",
+          "usd_goal_real": 15000.0
+        },
+        "category": "Film & Video",
+        "category_funding_rate": 0.4175,
+        "category_lift": 1.034,
+        "n_campaigns": 45162,
+        "market_opportunity": "Neutral",
+        "crowding": "Highly crowded",
+        "year_trend": {
+          "direction": "stable",
+          "by_year": [
+            {
+              "year": "2009",
+              "funding_rate": 0.4008,
+              "lift": 0.993,
+              "n": 237
+            },
+            {
+              "year": "2010",
+              "funding_rate": 0.4332,
+              "lift": 1.073,
+              "n": 2694
+            },
+            {
+              "year": "2011",
+              "funding_rate": 0.459,
+              "lift": 1.137,
+              "n": 5765
+            },
+            {
+              "year": "2012",
+              "funding_rate": 0.4298,
+              "lift": 1.064,
+              "n": 7008
+            },
+            {
+              "year": "2013",
+              "funding_rate": 0.4593,
+              "lift": 1.137,
+              "n": 7094
+            },
+            {
+              "year": "2014",
+              "funding_rate": 0.4097,
+              "lift": 1.014,
+              "n": 6918
+            },
+            {
+              "year": "2015",
+              "funding_rate": 0.3494,
+              "lift": 0.865,
+              "n": 6903
+            },
+            {
+              "year": "2016",
+              "funding_rate": 0.3931,
+              "lift": 0.973,
+              "n": 4816
+            },
+            {
+              "year": "2017",
+              "funding_rate": 0.4132,
+              "lift": 1.023,
+              "n": 3727
+            }
+          ]
+        },
+        "market_timing": "Neutral",
+        "goal_norms": {
+          "funded_median_goal_usd": 5000.0,
+          "failed_median_goal_usd": 10000.0
+        },
+        "summary": "The Film & Video segment has a 42% historical funding rate (lift 1.03, neutral opportunity), across 45,162 campaigns (highly crowded). Funding rates have held steady, making market timing neutral. (Within-Kickstarter read; external market size/CAGR not available.)",
+        "deferred": {
+          "tam_sam_som": {
+            "status": "deferred",
+            "reason": "no market-size data"
+          },
+          "market_cagr_growth": {
+            "status": "deferred",
+            "reason": "no external growth data"
+          },
+          "external_market_data": {
+            "status": "deferred",
+            "reason": "dataset is Kickstarter only"
+          }
+        },
+        "honesty_note": "A within-Kickstarter category read from our own data \u2014 NOT external market size, CAGR, or industry analysis (those are deferred: no data)."
+      },
+      "competition_analysis": {
+        "campaign": {
+          "name": "Sequel to \"I'm a Cow\" song and animation video",
+          "main_category": "Film & Video",
+          "usd_goal_real": 15000.0
+        },
+        "category": "Film & Video",
+        "competitive_intensity": {
+          "level": "Highly crowded",
+          "n_campaigns": 45162,
+          "share_of_all": 0.1703
+        },
+        "what_winners_do": [
+          "Ask for less: funded campaigns' median goal is $5,000 vs $10,000 for those that failed."
+        ],
+        "your_position": {
+          "goal_usd": 15000.0,
+          "winners_median_goal_usd": 5000.0,
+          "positioned_like": "strugglers",
+          "notes": [
+            "Your $15,000 goal is 3.0x the winners' median ($5,000) \u2014 priced like the campaigns that failed."
+          ]
+        },
+        "deferred": {
+          "named_competitors": {
+            "status": "deferred",
+            "reason": "no competitor data in this dataset"
+          },
+          "moat_defensibility": {
+            "status": "deferred",
+            "reason": "no product/IP data"
+          },
+          "proprietary_data_network_effects": {
+            "status": "deferred",
+            "reason": "no such data"
+          }
+        },
+        "honesty_note": "Competition = other campaigns in your category (our own data). Named competitors, moat, and defensibility are deferred \u2014 no data."
+      },
+      "recommendations": {
+        "campaign": {
+          "name": "Sequel to \"I'm a Cow\" song and animation video",
+          "main_category": "Film & Video",
+          "usd_goal_real": 15000.0
+        },
+        "current_probability": 0.2312,
+        "optimized_probability": 0.4357,
+        "threshold": 0.329,
+        "recommendations": [
+          {
+            "type": "action",
+            "recommendation": "Shorten your campaign from 18 to 30 days",
+            "rationale": "Film & Video campaigns with a 16-30d campaign funded at 44% vs a 40% baseline (lift 1.10, n=26,194).",
+            "estimated_impact": "+12 points",
+            "confidence": "medium",
+            "priority": 1
+          },
+          {
+            "type": "action",
+            "recommendation": "Lower your funding goal from $15,000 to $5,000",
+            "rationale": "Film & Video campaigns asking goal <= $5,000 funded at 51% vs a 40% baseline (lift 1.27, n=20,767). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed.",
+            "estimated_impact": "+9 points",
+            "confidence": "high",
+            "priority": 2
+          },
+          {
+            "type": "strategic",
+            "recommendation": "The recommended changes could lift you to ~44%, above the 33% bar \u2014 prioritize them before launch.",
+            "rationale": "Optimized probability 44% \u2265 33% threshold.",
+            "estimated_impact": null,
+            "confidence": "medium",
+            "priority": 3
+          }
+        ],
+        "overall_guidance": "Prioritize: shorten your campaign from 18 to 30 days. Applying all recommended changes, the plan reaches ~44%, above the 33% bar (from 23%).",
+        "honesty_note": "Strategic guidance from model simulations + historical patterns over controllable features \u2014 an estimate, not a guarantee. Team/advisor/product actions are out of scope (no data)."
+      }
+    },
+    "evolution": {
+      "stage": {
+        "campaign": {
+          "name": "Sequel to \"I'm a Cow\" song and animation video",
+          "main_category": "Film & Video",
+          "usd_goal_real": 15000.0
+        },
+        "funding_probability": 0.2312,
+        "optimized_probability": 0.4357,
+        "reachable_gain": 0.2045,
+        "threshold": 0.329,
+        "stage": "Fixable",
+        "confidence": 0.63,
+        "reason": "As-is the model estimates 23% (below the 33% bar), but controllable changes could reach ~44% \u2014 above the bar. Fixable before launch.",
+        "deferred_stages": {
+          "startup_lifecycle": {
+            "status": "deferred",
+            "reason": "Idea/MVP/Validation/PMF/Growth/Series-A require observing a company over time; the dataset is a single pre-launch snapshot"
+          }
+        },
+        "honesty_note": "Funding-readiness stage (model-derived from the calibrated probability + the counterfactual's reachable optimum) \u2014 not a startup lifecycle stage, and not a causal guarantee."
+      },
+      "roadmap": {
+        "campaign": {
+          "name": "Sequel to \"I'm a Cow\" song and animation video",
+          "main_category": "Film & Video",
+          "usd_goal_real": 15000.0
+        },
+        "current_stage": "Fixable",
+        "current_probability": 0.2312,
+        "steps": [
+          {
+            "order": 1,
+            "action": "Shorten your campaign from 18 to 30 days",
+            "cumulative_probability": 0.3499,
+            "marginal_gain": 0.1187,
+            "stage_after": "Ready",
+            "crosses_bar": true,
+            "confidence": "medium",
+            "evidence": "Film & Video campaigns with a 16-30d campaign funded at 44% vs a 40% baseline (lift 1.10, n=26,194)."
+          },
+          {
+            "order": 2,
+            "action": "Lower your funding goal from $15,000 to $5,000",
+            "cumulative_probability": 0.4357,
+            "marginal_gain": 0.0858,
+            "stage_after": "Ready",
+            "crosses_bar": true,
+            "confidence": "high",
+            "evidence": "Film & Video campaigns asking goal <= $5,000 funded at 51% vs a 40% baseline (lift 1.27, n=20,767). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed."
+          }
+        ],
+        "target_stage": "Ready",
+        "target_probability": 0.4357,
+        "summary": "Currently Fixable (23%). A 2-step preparation roadmap \u2014 starting with 'shorten your campaign from 18 to 30 days' \u2014 reaches Ready (~44%). You cross the funding bar at step 1.",
+        "deferred": {
+          "growth_milestones": {
+            "status": "deferred",
+            "reason": "post-launch milestones (users / retention / revenue / funding rounds) require data the dataset doesn't have"
+          }
+        },
+        "honesty_note": "A pre-launch preparation roadmap over controllable features (goal / duration / launch timing / title) \u2014 model-simulated, not a causal growth plan. Post-launch growth milestones are deferred."
+      },
+      "milestones": {
+        "campaign": {
+          "name": "Sequel to \"I'm a Cow\" song and animation video",
+          "main_category": "Film & Video",
+          "usd_goal_real": 15000.0
+        },
+        "milestones": [
+          {
+            "priority": 1,
+            "milestone": "Set a fundable funding goal",
+            "action": "Lower your funding goal from $15,000 to $5,000",
+            "predicted_impact_points": 9,
+            "funding_influence": 0.0905,
+            "historical_evidence": "Film & Video campaigns asking goal <= $5,000 funded at 51% vs a 40% baseline (lift 1.27, n=20,767). Funded campaigns here had a median goal of $5,000 vs $10,000 for failed.",
+            "execution_difficulty": "Low",
+            "confidence": "high",
+            "score": 0.11475
+          },
+          {
+            "priority": 2,
+            "milestone": "Choose an optimal campaign length",
+            "action": "Shorten your campaign from 18 to 30 days",
+            "predicted_impact_points": 12,
+            "funding_influence": 0.1187,
+            "historical_evidence": "Film & Video campaigns with a 16-30d campaign funded at 44% vs a 40% baseline (lift 1.10, n=26,194).",
+            "execution_difficulty": "Low",
+            "confidence": "medium",
+            "score": 0.11088
+          },
+          {
+            "priority": 3,
+            "milestone": "Time your launch well",
+            "action": "Launch on Tuesday instead of Sunday",
+            "predicted_impact_points": 7,
+            "funding_influence": 0.069,
+            "historical_evidence": "Film & Video campaigns launched on Tuesday funded at 43% vs a 40% baseline (lift 1.07, n=8,753).",
+            "execution_difficulty": "Low",
+            "confidence": "medium",
+            "score": 0.0463
+          }
+        ],
+        "deferred_milestones": {
+          "validate_customer_problem": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "improve_retention": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "grow_revenue": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "expand_founding_team": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "build_partnerships": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          },
+          "improve_unit_economics": {
+            "status": "deferred",
+            "reason": "no data in this dataset"
+          }
+        },
+        "honesty_note": "Milestones over controllable pre-launch features (goal / duration / timing / title), ranked by model-estimated impact + historical evidence + feasibility. Difficulty labels are heuristic. Product / team / traction milestones are deferred (no data)."
+      },
+      "timeline": {
+        "campaign": {
+          "name": "Sequel to \"I'm a Cow\" song and animation video",
+          "main_category": "Film & Video",
+          "usd_goal_real": 15000.0
+        },
+        "current_stage": "Fixable",
+        "current_probability": 0.2312,
+        "lead_weeks": 4,
+        "checkpoints": [
+          {
+            "checkpoint": 1,
+            "when": "Week -4",
+            "weeks_before_launch": 4,
+            "task": "Shorten your campaign from 18 to 30 days",
+            "cumulative_probability": 0.3499,
+            "marginal_gain": 0.1187,
+            "readiness_after": "Ready",
+            "crosses_bar": true
+          },
+          {
+            "checkpoint": 2,
+            "when": "Week -2",
+            "weeks_before_launch": 2,
+            "task": "Lower your funding goal from $15,000 to $5,000",
+            "cumulative_probability": 0.4357,
+            "marginal_gain": 0.0858,
+            "readiness_after": "Ready",
+            "crosses_bar": true
+          },
+          {
+            "checkpoint": 3,
+            "when": "Launch day",
+            "weeks_before_launch": 0,
+            "task": "Launch the campaign",
+            "cumulative_probability": 0.4357,
+            "marginal_gain": null,
+            "readiness_after": "Ready",
+            "crosses_bar": true
+          }
+        ],
+        "target_stage": "Ready",
+        "target_probability": 0.4357,
+        "summary": "Currently Fixable (23%). A 2-checkpoint pre-launch timeline \u2014 starting with 'shorten your campaign from 18 to 30 days' by Week -4 \u2014 reaches Ready (~44%) by launch. You clear the funding bar by Week -4.",
+        "deferred": {
+          "growth_timeline": {
+            "status": "deferred",
+            "reason": "a multi-month post-launch growth timeline (users / retention / revenue / funding rounds over time) needs longitudinal data the dataset doesn't have"
+          }
+        },
+        "honesty_note": "The SAME controllable levers as the roadmap (Phase C) and milestones (Phase D), placed on a pre-launch preparation schedule \u2014 decisions to lock in before launch, model-simulated, not a causal multi-month growth plan. Post-launch growth deferred."
+      }
+    },
+    "scenario": {
+      "ranked_scenarios": [
+        {
+          "rank": 1,
+          "name": "Lower goal + shorten duration + Tuesday launch",
+          "probability": 0.4968,
+          "gain": 0.2656,
+          "crosses_bar": true,
+          "stage": "Strong"
+        },
+        {
+          "rank": 2,
+          "name": "Lower goal + shorten duration + Tuesday launch + add title number",
+          "probability": 0.4913,
+          "gain": 0.2601,
+          "crosses_bar": true,
+          "stage": "Strong"
+        },
+        {
+          "rank": 3,
+          "name": "Lower goal + shorten duration",
+          "probability": 0.4357,
+          "gain": 0.2045,
+          "crosses_bar": true,
+          "stage": "Ready"
+        },
+        {
+          "rank": 4,
+          "name": "Lower goal",
+          "probability": 0.3217,
+          "gain": 0.0905,
+          "crosses_bar": false,
+          "stage": "Fixable"
+        },
+        {
+          "rank": 5,
+          "name": "Current (as-is)",
+          "probability": 0.2312,
+          "gain": 0.0,
+          "crosses_bar": false,
+          "stage": "Fixable"
+        }
+      ],
+      "marginal_values": [
+        {
+          "change": "goal_usd",
+          "change_label": "Lower goal",
+          "marginal_gain": 0.0905,
+          "worth_it": true
+        },
+        {
+          "change": "duration_days",
+          "change_label": "shorten duration",
+          "marginal_gain": 0.114,
+          "worth_it": true
+        },
+        {
+          "change": "weekday",
+          "change_label": "Tuesday launch",
+          "marginal_gain": 0.0611,
+          "worth_it": true
+        },
+        {
+          "change": "add_number",
+          "change_label": "add title number",
+          "marginal_gain": -0.0055,
+          "worth_it": false
+        }
+      ],
+      "best_scenario": {
+        "name": "Lower goal + shorten duration + Tuesday launch",
+        "probability": 0.4968,
+        "stage": "Strong"
+      },
+      "most_efficient_scenario": {
+        "name": "Lower goal + shorten duration",
+        "probability": 0.4357,
+        "n_changes": 2
+      },
+      "recommendation": "Fastest path to Ready: 'Lower goal + shorten duration' \u2014 2 change(s), ~44%. Highest probability overall: 'Lower goal + shorten duration + Tuesday launch' (~50%). Negligible or harmful, safe to skip: add title number."
+    },
+    "cohort": {
+      "main_category": "Film & Video",
+      "n_similar": 45162,
+      "cohort_funding_rate": 0.4175,
+      "platform_base_rate": 0.4038,
+      "note": "Similar = same-category campaigns in our own data (frame cohort, no faiss)."
+    },
+    "deferred": {
+      "customer_retention": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "monthly_revenue": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "revenue_growth": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "unit_economics": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "competitive_moat": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "named_competitors": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "founder_experience": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "team_size": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "pricing_strategy": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "market_size_tam": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "product_traction": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "funding_rounds": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "growth_trajectory": {
+        "status": "deferred",
+        "reason": "not observable in a single pre-launch Kickstarter snapshot"
+      },
+      "startup_lifecycle": {
+        "status": "deferred",
+        "reason": "Idea/MVP/Validation/PMF/Growth/Series-A require observing a company over time; the dataset is a single pre-launch snapshot"
+      },
+      "growth_milestones": {
+        "status": "deferred",
+        "reason": "post-launch milestones (users / retention / revenue / funding rounds) require data the dataset doesn't have"
+      },
+      "validate_customer_problem": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "improve_retention": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "grow_revenue": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "expand_founding_team": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "build_partnerships": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "improve_unit_economics": {
+        "status": "deferred",
+        "reason": "no data in this dataset"
+      },
+      "growth_timeline": {
+        "status": "deferred",
+        "reason": "a multi-month post-launch growth timeline (users / retention / revenue / funding rounds over time) needs longitudinal data the dataset doesn't have"
+      }
+    },
+    "honesty_note": "A unified venture-intelligence profile aggregated from the real Day 4-10 layers on one warm stack. Similar startups = same-category cohort in our own data (no semantic retrieval). Model-simulated over controllable features, not causal; product / team / traction / financial signals are deferred (the dataset can't observe them)."
+  }
+]

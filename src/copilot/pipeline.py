@@ -61,9 +61,14 @@ class VentureCopilotPipeline:
         Parsed configuration. If ``None``, loaded from ``configs/preprocessing.yaml``.
     logger:
         Optional logger; a namespaced one is created if not supplied.
+    cf_pipeline:
+        Optional pre-built Day-8 :class:`CounterfactualPipeline` (share the warm stack — e.g. so the
+        Day-11 recommendation engine runs copilot + evolution + scenario on ONE loaded model).
+        If ``None`` (default), a fresh one is built — existing behavior is unchanged.
     """
 
-    def __init__(self, config: Optional[dict[str, Any]] = None, logger=None) -> None:
+    def __init__(self, config: Optional[dict[str, Any]] = None, logger=None,
+                 cf_pipeline: Optional["CounterfactualPipeline"] = None) -> None:
         self.config = config if config is not None else load_config()
         self.logger = logger or get_logger("avip.copilot.pipeline")
 
@@ -71,8 +76,8 @@ class VentureCopilotPipeline:
         self.n_examples = int(c.get("n_examples", 3))
         self.out_path = Path(c.get("out_path", "artifacts/copilot/venture_copilot_brief.json"))
 
-        # One warm stack shared by every engine.
-        self.cf = CounterfactualPipeline(self.config, self.logger)          # model + item frame
+        # One warm stack shared by every engine (injected for Day-11, else self-built).
+        self.cf = cf_pipeline or CounterfactualPipeline(self.config, self.logger)  # model + item frame
         self.lx = LocalExplainer(self.config, self.logger, engine=self.cf.simulator.engine)  # SHAP
         frame, base = self.cf.evidence.frame, self.cf.evidence.base
 
