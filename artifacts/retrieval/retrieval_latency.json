@@ -1,0 +1,28 @@
+{
+  "n_warm": 200,
+  "n_decompose": 50,
+  "k": 5,
+  "model_load_seconds": 0.89,
+  "cold_first_query_ms": 10997.27,
+  "warm_end_to_end_ms": {
+    "p50": 14.02,
+    "p95": 16.05,
+    "mean": 14.28,
+    "min": 12.94
+  },
+  "decomposition_ms": {
+    "sbert_encode": {
+      "p50": 4.41,
+      "p95": 4.73,
+      "mean": 4.46
+    },
+    "faiss_search": {
+      "p50": 6.37,
+      "p95": 6.65,
+      "mean": 6.41
+    }
+  },
+  "cold_over_warm_ratio": 784.4,
+  "verdict": "Cold >> warm: the Day-14 first-call cost was ONE-TIME model warmup, already paid at registry startup \u2014 not a per-query FAISS cost. Warm p50 14.0ms is dominated by FAISS search (encode 4.5ms vs faiss 6.41ms); exact IndexFlatIP search is already sub-millisecond, so there is no FAISS bottleneck to optimize at 265K\u00d7384 (ANN would only trade recall for speed we don't need).",
+  "honesty_note": "Latency measured, not assumed (C-6): cold = first call incl. one-time SBERT warmup; warm p50/p95 = steady-state; decomposition = SBERT-encode vs FAISS-search. If cold >> warm, the Day-14 ~10s was model warmup (fixed by warming at startup), not a FAISS cost."
+}

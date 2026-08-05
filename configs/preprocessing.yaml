@@ -943,3 +943,19 @@ day14:
     cors_origins: ["*"]              # permissive for local dev; tighten for deploy
     verify_on_health: false          # if true, /health runs the Day-13 manifest content-hash verify
     load_retriever: true             # load the Day-6 faiss retriever at startup (needed by /retrieve)
+
+# ============================ DAY 15 — Retrieval Eval ========================
+# Honest retrieval-quality evaluation over the EXISTING Day-6 semantic retriever.
+# No ground-truth similarity labels -> proxy metrics vs real labels (category, target).
+day15:
+  evaluation:
+    k_values: [5, 10]                # top-K to evaluate
+    n_queries: 1500                  # held-out TEST campaigns sampled as queries
+    random_state: 15
+    out_path: artifacts/retrieval/retrieval_evaluation.json
+  optimization:                       # Phase Optimization — measure warm latency BEFORE optimizing (C-6)
+    n_warm: 200                       # warm per-query samples for p50/p95
+    n_decompose: 50                   # samples for encode-vs-search decomposition
+    k: 5                              # neighbours per query (default /retrieve k)
+    random_state: 15
+    out_path: artifacts/retrieval/retrieval_latency.json

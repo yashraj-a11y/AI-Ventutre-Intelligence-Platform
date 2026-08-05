@@ -154,3 +154,9 @@ wrapt==2.2.2
 faiss-cpu==1.14.3
 sentence-transformers==5.6.1
 torch==2.13.0
+# Day-14 production backend (Layer 14): FastAPI REST API over Days 1-13.
+# Serve with: OMP_NUM_THREADS=1 uvicorn src.api.main:app  (see docs/day14_roadmap.md).
+# pip resolves transitives (starlette, uvloop, httptools, watchfiles, websockets, python-dotenv).
+fastapi==0.141.1
+uvicorn[standard]==0.52.1
+python-multipart==0.0.32
