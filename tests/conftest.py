@@ -5,6 +5,13 @@ Unit tests run on a tiny, hand-built dataframe with deliberate edge cases — NO
 row exists to exercise one specific behaviour.
 """
 
+# OMP_NUM_THREADS must be set before numpy/lightgbm/faiss import (API tests load both) — conftest is
+# imported by pytest before any test module, so this is the earliest safe hook.
+import os
+
+os.environ.setdefault("OMP_NUM_THREADS", "1")
+os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
+
 import copy
 
 import numpy as np

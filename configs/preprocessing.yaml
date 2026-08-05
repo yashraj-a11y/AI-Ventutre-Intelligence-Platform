@@ -930,3 +930,16 @@ day13:
       investment_memo: artifacts/reports/investment_memo.json
       executive_summary: artifacts/reports/executive_summary.json
       copilot_log: artifacts/reports/copilot_log.json
+
+# ============================ DAY 14 — Backend API ==========================
+# Production FastAPI backend over Days 1-13. OMP_NUM_THREADS=1 + lightgbm-before-
+# faiss load order (mandatory). Thin services over existing pipelines.
+day14:
+  api:
+    title: "AI Venture Intelligence Platform API"
+    version: "1.0.0"
+    host: "127.0.0.1"
+    port: 8000
+    cors_origins: ["*"]              # permissive for local dev; tighten for deploy
+    verify_on_health: false          # if true, /health runs the Day-13 manifest content-hash verify
+    load_retriever: true             # load the Day-6 faiss retriever at startup (needed by /retrieve)
