@@ -1,0 +1,25 @@
+{
+  "dataset": {
+    "path": "data/processed/kickstarter_processed.csv",
+    "sha256": "90bf582925cd1b87d40bd859cfdb73acbd811431b87519d32f954c7171e38c30"
+  },
+  "split": {
+    "train_sha256": "99f0a3446085200f728e4e0fe9b8505069d0f1a8c500ab1726c75604d96f54bc",
+    "test_sha256": "7e9d8332f4069b4e9926a9de815c6260a9e6bf3814e4c3aeb50f38a5bc27e291"
+  },
+  "seed": 16,
+  "git": {
+    "commit": "3ea7e1db0bb6f0cdf21aef7e6b6ccb010feb7ef9",
+    "dirty": true
+  },
+  "libraries": {
+    "python": "3.14.2",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scipy": "1.18.0",
+    "sklearn": "1.9.0",
+    "lightgbm": "4.7.0",
+    "xgboost": "3.3.0",
+    "mlflow": "3.15.1"
+  }
+}

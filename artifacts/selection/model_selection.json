@@ -1,0 +1,111 @@
+{
+  "recommendation": "keep_incumbent",
+  "beats_incumbent": false,
+  "clears_baseline": true,
+  "best_challenger": {
+    "name": "xgboost",
+    "family": "xgboost",
+    "role": "candidate",
+    "calibrated": false,
+    "threshold": 0.34,
+    "metrics": {
+      "accuracy": 0.6606,
+      "precision": 0.5549,
+      "recall": 0.807,
+      "f1": 0.6576,
+      "roc_auc": 0.7619,
+      "pr_auc": 0.6707,
+      "brier": 0.1927
+    },
+    "footprint": {
+      "latency_ms_per_1k": 0.432,
+      "size_mb": 0.36
+    }
+  },
+  "incumbent": {
+    "name": "lightgbm",
+    "family": "lightgbm",
+    "role": "incumbent",
+    "calibrated": true,
+    "threshold": 0.329,
+    "metrics": {
+      "accuracy": 0.6713,
+      "precision": 0.5646,
+      "recall": 0.8131,
+      "f1": 0.6664,
+      "roc_auc": 0.7763,
+      "pr_auc": 0.6883,
+      "brier": 0.1873
+    },
+    "footprint": {
+      "latency_ms_per_1k": 62.232,
+      "size_mb": 20.48
+    }
+  },
+  "baseline": {
+    "name": "logreg",
+    "family": "logreg",
+    "role": "baseline",
+    "calibrated": false,
+    "threshold": 0.3,
+    "metrics": {
+      "accuracy": 0.6121,
+      "precision": 0.5121,
+      "recall": 0.8342,
+      "f1": 0.6346,
+      "roc_auc": 0.7281,
+      "pr_auc": 0.6295,
+      "brier": 0.2042
+    },
+    "footprint": {
+      "latency_ms_per_1k": 0.069,
+      "size_mb": 0.01
+    }
+  },
+  "ranked": [
+    {
+      "name": "xgboost",
+      "family": "xgboost",
+      "role": "candidate",
+      "calibrated": false,
+      "threshold": 0.34,
+      "metrics": {
+        "accuracy": 0.6606,
+        "precision": 0.5549,
+        "recall": 0.807,
+        "f1": 0.6576,
+        "roc_auc": 0.7619,
+        "pr_auc": 0.6707,
+        "brier": 0.1927
+      },
+      "footprint": {
+        "latency_ms_per_1k": 0.432,
+        "size_mb": 0.36
+      }
+    },
+    {
+      "name": "random_forest",
+      "family": "random_forest",
+      "role": "candidate",
+      "calibrated": false,
+      "threshold": 0.32,
+      "metrics": {
+        "accuracy": 0.644,
+        "precision": 0.5385,
+        "recall": 0.828,
+        "f1": 0.6526,
+        "roc_auc": 0.7551,
+        "pr_auc": 0.6591,
+        "brier": 0.1953
+      },
+      "footprint": {
+        "latency_ms_per_1k": 13.151,
+        "size_mb": 1023.0
+      }
+    }
+  ],
+  "rationale": "Best challenger xgboost F1=0.6576 vs incumbent 0.6664 (margin required 0.005). Does NOT beat the incumbent by the required margin \u2192 keep incumbent.",
+  "primary": "f1",
+  "min_f1_margin": 0.005,
+  "created_utc": "2026-08-11T10:19:47.816672+00:00"
+}

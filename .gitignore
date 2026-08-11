@@ -13,3 +13,17 @@ __pycache__/
 # metadata.csv is already covered by *.csv above.
 artifacts/embeddings/startup_embeddings.npy
 artifacts/vector_db/faiss.index
+
+# Day-16 MLflow LOCAL backend (regenerable via train_pipeline): sqlite tracking db + artifacts.
+mlflow.db
+mlartifacts/
+mlruns/
+
+# Day-16 artifact store: managed copies of small artifacts (regenerable via artifact_manager).
+artifacts/store/
+
+# Day-16 versioned training-run outputs (regenerable via train_pipeline).
+artifacts/training_runs/
+
+# Day-16 notebook isolated sandbox (regenerable by running the notebook).
+artifacts/_notebook16/

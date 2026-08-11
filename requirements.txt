@@ -160,3 +160,7 @@ torch==2.13.0
 fastapi==0.141.1
 uvicorn[standard]==0.52.1
 python-multipart==0.0.32
+
+# Day-16 MLOps (Layer 16): experiment tracking + model registry via a LOCAL file store (mlruns/).
+# No server required; `mlflow ui` is an optional local viewer. xgboost/lightgbm/sklearn already pinned.
+mlflow==3.15.1

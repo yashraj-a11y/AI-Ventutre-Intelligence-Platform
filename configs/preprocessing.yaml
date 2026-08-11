@@ -959,3 +959,31 @@ day15:
     k: 5                              # neighbours per query (default /retrieve k)
     random_state: 15
     out_path: artifacts/retrieval/retrieval_latency.json
+
+day16:                                # MLOps — experiment tracking, registry, artifact versioning
+  random_state: 16
+  mlflow:
+    tracking_uri: sqlite:///mlflow.db  # LOCAL sqlite backend (NO server); file store is deprecated
+    artifact_location: ./mlartifacts   # LOCAL artifact store (git-ignored); `mlflow ui` = optional
+    experiment_name: avip-venture-intelligence
+  registry:
+    path: artifacts/registry/model_registry.json
+  search:                             # Phase D — compare candidate families + random search, each tracked
+    candidates: [logreg, random_forest, xgboost, lightgbm]  # baseline + incumbent-family + 2 (NN deferred)
+    search_family: lightgbm           # which family gets randomized hyperparameter search
+    n_iter: 8                         # random-search candidates (small=tractable; raise for real runs)
+    cv: 3                             # stratified CV folds for the search
+    out_path: artifacts/search/hyperparameter_search.json
+  artifacts:                          # Phase F — content-hash artifact registry (copy small / reference large)
+    index_path: artifacts/registry/artifact_index.json
+    max_copy_mb: 50                   # <= this: copy into the store; > this: reference by sha256 (C-4)
+    store_root: artifacts/store       # managed copies land here as <category>/<name> (never clobbers curated dirs)
+  training:                           # Phase G — reproducible pipeline (VERSIONED outputs, never overwrites incumbent)
+    runs_dir: artifacts/training_runs # versioned run outputs land here as <version>/ (C-5)
+    slot: funding_success_classifier  # registry deployment slot
+    reproduce_tol: 0.01               # |test PR-AUC - incumbent 0.688| within this = "reproduces incumbent"
+  selection:                          # Phase H — automated selection (fair F1 at each model's own threshold)
+    primary: f1                       # primary criterion; tie-breaks: pr_auc, recall, then latency, size
+    min_f1_margin: 0.005              # a challenger must beat the incumbent's F1 by this to be promoted
+    latency_sample: 2000              # rows used to measure inference latency
+    out_path: artifacts/selection/model_selection.json

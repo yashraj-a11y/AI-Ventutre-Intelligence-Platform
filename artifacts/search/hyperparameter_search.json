@@ -1,0 +1,152 @@
+{
+  "primary_metric": "pr_auc",
+  "n_candidates": 5,
+  "best": {
+    "name": "lightgbm_search",
+    "kind": "search",
+    "model_type": "lightgbm (RandomizedSearchCV)",
+    "params": {
+      "subsample": 0.8,
+      "scale_pos_weight": 1.0,
+      "reg_lambda": 1.0,
+      "reg_alpha": 0.1,
+      "num_leaves": 63,
+      "n_estimators": 300,
+      "min_child_samples": 20,
+      "max_depth": -1,
+      "learning_rate": 0.05,
+      "colsample_bytree": 1.0
+    },
+    "metrics": {
+      "accuracy": 0.7083,
+      "precision": 0.6627,
+      "recall": 0.5655,
+      "f1": 0.6102,
+      "roc_auc": 0.7732,
+      "pr_auc": 0.6843
+    },
+    "best_cv_score": 0.6846,
+    "train_time_s": 82.8
+  },
+  "baseline": {
+    "name": "logreg_l2",
+    "kind": "baseline",
+    "model_type": "LogisticRegression(l2)",
+    "params": {
+      "penalty": "l2",
+      "C": 1.0,
+      "solver": "saga"
+    },
+    "metrics": {
+      "accuracy": 0.6768,
+      "precision": 0.6291,
+      "recall": 0.4864,
+      "f1": 0.5486,
+      "roc_auc": 0.7269,
+      "pr_auc": 0.6264
+    },
+    "train_time_s": 31.7
+  },
+  "beats_baseline": true,
+  "ranked": [
+    {
+      "name": "lightgbm_search",
+      "kind": "search",
+      "model_type": "lightgbm (RandomizedSearchCV)",
+      "params": {
+        "subsample": 0.8,
+        "scale_pos_weight": 1.0,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.1,
+        "num_leaves": 63,
+        "n_estimators": 300,
+        "min_child_samples": 20,
+        "max_depth": -1,
+        "learning_rate": 0.05,
+        "colsample_bytree": 1.0
+      },
+      "metrics": {
+        "accuracy": 0.7083,
+        "precision": 0.6627,
+        "recall": 0.5655,
+        "f1": 0.6102,
+        "roc_auc": 0.7732,
+        "pr_auc": 0.6843
+      },
+      "best_cv_score": 0.6846,
+      "train_time_s": 82.8
+    },
+    {
+      "name": "lightgbm",
+      "kind": "comparison",
+      "model_type": "lightgbm",
+      "params": {
+        "n_estimators": 200
+      },
+      "metrics": {
+        "accuracy": 0.7066,
+        "precision": 0.6608,
+        "recall": 0.5614,
+        "f1": 0.6071,
+        "roc_auc": 0.7697,
+        "pr_auc": 0.6798
+      },
+      "train_time_s": 2.9
+    },
+    {
+      "name": "xgboost",
+      "kind": "comparison",
+      "model_type": "xgboost",
+      "params": {
+        "n_estimators": 200
+      },
+      "metrics": {
+        "accuracy": 0.7046,
+        "precision": 0.6599,
+        "recall": 0.5538,
+        "f1": 0.6022,
+        "roc_auc": 0.7675,
+        "pr_auc": 0.6754
+      },
+      "train_time_s": 3.8
+    },
+    {
+      "name": "random_forest",
+      "kind": "comparison",
+      "model_type": "random_forest",
+      "params": {
+        "n_estimators": 200
+      },
+      "metrics": {
+        "accuracy": 0.7015,
+        "precision": 0.6676,
+        "recall": 0.5191,
+        "f1": 0.5841,
+        "roc_auc": 0.7592,
+        "pr_auc": 0.6643
+      },
+      "train_time_s": 126.8
+    },
+    {
+      "name": "logreg_l2",
+      "kind": "baseline",
+      "model_type": "LogisticRegression(l2)",
+      "params": {
+        "penalty": "l2",
+        "C": 1.0,
+        "solver": "saga"
+      },
+      "metrics": {
+        "accuracy": 0.6768,
+        "precision": 0.6291,
+        "recall": 0.4864,
+        "f1": 0.5486,
+        "roc_auc": 0.7269,
+        "pr_auc": 0.6264
+      },
+      "train_time_s": 31.7
+    }
+  ],
+  "honesty_note": "Candidates compared on the SAME held-out validation split, ranked by PR-AUC. LogReg is the mandatory baseline; LightGBM the incumbent family. Grid = trivial swap over the same space; Bayesian/optuna and a Neural-Network candidate are DEFERRED (no dep / none trained).",
+  "created_utc": "2026-08-11T07:40:40.392909+00:00"
+}

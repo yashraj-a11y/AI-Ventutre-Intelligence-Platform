@@ -1,0 +1,107 @@
+{
+  "entries": [
+    {
+      "name": "funding_success_classifier",
+      "version": "logreg-l2-baseline",
+      "created_utc": "2026-08-11T08:07:43.830344+00:00",
+      "status_history": [
+        {
+          "status": "Archived",
+          "at": "2026-08-11T08:07:43.865428+00:00",
+          "note": "mandatory 8-week baseline; retained for comparison, not deployed"
+        }
+      ],
+      "model_type": "LogisticRegression(l2)",
+      "role": "baseline",
+      "owner": "avip",
+      "metrics": {
+        "accuracy": 0.6768,
+        "precision": 0.6291,
+        "recall": 0.4864,
+        "f1": 0.5486,
+        "roc_auc": 0.7269,
+        "pr_auc": 0.6264
+      },
+      "params": {
+        "penalty": "l2",
+        "C": 1.0
+      },
+      "artifact": {
+        "path": "artifacts/models/logistic_regression.joblib",
+        "sha256": "1d40932bc2270cccf3bdaf501d994dffa4120dfa0fe962d8f8845dbb3114ef2d"
+      },
+      "feature_pipeline": {
+        "path": "artifacts/feature_pipeline/feature_pipeline.joblib",
+        "sha256": "5e13665c04b379fb0bece76cc8638e2a35749453c56481730281ab44014a7046"
+      },
+      "dataset_version": "90bf582925cd1b87d40bd859cfdb73acbd811431b87519d32f954c7171e38c30",
+      "references": {},
+      "extra": {},
+      "registered_utc": "2026-08-11T08:07:43.865411+00:00",
+      "status": "Archived"
+    },
+    {
+      "name": "funding_success_classifier",
+      "version": "lightgbm-1.0.0",
+      "created_utc": "2026-08-11T08:07:43.865813+00:00",
+      "status_history": [
+        {
+          "status": "Staging",
+          "at": "2026-08-11T08:07:43.898975+00:00",
+          "note": "registered"
+        },
+        {
+          "status": "Production",
+          "at": "2026-08-11T08:07:43.899309+00:00",
+          "note": "Day-4 tuned+calibrated incumbent"
+        }
+      ],
+      "model_type": "LightGBM (tuned) + CalibratedClassifierCV",
+      "role": "incumbent",
+      "owner": "avip",
+      "metrics": {
+        "brier": 0.1872,
+        "roc_auc": 0.7767,
+        "pr_auc": 0.6884,
+        "threshold": 0.329
+      },
+      "params": {
+        "subsample": 0.7,
+        "scale_pos_weight": 1.0,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.1,
+        "num_leaves": 127,
+        "n_estimators": 300,
+        "min_child_samples": 50,
+        "max_depth": -1,
+        "learning_rate": 0.05,
+        "colsample_bytree": 0.8
+      },
+      "artifact": {
+        "path": "artifacts/models/calibrated_model.joblib",
+        "sha256": "dde1cdef14554bc57482ce98a985851b02e926cd2dca115cb0ca4423efa3e677"
+      },
+      "feature_pipeline": {
+        "path": "artifacts/feature_pipeline/feature_pipeline.joblib",
+        "sha256": "5e13665c04b379fb0bece76cc8638e2a35749453c56481730281ab44014a7046"
+      },
+      "dataset_version": "90bf582925cd1b87d40bd859cfdb73acbd811431b87519d32f954c7171e38c30",
+      "references": {},
+      "extra": {
+        "pipeline_parity_flag": {
+          "recorded_train_time_sha256": "d27e8ae58ccb5a1d0d20f36c921fc88c5baad0cb17a43b7ee10b1d75007ab629",
+          "current_on_disk_sha256": "5e13665c04b379fb0bece76cc8638e2a35749453c56481730281ab44014a7046",
+          "match": false,
+          "note": "feature_pipeline.joblib was re-serialized 2026-08-05 (gitignored, not reverted); deterministic re-fit, API tests pass, but train-time parity hash differs \u2014 re-validate byte-identical predictions before next promotion.",
+          "hash_match": false,
+          "behavioral_parity_verified": true,
+          "verification": "max|\u0394|=0.0 over 66293 test rows; predictions byte-identical (old vs current pipeline, same model); test metrics roc_auc 0.7763/pr_auc 0.6883/brier 0.1873 match recorded. Hash differs due to re-serialization only (2026-08-05). Train/serve parity HOLDS.",
+          "verified_utc": "2026-08-11T08:29:15.188466+00:00"
+        }
+      },
+      "registered_utc": "2026-08-11T08:07:43.898962+00:00",
+      "status": "Production"
+    }
+  ],
+  "updated_utc": "2026-08-11T09:08:21.134907+00:00"
+}
