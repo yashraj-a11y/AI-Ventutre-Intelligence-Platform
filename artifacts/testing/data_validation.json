@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "n_rows": 331464,
+  "n_checks": 11,
+  "n_critical_failed": 0,
+  "n_warnings": 1,
+  "checks": [
+    {
+      "name": "required_columns",
+      "status": "PASS",
+      "severity": "critical",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "target_binary",
+      "status": "PASS",
+      "severity": "critical",
+      "detail": "target must be {0,1}"
+    },
+    {
+      "name": "target_no_missing",
+      "status": "PASS",
+      "severity": "critical",
+      "detail": "no NaN labels"
+    },
+    {
+      "name": "goal_positive",
+      "status": "PASS",
+      "severity": "critical",
+      "detail": "all goals > 0"
+    },
+    {
+      "name": "name_clean_present",
+      "status": "FAIL",
+      "severity": "warning",
+      "detail": "4 NaN cleaned titles (handled downstream by fillna(''))"
+    },
+    {
+      "name": "main_category_cardinality",
+      "status": "PASS",
+      "severity": "warning",
+      "detail": "15 categories"
+    },
+    {
+      "name": "no_duplicate_rows",
+      "status": "PASS",
+      "severity": "warning",
+      "detail": "0 dup rows"
+    },
+    {
+      "name": "feature_matrix_2d",
+      "status": "PASS",
+      "severity": "critical",
+      "detail": "shape=(265171, 865)"
+    },
+    {
+      "name": "feature_no_nan_inf",
+      "status": "PASS",
+      "severity": "critical",
+      "detail": "no NaN/inf in features"
+    },
+    {
+      "name": "feature_target_aligned",
+      "status": "PASS",
+      "severity": "critical",
+      "detail": "X rows 265171 vs y 265171"
+    },
+    {
+      "name": "y_binary",
+      "status": "PASS",
+      "severity": "critical",
+      "detail": "labels {0,1}"
+    }
+  ],
+  "created_utc": "2026-08-12T09:33:35.302937+00:00"
+}

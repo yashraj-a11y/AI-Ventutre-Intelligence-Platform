@@ -1,0 +1,60 @@
+{
+  "n_queries": 300,
+  "checks": {
+    "category_lift@5>=3x": true,
+    "knn_auc@5>0.5": true,
+    "knn_auc@10>0.5": true,
+    "mrr@5>0.5": true,
+    "similarity_descending": true,
+    "knn_beats_majority@5": true
+  },
+  "passed": true,
+  "category_consistency": {
+    "k5": {
+      "consistency": 0.766,
+      "base_rate": 0.1074,
+      "lift": 7.13
+    },
+    "k10": {
+      "consistency": 0.7537,
+      "base_rate": 0.1074,
+      "lift": 7.02
+    }
+  },
+  "knn_outcome": {
+    "k5": {
+      "accuracy": 0.6733,
+      "precision": 0.5949,
+      "recall": 0.4159,
+      "f1": 0.4896,
+      "roc_auc": 0.6849,
+      "lift_over_majority": 0.05
+    },
+    "k10": {
+      "accuracy": 0.6833,
+      "precision": 0.6154,
+      "recall": 0.4248,
+      "f1": 0.5026,
+      "roc_auc": 0.7115,
+      "lift_over_majority": 0.06
+    }
+  },
+  "mrr_category": {
+    "k5": 0.8541,
+    "k10": 0.8574
+  },
+  "similarity": {
+    "k5": {
+      "rank1_mean": 0.7662,
+      "rankk_mean": 0.7025,
+      "p50_topk": 0.7199
+    },
+    "k10": {
+      "rank1_mean": 0.7662,
+      "rankk_mean": 0.6813,
+      "p50_topk": 0.7006
+    }
+  },
+  "honesty_note": "proxy metrics vs real labels \u2014 no Precision@K (no similarity ground truth)",
+  "created_utc": "2026-08-12T09:37:05.345441+00:00"
+}

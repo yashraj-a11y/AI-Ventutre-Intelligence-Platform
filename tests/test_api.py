@@ -10,6 +10,10 @@ from __future__ import annotations
 import pytest
 from fastapi.testclient import TestClient
 
+# Every API test loads the warm registry (models + 407 MB FAISS index) via the app lifespan — all
+# artifact-dependent, so the whole module is `heavy` and runs locally, not in the CI fast lane (Day-17).
+pytestmark = pytest.mark.heavy
+
 CAMPAIGN = {
     "name": "Artificer - Board Game", "main_category": "Games", "usd_goal_real": 30000.0,
     "launched": "2016-05-01 12:00:00", "deadline": "2016-05-31 12:00:00",
@@ -141,3 +145,36 @@ def test_503_when_artifact_unavailable(client):
         assert "request_id" in j
     finally:
         reg.retriever = saved
+
+
+# ----------------------------------------------------------------- response time (Day-17 Phase G)
+# Warm bounds ~3x measured (health 0.8 / predict 12 / explain 31 / retrieve 20 / recommend 1120 /
+# analyze 3226 ms) — loose enough to never flake, tight enough to catch a hung/regressed endpoint.
+_TIME_BUDGET_MS = {"/health": 1000, "/predict": 2000, "/explain": 3000,
+                   "/retrieve": 3000, "/recommend": 10000, "/analyze": 30000}
+
+
+def test_response_times_within_budget(client):
+    import json as _json
+    import time
+    from pathlib import Path
+
+    def _call(ep):
+        return client.get(ep) if ep == "/health" else client.post(ep, json=CAMPAIGN)
+
+    measured, failures = {}, []
+    for ep, budget in _TIME_BUDGET_MS.items():
+        _call(ep)                                        # warm
+        t = time.perf_counter()
+        r = _call(ep)
+        dt = (time.perf_counter() - t) * 1000
+        measured[ep] = round(dt, 1)
+        assert r.status_code == 200
+        if dt > budget:
+            failures.append(f"{ep} {dt:.0f}ms > {budget}ms")
+
+    out = Path(__file__).resolve().parents[1] / "artifacts/testing/api_response_times.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(_json.dumps({"measured_ms": measured, "budget_ms": _TIME_BUDGET_MS,
+                                "passed": not failures}, indent=2))
+    assert not failures, failures

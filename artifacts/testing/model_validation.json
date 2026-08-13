@@ -1,0 +1,45 @@
+{
+  "model": "LightGBM (tuned) + CalibratedClassifierCV",
+  "threshold": 0.329,
+  "test_metrics": {
+    "accuracy": 0.6713,
+    "precision": 0.5646,
+    "recall": 0.8131,
+    "f1": 0.6664,
+    "roc_auc": 0.7763,
+    "pr_auc": 0.6883,
+    "brier": 0.1873
+  },
+  "train_metrics": {
+    "accuracy": 0.7021,
+    "precision": 0.5912,
+    "recall": 0.8497,
+    "f1": 0.6973,
+    "roc_auc": 0.8167,
+    "pr_auc": 0.7462,
+    "brier": 0.1715
+  },
+  "roc_auc_gap": 0.0404,
+  "baseline_logreg": {
+    "accuracy": 0.6768,
+    "precision": 0.6291,
+    "recall": 0.4864,
+    "f1": 0.5486,
+    "roc_auc": 0.7269,
+    "pr_auc": 0.6264
+  },
+  "checks": {
+    "pr_auc>=0.68": true,
+    "roc_auc>=0.77": true,
+    "brier<=0.20": true,
+    "f1>=0.63": true,
+    "recall>=0.75": true,
+    "beats_logreg_baseline": true,
+    "no_overfit_gap<0.10": true
+  },
+  "passed": true,
+  "deferred": {
+    "neural_network": "no NN trained (torch is SBERT-only) \u2014 validation deferred"
+  },
+  "created_utc": "2026-08-12T09:34:05.918432+00:00"
+}

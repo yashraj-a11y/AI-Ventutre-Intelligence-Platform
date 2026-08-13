@@ -1,0 +1,15 @@
+{
+  "additivity_error": 3.122614566919424e-08,
+  "sample_probability": 0.3781,
+  "sample_margin": -0.6048,
+  "base_value": -0.6985,
+  "checks": {
+    "additivity_error<1e-3": true,
+    "margin_reconstructs": true,
+    "positive_signs": true,
+    "negative_signs": true
+  },
+  "passed": true,
+  "honesty_note": "SHAP explains the uncalibrated log-odds margin; calibration is a monotonic squash",
+  "created_utc": "2026-08-12T09:33:46.199017+00:00"
+}

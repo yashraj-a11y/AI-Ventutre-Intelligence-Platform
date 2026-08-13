@@ -164,3 +164,8 @@ python-multipart==0.0.32
 # Day-16 MLOps (Layer 16): experiment tracking + model registry via a LOCAL file store (mlruns/).
 # No server required; `mlflow ui` is an optional local viewer. xgboost/lightgbm/sklearn already pinned.
 mlflow==3.15.1
+
+# Day-17 testing / CI (dev). The CI fast lane runs `pytest -m "not heavy"` with coverage; the heavy
+# lane (real data/models/index, all git-ignored) runs locally. psutil (benchmark) already available.
+pytest==9.1.1
+pytest-cov==7.1.0

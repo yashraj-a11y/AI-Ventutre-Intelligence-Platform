@@ -1,0 +1,55 @@
+name: CI
+
+# Day-17 · Phase J — continuous integration (FAST lane only).
+#
+# The real data (*.csv), trained models (*.joblib), and the 407 MB FAISS index are ALL git-ignored, so
+# they are not available on a GitHub runner and rebuilding them (SBERT-encoding 265K campaigns) is
+# impractical in CI. Therefore CI runs only the fast, fixture-based lane: `pytest -m "not heavy"`.
+# The `heavy` tests (model / retrieval / explainability / API / e2e / benchmark validation) need those
+# artifacts and are run LOCALLY. Pretending the full suite runs in CI would be dishonest.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  fast-tests:
+    runs-on: ubuntu-latest
+    env:
+      OMP_NUM_THREADS: "1"              # faiss + torch coexistence (also set in conftest.py)
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"        # the project's runtime; 3.12+ also works for the fast lane
+          cache: pip
+
+      - name: Install dependencies
+        # Full requirements: `pytest -m "not heavy"` still COLLECTS (imports) every test module, so the
+        # heavy modules' top-level imports (torch / faiss / mlflow) must resolve even though those tests
+        # are deselected, not executed.
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Download NLTK data
+        # The text-preprocessing unit tests need the stopwords + wordnet corpora.
+        run: python -m nltk.downloader -q stopwords wordnet omw-1.4
+
+      - name: Run fast lane with coverage
+        # Coverage is REPORTED, not gated: the fast lane exercises only the fixture-testable
+        # preprocessing/feature code, so ~17% is expected — the ML pipeline is covered by the heavy
+        # (local) lane. A hard threshold here would be a false signal.
+        run: pytest -m "not heavy" --cov=src --cov-report=term-missing --cov-report=xml
+
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-xml
+          path: coverage.xml

@@ -1,0 +1,19 @@
+{
+  "measured_ms": {
+    "/health": 0.6,
+    "/predict": 11.6,
+    "/explain": 32.1,
+    "/retrieve": 15.7,
+    "/recommend": 1437.1,
+    "/analyze": 3882.9
+  },
+  "budget_ms": {
+    "/health": 1000,
+    "/predict": 2000,
+    "/explain": 3000,
+    "/retrieve": 3000,
+    "/recommend": 10000,
+    "/analyze": 30000
+  },
+  "passed": true
+}

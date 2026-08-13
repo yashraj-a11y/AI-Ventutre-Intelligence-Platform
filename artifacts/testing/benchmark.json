@@ -1,0 +1,50 @@
+{
+  "latency_ms": {
+    "predict": {
+      "p50": 14.1,
+      "p95": 18.8,
+      "mean": 14.5,
+      "n": 20
+    },
+    "explain": {
+      "p50": 36.7,
+      "p95": 41.1,
+      "mean": 38.1,
+      "n": 20
+    },
+    "retrieve": {
+      "p50": 20.0,
+      "p95": 33.1,
+      "mean": 22.9,
+      "n": 20
+    },
+    "report_founder": {
+      "p50": 2251.9,
+      "p95": 2896.9,
+      "mean": 2390.3,
+      "n": 20
+    },
+    "analyze": {
+      "p50": 3204.8,
+      "p95": 3291.4,
+      "mean": 3213.3,
+      "n": 5
+    }
+  },
+  "memory_rss_mb": 408.1,
+  "cpu_percent": 100.9,
+  "n_cpus": 11,
+  "notes": {
+    "retrieval": "Day-15 characterised warm retrieval at p50 ~14 ms end-to-end (SBERT encode ~4.4 ms + FAISS ~6.4 ms); here it's through the HTTP layer",
+    "omp": "OMP_NUM_THREADS=1 (faiss + torch coexistence)"
+  },
+  "budgets_ms": {
+    "predict": 2000,
+    "explain": 3000,
+    "retrieve": 3000,
+    "report_founder": 15000,
+    "analyze": 30000
+  },
+  "passed": true,
+  "created_utc": "2026-08-12T09:33:33.618792+00:00"
+}
