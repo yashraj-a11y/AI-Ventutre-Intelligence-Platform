@@ -9,11 +9,13 @@ import ReportViewer from "../Reports/ReportViewer";
 import RetrievalDashboard from "../Retrieval/RetrievalDashboard";
 import { Card, ErrorBox, HonestyNote, Loading, Stat } from "../ui";
 
+// Committee verdicts: Strong Invest / Proceed to Due Diligence / Monitor Progress / Do Not Invest.
+// Order matters: "Do Not Invest" contains "invest", so the negative cases must be tested first.
 function verdictTone(rec: string): string {
   const s = rec.toLowerCase();
-  if (s.includes("caution")) return "bg-amber-100 text-amber-800";
-  if (s.includes("proceed") || s.includes("invest")) return "bg-emerald-100 text-emerald-800";
-  if (s.includes("pass") || s.includes("decline") || s.includes("avoid")) return "bg-rose-100 text-rose-800";
+  if (s.includes("do not") || s.includes("pass") || s.includes("decline") || s.includes("avoid")) return "bg-rose-100 text-rose-800";
+  if (s.includes("monitor") || s.includes("caution")) return "bg-amber-100 text-amber-800";
+  if (s.includes("strong") || s.includes("proceed") || s.includes("invest")) return "bg-emerald-100 text-emerald-800";
   return "bg-slate-100 text-slate-700";
 }
 
@@ -29,7 +31,7 @@ function VerdictPanel({ data }: { data: AnalysisResponse }) {
         </div>
       </div>
       <p className="text-xs text-slate-400">
-        Verdict from the Day-12 multi-agent committee over the Day-11 unified intelligence — a
+        Verdict from the multi-agent committee over the platform's unified analysis — a
         deterministic consensus, not an LLM opinion.
       </p>
       <HonestyNote note={data.honesty_note} />

@@ -27,7 +27,7 @@ from typing import Any, Optional
 
 import joblib
 
-from src.models.data_split import ModelData, ModelDataSplitter
+from src.models.data_split import ModelDataSplitter
 from src.mlops.artifact_manager import ArtifactManager
 from src.mlops.experiment_tracker import ExperimentTracker
 from src.mlops.model_registry import ModelRegistry

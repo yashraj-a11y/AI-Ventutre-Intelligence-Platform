@@ -161,8 +161,8 @@ class ModelEvaluator:
              "| metric | value |", "|---|--:|"]
         for k, v in m.items():
             L.append(f"| {k} | {v} |")
-        L += [f"\n_No-Information Rate (majority baseline) accuracy = 0.5962; "
-              f"PR-AUC base rate = 0.4038._\n",
+        L += ["\n_No-Information Rate (majority baseline) accuracy = 0.5962; "
+              "PR-AUC base rate = 0.4038._\n",
               "## Generalization check (validation vs test PR-AUC)\n",
               f"- validation PR-AUC: **{val_pr}**  ·  test PR-AUC: **{m['pr_auc']}**  "
               f"→ gap {abs((val_pr or 0) - m['pr_auc']):.4f} (small ⇒ selection did not overfit).\n",

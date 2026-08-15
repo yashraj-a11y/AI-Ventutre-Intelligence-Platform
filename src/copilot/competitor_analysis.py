@@ -32,7 +32,6 @@ from typing import Any, Optional
 import pandas as pd
 
 from src.counterfactual.evidence_validator import duration_band
-from src.knowledge_base.venture_database import goal_band
 from src.pattern_mining.mining import build_item_frame
 from src.utils.config import load_config
 from src.utils.logger import get_logger

@@ -31,7 +31,6 @@ from typing import Any, Optional
 import pandas as pd
 
 from src.counterfactual.pipeline import CounterfactualPipeline
-from src.recommendation.intelligence_aggregator import IntelligenceAggregator
 from src.recommendation.recommendation_generator import RecommendationGenerator
 from src.utils.config import load_config
 from src.utils.logger import get_logger

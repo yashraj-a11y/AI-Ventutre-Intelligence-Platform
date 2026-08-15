@@ -1,0 +1,155 @@
+{
+  "campaign": {
+    "name": "Lumen: solar smart garden planter",
+    "main_category": "Technology",
+    "usd_goal_real": 25000.0
+  },
+  "result": {
+    "baseline_p": 0.4021,
+    "ranked_recommendations": [
+      {
+        "feature": "title",
+        "current": "no number",
+        "proposed": "has number",
+        "tier": "suggestive",
+        "rationale_key": "title_has_number",
+        "baseline_p": 0.4021,
+        "new_p": 0.493,
+        "delta": 0.0909,
+        "raw_changes": {
+          "name": "Lumen: solar smart garden planter 2",
+          "name_clean": "lumen solar smart garden planter 2"
+        },
+        "evidence": {
+          "available": true,
+          "source": "pattern_mining (Day-7 train substrate)",
+          "scope": "Technology campaigns",
+          "item": "has_number=has number",
+          "n": 2584,
+          "confidence": 0.4013,
+          "lift": 0.994,
+          "base_rate": 0.4038,
+          "statement": "Technology campaigns with a number in the title funded at 40% vs a 40% baseline (lift 0.99, n=2,584)."
+        },
+        "score": 0.0506,
+        "feasibility": 0.8,
+        "confidence": "low",
+        "cost_label": "low (pre-launch setting)",
+        "time_label": "immediate (set before launch)",
+        "labels_are_heuristic": true,
+        "priority": 1,
+        "explanation": "Add a number to your title (e.g. an edition or volume number). The model estimates your funding probability would rise from 40% to 49% (+9 points). Technology campaigns with a number in the title funded at 40% vs a 40% baseline (lift 0.99, n=2,584). Confidence: low. Note: this is the model's estimate based on historical association, not a guarantee."
+      },
+      {
+        "feature": "goal",
+        "current": 25000.0,
+        "proposed": 10000.0,
+        "tier": "strong",
+        "rationale_key": "category_funded_median",
+        "baseline_p": 0.4021,
+        "new_p": 0.4352,
+        "delta": 0.0331,
+        "raw_changes": {
+          "goal": 10000.0,
+          "usd_goal_real": 10000.0
+        },
+        "evidence": {
+          "available": true,
+          "source": "pattern_mining (Day-7 train substrate)",
+          "scope": "Technology campaigns",
+          "item": "goal <= $10,000",
+          "n": 8545,
+          "confidence": 0.3006,
+          "lift": 0.745,
+          "base_rate": 0.4038,
+          "funded_median_goal_usd": 10000.0,
+          "failed_median_goal_usd": 20000.0,
+          "statement": "Technology campaigns asking goal <= $10,000 funded at 30% vs a 40% baseline (lift 0.74, n=8,545). Funded campaigns here had a median goal of $10,000 vs $20,000 for failed."
+        },
+        "score": 0.02466,
+        "feasibility": 1.0,
+        "confidence": "medium",
+        "cost_label": "low (pre-launch setting)",
+        "time_label": "immediate (set before launch)",
+        "labels_are_heuristic": true,
+        "priority": 2,
+        "explanation": "Lower your funding goal from $25,000 to $10,000. The model estimates your funding probability would rise from 40% to 44% (+3 points). Technology campaigns asking goal <= $10,000 funded at 30% vs a 40% baseline (lift 0.74, n=8,545). Funded campaigns here had a median goal of $10,000 vs $20,000 for failed. Confidence: medium. Note: this is the model's estimate based on historical association, not a guarantee."
+      },
+      {
+        "feature": "launch_weekday",
+        "current": "Monday",
+        "proposed": "Tuesday",
+        "tier": "suggestive",
+        "rationale_key": "best_weekday",
+        "baseline_p": 0.4021,
+        "new_p": 0.4451,
+        "delta": 0.043,
+        "raw_changes": {
+          "launched": "2017-03-07 10:00:00",
+          "deadline": "2017-04-06 10:00:00"
+        },
+        "evidence": {
+          "available": true,
+          "source": "pattern_mining (Day-7 train substrate)",
+          "scope": "Technology campaigns",
+          "item": "launch_weekday=Tuesday",
+          "n": 5037,
+          "confidence": 0.2849,
+          "lift": 0.706,
+          "base_rate": 0.4038,
+          "statement": "Technology campaigns launched on Tuesday funded at 28% vs a 40% baseline (lift 0.71, n=5,037)."
+        },
+        "score": 0.01913,
+        "feasibility": 0.9,
+        "confidence": "low",
+        "cost_label": "low (pre-launch setting)",
+        "time_label": "immediate (set before launch)",
+        "labels_are_heuristic": true,
+        "priority": 3,
+        "explanation": "Launch on Tuesday instead of Monday. The model estimates your funding probability would rise from 40% to 45% (+4 points). Technology campaigns launched on Tuesday funded at 28% vs a 40% baseline (lift 0.71, n=5,037). Confidence: low. Note: this is the model's estimate based on historical association, not a guarantee."
+      }
+    ],
+    "optimization_plan": {
+      "baseline_p": 0.4021,
+      "final_p": 0.5345,
+      "total_gain": 0.1324,
+      "n_steps": 2,
+      "steps": [
+        {
+          "feature": "title",
+          "current": "no number",
+          "proposed": "has number",
+          "tier": "suggestive",
+          "rationale_key": "title_has_number",
+          "cumulative_p": 0.493,
+          "marginal_gain": 0.0909,
+          "raw_changes": {
+            "name": "Lumen: solar smart garden planter 2",
+            "name_clean": "lumen solar smart garden planter 2"
+          },
+          "action": "Add a number to your title (e.g. an edition or volume number)",
+          "confidence": "low",
+          "evidence": "Technology campaigns with a number in the title funded at 40% vs a 40% baseline (lift 0.99, n=2,584)."
+        },
+        {
+          "feature": "launch_weekday",
+          "current": "Monday",
+          "proposed": "Tuesday",
+          "tier": "suggestive",
+          "rationale_key": "best_weekday",
+          "cumulative_p": 0.5345,
+          "marginal_gain": 0.0415,
+          "raw_changes": {
+            "launched": "2017-03-07 10:00:00",
+            "deadline": "2017-04-06 10:00:00"
+          },
+          "action": "Launch on Tuesday instead of Monday",
+          "confidence": "low",
+          "evidence": "Technology campaigns launched on Tuesday funded at 28% vs a 40% baseline (lift 0.71, n=5,037)."
+        }
+      ],
+      "note": "Cumulative probabilities are re-simulated jointly through the calibrated model, not summed. Model-simulated estimate, not a causal guarantee."
+    }
+  },
+  "honesty_note": "Model-simulated what-ifs over mutable features; cumulative re-simulated jointly. Historical association, not a guarantee."
+}

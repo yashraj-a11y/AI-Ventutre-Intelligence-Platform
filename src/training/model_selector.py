@@ -25,7 +25,7 @@ from typing import Any, Optional
 
 import joblib
 import numpy as np
-from sklearn.metrics import average_precision_score, f1_score, recall_score, roc_auc_score
+from sklearn.metrics import f1_score
 
 from src.models.data_split import ModelData, ModelDataSplitter
 from src.mlops.model_registry import ModelRegistry

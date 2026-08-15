@@ -1,0 +1,59 @@
+{
+  "_note": "Fictional campaigns (not in the Kickstarter dataset), dated inside the 2009-2017 training range. Captured results are from the committed model artifacts on 2026-11-03; they are deterministic for this model version and will change if the model is retrained.",
+  "campaigns": {
+    "A_primary_borderline": {
+      "request": {
+        "name": "Lumen: solar smart garden planter",
+        "main_category": "Technology",
+        "category": "Gadgets",
+        "currency": "USD",
+        "country": "US",
+        "usd_goal_real": 25000,
+        "launched": "2017-03-06 10:00:00",
+        "deadline": "2017-04-05 10:00:00"
+      },
+      "captured": {
+        "p": 0.4021,
+        "label": "successful",
+        "verdict": "Do Not Invest",
+        "conf": 0.606
+      }
+    },
+    "B_strong": {
+      "request": {
+        "name": "Hollow Kingdom: a cooperative dungeon card game",
+        "main_category": "Games",
+        "category": "Tabletop Games",
+        "currency": "USD",
+        "country": "US",
+        "usd_goal_real": 8000,
+        "launched": "2016-09-06 10:00:00",
+        "deadline": "2016-10-06 10:00:00"
+      },
+      "captured": {
+        "p": 0.8208,
+        "label": "successful",
+        "verdict": "Strong Invest",
+        "conf": 0.78
+      }
+    },
+    "D_weak": {
+      "request": {
+        "name": "Atlas One: modular home robot",
+        "main_category": "Technology",
+        "category": "Hardware",
+        "currency": "USD",
+        "country": "US",
+        "usd_goal_real": 120000,
+        "launched": "2017-01-10 10:00:00",
+        "deadline": "2017-03-11 10:00:00"
+      },
+      "captured": {
+        "p": 0.0746,
+        "label": "failed",
+        "verdict": "Do Not Invest",
+        "conf": 0.86
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "campaign": {
+    "name": "Lumen: solar smart garden planter",
+    "main_category": "Technology",
+    "usd_goal_real": 25000.0,
+    "country": "US"
+  },
+  "turns": [
+    {
+      "question": "Why is my funding probability low?",
+      "intent": "probability",
+      "deferred": false,
+      "source": "Days 4 / 10 / 11",
+      "answer": "Your funding probability is 40% (Ready). With the priority pre-launch changes it's reachable to ~53%. Confidence 69%."
+    },
+    {
+      "question": "What should I improve first?",
+      "intent": "improve",
+      "deferred": false,
+      "source": "Day-11 prioritization (Day-7 evidence)",
+      "answer": "First: Lower your funding goal from $25,000 to $10,000 — the model estimates about +3 points. Technology campaigns asking goal <= $10,000 funded at 30% vs a 40% baseline (lift 0.74, n=8,545). Funded campaigns here had a median goal of $10,000 vs $20,000 for failed."
+    },
+    {
+      "question": "Which campaigns are most similar to mine?",
+      "intent": "similar",
+      "deferred": false,
+      "source": "Day-9 category cohort",
+      "answer": "The closest comparison is the 21,646 other Technology campaigns in our data, which fund at 24% (vs a 40% baseline). You're positioned like the strugglers."
+    },
+    {
+      "question": "Why do similar campaigns fail?",
+      "intent": "why_fail",
+      "deferred": false,
+      "source": "Day-9 competition (what winners do)",
+      "answer": "Ask for less: funded campaigns' median goal is $10,000 vs $20,000 for those that failed. Your $25,000 goal is 2.5x the winners' median ($10,000) — priced like the campaigns that failed."
+    },
+    {
+      "question": "What is my biggest risk?",
+      "intent": "risk",
+      "deferred": false,
+      "source": "Day-9 risk analysis",
+      "answer": "Your biggest risk: Goal $25,000 is 2.5x the Technology funded-median ($10,000); large goals are harder to reach. (Overall risk: High)."
+    },
+    {
+      "question": "What should I do before I launch?",
+      "intent": "before_launch",
+      "deferred": false,
+      "source": "Day-11 founder strategy",
+      "answer": "Before you launch, focus on: lower your funding goal from $25,000 to $10,000; launch on tuesday instead of monday. These are the highest-impact controllable changes."
+    },
+    {
+      "question": "Should an investor invest?",
+      "intent": "recommendation",
+      "deferred": false,
+      "source": "Day-12 committee",
+      "answer": "The committee's recommendation is Do Not Invest (61% confidence). Committee recommendation: Do Not Invest (score -0.51; 2 positive / 4 negative of 6 agents). Dissent: FounderAgent, FinancialAgent (positive)."
+    },
+    {
+      "question": "What is my MRR?",
+      "intent": "deferred",
+      "deferred": true,
+      "source": "deferred",
+      "answer": "That isn't available — this platform has no mrr data for Kickstarter campaigns (they're anonymous, pre-launch). I can answer questions about funding probability, what to improve, similar campaigns, risks, and pre-launch steps."
+    }
+  ],
+  "honesty_note": "Deterministic intent-router over the real Day 4-12 outputs — not an LLM, never invents an answer. Out-of-scope questions (revenue / moat / founder background / …) return an honest 'not available' fallback. Model-simulated, not causal."
+}

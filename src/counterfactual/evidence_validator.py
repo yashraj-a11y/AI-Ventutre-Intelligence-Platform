@@ -25,10 +25,8 @@ Example
 
 from __future__ import annotations
 
-from pathlib import Path
 from typing import Any, Optional
 
-import numpy as np
 import pandas as pd
 
 from src.knowledge_base.venture_database import goal_band

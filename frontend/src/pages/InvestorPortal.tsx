@@ -17,7 +17,7 @@ export default function InvestorPortal() {
         Evaluate a campaign: committee verdict, confidence, comparable campaigns, and a due-diligence report.
       </p>
 
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,26rem)_1fr]">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,26rem)_minmax(0,1fr)]">
         <div className="lg:sticky lg:top-20 lg:self-start">
           <Card title="Evaluate a campaign">
             <CampaignForm onSubmit={setCampaign} />

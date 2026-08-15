@@ -12,7 +12,9 @@ import { ErrorBox, HonestyNote, Loading } from "../ui";
 const WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 interface RankedScenario { rank: number; name: string; probability: number; gain: number; crosses_bar: boolean; stage: string }
-interface ScenarioResult { ranked_scenarios?: RankedScenario[]; best_scenario?: { name: string; probability: number }; honesty_note?: string }
+interface ScenarioResult { ranked_scenarios?: RankedScenario[]; best_scenario?: { name: string; probability: number } }
+interface CfRecommendation { feature: string; current: string; proposed: string; baseline_p: number; new_p: number; delta: number }
+interface CfResult { ranked_recommendations?: CfRecommendation[] }
 
 function parse(dt: string): Date { return new Date(dt.replace(" ", "T")); }
 function fmt(d: Date): string {
@@ -55,8 +57,12 @@ export default function ScenarioSimulator({ campaign, baseline }: { campaign: Ca
   const sim = useApi(api.predict, debounced);          // live re-prediction of the modified campaign
   const scen = useApi(api.scenario, campaign);         // the backend's own scenario exploration (once)
 
+  const cf = useApi(api.counterfactual, campaign);     // single-feature changes ranked by probability lift
+
   const current = sim.data?.funding_probability;
   const result = scen.data?.result as unknown as ScenarioResult | undefined;
+
+  const cfResult = cf.data?.result as unknown as CfResult | undefined;
 
   const slider = "w-full accent-indigo-600";
   const label = "flex items-center justify-between text-xs font-medium text-slate-600";
@@ -127,11 +133,28 @@ export default function ScenarioSimulator({ campaign, baseline }: { campaign: Ca
         </ul>
       </div>
 
+      {/* the backend's counterfactuals: the single changes that move the probability most */}
+      <div>
+        <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Counterfactuals (what single change helps most)</h4>
+        {cf.loading && <Loading label="Computing counterfactuals…" />}
+        {cf.error && <ErrorBox message={cf.error} />}
+        <ul className="space-y-2">
+          {cfResult?.ranked_recommendations?.slice(0, 4).map((r) => (
+            <li key={r.feature} className="flex items-center justify-between rounded-lg border border-slate-200 p-2.5 text-sm">
+              <span className="text-slate-700">{r.feature}: {r.current} → {r.proposed}</span>
+              <span className={`ml-3 shrink-0 font-semibold ${r.delta > 0 ? "text-emerald-600" : "text-slate-500"}`}>
+                {r.delta >= 0 ? "+" : ""}{(r.delta * 100).toFixed(1)} pts
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
       <p className="text-xs text-slate-400">
         Levers are the real controllable features (goal, duration, timing, title). Revenue, retention,
         team, and burn are deferred — the dataset has no such signals.
       </p>
-      <HonestyNote note={result?.honesty_note} />
+      <HonestyNote note={scen.data?.honesty_note ?? cf.data?.honesty_note} />
     </div>
   );
 }

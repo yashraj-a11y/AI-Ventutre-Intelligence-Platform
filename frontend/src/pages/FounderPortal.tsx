@@ -15,7 +15,7 @@ export default function FounderPortal() {
         Submit a campaign for a funding prediction, explanation, recommendations, and scenarios.
       </p>
 
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,26rem)_1fr]">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,26rem)_minmax(0,1fr)]">
         <div className="lg:sticky lg:top-20 lg:self-start">
           <Card title="Submit your campaign">
             <CampaignForm onSubmit={setCampaign} />

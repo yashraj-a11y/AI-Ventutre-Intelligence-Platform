@@ -28,7 +28,7 @@ from typing import Any, Optional
 import numpy as np
 import pandas as pd
 
-from src.agents.base import agent_report, clip, clip01
+from src.agents.base import agent_report, clip
 from src.agents.competition_agent import CompetitionAgent
 from src.agents.financial_agent import FinancialAgent
 from src.agents.founder_agent import FounderAgent

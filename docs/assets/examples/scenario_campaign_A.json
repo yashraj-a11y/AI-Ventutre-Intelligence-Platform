@@ -1,0 +1,97 @@
+{
+  "campaign": {
+    "name": "Lumen: solar smart garden planter",
+    "main_category": "Technology",
+    "usd_goal_real": 25000.0
+  },
+  "result": {
+    "campaign": {
+      "name": "Lumen: solar smart garden planter",
+      "main_category": "Technology",
+      "usd_goal_real": 25000.0
+    },
+    "current_probability": 0.4021,
+    "threshold": 0.329,
+    "ranked_scenarios": [
+      {
+        "rank": 1,
+        "name": "Lower goal",
+        "probability": 0.4352,
+        "gain": 0.0331,
+        "crosses_bar": true,
+        "stage": "Ready"
+      },
+      {
+        "rank": 2,
+        "name": "Current (as-is)",
+        "probability": 0.4021,
+        "gain": 0.0,
+        "crosses_bar": true,
+        "stage": "Ready"
+      },
+      {
+        "rank": 3,
+        "name": "Lower goal + shorten duration + Tuesday launch + add title number",
+        "probability": 0.3105,
+        "gain": -0.0916,
+        "crosses_bar": false,
+        "stage": "Fixable"
+      },
+      {
+        "rank": 4,
+        "name": "Lower goal + shorten duration + Tuesday launch",
+        "probability": 0.2531,
+        "gain": -0.149,
+        "crosses_bar": false,
+        "stage": "Fixable"
+      },
+      {
+        "rank": 5,
+        "name": "Lower goal + shorten duration",
+        "probability": 0.2406,
+        "gain": -0.1615,
+        "crosses_bar": false,
+        "stage": "Fixable"
+      }
+    ],
+    "marginal_values": [
+      {
+        "change": "goal_usd",
+        "change_label": "Lower goal",
+        "marginal_gain": 0.0331,
+        "worth_it": true
+      },
+      {
+        "change": "duration_days",
+        "change_label": "shorten duration",
+        "marginal_gain": -0.1946,
+        "worth_it": false
+      },
+      {
+        "change": "weekday",
+        "change_label": "Tuesday launch",
+        "marginal_gain": 0.0125,
+        "worth_it": true
+      },
+      {
+        "change": "add_number",
+        "change_label": "add title number",
+        "marginal_gain": 0.0574,
+        "worth_it": true
+      }
+    ],
+    "best_scenario": {
+      "name": "Lower goal",
+      "probability": 0.4352,
+      "stage": "Ready"
+    },
+    "most_efficient_scenario": {
+      "name": "Current (as-is)",
+      "probability": 0.4021,
+      "n_changes": 0
+    },
+    "recommendation": "Fastest path to Ready: 'Current (as-is)' — 0 change(s), ~40%. Highest probability overall: 'Lower goal' (~44%). Negligible or harmful, safe to skip: shorten duration.",
+    "honesty_note": "Scenarios ranked by the real calibrated model. 'Marginal value' is the probability gain of adding one change on top of the ones before it (cumulative order), so it depends on what precedes it — model-simulated over controllable features, not causal."
+  },
+  "honesty_note": "Scenarios ranked by the real calibrated model. 'Marginal value' is the probability gain of adding one change on top of the ones before it (cumulative order), so it depends on what precedes it — model-simulated over controllable features, not causal."
+}

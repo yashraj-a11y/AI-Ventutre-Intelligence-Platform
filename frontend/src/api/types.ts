@@ -35,6 +35,8 @@ export interface ExplanationResponse {
   predicted_label: string;
   top_positive: Contribution[];
   top_negative: Contribution[];
+  base_value?: number | null; // expected log-odds margin (waterfall start)
+  margin?: number | null; // this campaign's log-odds (waterfall end)
   honesty_note?: string | null;
 }
 

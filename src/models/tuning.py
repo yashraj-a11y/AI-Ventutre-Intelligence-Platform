@@ -31,7 +31,6 @@ import time
 from pathlib import Path
 from typing import Any, Optional
 
-import numpy as np
 from sklearn.model_selection import RandomizedSearchCV, StratifiedKFold
 
 from src.models.benchmarking import classifier_metrics

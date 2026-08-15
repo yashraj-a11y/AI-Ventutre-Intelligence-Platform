@@ -1,0 +1,10 @@
+{
+  "campaign": {
+    "name": "Lumen: solar smart garden planter",
+    "main_category": "Technology",
+    "usd_goal_real": 25000.0
+  },
+  "funding_probability": 0.4021,
+  "predicted_label": "successful",
+  "decision_threshold": 0.329
+}

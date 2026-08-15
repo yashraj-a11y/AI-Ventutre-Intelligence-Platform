@@ -1,0 +1,972 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "AI Venture Intelligence Platform API",
+    "description": "Production backend over Architecture V1.0 (Days 1-13). Deterministic, honesty-tiered outputs; requests accept real Kickstarter campaign fields only.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Root",
+        "description": "Service banner + where to find the docs.",
+        "operationId": "root__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Root  Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/live": {
+      "get": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Live",
+        "description": "Liveness \u2014 the process is up. Always 200 (does not depend on the model load).",
+        "operationId": "live_live_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Live Live Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ready": {
+      "get": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Ready",
+        "description": "Readiness \u2014 the warm stack is loaded. 200 when ready, 503 while loading (probe-friendly).",
+        "operationId": "ready_ready_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Ready Ready Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Health",
+        "description": "Diagnostic health \u2014 registry component status + host/process resource usage.",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Health Health Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/predict": {
+      "post": {
+        "tags": [
+          "intelligence"
+        ],
+        "summary": "Predict",
+        "operationId": "predict_predict_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CampaignRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PredictionResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/explain": {
+      "post": {
+        "tags": [
+          "intelligence"
+        ],
+        "summary": "Explain",
+        "operationId": "explain_explain_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CampaignRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExplanationResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/retrieve": {
+      "post": {
+        "tags": [
+          "intelligence"
+        ],
+        "summary": "Retrieve",
+        "operationId": "retrieve_retrieve_post",
+        "parameters": [
+          {
+            "name": "k",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 25,
+              "minimum": 1,
+              "default": 5,
+              "title": "K"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CampaignRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RetrievalResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/counterfactual": {
+      "post": {
+        "tags": [
+          "intelligence"
+        ],
+        "summary": "Counterfactual",
+        "operationId": "counterfactual_counterfactual_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CampaignRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/scenario": {
+      "post": {
+        "tags": [
+          "intelligence"
+        ],
+        "summary": "Scenario",
+        "operationId": "scenario_scenario_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CampaignRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/recommend": {
+      "post": {
+        "tags": [
+          "intelligence"
+        ],
+        "summary": "Recommend",
+        "operationId": "recommend_recommend_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CampaignRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecommendationResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/analyze": {
+      "post": {
+        "tags": [
+          "intelligence"
+        ],
+        "summary": "Analyze",
+        "operationId": "analyze_analyze_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CampaignRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalysisResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/report/founder": {
+      "post": {
+        "tags": [
+          "reports"
+        ],
+        "summary": "Founder",
+        "operationId": "founder_report_founder_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CampaignRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReportResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/report/investor": {
+      "post": {
+        "tags": [
+          "reports"
+        ],
+        "summary": "Investor",
+        "operationId": "investor_report_investor_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CampaignRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReportResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AnalysisResponse": {
+        "properties": {
+          "campaign": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Campaign"
+          },
+          "committee_recommendation": {
+            "type": "string",
+            "title": "Committee Recommendation"
+          },
+          "overall_confidence": {
+            "type": "number",
+            "title": "Overall Confidence"
+          },
+          "reports": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Reports"
+          },
+          "copilot": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Copilot"
+          },
+          "honesty_note": {
+            "type": "string",
+            "title": "Honesty Note"
+          }
+        },
+        "type": "object",
+        "required": [
+          "campaign",
+          "committee_recommendation",
+          "overall_confidence",
+          "reports",
+          "copilot",
+          "honesty_note"
+        ],
+        "title": "AnalysisResponse",
+        "description": "The ``/analyze`` orchestrator \u2014 committee verdict + the full report suite + copilot."
+      },
+      "CampaignRequest": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Name",
+            "description": "Campaign title."
+          },
+          "main_category": {
+            "type": "string",
+            "title": "Main Category",
+            "description": "Top-level category, e.g. 'Games'."
+          },
+          "category": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Category",
+            "description": "Sub-category; defaults to main_category."
+          },
+          "currency": {
+            "type": "string",
+            "title": "Currency",
+            "description": "ISO currency code.",
+            "default": "USD"
+          },
+          "country": {
+            "type": "string",
+            "title": "Country",
+            "description": "ISO country code.",
+            "default": "US"
+          },
+          "usd_goal_real": {
+            "type": "number",
+            "exclusiveMinimum": 0.0,
+            "title": "Usd Goal Real",
+            "description": "Funding goal in USD (> 0)."
+          },
+          "goal": {
+            "anyOf": [
+              {
+                "type": "number",
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Goal",
+            "description": "Goal in the campaign currency; defaults to usd_goal_real."
+          },
+          "launched": {
+            "type": "string",
+            "title": "Launched",
+            "description": "Launch datetime (parseable), e.g. '2016-05-01 12:00:00'."
+          },
+          "deadline": {
+            "type": "string",
+            "title": "Deadline",
+            "description": "Deadline datetime (parseable), after launched."
+          },
+          "name_clean": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name Clean",
+            "description": "Derived from name if omitted (do not usually send)."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "main_category",
+          "usd_goal_real",
+          "launched",
+          "deadline"
+        ],
+        "title": "CampaignRequest",
+        "description": "A Kickstarter campaign to analyze \u2014 real fields only (fabricated fields are 422-rejected).",
+        "example": {
+          "category": "Tabletop Games",
+          "country": "US",
+          "currency": "USD",
+          "deadline": "2016-05-31 12:00:00",
+          "launched": "2016-05-01 12:00:00",
+          "main_category": "Games",
+          "name": "Artificer - Board Game",
+          "usd_goal_real": 30000.0
+        }
+      },
+      "ExplanationResponse": {
+        "properties": {
+          "funding_probability": {
+            "type": "number",
+            "title": "Funding Probability"
+          },
+          "predicted_label": {
+            "type": "string",
+            "title": "Predicted Label"
+          },
+          "top_positive": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Top Positive"
+          },
+          "top_negative": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Top Negative"
+          },
+          "base_value": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Base Value"
+          },
+          "margin": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Margin"
+          },
+          "honesty_note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Honesty Note"
+          }
+        },
+        "type": "object",
+        "required": [
+          "funding_probability",
+          "predicted_label",
+          "top_positive",
+          "top_negative"
+        ],
+        "title": "ExplanationResponse",
+        "description": "Day-5 SHAP local explanation (top +/- real-feature drivers)."
+      },
+      "GenericResponse": {
+        "properties": {
+          "campaign": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Campaign"
+          },
+          "result": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Result"
+          },
+          "honesty_note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Honesty Note"
+          }
+        },
+        "type": "object",
+        "required": [
+          "campaign",
+          "result"
+        ],
+        "title": "GenericResponse",
+        "description": "Fallback envelope for endpoints whose body is a pipeline dict (scenario / counterfactual)."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "PredictionResponse": {
+        "properties": {
+          "campaign": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Campaign"
+          },
+          "funding_probability": {
+            "type": "number",
+            "title": "Funding Probability"
+          },
+          "predicted_label": {
+            "type": "string",
+            "title": "Predicted Label"
+          },
+          "decision_threshold": {
+            "type": "number",
+            "title": "Decision Threshold"
+          }
+        },
+        "type": "object",
+        "required": [
+          "campaign",
+          "funding_probability",
+          "predicted_label",
+          "decision_threshold"
+        ],
+        "title": "PredictionResponse",
+        "description": "Day-4 funding prediction."
+      },
+      "RecommendationResponse": {
+        "properties": {
+          "campaign": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Campaign"
+          },
+          "investment_readiness": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Investment Readiness"
+          },
+          "confidence": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Confidence"
+          },
+          "priority_improvements": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Priority Improvements"
+          },
+          "investor_strategy": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Investor Strategy"
+          },
+          "final_strategy": {
+            "type": "string",
+            "title": "Final Strategy"
+          },
+          "deferred": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Deferred"
+          },
+          "honesty_note": {
+            "type": "string",
+            "title": "Honesty Note"
+          }
+        },
+        "type": "object",
+        "required": [
+          "campaign",
+          "investment_readiness",
+          "confidence",
+          "priority_improvements",
+          "investor_strategy",
+          "final_strategy",
+          "deferred",
+          "honesty_note"
+        ],
+        "title": "RecommendationResponse",
+        "description": "Day-11 unified venture decision (readiness + prioritized actions + confidence)."
+      },
+      "ReportResponse": {
+        "properties": {
+          "report_type": {
+            "type": "string",
+            "title": "Report Type"
+          },
+          "campaign": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Campaign"
+          },
+          "sections": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Sections"
+          },
+          "deferred_appendix": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Deferred Appendix"
+          },
+          "honesty_note": {
+            "type": "string",
+            "title": "Honesty Note"
+          }
+        },
+        "type": "object",
+        "required": [
+          "report_type",
+          "campaign",
+          "sections",
+          "deferred_appendix",
+          "honesty_note"
+        ],
+        "title": "ReportResponse",
+        "description": "A Day-13 report (founder / investor) \u2014 typed envelope, sections passed through."
+      },
+      "RetrievalResponse": {
+        "properties": {
+          "query": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Query"
+          },
+          "similar": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Similar"
+          },
+          "similar_successful": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Similar Successful",
+            "default": []
+          },
+          "similar_failed": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Similar Failed",
+            "default": []
+          },
+          "honesty_note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Honesty Note"
+          }
+        },
+        "type": "object",
+        "required": [
+          "query",
+          "similar"
+        ],
+        "title": "RetrievalResponse",
+        "description": "Day-6 semantic retrieval (similar campaigns from the knowledge base)."
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

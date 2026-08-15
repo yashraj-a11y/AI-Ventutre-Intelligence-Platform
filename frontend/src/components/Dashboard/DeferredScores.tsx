@@ -8,7 +8,7 @@ const DEFERRED = [
   "Scalability Score",
   "Market Fit",
   "Growth Potential",
-  "Market Opportunity",
+  "Market Size (TAM / SAM)",
 ];
 
 export default function DeferredScores() {
@@ -25,7 +25,8 @@ export default function DeferredScores() {
       </div>
       <p className="mt-3 text-xs text-slate-400">
         These have no data basis in the Kickstarter dataset (no founder / team / revenue / market signals),
-        so the platform defers them rather than fabricating values.
+        so the platform defers them rather than fabricating values. (A category-level opportunity signal
+        from Kickstarter history <em>is</em> computed — see the report's Market Analysis; market size is what is deferred.)
       </p>
     </div>
   );

@@ -88,6 +88,8 @@ def test_predict(client):
 def test_explain(client):
     j = client.post("/explain", json=CAMPAIGN).json()
     assert len(j["top_positive"]) > 0 and len(j["top_negative"]) > 0
+    # waterfall inputs: margin = base_value + sum of ALL contributions, so the shown ones can't exceed it
+    assert isinstance(j["base_value"], float) and isinstance(j["margin"], float)
 
 
 def test_retrieve(client):

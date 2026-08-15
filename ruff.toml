@@ -1,0 +1,6 @@
+# Day 20 · Phase A — conservative lint: real errors only (pyflakes + syntax). Dev-only tool (pip install ruff).
+line-length = 110
+extend-exclude = ["frontend", "mlruns", "mlartifacts", "notebooks"]
+
+[lint]
+select = ["E9", "F"]

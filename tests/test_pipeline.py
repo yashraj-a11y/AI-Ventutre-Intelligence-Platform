@@ -1,6 +1,5 @@
 """Tests for Phase G — the full Stage-1 PreprocessingPipeline (integration)."""
 
-import pandas as pd
 
 from src.preprocessing.pipeline import PreprocessingPipeline, TargetBuilder
 

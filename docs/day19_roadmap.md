@@ -88,6 +88,8 @@ endpoint), real authentication/JWT (architecture-ready only), Neural Network.
   score cards**) + `/recommend` (readiness, priority improvements, roadmap) + founder report link.
 - **E** — **Explainability (SHAP)** (`components/Explainability/`): `/explain` → contribution bar chart
   (top_positive/negative) + waterfall (base_value + contributions) + honesty note.
+  *(Built. `/explain` now also returns `base_value` + `margin` — both already computed by the Day-5
+  `LocalExplainer`, previously dropped by the service layer; additive, optional fields.)*
 - **F** — **Scenario Simulator** (`components/ScenarioSimulator/`): **real levers** (goal / duration /
   launch weekday / title) → `/scenario` + `/counterfactual`; show updated probability + reason + the
   deferred boundary. No MRR/retention/team sliders.

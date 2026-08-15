@@ -1,0 +1,223 @@
+{
+  "report_type": "Investor Due Diligence Report",
+  "campaign": {
+    "name": "Lumen: solar smart garden planter",
+    "main_category": "Technology",
+    "usd_goal_real": 25000.0,
+    "country": "US"
+  },
+  "generated_utc": "2026-11-02T19:55:26.820259+00:00",
+  "recommendation": "Do Not Invest",
+  "risk_veto": {
+    "eligible": true,
+    "applied": false
+  },
+  "sections": [
+    {
+      "id": "executive_summary",
+      "title": "Executive Summary",
+      "source": "Day-12 committee",
+      "kind": "text",
+      "body": "Committee recommendation: Do Not Invest (score -0.51; 2 positive / 4 negative of 6 agents). Dissent: FounderAgent, FinancialAgent (positive)."
+    },
+    {
+      "id": "investment_recommendation",
+      "title": "Investment Recommendation",
+      "source": "Day-12 committee",
+      "kind": "metrics",
+      "body": {
+        "Recommendation": "Do Not Invest",
+        "Overall confidence": "61%",
+        "Agreement": "67%",
+        "Committee score": "-0.51"
+      }
+    },
+    {
+      "id": "market_analysis",
+      "title": "Market Analysis",
+      "source": "Day-12 market agent",
+      "kind": "list",
+      "body": [
+        "Verdict: negative (score 10/100, confidence 81%).",
+        "Technology campaigns fund at 24% vs a 40% platform baseline (lift 0.59).",
+        "Market timing is unfavorable; the Technology trend is declining (21,646 campaigns).",
+        "The category is crowded."
+      ]
+    },
+    {
+      "id": "competitive_landscape",
+      "title": "Competitive Landscape",
+      "source": "Day-12 competition agent",
+      "kind": "list",
+      "body": [
+        "Verdict: negative (score 17/100, confidence 89%).",
+        "Ask for less: funded campaigns' median goal is $10,000 vs $20,000 for those that failed.",
+        "Your $25,000 goal is 2.5x the winners' median ($10,000) \u2014 priced like the campaigns that failed.",
+        "Category is crowded \u2014 21,646 campaigns (8% of all)."
+      ]
+    },
+    {
+      "id": "founder_assessment",
+      "title": "Founder Assessment (creator execution)",
+      "source": "Day-12 founder agent",
+      "kind": "list",
+      "body": [
+        "Verdict: positive (score 75/100, confidence 50%).",
+        "The creator's controllable choices are already near their modeled optimum (40% of a reachable 53%).",
+        "Craft gap: Add a number to your title (e.g. an edition or volume number) (~9 pts).",
+        "Craft gap: Lower your funding goal from $25,000 to $10,000 (~3 pts)."
+      ]
+    },
+    {
+      "id": "financial_assessment",
+      "title": "Financial Assessment (funding viability)",
+      "source": "Day-12 financial agent",
+      "kind": "list",
+      "body": [
+        "Verdict: positive (score 64/100, confidence 67%).",
+        "Goal $25,000 is 2.5x the category winners' median ($10,000).",
+        "Calibrated funding probability 40% vs the 33% decision bar.",
+        "Goal-size risk (High): Goal $25,000 is 2.5x the Technology funded-median ($10,000); large goals are harder to reach."
+      ]
+    },
+    {
+      "id": "similar_startups",
+      "title": "Similar Startups",
+      "source": "Day-9 category cohort (our data)",
+      "kind": "metrics",
+      "body": {
+        "Category": "Technology",
+        "Similar campaigns": "21,646",
+        "Category funding rate": "24%",
+        "Platform baseline": "40%"
+      }
+    },
+    {
+      "id": "risks_and_red_flags",
+      "title": "Risks & Red Flags",
+      "source": "Day-12 risk agent + Day-9 objections",
+      "kind": "list",
+      "body": [
+        "Overall risk: High. Modeled failure risk 60%.",
+        "High \u2014 Goal $25,000 is 2.5x the Technology funded-median ($10,000); large goals are harder to reach.",
+        "High \u2014 Similar campaigns (Technology, a large goal) funded at only 22% (lift 0.53).",
+        "4 investor objection(s) raised; top: goal_size.",
+        "Investor objection (High): Your $25,000 goal is high for Technology, where funded campaigns typically ask a median of $10,000. Why this ask \u2014 and can you hit it?",
+        "Investor objection (High): Among campaigns most like yours (Technology, a large goal), only 22% funded. What sets you apart from the 7,940 that came before?",
+        "Investor objection (High): Your 30-day campaign sits in a band that funds at 22% (lift 0.54). Would a shorter campaign convert better?",
+        "Investor objection (High): Technology campaigns historically fund at 24% (lift 0.59) \u2014 below the 40% baseline. How do you overcome the category headwind?"
+      ]
+    },
+    {
+      "id": "opportunities",
+      "title": "Opportunities",
+      "source": "Day-11",
+      "kind": "list",
+      "body": [
+        "Priority changes can lift funding odds from 40% to ~53%.",
+        "Working in your favor: campaign_duration.",
+        "Working in your favor: title term 'smart'."
+      ]
+    },
+    {
+      "id": "investment_decision",
+      "title": "Investment Decision",
+      "source": "Day-12 committee",
+      "kind": "table",
+      "body": {
+        "columns": [
+          "Agent",
+          "Vote",
+          "Confidence",
+          "Weight"
+        ],
+        "rows": [
+          [
+            "MarketAgent",
+            "negative",
+            "0.81",
+            1.0
+          ],
+          [
+            "FounderAgent",
+            "positive",
+            "0.50",
+            1.0
+          ],
+          [
+            "FinancialAgent",
+            "positive",
+            "0.67",
+            1.0
+          ],
+          [
+            "CompetitionAgent",
+            "negative",
+            "0.89",
+            0.8
+          ],
+          [
+            "RiskAgent",
+            "negative",
+            "0.71",
+            1.5
+          ],
+          [
+            "InvestmentAgent",
+            "negative",
+            "0.66",
+            1.5
+          ]
+        ]
+      }
+    }
+  ],
+  "deferred_appendix": {
+    "note": "Not covered \u2014 the dataset has no data for these; not fabricated.",
+    "items": [
+      "Financial Strategy",
+      "Go-To-Market Strategy",
+      "Product Strategy",
+      "Team Strategy",
+      "Technology Strategy",
+      "build_partnerships",
+      "cap_table",
+      "comparable_funding_rounds",
+      "competitive_moat",
+      "customer_retention",
+      "delay_fundraising_timing",
+      "exit_multiple",
+      "expand_founding_team",
+      "expected_return",
+      "financial_diligence",
+      "founder_experience",
+      "funding_rounds",
+      "grow_monthly_revenue",
+      "grow_revenue",
+      "growth_milestones",
+      "growth_timeline",
+      "growth_trajectory",
+      "hire_technical_cofounder",
+      "improve_retention",
+      "improve_retention_before_fundraising",
+      "improve_unit_economics",
+      "irr",
+      "market_size_tam",
+      "market_sizing",
+      "monthly_revenue",
+      "named_competitors",
+      "pricing_strategy",
+      "product_traction",
+      "revenue_growth",
+      "startup_lifecycle",
+      "team_diligence",
+      "team_size",
+      "traction_metrics",
+      "unit_economics",
+      "validate_customer_problem",
+      "validate_pricing_strategy",
+      "valuation"
+    ]
+  },
+  "honesty_note": "Investor Due Diligence Report \u2014 a deterministic reformatting of the Day 4-12 analysis (no new analysis). Every section names its source; agents are correlated views of one signal set, not independent experts. Model-simulated, not causal; expected return / comparable rounds / valuation / founder background / financials are deferred (no data)."
+}

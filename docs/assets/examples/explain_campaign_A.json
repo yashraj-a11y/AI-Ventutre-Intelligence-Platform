@@ -1,0 +1,123 @@
+{
+  "funding_probability": 0.4021,
+  "predicted_label": "successful",
+  "top_positive": [
+    {
+      "feature": "campaign_duration",
+      "group": "tabular",
+      "contribution": 0.6934,
+      "feature_value": -0.2321,
+      "descriptor": "campaign_duration"
+    },
+    {
+      "feature": "smart",
+      "group": "text",
+      "contribution": 0.1472,
+      "feature_value": 0.5458,
+      "descriptor": "title term 'smart'"
+    },
+    {
+      "feature": "launch_weekday",
+      "group": "tabular",
+      "contribution": 0.1376,
+      "feature_value": -1.3735,
+      "descriptor": "launch_weekday"
+    },
+    {
+      "feature": "garden",
+      "group": "text",
+      "contribution": 0.1138,
+      "feature_value": 0.5749,
+      "descriptor": "title term 'garden'"
+    },
+    {
+      "feature": "category_freq",
+      "group": "tabular",
+      "contribution": 0.1002,
+      "feature_value": 0.007,
+      "descriptor": "category_freq"
+    },
+    {
+      "feature": "launch_month",
+      "group": "tabular",
+      "contribution": 0.0755,
+      "feature_value": -1.0323,
+      "descriptor": "launch_month"
+    },
+    {
+      "feature": "launch_year",
+      "group": "tabular",
+      "contribution": 0.0724,
+      "feature_value": 1.4605,
+      "descriptor": "launch_year"
+    },
+    {
+      "feature": "currency_USD",
+      "group": "tabular",
+      "contribution": 0.0675,
+      "feature_value": 1.0,
+      "descriptor": "currency_USD"
+    }
+  ],
+  "top_negative": [
+    {
+      "feature": "uppercase_ratio",
+      "group": "tabular",
+      "contribution": -0.5212,
+      "feature_value": -0.9672,
+      "descriptor": "uppercase_ratio"
+    },
+    {
+      "feature": "usd_goal_real",
+      "group": "tabular",
+      "contribution": -0.2441,
+      "feature_value": 0.9684,
+      "descriptor": "usd_goal_real"
+    },
+    {
+      "feature": "goal_per_day",
+      "group": "tabular",
+      "contribution": -0.1992,
+      "feature_value": 0.9878,
+      "descriptor": "goal_per_day"
+    },
+    {
+      "feature": "solar",
+      "group": "text",
+      "contribution": -0.1957,
+      "feature_value": 0.6096,
+      "descriptor": "title term 'solar'"
+    },
+    {
+      "feature": "main_category_Technology",
+      "group": "tabular",
+      "contribution": -0.0513,
+      "feature_value": 1.0,
+      "descriptor": "main_category_Technology"
+    },
+    {
+      "feature": "title_length",
+      "group": "tabular",
+      "contribution": -0.0272,
+      "feature_value": -0.0771,
+      "descriptor": "title_length"
+    },
+    {
+      "feature": "has_number",
+      "group": "tabular",
+      "contribution": -0.0168,
+      "feature_value": -0.3497,
+      "descriptor": "has_number"
+    },
+    {
+      "feature": "album",
+      "group": "text",
+      "contribution": -0.0116,
+      "feature_value": 0.0,
+      "descriptor": "title term 'album' (absent)"
+    }
+  ],
+  "base_value": -0.6985,
+  "margin": -0.3497,
+  "honesty_note": "Factors are real campaign features (goal, category, timing, title words) the model learned to associate with funding — not causal levers or founder/market signals (the dataset has none). Probability is calibrated; contributions explain the log-odds."
+}

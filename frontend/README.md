@@ -104,6 +104,13 @@ from the submitted campaign into the analysis components.
 real; only `login()` is a **stub** (no credentials, no JWT). To make it real, replace `login()` with a
 `POST /auth/login` that returns a JWT and decode the role — routes, guards, and components are unchanged.
 
+## Explainability charts
+
+`ExplanationPanel` draws the contribution bar chart and a waterfall: baseline (`base_value`) → each
+top contribution → "All other features" (the remainder, so the bars always land exactly on `margin`) →
+this campaign's log-odds. Both come from `/explain`; the waterfall hides itself if the backend omits
+`base_value`/`margin`.
+
 ## Deferred (not built — no backend support)
 
 Startup catalog search/filter/rank (no catalog endpoint), a live pattern-mining panel (no `/patterns`

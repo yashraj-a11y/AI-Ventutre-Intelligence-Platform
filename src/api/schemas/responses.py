@@ -28,6 +28,8 @@ class ExplanationResponse(BaseModel):
     predicted_label: str
     top_positive: list[dict[str, Any]]
     top_negative: list[dict[str, Any]]
+    base_value: Optional[float] = None   # expected log-odds margin (phi0); waterfall start
+    margin: Optional[float] = None       # this campaign's log-odds (phi0 + sum of contributions)
     honesty_note: Optional[str] = None
 
 

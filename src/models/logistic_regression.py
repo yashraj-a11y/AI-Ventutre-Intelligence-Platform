@@ -36,7 +36,6 @@ from typing import Any, Optional
 
 import joblib
 import numpy as np
-import scipy.sparse as sp
 from sklearn.dummy import DummyClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (

@@ -30,7 +30,6 @@ import json
 from pathlib import Path
 from typing import Any, Optional
 
-import numpy as np
 import pandas as pd
 
 from src.pattern_mining.mining import Rule, build_item_frame, mine_rules

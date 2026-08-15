@@ -12,4 +12,5 @@ def explain(registry: Any, req: Any) -> dict[str, Any]:
     return {"funding_probability": e["funding_probability"],
             "predicted_label": e["predicted_label"],
             "top_positive": e["top_positive"], "top_negative": e["top_negative"],
+            "base_value": e.get("base_value"), "margin": e.get("margin"),
             "honesty_note": e.get("honesty_note")}

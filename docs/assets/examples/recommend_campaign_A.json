@@ -1,0 +1,334 @@
+{
+  "campaign": {
+    "name": "Lumen: solar smart garden planter",
+    "main_category": "Technology",
+    "usd_goal_real": 25000.0,
+    "country": "US"
+  },
+  "investment_readiness": {
+    "stage": "Ready",
+    "funding_probability": 0.4021,
+    "optimized_probability": 0.5345,
+    "threshold": 0.329,
+    "readiness_index": 47
+  },
+  "confidence": {
+    "score": 0.6884,
+    "factors": {
+      "prediction_margin": 0.244,
+      "cohort_agreement": 0.237,
+      "pattern_support": 0.0,
+      "scenario_stability": 0.75,
+      "cf_stability": 0.504,
+      "model_agreement": 1.0
+    },
+    "reason": "Supported by stable scenario behavior and agreement across models. Main uncertainty: a clear prediction margin, agreement among similar campaigns and strong historical pattern support."
+  },
+  "priority_improvements": [
+    {
+      "feature": "goal",
+      "category": "Fundraising Strategy",
+      "action": "Lower your funding goal from $25,000 to $10,000",
+      "priority_label": "Medium",
+      "expected_impact_points": 3,
+      "funding_influence": 0.0331,
+      "reason": "The funding goal is the single strongest lever on fundability — right-sizing it to a category-proven level most improves the odds.",
+      "evidence": "Technology campaigns asking goal <= $10,000 funded at 30% vs a 40% baseline (lift 0.74, n=8,545). Funded campaigns here had a median goal of $10,000 vs $20,000 for failed.",
+      "confidence": "medium",
+      "source_priority": 2,
+      "priority_score": 0.3225,
+      "factors": {
+        "impact": 0.12,
+        "evidence": 0.0,
+        "investor_overlap": 1.0,
+        "scenario_gain": 0.132,
+        "feasibility": 1.0,
+        "confidence": 0.6
+      },
+      "rank": 1
+    },
+    {
+      "feature": "launch_weekday",
+      "category": "Campaign Strategy",
+      "action": "Launch on Tuesday instead of Monday",
+      "priority_label": "Medium",
+      "expected_impact_points": 4,
+      "funding_influence": 0.043,
+      "reason": "Launch timing is a near-zero-cost lever — the funded cohort clusters on specific weekdays.",
+      "evidence": "Technology campaigns launched on Tuesday funded at 28% vs a 40% baseline (lift 0.71, n=5,037).",
+      "confidence": "low",
+      "source_priority": 3,
+      "priority_score": 0.283,
+      "factors": {
+        "impact": 0.16,
+        "evidence": 0.0,
+        "investor_overlap": 1.0,
+        "scenario_gain": 0.05,
+        "feasibility": 0.9,
+        "confidence": 0.3
+      },
+      "rank": 2
+    },
+    {
+      "feature": "title",
+      "category": "Campaign Strategy",
+      "action": "Add a number to your title (e.g. an edition or volume number)",
+      "priority_label": "High",
+      "expected_impact_points": 9,
+      "funding_influence": 0.0909,
+      "reason": "Title framing is a cheap signal the model associates with funded campaigns.",
+      "evidence": "Technology campaigns with a number in the title funded at 40% vs a 40% baseline (lift 0.99, n=2,584).",
+      "confidence": "low",
+      "source_priority": 1,
+      "priority_score": 0.2239,
+      "factors": {
+        "impact": 0.36,
+        "evidence": 0.0,
+        "investor_overlap": 0.0,
+        "scenario_gain": 0.23,
+        "feasibility": 0.8,
+        "confidence": 0.3
+      },
+      "rank": 3
+    }
+  ],
+  "investor_strategy": {
+    "campaign": {
+      "name": "Lumen: solar smart garden planter",
+      "main_category": "Technology",
+      "usd_goal_real": 25000.0,
+      "country": "US"
+    },
+    "recommendation": "Proceed with Caution",
+    "funding_probability": 0.4021,
+    "optimized_probability": 0.5345,
+    "threshold": 0.329,
+    "reachable_headroom": 0.1324,
+    "overall_risk_level": "High",
+    "reason": "Fundable as-is at 40% (just above the 33% bar) but on a thin margin. Main risk: Goal $25,000 is 2.5x the Technology funded-median ($10,000); large goals are harder to reach.",
+    "key_risk": {
+      "category": "financial_goal_risk",
+      "severity": "High",
+      "reason": "Goal $25,000 is 2.5x the Technology funded-median ($10,000); large goals are harder to reach."
+    },
+    "key_objection": {
+      "dimension": "goal_size",
+      "concern": "Your $25,000 goal is high for Technology, where funded campaigns typically ask a median of $10,000. Why this ask — and can you hit it?"
+    },
+    "conditions_to_reconsider": [
+      "Team addresses the top concern (goal_size).",
+      "Campaign reaches its reachable readiness (~53%) before launch."
+    ],
+    "deferred_diligence": {
+      "financial_diligence": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "cap_table": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "team_diligence": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "market_sizing": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "traction_metrics": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      },
+      "unit_economics": {
+        "status": "deferred",
+        "reason": "not in a pre-launch Kickstarter snapshot"
+      }
+    },
+    "honesty_note": "Investor recommendation band mapped from the funding-readiness stage + reachable headroom (model-simulated, not causal), with the top risk surfaced. Standard diligence (financials, cap table, team, market, traction) is deferred — no data.",
+    "confidence": {
+      "campaign": {
+        "name": "Lumen: solar smart garden planter",
+        "main_category": "Technology",
+        "usd_goal_real": 25000.0,
+        "country": "US"
+      },
+      "score": 0.6884,
+      "factors": {
+        "prediction_margin": 0.244,
+        "cohort_agreement": 0.237,
+        "pattern_support": 0.0,
+        "scenario_stability": 0.75,
+        "cf_stability": 0.504,
+        "model_agreement": 1.0
+      },
+      "weights": {
+        "prediction_margin": 0.25,
+        "cohort_agreement": 0.15,
+        "pattern_support": 0.2,
+        "scenario_stability": 0.15,
+        "cf_stability": 0.15,
+        "model_agreement": 0.1
+      },
+      "reason": "Supported by stable scenario behavior and agreement across models. Main uncertainty: a clear prediction margin, agreement among similar campaigns and strong historical pattern support.",
+      "honesty_note": "Confidence is a transparent weighted blend of real agreement signals (each shown) — prediction margin, similar-campaign agreement, historical pattern support, scenario stability, cross-method reachability, and model agreement. Not a probability; a reliability estimate over the ensemble.",
+      "model_probabilities": {
+        "calibrated": 0.4021,
+        "best_model": 0.4135,
+        "logistic_regression": 0.3304
+      }
+    }
+  },
+  "final_strategy": "Proceed with Caution: Ready at 40% (reachable ~53%), confidence 69%. Founder priority: lower your funding goal from $25,000 to $10,000; launch on tuesday instead of monday.",
+  "deferred": {
+    "customer_retention": {
+      "status": "deferred",
+      "reason": "not observable in a single pre-launch Kickstarter snapshot"
+    },
+    "monthly_revenue": {
+      "status": "deferred",
+      "reason": "not observable in a single pre-launch Kickstarter snapshot"
+    },
+    "revenue_growth": {
+      "status": "deferred",
+      "reason": "not observable in a single pre-launch Kickstarter snapshot"
+    },
+    "unit_economics": {
+      "status": "deferred",
+      "reason": "not in a pre-launch Kickstarter snapshot"
+    },
+    "competitive_moat": {
+      "status": "deferred",
+      "reason": "not observable in a single pre-launch Kickstarter snapshot"
+    },
+    "named_competitors": {
+      "status": "deferred",
+      "reason": "not observable in a single pre-launch Kickstarter snapshot"
+    },
+    "founder_experience": {
+      "status": "deferred",
+      "reason": "not observable in a single pre-launch Kickstarter snapshot"
+    },
+    "team_size": {
+      "status": "deferred",
+      "reason": "not observable in a single pre-launch Kickstarter snapshot"
+    },
+    "pricing_strategy": {
+      "status": "deferred",
+      "reason": "not observable in a single pre-launch Kickstarter snapshot"
+    },
+    "market_size_tam": {
+      "status": "deferred",
+      "reason": "not observable in a single pre-launch Kickstarter snapshot"
+    },
+    "product_traction": {
+      "status": "deferred",
+      "reason": "not observable in a single pre-launch Kickstarter snapshot"
+    },
+    "funding_rounds": {
+      "status": "deferred",
+      "reason": "not observable in a single pre-launch Kickstarter snapshot"
+    },
+    "growth_trajectory": {
+      "status": "deferred",
+      "reason": "not observable in a single pre-launch Kickstarter snapshot"
+    },
+    "startup_lifecycle": {
+      "status": "deferred",
+      "reason": "Idea/MVP/Validation/PMF/Growth/Series-A require observing a company over time; the dataset is a single pre-launch snapshot"
+    },
+    "growth_milestones": {
+      "status": "deferred",
+      "reason": "post-launch milestones (users / retention / revenue / funding rounds) require data the dataset doesn't have"
+    },
+    "validate_customer_problem": {
+      "status": "deferred",
+      "reason": "no data in this dataset"
+    },
+    "improve_retention": {
+      "status": "deferred",
+      "reason": "no data in this dataset"
+    },
+    "grow_revenue": {
+      "status": "deferred",
+      "reason": "no data in this dataset"
+    },
+    "expand_founding_team": {
+      "status": "deferred",
+      "reason": "no data in this dataset"
+    },
+    "build_partnerships": {
+      "status": "deferred",
+      "reason": "no data in this dataset"
+    },
+    "improve_unit_economics": {
+      "status": "deferred",
+      "reason": "no data in this dataset"
+    },
+    "growth_timeline": {
+      "status": "deferred",
+      "reason": "a multi-month post-launch growth timeline (users / retention / revenue / funding rounds over time) needs longitudinal data the dataset doesn't have"
+    },
+    "Product Strategy": {
+      "status": "deferred",
+      "reason": "requires data the dataset doesn't have"
+    },
+    "Team Strategy": {
+      "status": "deferred",
+      "reason": "requires data the dataset doesn't have"
+    },
+    "Financial Strategy": {
+      "status": "deferred",
+      "reason": "requires data the dataset doesn't have"
+    },
+    "Technology Strategy": {
+      "status": "deferred",
+      "reason": "requires data the dataset doesn't have"
+    },
+    "Go-To-Market Strategy": {
+      "status": "deferred",
+      "reason": "requires data the dataset doesn't have"
+    },
+    "improve_retention_before_fundraising": {
+      "status": "deferred",
+      "reason": "needs data the dataset doesn't have"
+    },
+    "validate_pricing_strategy": {
+      "status": "deferred",
+      "reason": "needs data the dataset doesn't have"
+    },
+    "hire_technical_cofounder": {
+      "status": "deferred",
+      "reason": "needs data the dataset doesn't have"
+    },
+    "delay_fundraising_timing": {
+      "status": "deferred",
+      "reason": "needs data the dataset doesn't have"
+    },
+    "grow_monthly_revenue": {
+      "status": "deferred",
+      "reason": "needs data the dataset doesn't have"
+    },
+    "financial_diligence": {
+      "status": "deferred",
+      "reason": "not in a pre-launch Kickstarter snapshot"
+    },
+    "cap_table": {
+      "status": "deferred",
+      "reason": "not in a pre-launch Kickstarter snapshot"
+    },
+    "team_diligence": {
+      "status": "deferred",
+      "reason": "not in a pre-launch Kickstarter snapshot"
+    },
+    "market_sizing": {
+      "status": "deferred",
+      "reason": "not in a pre-launch Kickstarter snapshot"
+    },
+    "traction_metrics": {
+      "status": "deferred",
+      "reason": "not in a pre-launch Kickstarter snapshot"
+    }
+  },
+  "honesty_note": "A unified venture decision aggregated from Days 4-10 on one warm stack: readiness + prioritized evidence-backed actions + transparent confidence + founder & investor views (two projections of one intelligence). Model-simulated over controllable features, not causal; product / team / traction / financial items are deferred."
+}
