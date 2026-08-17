@@ -4,12 +4,15 @@
 import {
   Bar, BarChart, Cell, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis,
 } from "recharts";
+import { useState } from "react";
 import type { Contribution, ExplanationResponse } from "../../api/types";
+import { useIsPhone } from "../../hooks/useMediaQuery";
+import { featureLabel } from "../../lib/featureLabels";
 import { HonestyNote } from "../ui";
 
 function shortLabel(c: Contribution): string {
-  const s = c.descriptor || c.feature;
-  return s.length > 32 ? `${s.slice(0, 31)}…` : s;
+  const s = featureLabel(c.descriptor || c.feature);
+  return s.length > 30 ? `${s.slice(0, 29)}…` : s;
 }
 
 interface Step { label: string; range: [number, number]; value: number; kind: "base" | "up" | "down" | "total" }
@@ -36,6 +39,37 @@ function waterfall(data: ExplanationResponse): Step[] | null {
 
 const FILL = { base: "#64748b", total: "#4f46e5", up: "#10b981", down: "#f43f5e" } as const;
 
+/** Phone layout of the contribution chart: label above a diverging bar, so neither gets squeezed. */
+function ContributionList({ rows }: { rows: { label: string; value: number }[] }) {
+  const max = Math.max(...rows.map((r) => Math.abs(r.value)), 1e-9);
+  const sorted = [...rows].sort((a, b) => b.value - a.value);
+  return (
+    <ul className="space-y-2.5">
+      {sorted.map((r, i) => {
+        const w = `${(Math.abs(r.value) / max) * 50}%`;
+        const up = r.value >= 0;
+        return (
+          <li key={`${r.label}-${i}`}>
+            <div className="flex items-baseline justify-between gap-3 text-xs">
+              <span className="text-slate-700">{r.label}</span>
+              <span className={`shrink-0 font-semibold tabular-nums ${up ? "text-emerald-700" : "text-rose-700"}`}>
+                {up ? "+" : ""}{r.value.toFixed(2)}
+              </span>
+            </div>
+            <div className="relative mt-1 h-2 rounded-full bg-slate-100">
+              <span className="absolute inset-y-0 left-1/2 w-px bg-slate-300" />
+              <span
+                className={`absolute inset-y-0 rounded-full ${up ? "bg-emerald-500" : "bg-rose-500"}`}
+                style={up ? { left: "50%", width: w } : { right: "50%", width: w }}
+              />
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
 export default function ExplanationPanel({ data }: { data: ExplanationResponse }) {
   const rows = [...data.top_negative, ...data.top_positive]
     .map((c) => ({ label: shortLabel(c), value: Number(c.contribution) }))
@@ -44,18 +78,31 @@ export default function ExplanationPanel({ data }: { data: ExplanationResponse }
   const steps = waterfall(data);
   const topUp = data.top_positive[0];
   const topDown = data.top_negative[0];
+  const [showWaterfall, setShowWaterfall] = useState(false);
+  const isPhone = useIsPhone();
 
   return (
     <div>
-      <p className="mb-3 text-sm text-slate-600">
-        {topUp && <>Biggest lift: <span className="font-medium text-emerald-700">{topUp.descriptor || topUp.feature}</span>. </>}
-        {topDown && <>Biggest drag: <span className="font-medium text-rose-700">{topDown.descriptor || topDown.feature}</span>.</>}
-      </p>
+      <div className="mb-4 grid gap-3 sm:grid-cols-2">
+        {topUp && (
+          <div className="rounded-xl bg-emerald-50 p-3 ring-1 ring-emerald-100">
+            <p className="text-xs font-medium text-emerald-700">Biggest lift</p>
+            <p className="mt-0.5 font-semibold text-emerald-900">{featureLabel(topUp.descriptor || topUp.feature)}</p>
+          </div>
+        )}
+        {topDown && (
+          <div className="rounded-xl bg-rose-50 p-3 ring-1 ring-rose-100">
+            <p className="text-xs font-medium text-rose-700">Biggest drag</p>
+            <p className="mt-0.5 font-semibold text-rose-900">{featureLabel(topDown.descriptor || topDown.feature)}</p>
+          </div>
+        )}
+      </div>
 
+      {isPhone ? <ContributionList rows={rows} /> : (
       <ResponsiveContainer width="100%" height={Math.max(220, rows.length * 30)}>
         <BarChart data={rows} layout="vertical" margin={{ top: 4, right: 16, bottom: 4, left: 8 }}>
-          <XAxis type="number" tick={{ fontSize: 11 }} tickFormatter={(v: number) => v.toFixed(2)} />
-          <YAxis type="category" dataKey="label" width={190} tick={{ fontSize: 11 }} />
+          <XAxis type="number" tick={{ fontSize: 11, fill: "#94a3b8" }} axisLine={false} tickLine={false} tickFormatter={(v: number) => v.toFixed(2)} />
+          <YAxis type="category" dataKey="label" width={190} tick={{ fontSize: 12, fill: "#334155" }} axisLine={false} tickLine={false} />
           <ReferenceLine x={0} stroke="#94a3b8" />
           <Tooltip formatter={(v) => (typeof v === "number" ? v.toFixed(3) : v)} cursor={{ fill: "#f1f5f9" }} />
           <Bar dataKey="value" radius={2}>
@@ -65,6 +112,7 @@ export default function ExplanationPanel({ data }: { data: ExplanationResponse }
           </Bar>
         </BarChart>
       </ResponsiveContainer>
+      )}
 
       <div className="mt-2 flex justify-center gap-6 text-xs text-slate-500">
         <span className="flex items-center gap-1"><span className="h-2 w-3 rounded-sm bg-emerald-500" /> pushes funding up</span>
@@ -72,12 +120,22 @@ export default function ExplanationPanel({ data }: { data: ExplanationResponse }
       </div>
 
       {steps && (
-        <div className="mt-6">
+        <button
+          onClick={() => setShowWaterfall((s) => !s)}
+          className="no-print mt-5 text-sm font-medium text-indigo-600 hover:text-indigo-800"
+          aria-expanded={showWaterfall}
+        >
+          {showWaterfall ? "Hide" : "Show"} how the score builds up (waterfall) {showWaterfall ? "▴" : "▾"}
+        </button>
+      )}
+
+      {steps && showWaterfall && (
+        <div className="mt-4">
           <h4 className="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-500">Waterfall — how the score builds up (log-odds)</h4>
           <ResponsiveContainer width="100%" height={Math.max(240, steps.length * 30)}>
             <BarChart data={steps} layout="vertical" margin={{ top: 4, right: 16, bottom: 4, left: 8 }}>
-              <XAxis type="number" tick={{ fontSize: 11 }} tickFormatter={(v: number) => v.toFixed(1)} />
-              <YAxis type="category" dataKey="label" width={190} tick={{ fontSize: 11 }} />
+              <XAxis type="number" tick={{ fontSize: 11, fill: "#94a3b8" }} axisLine={false} tickLine={false} tickFormatter={(v: number) => v.toFixed(1)} />
+              <YAxis type="category" dataKey="label" width={isPhone ? 120 : 190} tick={{ fontSize: isPhone ? 10 : 12, fill: "#334155" }} axisLine={false} tickLine={false} />
               <ReferenceLine x={0} stroke="#94a3b8" />
               <Tooltip
                 formatter={(_v, _n, item) => {

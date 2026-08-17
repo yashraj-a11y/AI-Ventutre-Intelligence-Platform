@@ -16,8 +16,9 @@ import type {
   StatusResponse,
 } from "./types";
 
+// Trailing slashes stripped: "https://api/" + "/ready" would request "//ready" (a 404).
 export const BASE_URL: string =
-  import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
+  (import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000").replace(/\/+$/, "");
 
 /** A normalized API error the UI can render (status + backend-provided detail). */
 export class ApiError extends Error {
@@ -33,7 +34,9 @@ export class ApiError extends Error {
 
 const http: AxiosInstance = axios.create({
   baseURL: BASE_URL,
-  timeout: 60_000, // /analyze is ~3s warm; generous for a cold first request
+  // /analyze is ~1s warm, but a free-tier host can take 1-2 minutes to wake from sleep — a shorter
+  // timeout would fail the first request after idle.
+  timeout: 150_000,
   headers: { "Content-Type": "application/json" },
 });
 

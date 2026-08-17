@@ -8,6 +8,7 @@ export interface AsyncState<T> {
   data?: T;
   loading: boolean;
   error?: string;
+  status?: number; // HTTP status of a failed call (e.g. 503 = feature not loaded on this host)
 }
 
 function message(e: unknown): string {
@@ -22,7 +23,10 @@ export function useApi<I, T>(fn: (input: I) => Promise<T>, input: I): AsyncState
     setState({ loading: true });
     fn(input).then(
       (data) => { if (alive) setState({ data, loading: false }); },
-      (err) => { if (alive) setState({ loading: false, error: message(err) }); },
+      (err) => {
+        if (alive) setState({ loading: false, error: message(err),
+                              status: err instanceof ApiError ? err.status : undefined });
+      },
     );
     return () => { alive = false; };
   }, [fn, input]);

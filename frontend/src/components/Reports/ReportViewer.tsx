@@ -38,7 +38,21 @@ function SectionBody({ kind, body }: { kind: string; body: unknown }) {
 
   if (kind === "table" && isTable(body))
     return (
-      <div className="overflow-x-auto">
+      <>
+      {/* phones: one card per row ("column: value"), since 3-4 columns squeeze text into slivers */}
+      <div className="space-y-2 sm:hidden print:hidden">
+        {body.rows.map((row, i) => (
+          <dl key={i} className="rounded-lg bg-slate-50 p-3 text-sm">
+            {row.map((cell, j) => (
+              <div key={j} className="flex gap-3 py-0.5">
+                <dt className="w-24 shrink-0 text-xs font-medium uppercase tracking-wide text-slate-400">{String(body.columns[j] ?? "")}</dt>
+                <dd className="min-w-0 flex-1 text-slate-700">{String(cell)}</dd>
+              </div>
+            ))}
+          </dl>
+        ))}
+      </div>
+      <div className="hidden overflow-x-auto sm:block print:block">
         <table className="w-full text-left text-sm">
           <thead>
             <tr className="border-b border-slate-200 text-xs uppercase tracking-wide text-slate-500">
@@ -54,9 +68,18 @@ function SectionBody({ kind, body }: { kind: string; body: unknown }) {
           </tbody>
         </table>
       </div>
+      </>
     );
 
   return <pre className="overflow-auto rounded bg-slate-900 p-2 text-xs text-slate-100">{JSON.stringify(body, null, 2)}</pre>;
+}
+
+// The backend's provenance labels carry internal build-stage names ("Day-12 committee", "Days 4-12 …").
+// Keep the meaningful part for readers; the full label stays available on hover.
+function sourceLabel(source: string): string {
+  const s = source.replace(/\bDays?[- ]?\d+(\s*[-–/]\s*\d+)*\s*/gi, "").trim();
+  if (!/^[a-z]/i.test(s)) return "Platform analysis";   // label was only stage numbers
+  return s[0].toUpperCase() + s.slice(1);
 }
 
 function Section({ section }: { section: ReportSection }) {
@@ -64,8 +87,8 @@ function Section({ section }: { section: ReportSection }) {
     <section className="border-b border-slate-100 py-4 last:border-0">
       <div className="mb-2 flex items-center justify-between gap-3">
         <h3 className="text-sm font-semibold text-slate-900">{section.title}</h3>
-        <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-medium text-slate-500" title="provenance">
-          {section.source}
+        <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-medium text-slate-500" title={`Source: ${section.source}`}>
+          {sourceLabel(section.source)}
         </span>
       </div>
       <SectionBody kind={section.kind} body={section.body} />
@@ -85,9 +108,9 @@ export default function ReportViewer({ campaign, variant }: { campaign: Campaign
 
   return (
     <div>
-      <div className="mb-3 flex items-center justify-between">
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
         <h2 className="text-lg font-bold text-slate-900">{data.report_type}</h2>
-        <Button onClick={() => window.print()}>Print / Save as PDF</Button>
+        <span className="no-print"><Button onClick={() => window.print()}>Print / Save as PDF</Button></span>
       </div>
 
       <div>{data.sections.map((s) => <Section key={s.id} section={s} />)}</div>

@@ -7,6 +7,7 @@ import { api } from "../../api/client";
 import type { CampaignRequest } from "../../api/types";
 import { useApi } from "../../hooks/useApi";
 import { useDebounced } from "../../hooks/useDebounced";
+import { featureLabel } from "../../lib/featureLabels";
 import { ErrorBox, HonestyNote, Loading } from "../ui";
 
 const WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -15,6 +16,14 @@ interface RankedScenario { rank: number; name: string; probability: number; gain
 interface ScenarioResult { ranked_scenarios?: RankedScenario[]; best_scenario?: { name: string; probability: number } }
 interface CfRecommendation { feature: string; current: string; proposed: string; baseline_p: number; new_p: number; delta: number }
 interface CfResult { ranked_recommendations?: CfRecommendation[] }
+
+// "goal: 25000 → 10000" reads better as "Funding goal: $25,000 → $10,000".
+function fmtValue(feature: string, v: string): string {
+  const n = Number(v);
+  if (feature === "goal" && Number.isFinite(n)) return `$${Math.round(n).toLocaleString()}`;
+  if (feature === "campaign_duration" && Number.isFinite(n)) return `${n} days`;
+  return v;
+}
 
 function parse(dt: string): Date { return new Date(dt.replace(" ", "T")); }
 function fmt(d: Date): string {
@@ -91,7 +100,7 @@ export default function ScenarioSimulator({ campaign, baseline }: { campaign: Ca
       </div>
 
       {/* baseline vs simulated */}
-      <div className="rounded-lg bg-slate-50 p-4">
+      <div className="rounded-xl bg-gradient-to-r from-slate-50 to-indigo-50 p-4 ring-1 ring-indigo-100">
         <div className="flex items-center justify-around text-center">
           <div>
             <div className="text-xs text-slate-500">Baseline</div>
@@ -140,8 +149,10 @@ export default function ScenarioSimulator({ campaign, baseline }: { campaign: Ca
         {cf.error && <ErrorBox message={cf.error} />}
         <ul className="space-y-2">
           {cfResult?.ranked_recommendations?.slice(0, 4).map((r) => (
-            <li key={r.feature} className="flex items-center justify-between rounded-lg border border-slate-200 p-2.5 text-sm">
-              <span className="text-slate-700">{r.feature}: {r.current} → {r.proposed}</span>
+            <li key={`${r.feature}:${r.proposed}`} className="flex items-center justify-between rounded-lg border border-slate-200 p-2.5 text-sm">
+              <span className="text-slate-700">
+                <span className="font-medium">{featureLabel(r.feature)}:</span> {fmtValue(r.feature, String(r.current))} → {fmtValue(r.feature, String(r.proposed))}
+              </span>
               <span className={`ml-3 shrink-0 font-semibold ${r.delta > 0 ? "text-emerald-600" : "text-slate-500"}`}>
                 {r.delta >= 0 ? "+" : ""}{(r.delta * 100).toFixed(1)} pts
               </span>
