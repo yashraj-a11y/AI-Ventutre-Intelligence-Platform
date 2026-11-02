@@ -30,6 +30,8 @@ logger = get_logger("avip.api")
 _cfg = load_config()
 _api = _cfg.get("day14", {}).get("api", {})
 _settings = deployment_settings()                   # Day-18: ports/logging/CORS from the environment
+if not _settings["load_retriever"]:                 # env override for small hosts (no FAISS / SBERT)
+    _cfg.setdefault("day14", {}).setdefault("api", {})["load_retriever"] = False
 
 
 @asynccontextmanager

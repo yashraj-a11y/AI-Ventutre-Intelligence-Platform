@@ -27,7 +27,10 @@ Example
 
 from __future__ import annotations
 
+import copy
 import json
+import threading
+from collections import OrderedDict
 from pathlib import Path
 from typing import Any, Optional
 
@@ -84,11 +87,32 @@ class IntelligenceAggregator:
         self.lx = self.copilot.lx                          # reuse the copilot's warm SHAP explainer
         self.frame = self.cf.evidence.frame                # item frame = the cohort source (no faiss)
         self.base = float(self.cf.evidence.base)
+        # Profiles are deterministic per campaign (Phase-I content hash), and one request — or the
+        # several endpoints the dashboard calls for one campaign — asks for the same profile repeatedly.
+        self._cache: OrderedDict[str, dict[str, Any]] = OrderedDict()
+        self._cache_size = int(c.get("cache_size", 64))
+        self._lock = threading.Lock()
         self.logger.info("IntelligenceAggregator ready (one warm faiss-free stack).")
 
     # ------------------------------------------------------------------ public
     def aggregate(self, raw: dict[str, Any]) -> dict[str, Any]:
-        """Build the unified VentureIntelligence profile for one campaign."""
+        """Build the unified VentureIntelligence profile for one campaign (memoized per campaign).
+
+        Each caller gets its own deep copy, so a caller that edits the profile can't affect another.
+        """
+        key = json.dumps(raw, sort_keys=True, default=str)
+        with self._lock:
+            if key in self._cache:
+                self._cache.move_to_end(key)
+                return copy.deepcopy(self._cache[key])
+        vi = self._aggregate(raw)
+        with self._lock:
+            self._cache[key] = vi
+            while len(self._cache) > self._cache_size:
+                self._cache.popitem(last=False)
+        return copy.deepcopy(vi)
+
+    def _aggregate(self, raw: dict[str, Any]) -> dict[str, Any]:
         raw = dict(raw)
         analysis = self.cf.analyze(raw)                    # Day-8 (dict evidence — for generator/prioritizer)
         brief = self.copilot.analyze(raw)                  # Day-9

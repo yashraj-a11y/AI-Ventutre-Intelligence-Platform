@@ -55,15 +55,16 @@ class AgentOrchestrator:
     """
 
     def __init__(self, config: Optional[dict[str, Any]] = None, logger=None,
-                 cf_pipeline: Optional[CounterfactualPipeline] = None) -> None:
+                 cf_pipeline: Optional[CounterfactualPipeline] = None,
+                 aggregator: Optional[IntelligenceAggregator] = None) -> None:
         self.config = config if config is not None else load_config()
         self.logger = logger or get_logger("avip.agents.orchestrator")
 
         c = self.config.get("day12", {}).get("orchestrator", {})
         self.out_path = Path(c.get("out_path", "artifacts/agents/agent_reports.json"))
 
-        # ONE aggregator (=> one warm cf), shared into every agent.
-        self.agg = IntelligenceAggregator(self.config, self.logger, cf_pipeline=cf_pipeline)
+        # ONE aggregator (=> one warm cf), shared into every agent — reused if the caller has one.
+        self.agg = aggregator or IntelligenceAggregator(self.config, self.logger, cf_pipeline=cf_pipeline)
         self.specialists = [
             MarketAgent(self.config, self.logger, aggregator=self.agg),
             FounderAgent(self.config, self.logger, aggregator=self.agg),

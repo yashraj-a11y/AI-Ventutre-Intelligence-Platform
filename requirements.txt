@@ -77,9 +77,9 @@ nest-asyncio2==1.7.2
 nltk==3.10.0
 notebook==7.6.1
 notebook_shim==0.2.4
-numpy==2.5.1
+numpy==2.4.6
 packaging==26.2
-pandas==3.0.5
+pandas==2.3.3
 pandocfilters==1.5.1
 parso==0.8.7
 pexpect==4.9.0

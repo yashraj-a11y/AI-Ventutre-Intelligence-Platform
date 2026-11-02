@@ -68,18 +68,20 @@ class ReportingPipeline:
         # ONE warm stack: cf -> Day-11 recommendation + Day-12 committee, shared into every generator.
         self.cf = cf_pipeline or CounterfactualPipeline(self.config, self.logger)
         self.rec = RecommendationPipeline(self.config, self.logger, cf_pipeline=self.cf)
-        self.consensus = ConsensusEngine(self.config, self.logger, cf_pipeline=self.cf)
         self.agg = self.rec.agg
+        # the committee reuses the SAME aggregator (no second SHAP explainer / copilot / scenario stack)
+        self.consensus = ConsensusEngine(self.config, self.logger, cf_pipeline=self.cf, aggregator=self.agg)
 
         self.founder = FounderReportGenerator(self.config, self.logger, rec_pipeline=self.rec)
-        self.investor = InvestorReportGenerator(self.config, self.logger, rec_pipeline=self.rec,
-                                                consensus=self.consensus)
-        self.memo = InvestmentMemoGenerator(self.config, self.logger, rec_pipeline=self.rec,
-                                            consensus=self.consensus)
-        self.executive = ExecutiveSummaryGenerator(self.config, self.logger, rec_pipeline=self.rec,
-                                                   consensus=self.consensus)
-        self.copilot = VentureCopilotQA(self.config, self.logger, rec_pipeline=self.rec,
-                                        consensus=self.consensus)
+        # pass cf too — without it each generator loads its own copy of the model + feature pipeline
+        self.investor = InvestorReportGenerator(self.config, self.logger, cf_pipeline=self.cf,
+                                                rec_pipeline=self.rec, consensus=self.consensus)
+        self.memo = InvestmentMemoGenerator(self.config, self.logger, cf_pipeline=self.cf,
+                                            rec_pipeline=self.rec, consensus=self.consensus)
+        self.executive = ExecutiveSummaryGenerator(self.config, self.logger, cf_pipeline=self.cf,
+                                                   rec_pipeline=self.rec, consensus=self.consensus)
+        self.copilot = VentureCopilotQA(self.config, self.logger, cf_pipeline=self.cf,
+                                        rec_pipeline=self.rec, consensus=self.consensus)
         self.exporter = ReportExporter(self.config, self.logger)
         self.logger.info("ReportingPipeline ready (one warm faiss-free stack, 4 reports + copilot).")
 

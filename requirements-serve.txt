@@ -1,0 +1,29 @@
+# Serving-only dependencies for the API in lightweight mode (LOAD_RETRIEVER=false).
+#
+# requirements.txt is the full development environment (Jupyter, plotting, MLflow, SBERT/FAISS/torch,
+# tests). The API itself needs far less. Leaving out matplotlib/IPython (shap then skips its plotting
+# module), pyarrow (pulled in only by mlflow), and torch/faiss/sentence-transformers keeps the
+# installed size and memory small enough for a ~512 MB host. Responses are identical to the full env.
+#
+# Versions match the environment the models, artifacts and tests were produced with.
+# /retrieve (similar campaigns) needs faiss-cpu + sentence-transformers + torch from requirements.txt.
+
+fastapi==0.141.1
+uvicorn[standard]==0.52.1
+python-multipart==0.0.32
+pydantic==2.13.4
+
+numpy==2.4.6
+pandas==2.3.3
+scipy==1.18.0
+scikit-learn==1.9.0
+lightgbm==4.7.0
+joblib==1.5.3
+
+shap==0.52.0            # interventional TreeSHAP for /explain (plots not needed for serving)
+numba==0.66.0
+llvmlite==0.48.0
+
+nltk==3.10.0            # title lemmatization/stopwords (data: scripts/download_nltk_data.py)
+PyYAML==6.0.3
+psutil==7.2.2           # /health diagnostics

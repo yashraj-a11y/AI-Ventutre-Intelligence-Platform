@@ -29,15 +29,13 @@ import pickle
 from pathlib import Path
 from typing import Any, Optional
 
-import matplotlib
-matplotlib.use("Agg")                    # headless: render to file, never to a window
-import matplotlib.pyplot as plt          # noqa: E402
-import numpy as np                       # noqa: E402
-import pandas as pd                      # noqa: E402
-import scipy.sparse as sp                # noqa: E402
+import numpy as np
+import pandas as pd
+import scipy.sparse as sp
 
-from src.utils.config import load_config  # noqa: E402
-from src.utils.logger import get_logger   # noqa: E402
+from src.utils.config import load_config
+from src.utils.logger import get_logger
+from src.utils.plotting import plt        # lazy headless pyplot ("Agg"): loaded on first plot
 
 _POS = "#2a9d8f"   # green — increases funding probability
 _NEG = "#e76f51"   # red   — decreases funding probability

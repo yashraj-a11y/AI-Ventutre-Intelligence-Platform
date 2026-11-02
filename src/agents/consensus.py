@@ -59,7 +59,8 @@ class ConsensusEngine:
 
     def __init__(self, config: Optional[dict[str, Any]] = None, logger=None,
                  orchestrator: Optional[AgentOrchestrator] = None,
-                 cf_pipeline: Optional[CounterfactualPipeline] = None) -> None:
+                 cf_pipeline: Optional[CounterfactualPipeline] = None,
+                 aggregator=None) -> None:
         self.config = config if config is not None else load_config()
         self.logger = logger or get_logger("avip.agents.consensus")
 
@@ -73,6 +74,7 @@ class ConsensusEngine:
 
         self.orchestrator = orchestrator
         self._cf = cf_pipeline
+        self._agg = aggregator                             # optional shared IntelligenceAggregator
 
     # ------------------------------------------------------------------ public
     def decide(self, agent_reports: list[dict[str, Any]]) -> dict[str, Any]:
@@ -118,7 +120,8 @@ class ConsensusEngine:
     def run(self, raw: dict[str, Any]) -> dict[str, Any]:
         """Orchestrate the six agents, then decide — the full committee pass for one campaign."""
         if self.orchestrator is None:
-            self.orchestrator = AgentOrchestrator(self.config, self.logger, cf_pipeline=self._cf)
+            self.orchestrator = AgentOrchestrator(self.config, self.logger, cf_pipeline=self._cf,
+                                                  aggregator=self._agg)
         collected = self.orchestrator.run(raw)
         decision = self.decide(collected["agent_reports"])
         decision["campaign"] = collected["campaign"]

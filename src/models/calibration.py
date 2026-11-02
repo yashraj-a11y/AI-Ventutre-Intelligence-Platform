@@ -35,9 +35,6 @@ from pathlib import Path
 from typing import Any, Optional
 
 import joblib
-import matplotlib
-matplotlib.use("Agg")  # headless: save PNGs, no display
-import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.calibration import CalibratedClassifierCV, calibration_curve
 from sklearn.metrics import (
@@ -51,6 +48,7 @@ from sklearn.metrics import (
 
 from src.utils.config import load_config
 from src.utils.logger import get_logger
+from src.utils.plotting import plt  # lazy headless pyplot: loaded only when a plot is drawn
 
 
 class ProbabilityCalibrator:

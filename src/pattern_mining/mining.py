@@ -18,7 +18,9 @@ items exist. Every rule is a historical **association**, not a cause.
 
 from __future__ import annotations
 
+import hashlib
 import itertools
+import pickle
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Optional
@@ -61,12 +63,65 @@ class Rule:
         return d
 
 
+# One shared frame per (data path, split): every consumer reads it, none mutates it, so the
+# serving stack holds one copy instead of rebuilding it per component (~150 MB each).
+_FRAME_CACHE: dict[tuple[str, str, str], tuple[pd.DataFrame, float]] = {}
+
+
 def build_item_frame(config: dict[str, Any], logger=None) -> tuple[pd.DataFrame, float]:
-    """Discretize train campaigns into categorical item columns + target. Returns (frame, base_rate)."""
+    """Discretize train campaigns into categorical item columns + target. Returns (frame, base_rate).
+
+    Memoized per (processed_path, split_dir, use_split); callers must treat the frame as read-only.
+    """
     m = config.get("day7", {}).get("mining", {})
-    df = pd.read_csv(m.get("processed_path", "data/processed/kickstarter_processed.csv"))
+    key = (str(m.get("processed_path", "data/processed/kickstarter_processed.csv")),
+           str(m.get("split_dir", "artifacts/splits")), str(m.get("use_split", "train")))
+    if key not in _FRAME_CACHE:
+        _FRAME_CACHE[key] = _load_or_build_item_frame(m, logger)
+    return _FRAME_CACHE[key]
+
+
+def _load_or_build_item_frame(m: dict[str, Any], logger=None) -> tuple[pd.DataFrame, float]:
+    """Use the on-disk frame cache when it matches the current data; else build (and try to save).
+
+    Skipping the CSV parse keeps startup peak memory down on small hosts. The cache is keyed by the
+    processed CSV's size and the split index's bytes, so changed data is never served stale.
+    """
+    csv = Path(m.get("processed_path", "data/processed/kickstarter_processed.csv"))
+    split = Path(m.get("split_dir", "artifacts/splits")) / f"{m.get('use_split','train')}_index.npy"
+    cache = Path(m.get("item_frame_cache", "artifacts/patterns/item_frame.pkl"))
+    fingerprint = (csv.stat().st_size if csv.exists() else None,
+                   hashlib.sha256(split.read_bytes()).hexdigest())
+    if cache.exists():
+        try:
+            with cache.open("rb") as fh:
+                saved = pickle.load(fh)
+            saved_size, saved_split = saved.get("fingerprint", (None, None))
+            # A slim deployment may ship the cache without the CSV: then only the split must match.
+            if saved_split == fingerprint[1] and fingerprint[0] in (None, saved_size):
+                if logger:
+                    logger.info("Item frame loaded from cache %s.", cache)
+                return saved["frame"], saved["base"]
+        except Exception:                               # unreadable cache -> rebuild
+            pass
+    frame, base = _build_item_frame(m, logger)
+    try:
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        with cache.open("wb") as fh:
+            pickle.dump({"fingerprint": fingerprint, "frame": frame, "base": base}, fh,
+                        protocol=pickle.HIGHEST_PROTOCOL)
+    except OSError:                                     # read-only artifacts mount: just skip
+        pass
+    return frame, base
+
+
+def _build_item_frame(m: dict[str, Any], logger=None) -> tuple[pd.DataFrame, float]:
+    df = pd.read_csv(m.get("processed_path", "data/processed/kickstarter_processed.csv"),
+                     usecols=["name", "main_category", "category", "country", "currency",
+                              "usd_goal_real", "launched", "deadline", "target"])
     idx = np.load(Path(m.get("split_dir", "artifacts/splits")) / f"{m.get('use_split','train')}_index.npy")
     d = df.iloc[idx].copy()
+    del df
 
     launched = pd.to_datetime(d["launched"], errors="coerce")
     deadline = pd.to_datetime(d["deadline"], errors="coerce")
@@ -93,6 +148,11 @@ def build_item_frame(config: dict[str, Any], logger=None) -> tuple[pd.DataFrame,
         "usd_goal_real": d["usd_goal_real"].astype(float).values,   # raw (for goal thresholds; not an item)
         "target": d["target"].astype(int).values,
     })
+    # Same object dtype and values, but each distinct label becomes one shared str object instead
+    # of one per row (~186 MB -> ~40 MB for 265k rows).
+    for col in frame.columns[frame.dtypes == object]:
+        codes, uniques = pd.factorize(frame[col], use_na_sentinel=False)
+        frame[col] = np.asarray(uniques, dtype=object)[codes]
     base = float(frame["target"].mean())
     if logger:
         # non-item columns: usd_goal_real (raw, for thresholds) + target

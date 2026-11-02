@@ -110,4 +110,6 @@ def deployment_settings(environ: Optional[dict[str, str]] = None) -> dict[str, A
         "artifacts_dir": env.get("ARTIFACTS_DIR", "artifacts"),
         "data_dir": env.get("DATA_DIR", "data"),
         "cors_origins": origins,
+        # Small hosts (e.g. 512 MB): LOAD_RETRIEVER=false skips FAISS + SBERT (~700 MB); /retrieve then 503s.
+        "load_retriever": env.get("LOAD_RETRIEVER", "true").strip().lower() not in ("0", "false", "no"),
     }

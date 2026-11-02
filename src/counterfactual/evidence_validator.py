@@ -25,6 +25,8 @@ Example
 
 from __future__ import annotations
 
+import copy
+import threading
 from typing import Any, Optional
 
 import pandas as pd
@@ -66,10 +68,27 @@ class EvidenceValidator:
             frame, base = build_item_frame(self.config, self.logger)
         self.frame = frame
         self.base = float(base)
+        # Evidence depends only on (feature, proposed value, main category) over a fixed frame, and the
+        # same few cells recur across candidates, plans and requests — so each is computed once.
+        self._cache: dict[tuple, dict[str, Any]] = {}
+        self._cache_size = int(self.config.get("day8", {}).get("evidence", {}).get("cache_size", 2048))
+        self._lock = threading.Lock()
 
     # ------------------------------------------------------------------ public
     def validate(self, rec: dict[str, Any], campaign: dict[str, Any]) -> dict[str, Any]:
         """Real historical evidence for one recommendation applied to a campaign's context."""
+        key = (rec["feature"], repr(rec.get("proposed")), str(campaign.get("main_category")))
+        with self._lock:
+            hit = self._cache.get(key)
+        if hit is None:
+            hit = self._validate(rec, campaign)
+            with self._lock:
+                if len(self._cache) >= self._cache_size:
+                    self._cache.pop(next(iter(self._cache)))     # drop the oldest entry
+                self._cache[key] = hit
+        return copy.deepcopy(hit)
+
+    def _validate(self, rec: dict[str, Any], campaign: dict[str, Any]) -> dict[str, Any]:
         feature = rec["feature"]
         main = str(campaign.get("main_category"))
 
