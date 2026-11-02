@@ -43,3 +43,6 @@ logs/
 frontend/node_modules/
 frontend/dist/
 frontend/.vite/
+
+# NLTK corpora downloaded at deploy time (render.yaml sets NLTK_DATA here)
+nltk_data/

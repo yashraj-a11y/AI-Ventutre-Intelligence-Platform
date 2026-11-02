@@ -1,0 +1,32 @@
+# Render Blueprint — the API in lightweight mode on the free plan.
+#
+# Lightweight = LOAD_RETRIEVER=false: no FAISS / SBERT / torch, so /retrieve answers 503 and the UI
+# shows "similar-campaign search is turned off". Everything else (prediction, SHAP, counterfactuals,
+# scenarios, recommendations, committee, reports) is identical to the full stack.
+# The free plan has 512 MB RAM; this stack peaks at roughly 500-530 MB, so it is tight.
+
+services:
+  - type: web
+    name: avip-api
+    runtime: python
+    plan: free
+    region: oregon
+    # mkdir first: NLTK only downloads into NLTK_DATA if it already exists (else it uses ~/nltk_data,
+    # which is outside the project dir and not kept for runtime)
+    buildCommand: mkdir -p "$NLTK_DATA" && pip install -r requirements-serve.txt && python scripts/download_nltk_data.py
+    startCommand: uvicorn src.api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /ready
+    autoDeployTrigger: commit
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.14.2                 # the version the models and tests were produced with
+      - key: LOAD_RETRIEVER
+        value: "false"
+      - key: OMP_NUM_THREADS
+        value: "1"
+      - key: NLTK_DATA
+        value: /opt/render/project/src/nltk_data   # inside the project dir so the build output is kept
+      - key: DEPLOY_MODE
+        value: production
+      - key: CORS_ORIGINS               # your Cloudflare Pages URL, e.g. https://avip.pages.dev
+        sync: false
