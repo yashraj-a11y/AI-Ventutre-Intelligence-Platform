@@ -28,5 +28,19 @@ services:
         value: /opt/render/project/src/nltk_data   # inside the project dir so the build output is kept
       - key: DEPLOY_MODE
         value: production
-      - key: CORS_ORIGINS               # your Cloudflare Pages URL, e.g. https://avip.pages.dev
+      - key: CORS_ORIGINS               # the frontend's URL, e.g. https://avip-web.onrender.com
+        sync: false
+
+  # React dashboard as a free static site (served from Render's CDN; static sites don't sleep).
+  - type: web
+    name: avip-web
+    runtime: static
+    buildCommand: cd frontend && npm ci && npm run build
+    staticPublishPath: frontend/dist
+    routes:
+      - type: rewrite                   # client-side routes (/founder, /investor) -> the SPA
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_BASE_URL          # the API's URL, e.g. https://avip-api.onrender.com (baked in at build)
         sync: false
