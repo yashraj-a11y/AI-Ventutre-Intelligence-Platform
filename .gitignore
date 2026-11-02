@@ -32,3 +32,14 @@ artifacts/_notebook16/
 .coverage
 coverage.xml
 htmlcov/
+
+# Day-18 real environment file (never commit; use .env.example)
+.env
+
+# Day-18 runtime logs (never commit)
+logs/
+
+# Day-19 frontend build outputs
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/

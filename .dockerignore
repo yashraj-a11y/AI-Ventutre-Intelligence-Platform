@@ -1,0 +1,43 @@
+# Day 18 · Phase B — keep the build context tiny.
+# The Dockerfile only COPYs requirements.txt, src/, configs/, scripts/. Everything else is excluded so
+# the daemon never uploads the 800 MB+ of artifacts/data (mounted at runtime) or the local venv.
+
+# Virtualenv + Python caches
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Large, git-ignored, MOUNTED-at-runtime artifacts + data (NOT baked into the image)
+artifacts/
+data/
+mlruns/
+mlartifacts/
+mlflow.db
+logs/
+
+# VCS + CI + editor
+.git/
+.github/
+.gitignore
+.vscode/
+.idea/
+
+# Tests, notebooks, docs, deployment prose (not needed to run the API)
+tests/
+notebooks/
+docs/
+deployment/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Local env + secrets (never bake into an image)
+.env
+.DS_Store
+
+# The deployment files themselves
+Dockerfile
+.dockerignore
+docker-compose.yml

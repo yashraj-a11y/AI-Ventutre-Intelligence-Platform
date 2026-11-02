@@ -42,6 +42,34 @@ def test_docs_and_openapi(client):
         assert path in spec["paths"]
 
 
+def test_liveness_probe(client):
+    r = client.get("/live")                                  # always 200, independent of model load
+    assert r.status_code == 200 and r.json()["status"] == "alive"
+
+
+def test_readiness_probe_ready(client):
+    r = client.get("/ready")                                 # registry loaded in the fixture -> ready
+    assert r.status_code == 200 and r.json()["status"] == "ready"
+
+
+def test_readiness_probe_503_while_loading(client):
+    """When the registry isn't ready, /ready must return 503 (probe-friendly), then restore."""
+    reg = client.app.state.registry
+    client.app.state.registry = None
+    try:
+        r = client.get("/ready")
+        assert r.status_code == 503 and r.json()["status"] == "loading"
+    finally:
+        client.app.state.registry = reg
+
+
+def test_health_has_system_diagnostics(client):
+    j = client.get("/health").json()
+    sysd = j["system"]
+    assert sysd["process_rss_mb"] > 0 and 0 <= sysd["memory_percent"] <= 100
+    assert 0 <= sysd["disk_percent"] <= 100 and sysd["disk_free_gb"] >= 0
+
+
 def test_request_id_header(client):
     r = client.post("/predict", json=CAMPAIGN)
     assert "x-request-id" in {k.lower() for k in r.headers}

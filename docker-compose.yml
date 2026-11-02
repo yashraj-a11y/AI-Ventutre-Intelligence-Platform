@@ -1,0 +1,66 @@
+# Day 18 · Phase C — Compose stack for the AI Venture Intelligence Platform.
+#
+# ONE app container (FastAPI + all 13 layers + FAISS in-process). There is NO separate vector-database
+# service — FAISS is an embedded library, not a server. The large, git-ignored trained artifacts are
+# MOUNTED (read-only) rather than baked into the image. `nginx` (reverse proxy) and `mlflow-ui` (a dev
+# viewer over the local sqlite store) are OPTIONAL, gated behind Compose profiles.
+#
+# Run:   docker compose up -d                         # just the API
+#        docker compose --profile proxy up -d         # API + nginx
+#        docker compose --profile dev up -d            # API + mlflow ui
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: avip-api:latest
+    container_name: avip-api
+    ports:
+      - "${PORT:-8000}:8000"
+    environment:
+      OMP_NUM_THREADS: "1"                 # faiss + torch coexistence (also set in-app)
+      TOKENIZERS_PARALLELISM: "false"
+      LOG_LEVEL: "${LOG_LEVEL:-INFO}"
+      LOG_FILE: "/app/logs/application.log"
+      DEPLOY_MODE: "${DEPLOY_MODE:-production}"
+    volumes:
+      # Trained artifacts + data are provided at runtime (NOT in the image). Read-only for the app.
+      - ./artifacts:/app/artifacts:ro
+      - ./data:/app/data:ro
+      - ./logs:/app/logs                   # writable: application.log
+    healthcheck:
+      # slim image has no curl — use the venv python (urllib) to probe the real readiness endpoint.
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/health').status==200 else 1)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 90s                    # the warm stack (models + 407 MB index) takes ~tens of seconds
+    restart: unless-stopped
+
+  # ---- OPTIONAL: nginx reverse proxy (profile: proxy) — TLS termination / rate-limit lives here ----
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: avip-nginx
+    profiles: ["proxy"]
+    depends_on:
+      - api
+    ports:
+      - "${HTTP_PORT:-80}:80"
+    volumes:
+      - ./deployment/nginx.conf:/etc/nginx/conf.d/default.conf:ro   # created in Phase H/I
+    restart: unless-stopped
+
+  # ---- OPTIONAL: MLflow UI (profile: dev) — a viewer over the LOCAL sqlite store (training-time) ----
+  mlflow-ui:
+    image: ghcr.io/mlflow/mlflow:v3.15.1
+    container_name: avip-mlflow-ui
+    profiles: ["dev"]
+    command: >
+      mlflow ui --host 0.0.0.0 --port 5000
+      --backend-store-uri sqlite:////app/mlflow.db
+    ports:
+      - "${MLFLOW_PORT:-5000}:5000"
+    volumes:
+      - ./mlflow.db:/app/mlflow.db         # the local tracking db (git-ignored); read-only viewer
+    restart: unless-stopped
