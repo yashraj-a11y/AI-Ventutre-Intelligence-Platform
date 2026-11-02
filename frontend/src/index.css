@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* Day 19 — Tailwind v4 entry. Global base only; components style with Tailwind utilities. */
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  @apply bg-slate-50 text-slate-800 antialiased;
+}
