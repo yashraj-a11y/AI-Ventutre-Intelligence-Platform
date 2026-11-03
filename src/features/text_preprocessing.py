@@ -43,6 +43,61 @@ from src.utils.logger import get_logger
 _TOKEN_RE = re.compile(r"[a-z]+")  # after lowercasing, words are runs of a-z
 
 
+class _CompactNounWordNet:
+    """Only the WordNet data that noun lemmatization reads, run through NLTK's own ``_morphy``.
+
+    ``WordNetLemmatizer().lemmatize(w)`` (pos="n") consults just two things: whether a form is a
+    noun lemma (``index.noun``) and the noun exception list (``noun.exc``). NLTK's reader instead
+    loads all four indexes with every synset offset — ~135 MB resident in a server. This reads the
+    same two files into a set + dict (~15 MB) and calls ``WordNetCorpusReader._morphy`` itself, so
+    the algorithm is NLTK's, unchanged; only its lookup tables are smaller.
+    """
+
+    class _NounIndex:                       # stands in for _lemma_pos_offset_map for pos "n"
+        def __init__(self, nouns: set[str]) -> None:
+            self._nouns = nouns
+
+        def __contains__(self, form: str) -> bool:
+            return form in self._nouns
+
+        def __getitem__(self, form: str) -> tuple[str, ...]:
+            return ("n",)
+
+    def __init__(self) -> None:
+        import nltk
+        from nltk.corpus.reader.wordnet import WordNetCorpusReader
+
+        self.MORPHOLOGICAL_SUBSTITUTIONS = WordNetCorpusReader.MORPHOLOGICAL_SUBSTITUTIONS
+        self._morphy_impl = WordNetCorpusReader._morphy
+        nouns: set[str] = set()
+        with nltk.data.find("corpora/wordnet/index.noun").open(encoding="utf8") as fp:
+            for line in fp:
+                if not line.startswith(" "):            # skip the licence header, as NLTK does
+                    nouns.add(line.split(None, 1)[0])
+        exceptions: dict[str, list[str]] = {}
+        with nltk.data.find("corpora/wordnet/noun.exc").open(encoding="utf8") as fp:
+            for line in fp:
+                terms = line.split()
+                exceptions[terms[0]] = terms[1:]
+        self._lemma_pos_offset_map = self._NounIndex(nouns)
+        self._exception_map = {"n": exceptions}
+
+    def lemmatize(self, word: str) -> str:
+        """Same contract as ``WordNetLemmatizer().lemmatize(word)``: shortest noun lemma, else word."""
+        lemmas = self._morphy_impl(self, word, "n")
+        return min(lemmas, key=len) if lemmas else word
+
+
+_NOUN_WORDNET: Optional[_CompactNounWordNet] = None
+
+
+def _noun_lemmatizer() -> _CompactNounWordNet:
+    global _NOUN_WORDNET
+    if _NOUN_WORDNET is None:
+        _NOUN_WORDNET = _CompactNounWordNet()
+    return _NOUN_WORDNET
+
+
 class TextPreprocessor:
     """Lowercase → strip → tokenize → de-stopword → lemmatize a text column.
 
@@ -132,8 +187,9 @@ class TextPreprocessor:
     # --------------------------------------------------------------- internals
     @lru_cache(maxsize=100_000)
     def _lemma_cached(self, tok: str) -> str:
-        # Cached because a ~50k-word vocabulary repeats across ~1.5M tokens.
-        return self._lemmatizer.lemmatize(tok)
+        # Cached because a ~50k-word vocabulary repeats across ~1.5M tokens. Noun lemmatization uses
+        # the compact WordNet tables (identical output to self._lemmatizer, a fraction of the memory).
+        return _noun_lemmatizer().lemmatize(tok)
 
     def _lemma(self, tok: str) -> str:
         return self._lemma_cached(tok)

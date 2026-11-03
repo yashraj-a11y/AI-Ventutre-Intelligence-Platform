@@ -73,6 +73,7 @@ class ModelRegistry:
             self.retriever = VentureRetriever(self.config, self.logger)
 
         self._loaded = True
+        _release_freed_memory()
         self.logger.info("ModelRegistry ready in %.1fs (lightgbm %.1fs, retriever=%s, OMP=%s).",
                          time.time() - t0, t_light, bool(self.retriever),
                          os.environ.get("OMP_NUM_THREADS"))
@@ -89,6 +90,22 @@ class ModelRegistry:
                                "recommendation": self.rec is not None,
                                "committee": self.consensus is not None,
                                "retriever": self.retriever is not None}}
+
+
+def _release_freed_memory() -> None:
+    """Hand memory freed during startup back to the OS (glibc/Linux only; a no-op elsewhere).
+
+    Loading the stack creates large temporaries that Python frees, but glibc keeps the pages in its
+    heap, so the process still *looks* that big to the host's memory limit. ``malloc_trim(0)`` only
+    returns already-free pages — it never touches live objects.
+    """
+    import ctypes
+    import gc
+    gc.collect()
+    try:
+        ctypes.CDLL("libc.so.6").malloc_trim(0)
+    except (OSError, AttributeError):                  # not glibc (macOS, musl): nothing to do
+        pass
 
 
 # ------------------------------------------------------------------ module singleton

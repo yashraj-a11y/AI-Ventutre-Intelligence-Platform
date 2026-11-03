@@ -96,6 +96,7 @@ class SHAPExplainer:
         self.additivity_tol = float(c.get("additivity_tol", 1e-3))
         self.random_state = int(c.get("random_state", 42))
         self.out_path = Path(c.get("out_path", "artifacts/explainability/shap_values.pkl"))
+        self.background_cache = Path(c.get("background_cache", "artifacts/explainability/shap_background.npz"))
 
         self.model_ = None
         self.feature_names_: list[str] = []
@@ -132,7 +133,7 @@ class SHAPExplainer:
         if self.model_ is None:
             self.load()
         if background is None:
-            background = self._sample_rows(self.background)[0]
+            background = self._background_rows()
 
         self.explainer_ = shap.TreeExplainer(
             self.model_,
@@ -214,6 +215,30 @@ class SHAPExplainer:
         return self.out_path
 
     # --------------------------------------------------------------- internals
+    def _background_rows(self) -> np.ndarray:
+        """The fixed SHAP background: the same rows as ``_sample_rows(self.background)``, cached.
+
+        Sampling 100 rows means loading the whole ~60 MB training matrix, which a server then keeps
+        as resident memory after it is freed. The rows are saved once (~0.7 MB) and reused while the
+        matrix file, the row count and the seed are unchanged, so explanations are identical.
+        """
+        src = self.fused_dir / "X_train_selected.npz"
+        key = np.array([src.stat().st_size, self.background, self.random_state])
+        if self.background_cache.exists():
+            try:
+                with np.load(self.background_cache) as z:
+                    if np.array_equal(z["key"], key):
+                        return z["rows"]
+            except Exception:                           # unreadable cache -> rebuild
+                pass
+        rows = self._sample_rows(self.background)[0]
+        try:
+            self.background_cache.parent.mkdir(parents=True, exist_ok=True)
+            np.savez_compressed(self.background_cache, rows=rows, key=key)
+        except OSError:                                 # read-only artifacts mount: just skip
+            pass
+        return rows
+
     def _sample_rows(self, n: int) -> tuple[np.ndarray, np.ndarray]:
         """Densify a random ``n``-row sample of X_train_selected (never the full 66k)."""
         X = sp.load_npz(self.fused_dir / "X_train_selected.npz").tocsr()
