@@ -5,6 +5,23 @@ what to fix and an **investor** what to weigh: a calibrated funding probability,
 similar past campaigns, what-if scenarios, and written reports — served by a FastAPI backend and a
 React dashboard.
 
+## Live demo
+
+| | |
+|---|---|
+| **Web app** | **[avip-web-68h8.onrender.com](https://avip-web-68h8.onrender.com)** |
+| API (interactive docs) | [avip-api-j7km.onrender.com/docs](https://avip-api-j7km.onrender.com/docs) |
+| API health | [avip-api-j7km.onrender.com/health](https://avip-api-j7km.onrender.com/health) |
+
+Open the web app, choose **I'm a founder** or **I'm an investor**, and click one of the example campaigns.
+
+- **First visit can take about a minute.** The API runs on Render's free tier, which sleeps after ~15
+  minutes idle; the page shows a "waking up" notice until it is ready, and later requests are fast.
+- **Lightweight deployment.** To fit the free tier's 512 MB, the hosted API runs without the SBERT/FAISS
+  similar-campaign search (the page says so where it would appear). Everything else — prediction, SHAP,
+  what-if simulator, recommendations, the agent committee and both reports — is the full system. Run
+  locally ([Quick start](#quick-start)) for similar-campaign search.
+
 > **Honest by design.** The data is Kickstarter campaigns: title, category, goal, country, currency,
 > dates. It contains **no founder, team, revenue or market data**, so the platform does **not** score
 > Business Model, Founder Strength, Scalability, Market Fit or Growth Potential, and it has no market-size
@@ -33,7 +50,7 @@ a deployable product — and keeps every output traceable to real data.
 | **Multi-agent analysis** | Six deterministic agents (five specialists plus an investment agent) and a consensus step |
 | **Reports** | Founder report, investor report, memo, executive summary (JSON / Markdown / HTML) |
 | **Product** | FastAPI backend, React + TypeScript Founder and Investor portals |
-| **Engineering** | MLflow tracking, model registry, 95 tests, CI (fast lane), Docker config |
+| **Engineering** | MLflow tracking, model registry, 95 tests, CI (fast lane), live deployment on Render, Docker config |
 
 ## Architecture
 
@@ -123,9 +140,21 @@ Captured from the running app with a fictional demo campaign (full set in [docs/
 
 ## Deployment
 
+**Hosted on Render (free tier)** from [render.yaml](render.yaml), a Blueprint with two services:
+
+| Service | Type | Details |
+|---|---|---|
+| `avip-api` | Python web service | installs [requirements-serve.txt](requirements-serve.txt) (serving-only packages); `LOAD_RETRIEVER=false`; health check `/ready` |
+| `avip-web` | Static site | `npm ci && npm run build` in `frontend/`; `VITE_API_BASE_URL` points at the API; SPA rewrite to `index.html` |
+
+The API was trimmed to fit the 512 MB free instance without changing any output (responses verified
+identical): one shared model stack, request-level caches, a compact WordNet lookup for title
+lemmatization, a cached SHAP background sample and a serving-only dependency set. It uses roughly
+450 MB on Render, and a warm request takes about 0.3–2 s.
+
 A single-container Docker setup (multi-stage image, artifacts mounted read-only) with Compose,
-health probes and an nginx option is in [deployment/](deployment/). It is **authored but has not been
-built** — the development machine has no Docker. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
+health probes and an nginx option is also in [deployment/](deployment/). It is **authored but has not
+been built** — the development machine has no Docker. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
 ## Results
 
@@ -157,6 +186,8 @@ of each other. Full comparison and plots:
 - Factors are **associations, not causes**. Counterfactuals describe the model, not the world.
 - CI covers the fast lane; Docker is configured but unbuilt; the UI has no real authentication
   (login is an auth-ready stub).
+- The hosted demo runs on a free tier: it sleeps when idle (about a minute to wake) and omits
+  similar-campaign search to stay within 512 MB.
 
 ## Future work
 
