@@ -28,8 +28,8 @@ services:
         value: /opt/render/project/src/nltk_data   # inside the project dir so the build output is kept
       - key: DEPLOY_MODE
         value: production
-      - key: CORS_ORIGINS               # the frontend's URL, e.g. https://avip-web.onrender.com
-        sync: false
+      - key: CORS_ORIGINS               # the avip-web static site below
+        value: https://avip-web-68h8.onrender.com
 
   # React dashboard as a free static site (served from Render's CDN; static sites don't sleep).
   - type: web
@@ -42,5 +42,5 @@ services:
         source: /*
         destination: /index.html
     envVars:
-      - key: VITE_API_BASE_URL          # the API's URL, e.g. https://avip-api.onrender.com (baked in at build)
-        sync: false
+      - key: VITE_API_BASE_URL          # the avip-api service above (baked in at build)
+        value: https://avip-api-j7km.onrender.com

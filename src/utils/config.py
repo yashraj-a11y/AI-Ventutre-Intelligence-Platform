@@ -99,7 +99,8 @@ def deployment_settings(environ: Optional[dict[str, str]] = None) -> dict[str, A
         raise ValueError(f"DEPLOY_MODE must be one of {sorted(_VALID_MODES)}, got {mode!r}")
 
     # Comma-separated CORS origins; empty => no cross-origin access (safe default).
-    origins = [o.strip() for o in env.get("CORS_ORIGINS", "").split(",") if o.strip()]
+    # A browser's Origin never ends in "/", so a pasted "https://site/" would silently never match.
+    origins = [o.strip().rstrip("/") for o in env.get("CORS_ORIGINS", "").split(",") if o.strip()]
 
     return {
         "port": _int("PORT", 8000),
